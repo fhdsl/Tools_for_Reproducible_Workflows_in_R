@@ -3,8 +3,9 @@ introduction
 motivation
 target-audience
 curriculum
-a-new-chapter
 learning-objectives
+a-new-chapter
+learning-objectives-1
 libraries
 topic-of-section
 subtopic
