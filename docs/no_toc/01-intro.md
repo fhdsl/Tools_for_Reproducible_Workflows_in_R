@@ -3,85 +3,40 @@
 
 # Introduction
 
+In this course we will explore a variety of tools that can assist with data analysis from a broad range of fields. The tools we will cover may take some time to get used to, but the payoff will be immeasurable. Not only are these skills valuable for career advancement, they will also make your work-life easier. The tools will enhance your ability to reproduce your work across similar projects, stay organized, collaborate with others effectively, and more.
 
+  
 ## Motivation
+
+Many researchers are self-taught when it comes to computer science. However, data analysis has become a requirement for most researchers. The ability to smoothly work in a reproducible manner not only makes for easier more maintainable workflows, it also improves scientific rigor and transparency. 
+
+This course will help learners to use tools that will make their data analytic workflows more organized, more understandable to collaborators (and your future self!), and ultimately more efficient.
 
 
 ## Target Audience  
 
-The course is intended for ...
+This course is intended for people conducting data analyses at the level of a graduate student or higher. The course is designed so that the majority of the material is presented in a high-level manner that should be applicable to researchers working in a broad range of areas. The course is centered around the R programming language, a widely used statistical analysis software package. 
 
 ## Curriculum  
 
 The course covers...
 
 
+## Learning Objectives
 
-```r
-devtools::session_info()
-```
+- Implement basic project organization tools:
+   - Setup and configure RStudio/RStudio projects for data analysis (`here` package and file structure/paths)
+   - Install and configure `ProjectTemplate` package for formalizing and automating workflows
+- Apply the `pointblank` package for validation of tabular data 
+- Write functions and package them
+- Apply the `testthat` package for building software unit tests
+- Setup and use Git repositories for version control of code 
+- Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows 
+  - Pull Requests
+  - Code review
+  - Issues
+  - Discussions
+  
+References will include @gillespie_efficient_2021, @riederer_column_2020, @timbers_data_nodate.
 
-```
-## ─ Session info ───────────────────────────────────────────────────────────────
-##  setting  value                       
-##  version  R version 4.0.2 (2020-06-22)
-##  os       Ubuntu 20.04.3 LTS          
-##  system   x86_64, linux-gnu           
-##  ui       X11                         
-##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  ctype    en_US.UTF-8                 
-##  tz       Etc/UTC                     
-##  date     2022-11-15                  
-## 
-## ─ Packages ───────────────────────────────────────────────────────────────────
-##  package     * version    date       lib source                            
-##  assertthat    0.2.1      2019-03-21 [1] RSPM (R 4.0.3)                    
-##  bookdown      0.24       2022-02-15 [1] Github (rstudio/bookdown@88bc4ea) 
-##  callr         3.4.4      2020-09-07 [1] RSPM (R 4.0.2)                    
-##  cli           2.0.2      2020-02-28 [1] RSPM (R 4.0.0)                    
-##  crayon        1.3.4      2017-09-16 [1] RSPM (R 4.0.0)                    
-##  desc          1.2.0      2018-05-01 [1] RSPM (R 4.0.3)                    
-##  devtools      2.3.2      2020-09-18 [1] RSPM (R 4.0.3)                    
-##  digest        0.6.25     2020-02-23 [1] RSPM (R 4.0.0)                    
-##  ellipsis      0.3.1      2020-05-15 [1] RSPM (R 4.0.3)                    
-##  evaluate      0.14       2019-05-28 [1] RSPM (R 4.0.3)                    
-##  fansi         0.4.1      2020-01-08 [1] RSPM (R 4.0.0)                    
-##  fs            1.5.0      2020-07-31 [1] RSPM (R 4.0.3)                    
-##  glue          1.6.1      2022-01-22 [1] CRAN (R 4.0.2)                    
-##  hms           0.5.3      2020-01-08 [1] RSPM (R 4.0.0)                    
-##  htmltools     0.5.0      2020-06-16 [1] RSPM (R 4.0.1)                    
-##  jquerylib     0.1.4      2021-04-26 [1] CRAN (R 4.0.2)                    
-##  knitr         1.33       2022-02-15 [1] Github (yihui/knitr@a1052d1)      
-##  lifecycle     1.0.0      2021-02-15 [1] CRAN (R 4.0.2)                    
-##  magrittr      2.0.2      2022-01-26 [1] CRAN (R 4.0.2)                    
-##  memoise       1.1.0      2017-04-21 [1] RSPM (R 4.0.0)                    
-##  ottrpal       0.1.2      2022-02-15 [1] Github (jhudsl/ottrpal@1018848)   
-##  pillar        1.4.6      2020-07-10 [1] RSPM (R 4.0.2)                    
-##  pkgbuild      1.1.0      2020-07-13 [1] RSPM (R 4.0.2)                    
-##  pkgconfig     2.0.3      2019-09-22 [1] RSPM (R 4.0.3)                    
-##  pkgload       1.1.0      2020-05-29 [1] RSPM (R 4.0.3)                    
-##  prettyunits   1.1.1      2020-01-24 [1] RSPM (R 4.0.3)                    
-##  processx      3.4.4      2020-09-03 [1] RSPM (R 4.0.2)                    
-##  ps            1.3.4      2020-08-11 [1] RSPM (R 4.0.2)                    
-##  purrr         0.3.4      2020-04-17 [1] RSPM (R 4.0.3)                    
-##  R6            2.4.1      2019-11-12 [1] RSPM (R 4.0.0)                    
-##  readr         1.4.0      2020-10-05 [1] RSPM (R 4.0.2)                    
-##  remotes       2.2.0      2020-07-21 [1] RSPM (R 4.0.3)                    
-##  rlang         0.4.10     2022-02-15 [1] Github (r-lib/rlang@f0c9be5)      
-##  rmarkdown     2.10       2022-02-15 [1] Github (rstudio/rmarkdown@02d3c25)
-##  rprojroot     2.0.2      2020-11-15 [1] CRAN (R 4.0.2)                    
-##  sessioninfo   1.1.1      2018-11-05 [1] RSPM (R 4.0.3)                    
-##  stringi       1.5.3      2020-09-09 [1] RSPM (R 4.0.3)                    
-##  stringr       1.4.0      2019-02-10 [1] RSPM (R 4.0.3)                    
-##  testthat      3.0.1      2022-02-15 [1] Github (R-lib/testthat@e99155a)   
-##  tibble        3.0.3      2020-07-10 [1] RSPM (R 4.0.2)                    
-##  usethis       2.1.5.9000 2022-02-15 [1] Github (r-lib/usethis@57b109a)    
-##  vctrs         0.3.4      2020-08-29 [1] RSPM (R 4.0.2)                    
-##  withr         2.3.0      2020-09-22 [1] RSPM (R 4.0.2)                    
-##  xfun          0.26       2022-02-15 [1] Github (yihui/xfun@74c2a66)       
-##  yaml          2.2.1      2020-02-01 [1] RSPM (R 4.0.3)                    
-## 
-## [1] /usr/local/lib/R/site-library
-## [2] /usr/local/lib/R/library
-```
+Code review references will include @hutchdatascience_code_review, @radigan_what_nodate, @parker_opinionated_2017, @bodner_10_2018.

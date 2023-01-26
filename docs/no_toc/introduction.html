@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | Course Name</title>
-  <meta name="description" content="Description about Course/Book." />
+  <title>Chapter 1 Introduction | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 1 Introduction | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | Course Name" />
+  <meta property="og:title" content="Chapter 1 Introduction | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Description about Course/Book." />
+  
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | Course Name" />
+  <meta name="twitter:title" content="Chapter 1 Introduction | Tools for Reproducible Workflows in R" />
   
-  <meta name="twitter:description" content="Description about Course/Book." />
+  
   
 
 
@@ -165,10 +165,11 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#learning-objectives"><i class="fa fa-check"></i><b>1.4</b> Learning Objectives</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="a-new-chapter.html"><a href="a-new-chapter.html"><i class="fa fa-check"></i><b>2</b> A new chapter</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="a-new-chapter.html"><a href="a-new-chapter.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.1" data-path="a-new-chapter.html"><a href="a-new-chapter.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="2.2" data-path="a-new-chapter.html"><a href="a-new-chapter.html#libraries"><i class="fa fa-check"></i><b>2.2</b> Libraries</a></li>
 <li class="chapter" data-level="2.3" data-path="a-new-chapter.html"><a href="a-new-chapter.html#topic-of-section"><i class="fa fa-check"></i><b>2.3</b> Topic of Section</a>
 <ul>
@@ -215,7 +216,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Reproducible Workflows in R</a>
           </h1>
         </div>
 
@@ -237,80 +238,67 @@ div.csl-indent {
 </div>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>In this course we will explore a variety of tools that can assist with data analysis from a broad range of fields. The tools we will cover may take some time to get used to, but the payoff will be immeasurable. Not only are these skills valuable for career advancement, they will also make your work-life easier. The tools will enhance your ability to reproduce your work across similar projects, stay organized, collaborate with others effectively, and more.</p>
 <div id="motivation" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Motivation</h2>
+<p>Many researchers are self-taught when it comes to computer science. However, data analysis has become a requirement for most researchers. The ability to smoothly work in a reproducible manner not only makes for easier more maintainable workflows, it also improves scientific rigor and transparency.</p>
+<p>This course will help learners to use tools that will make their data analytic workflows more organized, more understandable to collaborators (and your future self!), and ultimately more efficient.</p>
 </div>
 <div id="target-audience" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Target Audience</h2>
-<p>The course is intended for …</p>
+<p>This course is intended for people conducting data analyses at the level of a graduate student or higher. The course is designed so that the majority of the material is presented in a high-level manner that should be applicable to researchers working in a broad range of areas. The course is centered around the R programming language, a widely used statistical analysis software package.</p>
 </div>
 <div id="curriculum" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Curriculum</h2>
 <p>The course covers…</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction.html#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
-<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
-##  setting  value                       
-##  version  R version 4.0.2 (2020-06-22)
-##  os       Ubuntu 20.04.3 LTS          
-##  system   x86_64, linux-gnu           
-##  ui       X11                         
-##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  ctype    en_US.UTF-8                 
-##  tz       Etc/UTC                     
-##  date     2022-11-15                  
-## 
-## ─ Packages ───────────────────────────────────────────────────────────────────
-##  package     * version    date       lib source                            
-##  assertthat    0.2.1      2019-03-21 [1] RSPM (R 4.0.3)                    
-##  bookdown      0.24       2022-02-15 [1] Github (rstudio/bookdown@88bc4ea) 
-##  callr         3.4.4      2020-09-07 [1] RSPM (R 4.0.2)                    
-##  cli           2.0.2      2020-02-28 [1] RSPM (R 4.0.0)                    
-##  crayon        1.3.4      2017-09-16 [1] RSPM (R 4.0.0)                    
-##  desc          1.2.0      2018-05-01 [1] RSPM (R 4.0.3)                    
-##  devtools      2.3.2      2020-09-18 [1] RSPM (R 4.0.3)                    
-##  digest        0.6.25     2020-02-23 [1] RSPM (R 4.0.0)                    
-##  ellipsis      0.3.1      2020-05-15 [1] RSPM (R 4.0.3)                    
-##  evaluate      0.14       2019-05-28 [1] RSPM (R 4.0.3)                    
-##  fansi         0.4.1      2020-01-08 [1] RSPM (R 4.0.0)                    
-##  fs            1.5.0      2020-07-31 [1] RSPM (R 4.0.3)                    
-##  glue          1.6.1      2022-01-22 [1] CRAN (R 4.0.2)                    
-##  hms           0.5.3      2020-01-08 [1] RSPM (R 4.0.0)                    
-##  htmltools     0.5.0      2020-06-16 [1] RSPM (R 4.0.1)                    
-##  jquerylib     0.1.4      2021-04-26 [1] CRAN (R 4.0.2)                    
-##  knitr         1.33       2022-02-15 [1] Github (yihui/knitr@a1052d1)      
-##  lifecycle     1.0.0      2021-02-15 [1] CRAN (R 4.0.2)                    
-##  magrittr      2.0.2      2022-01-26 [1] CRAN (R 4.0.2)                    
-##  memoise       1.1.0      2017-04-21 [1] RSPM (R 4.0.0)                    
-##  ottrpal       0.1.2      2022-02-15 [1] Github (jhudsl/ottrpal@1018848)   
-##  pillar        1.4.6      2020-07-10 [1] RSPM (R 4.0.2)                    
-##  pkgbuild      1.1.0      2020-07-13 [1] RSPM (R 4.0.2)                    
-##  pkgconfig     2.0.3      2019-09-22 [1] RSPM (R 4.0.3)                    
-##  pkgload       1.1.0      2020-05-29 [1] RSPM (R 4.0.3)                    
-##  prettyunits   1.1.1      2020-01-24 [1] RSPM (R 4.0.3)                    
-##  processx      3.4.4      2020-09-03 [1] RSPM (R 4.0.2)                    
-##  ps            1.3.4      2020-08-11 [1] RSPM (R 4.0.2)                    
-##  purrr         0.3.4      2020-04-17 [1] RSPM (R 4.0.3)                    
-##  R6            2.4.1      2019-11-12 [1] RSPM (R 4.0.0)                    
-##  readr         1.4.0      2020-10-05 [1] RSPM (R 4.0.2)                    
-##  remotes       2.2.0      2020-07-21 [1] RSPM (R 4.0.3)                    
-##  rlang         0.4.10     2022-02-15 [1] Github (r-lib/rlang@f0c9be5)      
-##  rmarkdown     2.10       2022-02-15 [1] Github (rstudio/rmarkdown@02d3c25)
-##  rprojroot     2.0.2      2020-11-15 [1] CRAN (R 4.0.2)                    
-##  sessioninfo   1.1.1      2018-11-05 [1] RSPM (R 4.0.3)                    
-##  stringi       1.5.3      2020-09-09 [1] RSPM (R 4.0.3)                    
-##  stringr       1.4.0      2019-02-10 [1] RSPM (R 4.0.3)                    
-##  testthat      3.0.1      2022-02-15 [1] Github (R-lib/testthat@e99155a)   
-##  tibble        3.0.3      2020-07-10 [1] RSPM (R 4.0.2)                    
-##  usethis       2.1.5.9000 2022-02-15 [1] Github (r-lib/usethis@57b109a)    
-##  vctrs         0.3.4      2020-08-29 [1] RSPM (R 4.0.2)                    
-##  withr         2.3.0      2020-09-22 [1] RSPM (R 4.0.2)                    
-##  xfun          0.26       2022-02-15 [1] Github (yihui/xfun@74c2a66)       
-##  yaml          2.2.1      2020-02-01 [1] RSPM (R 4.0.3)                    
-## 
-## [1] /usr/local/lib/R/site-library
-## [2] /usr/local/lib/R/library</code></pre>
+</div>
+<div id="learning-objectives" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Learning Objectives</h2>
+<ul>
+<li>Implement basic project organization tools:
+<ul>
+<li>Setup and configure RStudio/RStudio projects for data analysis (<code>here</code> package and file structure/paths)</li>
+<li>Install and configure <code>ProjectTemplate</code> package for formalizing and automating workflows</li>
+</ul></li>
+<li>Apply the <code>pointblank</code> package for validation of tabular data</li>
+<li>Write functions and package them</li>
+<li>Apply the <code>testthat</code> package for building software unit tests</li>
+<li>Setup and use Git repositories for version control of code</li>
+<li>Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows
+<ul>
+<li>Pull Requests</li>
+<li>Code review</li>
+<li>Issues</li>
+<li>Discussions</li>
+</ul></li>
+</ul>
+<p>References will include <span class="citation">Gillespie and Lovelace (<a href="#ref-gillespie_efficient_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation">Riederer (<a href="#ref-riederer_column_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation">Timbers, Campbell, and Lee (<a href="#ref-timbers_data_nodate" role="doc-biblioref">2022</a>)</span>.</p>
+<p>Code review references will include <span class="citation"><span>“About Scientific Code Review”</span> (<a href="#ref-hutchdatascience_code_review" role="doc-biblioref">n.d.</a>)</span>, <span class="citation">Radigan (<a href="#ref-radigan_what_nodate" role="doc-biblioref">n.d.</a>)</span>, <span class="citation">Parker (<a href="#ref-parker_opinionated_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation">Bodner (<a href="#ref-bodner_10_2018" role="doc-biblioref">2018</a>)</span>.</p>
 
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hutchdatascience_code_review" class="csl-entry">
+<span>“About Scientific Code Review.”</span> n.d. Accessed January 26, 2023. <a href="https://hutchdatascience.org/code_review/">https://hutchdatascience.org/code_review/</a>.
+</div>
+<div id="ref-bodner_10_2018" class="csl-entry">
+Bodner, Herbert. 2018. <span>“10 <span>Reasons</span> <span>Why</span> <span>Code</span> <span>Reviews</span> <span>Make</span> <span>Better</span> <span>Code</span> and <span>Better</span> <span>Teams</span>.”</span> <em>Simple Programmer</em>. <a href="https://simpleprogrammer.com/why-code-reviews-make-better-code-teams/">https://simpleprogrammer.com/why-code-reviews-make-better-code-teams/</a>.
+</div>
+<div id="ref-gillespie_efficient_2021" class="csl-entry">
+Gillespie, Colin, and Robin Lovelace. 2021. <em>Efficient <span>R</span> Programming</em>. O’Reilly Media Inc. <a href="https://csgillespie.github.io/efficientR/">https://csgillespie.github.io/efficientR/</a>.
+</div>
+<div id="ref-parker_opinionated_2017" class="csl-entry">
+Parker, Hilary. 2017. <span>“Opinionated Analysis Development.”</span> Preprint. PeerJ Preprints. <a href="https://doi.org/10.7287/peerj.preprints.3210v1">https://doi.org/10.7287/peerj.preprints.3210v1</a>.
+</div>
+<div id="ref-radigan_what_nodate" class="csl-entry">
+Radigan, Dan. n.d. <span>“What Is a <span>Code</span> <span>Review</span> &amp; <span>How</span> <span>It</span> <span>Can</span> <span>Save</span> <span>Time</span>.”</span> Atlassian. Accessed January 26, 2023. <a href="https://www.atlassian.com/agile/software-development/code-reviews">https://www.atlassian.com/agile/software-development/code-reviews</a>.
+</div>
+<div id="ref-riederer_column_2020" class="csl-entry">
+Riederer, Emily. 2020. <span>“Column <span>Names</span> as <span>Contracts</span>.”</span> Emily Riederer. September 2020. <a href="https://emilyriederer.netlify.app/post/column-name-contracts/">https://emilyriederer.netlify.app/post/column-name-contracts/</a>.
+</div>
+<div id="ref-timbers_data_nodate" class="csl-entry">
+Timbers, Tiffany, Trevor Campbell, and Melissa Lee. 2022. <em>Data <span>Science</span></em>. <a href="https://datasciencebook.ca">https://datasciencebook.ca</a>.
 </div>
 </div>
 <hr>

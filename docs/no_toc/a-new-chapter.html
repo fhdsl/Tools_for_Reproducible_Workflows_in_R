@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 A new chapter | Course Name</title>
-  <meta name="description" content="Description about Course/Book." />
+  <title>Chapter 2 A new chapter | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 2 A new chapter | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 A new chapter | Course Name" />
+  <meta property="og:title" content="Chapter 2 A new chapter | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Description about Course/Book." />
+  
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 A new chapter | Course Name" />
+  <meta name="twitter:title" content="Chapter 2 A new chapter | Tools for Reproducible Workflows in R" />
   
-  <meta name="twitter:description" content="Description about Course/Book." />
+  
   
 
 
@@ -165,10 +165,11 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#learning-objectives"><i class="fa fa-check"></i><b>1.4</b> Learning Objectives</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="a-new-chapter.html"><a href="a-new-chapter.html"><i class="fa fa-check"></i><b>2</b> A new chapter</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="a-new-chapter.html"><a href="a-new-chapter.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.1" data-path="a-new-chapter.html"><a href="a-new-chapter.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="2.2" data-path="a-new-chapter.html"><a href="a-new-chapter.html#libraries"><i class="fa fa-check"></i><b>2.2</b> Libraries</a></li>
 <li class="chapter" data-level="2.3" data-path="a-new-chapter.html"><a href="a-new-chapter.html#topic-of-section"><i class="fa fa-check"></i><b>2.3</b> Topic of Section</a>
 <ul>
@@ -215,7 +216,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Reproducible Workflows in R</a>
           </h1>
         </div>
 
@@ -240,7 +241,7 @@ div.csl-indent {
 <p>If you haven’t yet read the getting started Wiki pages; <a href="https://www.ottrproject.org/getting_started.html">start there</a>.</p>
 <p>To see the rendered version of this chapter and the rest of the template, see here: <a href="https://jhudatascience.org/OTTR_Template/" class="uri">https://jhudatascience.org/OTTR_Template/</a>.</p>
 <p>Every chapter needs to start out with this chunk of code:</p>
-<div id="learning-objectives" class="section level2" number="2.1">
+<div id="learning-objectives-1" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Learning Objectives</h2>
 <p>Every chapter also needs Learning objectives that will look like this:</p>
 <p>This chapter will cover:</p>
@@ -253,7 +254,7 @@ div.csl-indent {
 <h2><span class="header-section-number">2.2</span> Libraries</h2>
 <p>For this chapter, we’ll need the following packages attached:</p>
 <p>*Remember to add <a href="https://github.com/jhudsl/OTTR_Template/wiki/Using-Docker#starting-a-new-docker-image">any additional packages you need to your course’s own docker image</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="a-new-chapter.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="a-new-chapter.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span></code></pre></div>
 </div>
 <div id="topic-of-section" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Topic of Section</h2>
@@ -267,16 +268,16 @@ div.csl-indent {
 <div id="code-examples" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Code examples</h2>
 <p>You can demonstrate code like this:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a-new-chapter.html#cb4-1" aria-hidden="true" tabindex="-1"></a>output_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;code_output&quot;</span>)</span>
-<span id="cb4-2"><a href="a-new-chapter.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(output_dir)) {</span>
-<span id="cb4-3"><a href="a-new-chapter.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(output_dir)</span>
-<span id="cb4-4"><a href="a-new-chapter.html#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="a-new-chapter.html#cb2-1" aria-hidden="true" tabindex="-1"></a>output_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;code_output&quot;</span>)</span>
+<span id="cb2-2"><a href="a-new-chapter.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(output_dir)) {</span>
+<span id="cb2-3"><a href="a-new-chapter.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(output_dir)</span>
+<span id="cb2-4"><a href="a-new-chapter.html#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>And make plots too:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a-new-chapter.html#cb5-1" aria-hidden="true" tabindex="-1"></a>hist_plot <span class="ot">&lt;-</span> <span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Length)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="a-new-chapter.html#cb3-1" aria-hidden="true" tabindex="-1"></a>hist_plot <span class="ot">&lt;-</span> <span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Length)</span></code></pre></div>
 <p><img src="resources/images/02-chapter_of_course_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>You can also save these plots to file:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-new-chapter.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="fu">file.path</span>(output_dir, <span class="st">&quot;test_plot.png&quot;</span>))</span>
-<span id="cb6-2"><a href="a-new-chapter.html#cb6-2" aria-hidden="true" tabindex="-1"></a>hist_plot</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a-new-chapter.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="fu">file.path</span>(output_dir, <span class="st">&quot;test_plot.png&quot;</span>))</span>
+<span id="cb4-2"><a href="a-new-chapter.html#cb4-2" aria-hidden="true" tabindex="-1"></a>hist_plot</span></code></pre></div>
 <pre><code>## $breaks
 ## [1] 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0
 ## 
@@ -298,7 +299,7 @@ div.csl-indent {
 ## 
 ## attr(,&quot;class&quot;)
 ## [1] &quot;histogram&quot;</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a-new-chapter.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-new-chapter.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
 <pre><code>## png 
 ##   2</code></pre>
 </div>
@@ -432,7 +433,7 @@ Here’s more words that are hidden.
 <div id="print-out-session-info" class="section level2" number="2.12">
 <h2><span class="header-section-number">2.12</span> Print out session info</h2>
 <p>You should print out session info when you have code for <a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/managing-package-versions.html">reproducibility purposes</a>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="a-new-chapter.html#cb13-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="a-new-chapter.html#cb11-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value                       
 ##  version  R version 4.0.2 (2020-06-22)
@@ -443,7 +444,7 @@ Here’s more words that are hidden.
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2022-11-15                  
+##  date     2023-01-26                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version    date       lib source                            
