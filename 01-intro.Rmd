@@ -36,3 +36,5 @@ The course covers...
   - Discussions
   
 References will include @gillespie_efficient_2021, @riederer_column_2020, @timbers_data_nodate.
+
+Code review references will include @hutchdatascience_code_review, @radigan_what_nodate, @parker_opinionated_2017, @bodner_10_2018.
