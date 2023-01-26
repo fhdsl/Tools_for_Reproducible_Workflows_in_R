@@ -27,7 +27,7 @@ The course covers...
    - Install and configure `ProjectTemplate` package for formalizing and automating workflows
 - Apply the `pointblank` package for validation of tabular data 
 - Write functions and package them
-- Apply the testthat package for building software unit tests
+- Apply the `testthat` package for building software unit tests
 - Setup and use Git repositories for version control of code 
 - Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows 
   - Pull Requests
