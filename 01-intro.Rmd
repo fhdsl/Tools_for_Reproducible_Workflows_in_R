@@ -13,7 +13,7 @@ ottrpal::set_knitr_image_path()
 
 ## Target Audience  
 
-The course is intended for 
+This course is intended for people conducting data analyses at the level of a graduate student or higher. The course is designed so that the majority of the material is presented in a high-level manner that should be applicable to researchers working in a broad range of areas. The course is centered around the R programming language, a widely used statistical analysis software package. 
 
 ## Curriculum  
 
