@@ -6,18 +6,33 @@ ottrpal::set_knitr_image_path()
 # Introduction
 
 
+
+  
 ## Motivation
 
 
 ## Target Audience  
 
-The course is intended for ...
+The course is intended for 
 
 ## Curriculum  
 
 The course covers...
 
 
-```{r}
-devtools::session_info()
-```
+## Learning Objectives
+
+- Implement basic project organization tools:
+   - Setup and configure RStudio/RStudio projects for data analysis (`here` package and file structure/paths)
+   - Install and configure `ProjectTemplate` package for formalizing and automating workflows
+- Apply the `pointblank` package for validation of tabular data 
+- Write functions and package them
+- Apply the testthat package for building software unit tests
+- Setup and use Git repositories for version control of code 
+- Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows 
+  - Pull Requests
+  - Code review
+  - Issues
+  - Discussions
+  
+

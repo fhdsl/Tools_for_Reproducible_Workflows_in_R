@@ -1,12 +1,11 @@
 ---
-title: "Course Name"
+title: "Tools for Reproducible Workflows in R"
 date: "`r format(Sys.time(), '%B, %Y')`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-description: "Description about Course/Book."
 favicon: assets/dasl_favicon.ico
 output:
     bookdown::word_document2:
@@ -16,22 +15,6 @@ output:
 # About this Course {-}
 
 Reproducibility of data analyses can be enhanced through the use of tools designed to manage the complexity involved in any data analysis designed to address an important scientific question. We focus on a few software tools that aid in project organization, collaboration, auditability of analyses, and maintaining the integrity of data and code. In this course, we view a data analysis as a complex system with many integrated parts that together produce analytic results. The tools we focus on here allow data analysts to diagnose unexpected results, quickly identify problems with data and code, and provide a basis for managing the dynamic nature of data analysis.
-
-
-## Learning Objectives
-
-- Implement basic project organization tools:
-   - Setup and configure RStudio/RStudio projects for data analysis (`here` package and file structure/paths)
-   - Install and configure `ProjectTemplate` package for formalizing and automating workflows
-- Apply the `pointblank` package for validation of tabular data 
-- Write functions and package them
-- Apply the testthat package for building software unit tests
-- Setup and use Git repositories for version control of code 
-- Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows 
-  - Pull Requests
-  - Code review
-  - Issues
-  - Discussions
 
 
 
