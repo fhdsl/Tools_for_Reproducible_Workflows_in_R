@@ -5,7 +5,7 @@ ottrpal::set_knitr_image_path()
 
 # Introduction
 
-
+In this course we will explore a variety of tools that can assist with data analysis from a broad range of fields. The tools we will cover may take some time to get used to, but the payoff will be immeasurable. Not only are these skills valuable for career advancement, they will also make your work-life easier. The tools will enhance your ability to reproduce your work across similar projects, stay organized, collaborate with others effectively, and more.
 
   
 ## Motivation
