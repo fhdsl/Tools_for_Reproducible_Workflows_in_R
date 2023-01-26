@@ -10,6 +10,10 @@ ottrpal::set_knitr_image_path()
   
 ## Motivation
 
+Many researchers are self-taught when it comes to computer science. However, data analysis has become a requirement for most researchers. The ability to smoothly work in a reproducible manner not only makes for easier more maintainable workflows, it also improves scientific rigor and transparency. 
+
+This course will help learners to use tools that will make their data analytic workflows more organized, more understandable to collaborators (and your future self!), and ultimately more efficient.
+
 
 ## Target Audience  
 
