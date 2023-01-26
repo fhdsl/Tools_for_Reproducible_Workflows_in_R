@@ -1,4 +1,5 @@
 AnVIL
+auditability
 BIPOC
 Bloomberg
 Bookdown
@@ -29,5 +30,6 @@ Pandoc
 UE
 UE5
 reproducibility
+RStudio
 underserved
 www
