@@ -35,4 +35,4 @@ The course covers...
   - Issues
   - Discussions
   
-
+References will include @gillespie_efficient_2021, @riederer_column_2020, @timbers_data_nodate.
