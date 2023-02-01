@@ -8,7 +8,9 @@ ottrpal::set_knitr_image_path()
 
 ## Learning Objectives
 
-Every chapter also needs Learning objectives that will look like this:  
+Before we begin to jump into additional tools that can help us to be work more efficiently and in a more reproducible manner, it is helpful to review some nifty features of RStudio that are very helpful.
+
+- Understand how to con
 
 
 - Explain why project organization helps with work efficiency and reproducibility
