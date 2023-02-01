@@ -1,11 +1,5 @@
 
-# A new chapter
-
-If you haven't yet read the getting started Wiki pages; [start there](https://www.ottrproject.org/getting_started.html).
-
-To see the rendered version of this chapter and the rest of the template, see here: https://jhudatascience.org/OTTR_Template/.
-
-Every chapter needs to start out with this chunk of code:
+# Project Organization
 
 
 ```{r, include = FALSE}
@@ -16,9 +10,15 @@ ottrpal::set_knitr_image_path()
 
 Every chapter also needs Learning objectives that will look like this:  
 
-This chapter will cover:  
 
-- {You can use https://tips.uark.edu/using-blooms-taxonomy/ to define some learning objectives here}
+- Explain why project organization helps with work efficiency and reproducibility
+- Recognize how RStudio projects help organize file structures
+- Explain how R recognizes file paths to locate files that you want to work with
+- Illustrate how different file organizations result in different paths
+- Explain how the `here` package makes file paths in your code more easily usable by coworkers
+- Describe how the `ProjectTemplate` package can help you organize projects
+
+{You can use https://tips.uark.edu/using-blooms-taxonomy/ to define some learning objectives here}
 - {Another learning objective}
 
 ## Libraries
