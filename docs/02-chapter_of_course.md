@@ -59,7 +59,7 @@ And make plots too:
 hist_plot <- hist(iris$Sepal.Length)
 ```
 
-<img src="resources/images/02-chapter_of_course_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+![](resources/images/02-chapter_of_course_files/figure-docx/unnamed-chunk-4-1.png)<!-- -->
 
 You can also save these plots to file:
 
@@ -107,7 +107,7 @@ dev.off()
 How to include a Google slide. It's simplest to use the `ottrpal` package:
 
 
-<img src="resources/images/02-chapter_of_course_files/figure-html//1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ_gcc4fbee202_0_141.png" title="Major point!! example image" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
+![](resources/images/02-chapter_of_course_files/figure-docx//1YmwKdIy9BeQ3EShgZhvtb3MgR8P6iDX4DfFD65W_gdQ_gcc4fbee202_0_141.png){width=100%}
 
 But if you have the slide or some other image locally downloaded you can also use HTML like this:
 
@@ -124,7 +124,12 @@ To embed videos in your course, you can use `knitr::include_url()` like this:
 Note that you should use `echo=FALSE` in the code chunk because we don't want the code part of this to show up. If you are unfamiliar with [how R Markdown code chunks work, read this](https://rmarkdown.rstudio.com/lesson-3.html).
 
 
-<iframe src="https://www.youtube.com/embed/VOCYL-FNbr0" width="672" height="400px"></iframe>
+
+```
+## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
+```
+
+<iframe src="https://www.youtube.com/embed/VOCYL-FNbr0" width="100%" height="400px"></iframe>
 
 ### Using HTML
 
@@ -162,7 +167,7 @@ Or, you can embed some websites.
 
 This works:
 
-<iframe src="https://yihui.org" width="672" height="400px"></iframe>
+<iframe src="https://yihui.org" width="100%" height="400px"></iframe>
 
 
 ### Using HTML
@@ -320,7 +325,6 @@ devtools::session_info()
 ##  hms           0.5.3      2020-01-08 [1] RSPM (R 4.0.0)                    
 ##  htmltools     0.5.0      2020-06-16 [1] RSPM (R 4.0.1)                    
 ##  httr          1.4.2      2020-07-20 [1] RSPM (R 4.0.3)                    
-##  jquerylib     0.1.4      2021-04-26 [1] CRAN (R 4.0.2)                    
 ##  knitr         1.33       2022-02-15 [1] Github (yihui/knitr@a1052d1)      
 ##  lifecycle     1.0.0      2021-02-15 [1] CRAN (R 4.0.2)                    
 ##  magrittr    * 2.0.2      2022-01-26 [1] CRAN (R 4.0.2)                    
@@ -347,6 +351,7 @@ devtools::session_info()
 ##  tibble        3.0.3      2020-07-10 [1] RSPM (R 4.0.2)                    
 ##  usethis       2.1.5.9000 2022-02-15 [1] Github (r-lib/usethis@57b109a)    
 ##  vctrs         0.3.4      2020-08-29 [1] RSPM (R 4.0.2)                    
+##  webshot       0.5.2      2019-11-22 [1] RSPM (R 4.0.3)                    
 ##  withr         2.3.0      2020-09-22 [1] RSPM (R 4.0.2)                    
 ##  xfun          0.26       2022-02-15 [1] Github (yihui/xfun@74c2a66)       
 ##  yaml          2.2.1      2020-02-01 [1] RSPM (R 4.0.3)                    
