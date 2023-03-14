@@ -27,6 +27,8 @@ The course covers...
 ## Learning Objectives
 
 - Implement basic project organization tools:
+- R Studio tips and tricks for efficiency
+- R Markdown to create reports
    - Setup and configure RStudio/RStudio projects for data analysis (`here` package and file structure/paths)
    - Install and configure `ProjectTemplate` package for formalizing and automating workflows
 - Apply the `pointblank` package for validation of tabular data 

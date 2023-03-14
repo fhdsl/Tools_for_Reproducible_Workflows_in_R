@@ -1,9 +1,20 @@
-book_filename: "Course_Name"
+book_filename: "Tools for Reproducibility in R"
 chapter_name: "Chapter "
-repo: https://github.com/jhudsl/OTTR_Template/
+repo: https://github.com/fhdsl/Tools_for_Reproducible_Workflows_in_R
+
 rmd_files: ["index.Rmd",
             "01-intro.Rmd",
-            "02-chapter_of_course.Rmd",
+            "02-why-R.Rmd",
+            "03-components.Rmd",
+            "04-rstudio-tour.Rmd",
+            "05-setting-up.Rmd",
+            "06-transparency.Rmd",
+            "07-github-workflow.Rmd",
+            "08-software-versions.Rmd",
+            "09-sharing-data.Rmd",
+            "10-functions.Rmd",
+            "11-project-maintenance.Rmd",
+            "12-collabs.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes

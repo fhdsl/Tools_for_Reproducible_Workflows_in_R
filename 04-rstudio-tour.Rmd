@@ -1,0 +1,10 @@
+
+# A Tour of RStudio
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_0")
+```
