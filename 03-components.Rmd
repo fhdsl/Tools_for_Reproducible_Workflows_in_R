@@ -74,9 +74,17 @@ Often data analyses start out with a particular goal or question and morph along
 
 ## Consistent
 
+A reproducible analysis is consistent. It should consistently run and consistently produce the same results. It should also be written in a manner that follows a consistent style and project organization scheme.
+
 ### Re-runs consistently and easily
 
+A reproducible analysis should be able to re-run with one command that is explicitly stated on the README. If an individual has a copy of the analysis project, it should include everything that is needed to re-run that analysis and the number of steps needed to re-run the analysis should be the lowest number possible. The more steps that are needed, the less likely it will be that someone will be able to reproduce the analysis.
+
+This also generally means that analyses that can be performed through programmatic scripts are more reproducible than those performed by GUI's (graphic user interfaces). Most GUI's, although sometimes more intuitive to use, are unfortunately less reproducible because they require more manual steps by clicking various buttons.
+
 ### Follows a code style
+
+Code style is important because it not only make code more readable, but it also lends a certain confidence to the 
 
 ### Is project organized in a way that is consistent
 
