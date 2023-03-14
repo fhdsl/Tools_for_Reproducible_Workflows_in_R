@@ -58,6 +58,10 @@ R has a very rich and active community!
 
 This makes it easier to reach out to others for help, find support, find tutorials, and more. 
 
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Cartoon of parrot saying: The R community can support me to learn R"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_0_6")
+```
+
 This means that overall your code has a better chance of being more accessible than if it were written in a language that is not open source or that has limited support. 
 
 You can also find support to make sure your code does what you want it to, as well as support to make your code as reproducible as possible.
