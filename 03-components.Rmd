@@ -11,22 +11,77 @@ In this chapter, we will discuss what components of an analysis make it reproduc
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_23")
 ```
 
-A reproducible analysis is:
+## Reproducibility is iterative work
 
-## Transparent in its decisions and goals
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_23")
+```
 
-A key to reproducibility is not just having code that runs reliably, but perhaps more importantly, clear communication about the analysis and the decisions made about that analysis along the way. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute to it if needed.
+## Components of reproducibility
+A reproducible analysis is transparent, consistent, and accessible.
+
+- **Transparency** refers to the idea that it is well communicated and everything is displayed: data, code, goals, methods, and decisions. There are no secrets in a reproducible analysis/
+- **Consistency** refers to the idea that the code can be consistently run, but also everything follows a particular system, conventions and design.
+- **Accessibility** refers to the idea that anyone anywhere should be able to run and/or examine the analysis. No pay walls or expensive software should be required.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21b8e34c516_0_5")
+```
+
+## Transparent
+
+Code that runs reliably is important but clear communication about the analysis and the decisions made make an analysis reproducible. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute ideas and suggestions to it or borrow the methods and strategies for their own analyses.
 
 ### Open source
 
-Open source means not only publicly available but that the analysis is able to be modified by anyone. This doesn't mean that any and all modifying contributions need to be accepted, because some level of standards and quality checks need to be maintained by the owners of the analysis, but just that anyone online could propose a contribution if they wanted to.
+Open source means not making code and data publicly available but that the analysis is able to be modified by anyone. This doesn't mean that any and all modifying contributions need to be accepted, because some level of standards and quality checks need to be maintained by the owners of the analysis, but just that anyone online could propose a contribution if they wanted to.
 
-Open source in the context of an analysis can be slightly different than in the context of software, particularly when an analysis deals with human data that needs to be protected. 
+For an analysis to be truly open source, it needs to be easily accessed by others and stored online. Code that can be emailed, for example, is not considered open source.
 
-### Well documented
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2006b5a2e6b_0_448")
+```
 
-## Able to be re-run easily
+For reproducibility, keeping your code on GitHub is a great open source solution. It is commonly used, and has a built in system that allows others to contribute changes in a way that can be methodically reviewed by you (this is called the pull request system and we will talk about it more).
 
-## Obtains the same results
+### Data is publicly available
 
-## Version controlled
+A transparent analysis has data that is publicly shared so that others can re-run the analysis as you have. Data should be provided in a way that it can be programmatically accessed (downloaded by a script). Data also need to be well documented in the form of metadata.
+
+<div class = "warning">
+Data sharing is a critical piece for promoting the open sourceness of your analysis, however this often needs to be balanced with privacy if you work with human data or samples. These data will likely contain personal identifiable information (PII) and protected health information (PHI). For more details on this, we encourage you to see this [course about data management](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html).
+</div>
+
+It's imperative that you protect human data but that doesn't mean that your analysis cannot be publicly shared! These are not mutually exclusive goals, but will take a bit of thoughtful planning. In the upcoming chapters we will provide additional ideas and information for how you can conduct an open source analysis while appropriately protecting sensitive data.
+
+### Readable code
+
+Readable code is much more important than clever code.
+
+### Well-documented
+
+A well-documented analysis is a reproducible analysis. If analyses didn't require a lot of decisions and human comprehension than documentation would be unnecessary -- but also a lot of data analysts would be out of a job because robots would be able to do it! Analysts and developers often think of documentation as an after thought, but good documentation is being actively developed along with the code. Arguably, it is more important to have clear documentation than even working code, because if broken code is well documented, others may be able to help make suggestions for how it can be fixed.
+
+Good documentation not only describes what happened in an analysis, but why it happened -- why did the analyst choose this method or parameter as opposed to others? Was there an additional analysis, literature, or other resource that helped them come to this conclusion? Documentation should describe not only what is happening, but the thought process that led us here.
+
+### Version controlled
+
+A reproducible analysis is a version controlled analysis. Analyses go through many iterations -- and this is a good thing! -- but if not done properly with version control, can lead to an unruly code base and a lot of confused team members.
+
+Version control is helpful for many reasons
+
+Often data analyses start out with a particular goal or question and morph along the way, having side investigations that may or may not lead to "dead ends" or other questions
+
+## Consistent
+
+### Re-runs consistently and easily
+
+### Follows a code style
+
+### Is project organized in a way that is consistent
+
+## Accessible
+
+### No pay walls
+
+### Minimal bureaucratic hoops
