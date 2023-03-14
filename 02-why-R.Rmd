@@ -10,7 +10,7 @@ ottrpal::set_knitr_image_path()
 
 Before we begin to jump into additional tools that R can help us with to be work more efficiently and in a more reproducible manner, it is helpful to first discuss why we should consider R in the first place. After completing this section you will be able to:
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: 1.Explain why R can be especially helpful for transparent and reproducibility data analyses, 2. Recognize that R has a very active and supportive community and locate access points to that community 3.Compare R to other similar statistical and data analysis tools and programming languages, 4.Describe the unique benefits of R"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: 1.Explain why R can be especially helpful for transparent and reproducibility data analyses, 2. Recognize that R has a very active and supportive community and locate access points to that community 3. Compare R to other similar statistical and data analysis tools and programming languages, 4.Describe the unique benefits of R"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_0_0")
 ```
 
@@ -79,7 +79,7 @@ Many people have designed useful packages that are especially relevant to:
 2) Statistical analysis of data
 3) Creating effective plots of data
 
-Although other options like SPSS and SAS exist to help you do statistical analysis, R is especially useful at getting messy data ready to analyze and R is also particularly powerful for creating useful plots to represent patterns in data.  Conveniently, R can do all of these and does not require users to switch between different programs to perform all these aspects of a data project. R also helps create reports that can demonstrate to collaborators and others exactly howan analysis was performed, aiding in the transparency of how the data was used from start to finish.
+Although other options like [SPSS](https://www.ibm.com/products/spss-statistics) and [SAS](https://www.sas.com/) (which are not free!) can also be helpful for statistical analysis, R is especially powerful at getting messy data ready to analyze andfor creating useful plots to represent patterns in data.  Conveniently, R can do all of these steps in a data project and does not require users to switch between different programs to perform these tasks. R also helps create reports that can demonstrate to collaborators and others exactly how analysis was performed, aiding in the transparency of how the data was used from start to finish.
 
 R can also import data from many different sources that other statistical software can't handle (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)). This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
 
@@ -97,8 +97,8 @@ In summary, R can be especially useful if you want to make your data analyses mo
 
 1. It is free and open source, meaning that code that you might incorporate in your analyses is accessible to anyone. Secondly, others can use your code without needing to buy software.
 2. There is a rich R community that can help you make the most out of your code and learn how to write your code in a more reproducible manner.
-3. R is especially designed to analyze data and for the entirety of the process, which makes it great for creating transparent information about how you actually worked with data from start to finish.
-
+3. R is particularly powerful for preparing data for analysis and for creating visual representations of data. Beyond being free, these unique benefits make R a particularly good statistical tool.
+4. R is especially designed to analyze data and for the entirety of the process, which makes it great for creating transparent information about how you actually worked with data from start to finish.
 
 
 
