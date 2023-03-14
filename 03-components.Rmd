@@ -1,10 +1,32 @@
 
-# Components of a reproducible analysis 
+# Components of a reproducible analysis
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
 
+In this chapter, we will discuss what components of an analysis make it reproducible.
+
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_23")
 ```
+
+A reproducible analysis is:
+
+## Transparent in its decisions and goals
+
+A key to reproducibility is not just having code that runs reliably, but perhaps more importantly, clear communication about the analysis and the decisions made about that analysis along the way. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute to it if needed.
+
+### Open source
+
+Open source means not only publicly available but that the analysis is able to be modified by anyone. This doesn't mean that any and all modifying contributions need to be accepted, because some level of standards and quality checks need to be maintained by the owners of the analysis, but just that anyone online could propose a contribution if they wanted to.
+
+Open source in the context of an analysis can be slightly different than in the context of software, particularly when an analysis deals with human data that needs to be protected. 
+
+### Well documented
+
+## Able to be re-run easily
+
+## Obtains the same results
+
+## Version controlled
