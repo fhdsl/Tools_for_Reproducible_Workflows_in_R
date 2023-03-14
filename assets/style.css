@@ -191,6 +191,23 @@ li.appendix span, li.part span { /* for TOC part names */
 	height: 0px;
 }
 
+.trapezoid {
+  width: 132px;
+  text-align: center;
+  position: relative;
+    left: 10px;
+  border-right: 50px solid #ffb809;
+  border-bottom: 50px solid #dbdbdb;
+  border-left: 50px solid #0098a7;
+  box-sizing: content-box;
+}
+.trapezoid span {
+  position: absolute;
+  top: 8px;
+  bottom: 5px;
+  left: 5%;
+  color: #dbdbdb;
+}
 
 /*--- LOGO ---*/
 
