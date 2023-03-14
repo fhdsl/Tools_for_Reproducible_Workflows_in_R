@@ -21,7 +21,7 @@ Before we begin to jump into additional tools that R can help us with to be work
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_9")
 ```
 
-R is a programming language and environment for statistical computing and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand. However, countless contributors have made R what it is today. 
+[R](https://en.wikipedia.org/wiki/R_(programming_language)) is a programming language and environment for statistical computing and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand. Countless contributors have made R what it is today. 
 
 There are some especially useful aspects about R that make it a great option for creating reproducible data analyses. 
 
@@ -81,7 +81,25 @@ Many people have designed useful packages that are especially relevant to:
 
 Although other options like SPSS and SAS exist to help you do statistical analysis, R is especially useful at getting messy data ready to analyze and creating really useful plots all in one place. It also helps you create reports that can demonstrate to collaborators and others exactly how you did your analysis, aiding in the transparency of how the data was used from start to finish.
 
-R can also import data from many different sources (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)), allowing users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
+R can also import data from many different sources that other statistical software can't handle (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)). This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
+
+The following design features make R especially helpful for creating reproducible analyses:
+1.It is easier to work with messy data and get it ready for analysis 
+1.It is easier to create effective plots using the same program as for data prep and analysis
+1. It helps you create reports that can show the entire data analysis process from importing the data to making plots
+1. It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications to the data 
+
+
+## Conclusion
+
+In summary, R can be especially useful if you want to make your data analyses more transparent and reproducible for the following reasons:
+
+1. It is free and open source, meaning that code that you might incorporate in your analyses is accessible to anyone. Secondly, others can use your code without needing to buy software.
+2. There is a rich R community that can help you make the most out of your code and learn how to write your code in a more reproducible manner.
+3. R is especially designed to analyze data and for the entirity of the process, which makes it great for creating transparent information about how you actually worked with data from start to finish.
+
+
+
 
 
 
