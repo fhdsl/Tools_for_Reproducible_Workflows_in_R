@@ -21,6 +21,8 @@ Before we begin to jump into additional tools that R can help us with to be work
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_9")
 ```
 
+R is a programming language and environment for statistical computing and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand. However, countless contributors have made R what it is today. 
+
 There are some especially useful aspects about R that make it a great option for creating reproducible data analyses. 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Why is R useful for Reproducibility? 1.It is free and open source, 2. The community, 3. It is designed for data wrangling and stats"}
@@ -37,7 +39,7 @@ Thus all of the code involved in creating R is actually publicly available! This
 In fact, many users create their own R packages to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
 
 <div class = "dictionary">
-
+- R programming language and enivornment for statisical computing and for creating plots and other graphics
 - open source -  Code is publicly available.
 - open development - Anyone can contribute to developing more R code.
 - R package - A set of code that can be shared between users.
@@ -67,7 +69,9 @@ There are several R community groups that are especially helpful:
 
 See this [link](https://jhudatascience.org/intro_to_r/resources.html) for more R resources.
 
+## Designed for Wrangling and Stats
 
+R is a statistical programming language
 
 
 
