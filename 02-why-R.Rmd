@@ -33,6 +33,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The first is that R is free and [open source](https://opensource.com/resources/what-open-source). 
 
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Cartoon of parrot saying: What!? R is free!! That's awesome!"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_1_0")
+```
+
+
 The term open source means that the code is publicly available.
 Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular package (a set of code that allows you to do various things) so that they can modify or build upon the code if the would like to. 
 
@@ -58,7 +63,7 @@ R has a very rich and active community!
 
 This makes it easier to reach out to others for help, find support, find tutorials, and more. 
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Cartoon of parrot saying: The R community can support me to learn R"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Cartoon of parrot saying: The R community can support me to lear about R"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_0_6")
 ```
 
