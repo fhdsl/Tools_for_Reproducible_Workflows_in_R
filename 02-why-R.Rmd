@@ -21,7 +21,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_9")
 ```
 
-[R](https://en.wikipedia.org/wiki/R_(programming_language)) is a programming language and environment for statistical computing and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand. Countless contributors have made R what it is today. 
+[R](https://en.wikipedia.org/wiki/R_(programming_language)) is a [programming language](https://en.wikipedia.org/wiki/Programming_language) for working with data, performing statistical analyses, and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand. Countless contributors have made R what it is today. 
 
 There are some especially useful aspects about R that make it a great option for creating reproducible data analyses. 
 
@@ -39,11 +39,11 @@ Thus all of the code involved in creating R is actually publicly available! This
 In fact, many users create their own R packages to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
 
 <div class = "dictionary">
-- R programming language and enivornment for statisical computing and for creating plots and other graphics
+- programming language - a specified set of notations to tell a computer what to do
+- R - programming language for working with data to perform statistical analyses and for creating plots and other graphics
 - open source -  Code is publicly available.
 - open development - Anyone can contribute to developing more R code.
 - R package - A set of code that can be shared between users.
-
 
 </div>
 
@@ -71,7 +71,7 @@ See this [link](https://jhudatascience.org/intro_to_r/resources.html) for more R
 
 ## Designed for data analysis
 
-R is a statistical programming language, meaning it was designed to help you analyze data. That is the main focus of the language. This is one of the major advantages of using R over other programming languages or statistical analysis programs. 
+R is a statistical programming language, meaning it was designed to help you analyze data. That is the main focus of the language. This is one of the major advantages of using R over other programming languages that have more general purposes. 
 
 Many people have designed useful packages that are especially relevant to:
 
@@ -79,15 +79,16 @@ Many people have designed useful packages that are especially relevant to:
 2) Statistical analysis of data
 3) Creating effective plots of data
 
-Although other options like SPSS and SAS exist to help you do statistical analysis, R is especially useful at getting messy data ready to analyze and creating really useful plots all in one place. It also helps you create reports that can demonstrate to collaborators and others exactly how you did your analysis, aiding in the transparency of how the data was used from start to finish.
+Although other options like SPSS and SAS exist to help you do statistical analysis, R is especially useful at getting messy data ready to analyze and R is also particularly powerful for creating useful plots to represent patterns in data.  Conveniently, R can do all of these and does not require users to switch between different programs to perform all these aspects of a data project. R also helps create reports that can demonstrate to collaborators and others exactly howan analysis was performed, aiding in the transparency of how the data was used from start to finish.
 
 R can also import data from many different sources that other statistical software can't handle (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)). This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
 
 The following design features make R especially helpful for creating reproducible analyses:
-1.It is easier to work with messy data and get it ready for analysis 
-1.It is easier to create effective plots using the same program as for data prep and analysis
-1. It helps you create reports that can show the entire data analysis process from importing the data to making plots
-1. It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications to the data 
+
+1. It enables users to work with messy data and get it ready for analysis 
+1. Users can create effective plots using the same program as for data prep and analysis
+1. It helps create reports that can show the entire data analysis process from importing the data to making plots
+1. It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications of the data 
 
 
 ## Conclusion
