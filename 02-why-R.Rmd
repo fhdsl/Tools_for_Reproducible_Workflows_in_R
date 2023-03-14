@@ -17,7 +17,37 @@ Before we begin to jump into additional tools that R can help us with to be work
 
 ## Why R
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Why R?"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_9")
 ```
+
+There are some especially useful aspects about R that make it a great option for creating reproducible data analyses. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Why is R useful for Reproducibility? 1.It is free and open source, 2. The community, 3. It is designed for data wrangling and stats"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.gcf1264c749_0_135")
+```
+
+## It is free and open source
+
+The first is that R is free and [open source](https://opensource.com/resources/what-open-source). 
+
+The term open source means that the code is publicly available.
+Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular package (a set of code that allows you to do various things) so that they can modify or build upon the code if the would like to. 
+
+In fact, many users create their own R packages to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
+
+<div class = "dictionary">
+
+- open source -  Code is publicly available.
+- open development - Anyone can contribute to developing more R code.
+- R package - A set of code that can be shared between users.
+
+
+</div>
+
+Why are these aspects good for reproducibility? 
+
+- Since R is free, it is accessible to anyone. Therefore, anyone could run your code if you shared it with them, without them needing to buy software.
+- Since R is open source, if you use packages from others, people can determine what underlying code your code used (if you tell them what version you used - more on that later!)
+
 
