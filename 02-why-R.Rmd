@@ -69,9 +69,23 @@ There are several R community groups that are especially helpful:
 
 See this [link](https://jhudatascience.org/intro_to_r/resources.html) for more R resources.
 
-## Designed for Wrangling and Stats
+## Designed for data analysis
 
-R is a statistical programming language
+R is a statistical programming language, meaning it was designed to help you analyze data. That is the main focus of the language. This is one of the major advantages of using R over other programming languages or statistical analysis programs. 
+
+Many people have designed useful packages that are especially relevant to:
+
+1) Dealing with messy data in a systematic and reproducible way to get it into a state that is useful for data analysis
+2) Statistical analysis of data
+3) Creating effective plots of data
+
+Although other options like SPSS and SAS exist to help you do statistical analysis, R is especially useful at getting messy data ready to analyze and creating really useful plots all in one place. It also helps you create reports that can demonstrate to collaborators and others exactly how you did your analysis, aiding in the transparency of how the data was used from start to finish.
+
+R can also import data from many different sources (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)), allowing users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
+
+
+
+
 
 
 
