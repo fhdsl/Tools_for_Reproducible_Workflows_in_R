@@ -38,7 +38,7 @@ Open source means not making code and data publicly available but that the analy
 
 For an analysis to be truly open source, it needs to be easily accessed by others and stored online. Code that can be emailed, for example, is not considered open source.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2006b5a2e6b_0_448")
 ```
 
@@ -56,21 +56,25 @@ It's imperative that you protect human data but that doesn't mean that your anal
 
 ### Readable code
 
-Readable code is much more important than clever code.
+Readable code is much more important than clever code. If you are the only one who knows what your code is doing, it will not only be difficult for other to contribute or vet your analysis, but in the future, you will probably not understand what your code is doing either.
+
+[Read this course chapter from the ITCR training network about how to write durable code ](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/writing-durable-code.html).
 
 ### Well-documented
 
 A well-documented analysis is a reproducible analysis. If analyses didn't require a lot of decisions and human comprehension than documentation would be unnecessary -- but also a lot of data analysts would be out of a job because robots would be able to do it! Analysts and developers often think of documentation as an after thought, but good documentation is being actively developed along with the code. Arguably, it is more important to have clear documentation than even working code, because if broken code is well documented, others may be able to help make suggestions for how it can be fixed.
 
-Good documentation not only describes what happened in an analysis, but why it happened -- why did the analyst choose this method or parameter as opposed to others? Was there an additional analysis, literature, or other resource that helped them come to this conclusion? Documentation should describe not only what is happening, but the thought process that led us here.
+Good documentation not only describes what happened in an analysis, but why it happened -- why did the analyst choose this method or parameter as opposed to others? Was there an additional analysis, literature, or other resource that led us to this conclusion? Documentation should describe not only what is happening, but the thought process that led us here.
 
 ### Version controlled
 
-A reproducible analysis is a version controlled analysis. Analyses go through many iterations -- and this is a good thing! -- but if not done properly with version control, can lead to an unruly code base and a lot of confused team members.
+A reproducible analysis is a version controlled analysis. Analyses go through many iterations, side quests, and sometimes meet dead ends -- and this is okay, it is how data science works! -- but if not done properly with version control, can lead to an unruly code base and a lot of confused team members.
 
-Version control is helpful for many reasons
+Version control helps maintain the history of your project in a way that will allow you to recover old versions if necessary, or otherwise have documented what has happened. It can also be useful for rectifying different versions of a code base between team members.
 
-Often data analyses start out with a particular goal or question and morph along the way, having side investigations that may or may not lead to "dead ends" or other questions
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201b2cf6e8c_34_370")
+```
 
 ## Consistent
 
@@ -84,12 +88,38 @@ This also generally means that analyses that can be performed through programmat
 
 ### Follows a code style
 
-Code style is important because it not only make code more readable, but it also lends a certain confidence to the 
+Code style is important because it not only make code more readable, but it also lends a certain confidence to the reader of the code, that this code has been thought through and well kept.
 
-### Is project organized in a way that is consistent
+### Have an organizational scheme
+
+Project organization is a major component of reproducibility. If you are not able to find your files, then chances are individuals who are attempting to reproduce your analysis also will not be able to understand where to find things. We will discuss in a later chapter strategies for keeping projects organized, while realizing that project organization is an ongoing, iterative task.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201b2cf6e8c_34_0")
+```
 
 ## Accessible
 
-### No pay walls
+We discussed that we use R because it is open source and free. This helps make it conducible for making reproducible analyses. Accessibility is important for reproducibility. This means minimizing the number of hoops others have to jump through to re-run your analysis.
 
-### Minimal bureaucratic hoops
+Accessibility also involves prioritizing democratizing science over the antiquated fear that your ideas will be "scooped". We encourage you to realize that science does best when everyone has access to it and that includes code and data analyses! Making your data and code accessible, allows everyone to contribute and learn from your analysis.
+
+Accessibility means that anyone should be able to access it -- whether or not their funding is in ample supply. So be sure to publish in journals and code repositories that do not require membership fees or any other kinds of pay walls.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is sad because an analysis has been published behind a pay wall and has used expensive software. Reproducible parrot can not reproduce these results. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2006b5a2e6b_0_448")
+```
+
+Sometimes even if something is accessible in that it is "free" monetarily it doesn't mean that it is free in the sense of the amount of time it takes to get access to it. If your code and data does need some sort of controlled access features for privacy and ethical concerns of protecting data, make sure that the paperwork hoops that are put in place are truly there in the spirit of protecting the data and not merely serving to keep data and code hidden from others.
+
+
+
+## Conclusion
+
+In this chapter, we gave a high level overview of reproducible analyses. We discussed that reproducible analyses are transparent, consistent, and accessible. This means in practical terms, reproducible analyses:
+
+- Are open source
+- Have data that is publicly available (when appropriate)
+- Emphasize readable code
+- Are well documented
+-
