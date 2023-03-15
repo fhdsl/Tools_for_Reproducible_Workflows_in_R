@@ -7,6 +7,10 @@ learning-objectives
 r-for-reproducibility
 learning-objectives-1
 why-r
+it-is-free-and-open-source
+the-community
+designed-for-data
+conclusion
 components-of-a-reproducible-analysis
 a-tour-of-rstudio
 setting-up-your-project
