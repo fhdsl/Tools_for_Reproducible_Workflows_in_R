@@ -38,17 +38,16 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-The term open source means that the code is publicly available.
-Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular package (a set of code that allows you to do various things) so that they can modify or build upon the code if they would like to. 
+The term **open source** means that the code is publicly available.
+Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular **package** (a set of code that allows you to do various things) so that they can modify or build upon the code if they would like to. 
 
-In fact, many users create their own R packages to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
+In fact, many users create their own R **packages** to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
 
 <div class = "dictionary">
-- programming language - a specified set of notations to tell a computer what to do
-- R - programming language for working with data to perform statistical analyses and for creating plots and other graphics
-- open source -  Code is publicly available.
-- open development - Anyone can contribute to developing more R code.
-- R package - A set of code that can be shared between users.
+- **programming language** - A specified set of notations to tell a computer what to do
+- **R** - Programming language for working with data to perform statistical analyses and for creating plots and other graphics
+- **open source** -  Code is publicly available
+- **R package** - A set of code that can be shared between users
 
 </div>
 
@@ -67,9 +66,7 @@ This makes it easier to reach out to others for help, find support, find tutoria
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_0_6")
 ```
 
-This means that overall your code has a better chance of being more accessible than if it were written in a language that is not open source or that has limited support. 
 
-You can also find support to make sure your code does what you want it to, as well as support to make your code as reproducible as possible.
 
 There are several R community groups that are especially helpful:
 
@@ -77,6 +74,11 @@ There are several R community groups that are especially helpful:
 - There are lots of useful resources, such as the [R for Data Science book](https://r4ds.had.co.nz/) (written by two developers at Posit (formally called RStudio) which develops lots of core R packages), resources and online courses from the [Johns Hopkins Data Science Lab](https://jhudatascience.org/courses.html) including [Open Case Studies](https://www.opencasestudies.org/), resources and workshops from [Data Carpentry](https://datacarpentry.org/),  [Dataquest](https://www.dataquest.io/v2/), [DataTrail](https://datatrail-jhu.github.io/DataTrail/) and more!
 
 See this [link](https://jhudatascience.org/intro_to_r/resources.html) for more R resources.
+
+Why is this rich community good for reproducibility?
+
+- Overall your code has a better chance of being more accessible than if it were written in a language that is not open source or that has limited support. 
+- You can also find support to make sure your code does what you want it to, as well as support to make your code as reproducible as possible.
 
 ## Designed for data
 
@@ -97,12 +99,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-The following design features make R especially helpful for creating reproducible analyses:
+Why are these design features especially helpful for creating reproducible analyses?
 
-1. It enables users to work with messy data and get it ready for analysis 
-1. Users can create effective plots using the same program as for data prep and analysis
-1. It helps create reports that can show the entire data analysis process from importing the data to making plots
-1. It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications of the data 
+1. It enables users to work with messy data and get it ready for analysis, as opposed to requiring users to use other programs. The `tidyverse` a suite of very helpful packages has many data wrangling packages that are especially intuitive for others to read and understand your code. 
+1. Users can create effective plots using the same program as for data prep and analysis. The `ggplot2` package is famous for making really effective and customizable plots.
+1. It helps create reports that can show the entire data analysis process from importing the data to making plots. `R Markdown` reports are very helpful for this.
+1. It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications of the data.
 
 
 ## Conclusion
