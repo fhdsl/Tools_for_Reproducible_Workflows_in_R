@@ -5,8 +5,10 @@ Bloomberg
 Bookdown
 Coursera
 css
+customizable
 Datatrail
 DataTrail
+Dataquest
 Dockerfile
 Dockerhub
 dropdown
@@ -15,6 +17,7 @@ GDSCN
 GitHub
 Github
 GH
+Ihaka
 impactful
 ITCR
 itcrtraining
@@ -25,6 +28,7 @@ Markua
 mentorship
 NCI
 NHGRI
+NIGMS
 ottrpal
 Pandoc
 UE
