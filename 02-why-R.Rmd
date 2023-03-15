@@ -39,7 +39,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 
 The term open source means that the code is publicly available.
-Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular package (a set of code that allows you to do various things) so that they can modify or build upon the code if the would like to. 
+Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular package (a set of code that allows you to do various things) so that they can modify or build upon the code if they would like to. 
 
 In fact, many users create their own R packages to share their code with others.  There are places such as the Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)) and elsewhere that allow users to publish their own packages for others to use. 
 
