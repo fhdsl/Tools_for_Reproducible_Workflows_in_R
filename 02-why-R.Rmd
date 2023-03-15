@@ -92,7 +92,7 @@ Although other options like [SPSS](https://www.ibm.com/products/spss-statistics)
 
 R can also import data from many different sources that other statistical software can't handle (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html)). This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data. 
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Cartoon of parrot saying: I created errors copy and pasting my data to excel and spent hours fixing it when I was confused later! I'm glad R can help!"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "I created errors copying my data into Excel and spent hours figuring it out later! I’m glad R can help!"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21c5ab757ec_0_78")
 ```
 
