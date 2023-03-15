@@ -13,11 +13,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Reproducibility is iterative work
 
+Making an analysis isn't something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren't really needed anymore, and don't become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time. 
+
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_23")
 ```
 
 ## Components of reproducibility
+
 A reproducible analysis is transparent, consistent, and accessible.
 
 - **Transparency** refers to the idea that it is well communicated and everything is displayed: data, code, goals, methods, and decisions. There are no secrets in a reproducible analysis/
