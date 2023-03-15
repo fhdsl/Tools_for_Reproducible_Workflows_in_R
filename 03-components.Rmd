@@ -112,8 +112,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Sometimes even if something is accessible in that it is "free" monetarily it doesn't mean that it is free in the sense of the amount of time it takes to get access to it. If your code and data does need some sort of controlled access features for privacy and ethical concerns of protecting data, make sure that the paperwork hoops that are put in place are truly there in the spirit of protecting the data and not merely serving to keep data and code hidden from others.
 
-
-
 ## Conclusion
 
 In this chapter, we gave a high level overview of reproducible analyses. We discussed that reproducible analyses are transparent, consistent, and accessible. This means in practical terms, reproducible analyses:
@@ -122,4 +120,7 @@ In this chapter, we gave a high level overview of reproducible analyses. We disc
 - Have data that is publicly available (when appropriate)
 - Emphasize readable code
 - Are well documented
--
+- Re-runs easily
+- Has an organizational scheme
+- Follows a code style
+- Do not have pay walls or unreasonable bureaucratic tape
