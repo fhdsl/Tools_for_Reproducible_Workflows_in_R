@@ -85,7 +85,7 @@ R is a statistical programming language, meaning it was designed to help you ana
 Because of this many people have designed useful packages that are especially relevant to:
 
 1) Dealing with messy data in a systematic and reproducible way to get it into a state that is useful for data analysis
-2) Statistical analysis of data
+2) Producing statistical analysis of data
 3) Creating effective plots of data
 
 Although other options like [SPSS](https://www.ibm.com/products/spss-statistics) and [SAS](https://www.sas.com/) (which are not free!) can also be helpful for statistical analysis, R is especially powerful at getting messy data ready to analyze and for creating useful plots to represent patterns in data.  Conveniently, R can do all of these steps in a data project and does not require users to switch between different programs to perform these tasks. R also helps create reports that can demonstrate to collaborators and others exactly how analysis was performed, aiding in the transparency of how the data was used from start to finish.
