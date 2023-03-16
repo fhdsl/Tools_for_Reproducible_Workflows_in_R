@@ -101,7 +101,7 @@ GUIs are programs on computers that are used by pointing and clicking buttons wh
 Most GUI's, although sometimes more intuitive to use, are unfortunately less reproducible because they require more manual steps by clicking various buttons.
 
 <div class = "dictionary">
-**GUI (graphic user interface)** - A type of program on a computer that you use by pointing an clicking with a mouse
+**GUI (graphic user interface)** - A type of program on a computer that you use by pointing and clicking with a mouse
 **Command line** - A type of program on a computer that you use by typing in commands or writing scripts that can be run
 </div>
 
