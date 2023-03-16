@@ -31,9 +31,9 @@ Sometimes if we have generally the same software installed for reproducing an an
 
 ## Session Info
 
-Perhaps the easiest way to begin to address computing environment variability is to record what the computing environment looks like at the time an analysis is run. In R, this is a fairly straighforward task.
+Perhaps the easiest way to begin to address computing environment variability is to record what the computing environment looks like at the time an analysis is run. In R, this is a fairly straightforward task.
 
-You can run the function `sessionInfo()` or the tidyverse version of this function from the devtools package, `devtools::session_info()`.
+Generally at the end of your notebook, you will want to print out your sesion info. You can do this by running the function `sessionInfo()` or the tidyverse version of this function from the devtools package, `devtools::session_info()`.
 
 We can run sessionInfo in this book (this book is powered by R).
 
