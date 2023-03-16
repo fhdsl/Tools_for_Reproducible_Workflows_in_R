@@ -13,7 +13,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Reproducibility is iterative work
 
-Making an analysis isn't something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren't really needed anymore, and don't become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time. 
+Making an analysis isn't something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren't really needed anymore, and don't become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_23")
@@ -71,7 +71,7 @@ Good documentation not only describes what happened in an analysis, but why it h
 
 ### Version controlled
 
-A reproducible analysis is a version controlled analysis. Analyses go through many iterations, side quests, and sometimes meet dead ends -- and this is okay, it is how data science works! -- but if not done properly with version control, can lead to an unruly code base and a lot of confused team members.
+A reproducible analysis is a version controlled analysis. Analyses go through many iterations, side quests, and sometimes meet dead ends -- and this is okay, it is how data science works! -- but if not done properly with version control, can lead to an unruly code base and a lot of confused team members. Version control is a method for tracking changes to files in a systematic manner. One such method of version control is called git and we will talk about how to use git and its online website GitHub, in a future chapter. 
 
 Version control helps maintain the history of your project in a way that will allow you to recover old versions if necessary, or otherwise have documented what has happened. It can also be useful for rectifying different versions of a code base between team members.
 
