@@ -33,7 +33,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Transparent
 
-It is important that code runs reliably but clear communication about the analysis and the decisions made really make an analysis reproducible. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute ideas and suggestions to or borrow methods and strategies for their own analyses.
+One essential piece of a reproducible analysis is that the code runs reliably. However, to really make an analysis reproducible, the decisions made in the analysis should also be clearly communicated. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute ideas and suggestions to or borrow methods and strategies for their own analyses.
 
 ### Open source
 
