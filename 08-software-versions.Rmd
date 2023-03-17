@@ -13,6 +13,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 As we discussed, reproducibility is on a continuum, meaning that it can range from being impossible to very easy to reproduce any given results. Some results can be effectively impossible to reproduce if there are too many barriers and set up needed to re-run the analysis. One of the most common barriers is the computing environment used run the analysis.
 
+<div class = "dictionary">
+**computing environment** - All the relevant pieces of software and their dependencies that were used on a computer at the time that an analysis or other project was run
+</div>
+
 ## No two computers are the same
 
 A computing environment not only consists of the direct software that we use to analyze data, but all of the other software that our main pieces of software require to install and run properly.
@@ -49,13 +53,17 @@ This print out may seem like a lot of nonsense at first, but it gives us some us
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_1030")
 ```
 
-If we take a look at two different session info print outs, we can begin to spot the differences. These differences may give us clues into why an analysis ran differently.
+If we take a look at two different session info printouts, we can begin to spot the differences. These differences may give us clues into why an analysis ran differently.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Two session info print outs are show side by side.Highlighted we can see that they have different R versions: 4.0.2 vs 4.0.5. They also have different operating systems. The packages they have attached is rmarkdown but they also have different rmarkdown package versions!  If there are  discrepancies in re-runs of the analysis, the session info print out gives a record which may have clues to why that might be! This can give items to look into for determining why the results didn’t reproduce as expected."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Two session info printouts are show side by side. Highlighted we can see that they have different R versions: 4.0.2 vs 4.0.5. They also have different operating systems. The packages they have attached is rmarkdown but they also have different rmarkdown package versions!  If there are  discrepancies in re-runs of the analysis, the session info printout gives a record which may have clues to why that might be! This can give items to look into for determining why the results didn’t reproduce as expected."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_1333")
 ```
 
 Printing out session info is an easy way to record your computing environment in hopes of increasing the reproducibility of your analysis!
+
+<div class = "dictionary">
+**session info** - A printout in R that displays information about the software and packages that were being used at the time the `sessionInfo()` or  `devtools::session_info()` functions were run.
+</div>
 
 ## Snapshots with `renv`
 
@@ -69,15 +77,15 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The `renv` workflow looks like this (as described by their documentation):
 
-> 1. Call `renv::init()` to initialize a new project-local environment with a private R library,
+> 1. Call `renv::init()` to initialize a new project-local environment with a private R library
 
-> 2. Work in the project as normal, installing and removing new R packages as they are needed in the project,
+> 2. Work in the project as normal, installing and removing new R packages as they are needed in the project
 
-> 3. Call `renv::snapshot()` to save the state of the project library to the lockfile (called renv.lock),
+> 3. Call `renv::snapshot()` to save the state of the project library to the lockfile (called renv.lock)
 
-> 4. Continue working on your project, installing and updating R packages as needed.
+> 4. Continue working on your project, installing and updating R packages as needed
 
-> 5. Call `renv::snapshot()` again to save the state of your project library if your attempts to update R packages were successful, or call `renv::restore()` to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems.
+> 5. Call `renv::snapshot()` again to save the state of your project library if your attempts to update R packages were successful, or call `renv::restore()` to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems
 
 To make this shareable to others, you will need to do two things:
 
@@ -90,17 +98,33 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The limitations of this method, [as noted by the `renv` authors](https://rstudio.github.io/renv/articles/renv.html#caveats), is that it really only tracks packages in R and cannot help track or enforce items that may affect the computing environment outside of R. So while it will aid in the reproducibility of your analysis, it will not cover everything.
 
+<div class = "dictionary">
+**renv** - An R package that helps you to share and record your R specific computing environment
+</div>
+
 ## Containerization
 
 In order to truly reproduce a result with an identical computing environment you would need to use a containerized approach. To containerize a computing environment is to truly create an environment that is shippable to others. A container is analogous to a virtual machine. A computer runs a computing environment inside of it that is separate from the rest of the computer (hence why its called a container).
 
 One of the most popular containerization softwares is Docker. Docker allows you to build your computing environment and share it on its online platform in the form of images that you can download and run. In fact, this book is rendered by a Docker container!
 
+<div class = "warning">
+If you will be using a container with PHI or PII or other protected information, we recommend you take a look at [this resource](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf) to understand best practices for using Docker with sensitive data.
+</div>
+
+<div class = "dictionary">
+- **container** - A method for running software in a way that is shareable and Reproducible
+- **Docker** - a popular platform for containers
+</div>
+
 We will not cover Docker here but if you are interested in using a containerized approach like Docker, here are additional resources for learning:
 
 - [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/introduction/index.html)
 - [ITCR Training Network chapters about Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html)
 - [Docker documentation about getting started](https://www.docker.com/get-started/)
+- [How to ensure your Docker usage is HIPAA-Compliant](https://www.atlantic.net/hipaa-compliant-hosting/best-practices-for-creating-a-hipaa-compliant-docker-host/)
+- [HIPAA Compliant Containers](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf)
+- [Singularity is a different container platform that does some encryption](https://docs.sylabs.io/guides/latest/user-guide/) -- this can help if you are using data that needs to be protected.
 
 ## Conclusion
 
