@@ -1,0 +1,39 @@
+
+# Reproducible Code
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient , and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g221fb1e0594_0_0")
+```
+
+## Aspects of Reproducible code
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible code is: Readable meaning it is well-documented, uses well-known functions when appropriate, and follows a code style. Efficient meaning it doesn’t use up more computational resources than necessary and follows the advice of DRY (don’t repeat yourself). Consistent meaning it follows conventions and is organized"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g221fb1e0594_0_6")
+```
+
+## Readable
+
+### Well-documented
+
+### Opts for well-known functions when appropriate
+
+### Follows a code style
+
+## Efficient
+
+### Doesn’t use up more computational resources than necessary
+
+### Is DRY (don’t repeat yourself)
+
+## Consistent
+
+### Follows conventions
+
+### Is organized
+
+
+## Summary
