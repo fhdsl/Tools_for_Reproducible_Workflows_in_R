@@ -1,6 +1,10 @@
+HIPAA
+iteratively
+lockfile
+preprint
 README
 renv
-lockfile 
+lockfile
 Carpentries
 devtools
 shippable
