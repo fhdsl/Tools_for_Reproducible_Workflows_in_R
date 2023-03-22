@@ -130,7 +130,7 @@ We will not cover Docker here but if you are interested in using a containerized
 
 In summary:
 
-- Software versions affect the reproducibility of an analysis
-- Printing out session info is a great way to record software versions
-- `renv` is an R package that allows you to share your R specific computing environment
+- Software versions affect the reproducibility of an analysis.
+- Printing out session info is a great way to record software versions.
+- `renv` is an R package that allows you to share your R specific computing environment.
 - Containerization softwares like Docker allow you to more completely share a replicate computing environment.
