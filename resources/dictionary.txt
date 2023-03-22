@@ -7,6 +7,9 @@ shippable
 tidyverse
 sessionInfo
 softwares
+NIGMS
+programmatically
+README
 AnVIL
 auditability
 BIPOC
