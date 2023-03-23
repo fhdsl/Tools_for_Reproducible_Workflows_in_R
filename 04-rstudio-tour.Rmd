@@ -10,11 +10,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Why use RStudio?
 
-RStudio is what is called an integrated development environment(IDE) for writing code in R (although it also has compatibility for other languages).
+RStudio is what is called an **integrated development environment (IDE)** for writing code in R (although it also has compatibility for other languages).
 
 It is designed to make working in R easier in a variety of ways:
 
-- it helps you write code by suggesting code based on what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
+- it helps you write code by making suggestions to complete what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
 - it helps you view the output of your code, this is especially true for creating reports or viewing plots
 - it helps you find errors in your code
 - it helps you keep track of any objects that you have assigned in R
@@ -38,9 +38,9 @@ In case you don't yet have RStudio on your computer, we will walk you through th
 
 ### Installing and Updating R
 
-You first need to make sure that you have R. R is not the same as RStudio. R is instead the libraries needed to use R code on your computer and it is needed so that you can use RStudio. It is also good idea to update the version of R that you are using periodically. 
+You first need to make sure that you have R. R is not the same as RStudio. R is instead the libraries needed to use R code on your computer and it is needed so that you can use RStudio. It is also a good idea to update the version of R that you are using periodically. 
 
-<details> <summary> Click here for directions if you have never installed R before on your computer </summary> 
+<details> <summary> Click here for directions if you have never installed R before on your computer. </summary> 
 
 You can install the latest version of R from the R project site located here: https://www.r-project.org/
 
@@ -89,7 +89,7 @@ updateR()#update your version of R
 
 ### Downloading RStudio
 
-Next we want to download RStudio. You can do so by going to the [Posit website at this link: https://posit.co/downloads/.
+Next we want to download RStudio. You can do so by going to the Posit website at this link: https://posit.co/.
 
 <div class = "notice">
 
@@ -100,14 +100,15 @@ Posit is a software company that used to be called RStudio that develops open-so
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Posit website for downloading RStudio"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_30")
 ```
+Note that the website may look slightly different when you visit it.
 
-There is a download button, which will take you to another page to choose if you want the free or paid version of RStudio. The free version should be enough for most users.
+There should be a download button on the upper right corner. This will take you to another page to choose if you want the free or paid version of RStudio. The free version should be enough for most users.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The free version of RStudio is likely all you need."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_37")
 ```
 
-Then you need to scroll down to select the write download for your computer based on what kind of computer you have.
+Then you need to scroll down to select the appropriate download for your computer based on what kind of computer you have.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Select the appropriate link to download RStudio according to the type of computer you have."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_37")
@@ -115,7 +116,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Note that by the time you read this the versions will likely have changed and there may be slight variations in how the website appears.
 
-You should then be directed by your computer to install RStudio once the download is complete. You may need to go to your downloads first and click on the RStudio file that was downloaded to start this process.
+You should then be directed by your computer on how to install RStudio once the download is complete. You may need to go to your downloads first and click on the RStudio file that was downloaded to start this process.
 
 See[here](https://jhudatascience.org/intro_to_r/modules/Setup/R_and_RStudio_installation.html) for more information.
 
