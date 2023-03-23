@@ -17,13 +17,65 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Readable
 
+Reproducible code is readable code. In order for other people to use your code, they will need to be able to understand it. Because of that, code being readable is more important than code being innovative or clever.
+
+**Example:**
+```{r}
+
+```
+
 ### Well-documented
 
-### Opts for well-known functions when appropriate
+Reproducible code is well documented code! This includes (but isn't limited to):
+
+- A README that can get individuals up to speed on the project quickly
+- Code and notebooks that have a healthy amount of comments
+
+These bits of documentation are not only helpful for others reading your project but for you! As time passes, future you will forget what you of today was thinking when you wrote this code. Helpful code comments can help jog your memory of what the code is doing and perhaps what the next steps in the project need to be.
+
+#### READMEs
+
+READMEs are a universal signal to people looking at the project that they should READ this file to get a rundown on the project. READMEs should include:
+
+1. A summary of the goals and intentions of the project.
+2. Usage instructions that explain exactly what commands and packages need to be used to re-run analyses.
+3. Explanation of what software dependencies are needed for your project.
+4. A basic summary of what files are there; which are input and output files.
+5. Any other information that would be relevant to someone trying to understand the project.
+
+Here's a [template README](https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md) that you can use an example.
+
+#### Code comments
+
+A healthy amount of code comments doesn't mean that every line needs a comment (though perhaps at sections that need future explanation they might). Helpful code comments don't just echo what the code is doing but are explanatory. [StackOverflow has a great article](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) about rules for writing helpful code comments. we'll echo the rules here:
+
+> Rule 1: Comments should not duplicate the code.
+
+> Rule 2: Good comments do not excuse unclear code.
+
+> Rule 3: If you can’t write a clear comment, there may be a problem with the code.
+
+> Rule 4: Comments should dispel confusion, not cause it.
+
+> Rule 5: Explain unidiomatic code in comments.
+
+> Rule 6: Provide links to the original source of copied code.
+
+> Rule 7: Include links to external references where they will be most helpful.
+
+> Rule 8: Add comments when fixing bugs.
+
+> Rule 9: Use comments to mark incomplete implementations.
 
 ### Follows a code style
 
+Code style helps make code readable. Appropriate spacing, punctuation, and grammar are not always essential for getting a message across, but it can certainly b3 dis-tRaCTIng to readers if conventions aren't followed.
+
+[R packages like styler](https://www.tidyverse.org/blog/2017/12/styler-1.0.0/) can automatically style code for you.
+
 ## Efficient
+
+Reproducible code is efficient code. Efficiency helps reproducibility in that code that takes up less resources and is not redundant can be re-run and debugged more easily.
 
 ### Doesn’t use up more computational resources than necessary
 
