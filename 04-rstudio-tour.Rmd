@@ -127,4 +127,12 @@ If you run into trouble, check the following:
    
 If your operating system is older (and you can't update it), try installing progressively older versions found [here](https://www.rstudio.com/products/rstudio/older-versions/) until it works. You will know if it worked if you try to open RStudio and you see an interface without a message about things going poorly. Here you can see an [example](https://community.rstudio.com/t/rstudio-desktop-crashes-on-startup-with-library-not-loaded/130296) of this. 
 
+### Updating RStudio
 
+It is also a good idea to keep RStudio up-to-date. New features become available as the Posit team works on developing RStudio.
+
+To check for updates you can go to the `Help` menu at the top of RStudio and then click on `Check for Updates`. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Check for updates for RStudio in the Help menu of RStudio."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_50")
+```
