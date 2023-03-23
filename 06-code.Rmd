@@ -79,13 +79,93 @@ Reproducible code is efficient code. Efficiency helps reproducibility in that co
 
 ### Doesn’t use up more computational resources than necessary
 
+R is not meant to be a fast language. R code can be computationally costly if it's written in the wrong way.
+
+You can identify what parts of your R code are the slowest or otherwise computationally costly by using the [`profvis`](https://rstudio.github.io/profvis/) and [`bench`](https://bench.r-lib.org/) packages.
+
+One popular example is R loops which can be particularly slow in R. Note that this doesn't mean you shouldn't ever use loops or other items in R, just that you should be aware that some items in R are particularly slower than others.
+
+**R Loop alternatives:**
+- [Using lapply](https://statisticsglobe.com/avoid-for-loop-in-r)
+- [Using the purrr package](https://purrr.tidyverse.org/)
+- [Advanced R discusses alternative strategies](https://adv-r.hadley.nz/perf-improve.html?q=perfor#avoid-copies).
+
+**Further reading:**
+- Hadley Wickham has a [great chapter in Advanced R](https://adv-r.hadley.nz/perf-improve.html?q=perfor#perf-improve) that covers these concepts in more detail.
+
 ### Is DRY (don’t repeat yourself)
+
+DRY is an acronym for "don't repeat yourself". Non-redundant code is more reproducible because it is easier to maintain and to read. Picture you have written th
+
+Let's take a look at an example from [this Reproducibility in Cancer Informatics course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/writing-durable-code.html#dry-up-your-code) about what DRY vs non-DRY code might look like:
+
+Non-DRY or WET (write everything twice) code might look like this:
+```
+paste('Hello','John', 'welcome to this course')
+paste('Hello','Susan', 'welcome to this course')
+paste('Hello','Matt', 'welcome to this course')
+paste('Hello','Anne', 'welcome to this course')
+paste('Hello','Joe', 'welcome to this course')
+paste('Hello','Tyson', 'welcome to this course')
+paste('Hello','Julia', 'welcome to this course')
+paste('Hello','Cathy', 'welcome to this course')
+```
+
+Note that if you want to change something in eight of these messages you would have to change all eight lines.
+
+To DRY up this code, we could functionalize it:
+```
+GreetStudent <- function(name) {
+ greeting <- paste('Hello', name, 'welcome to this course')
+ return(greeting)
+}
+
+class_names <- c('John', 'Susan', 'Matt' ,'Anne', 'Joe', 'Tyson', 'Julia', 'Cathy')
+
+lapply(class_names, GreetStudent)
+```
+
+Now, if we wanted to edit the greeting pasted, we'd only have to change it once.
 
 ## Consistent
 
+Consistency is key for reproducibility. Not only do we want code to run consistently, but it will be more understandable to our future selves and to others if it follows a pattern.
+
 ### Follows conventions
+
+Although there's always a time to break conventions, often times conventions lend to readability. For example, in R using `<-` for assignments is less likely to be distracting than using `=`. This is related to following a style guide. In general we recommend using the tidyverse conventions and style.
+
+However, this advice, like a lot of the advice in this chapter is highly dependent on the context and goals of the project and code being written. There are times that the conventional way to write something might not suit the project because it is inefficient or otherwise clashes with other goals of reproducibility. 
 
 ### Is organized
 
+In the previous chapter, we discussed how projects should be organized in order to be reproducible, but this also applies to code. Sometimes as you have been working on code, you may realize that as it has been developing it doesn't flow in an organized manner.
 
-## Summary
+Just as with regular writing that is disorganized, code that is disorganized can be hard to follow and hard to bug. For example, if you have hard coded a multiple variables or have loaded multiple packages, it makes sense to group these items together so they are easier to find and fix.
+
+A code outline for an analysis notebook for example might look like:
+
+- Describe the goals
+- Load in the libraries and any source code
+- Declare any hard coded variables
+- Read in the data  
+- Clean the data
+- Make plots and gather statistics
+- Summarize results
+- Print out the [session info]() we'll discuss more about this in a future chapter.
+
+## Conclusion
+
+The best way to find out if your code meets these concepts or how it can better become more reproducible is through code review. We will briefly discuss code review in future chapters.
+
+In summary, reproducible code is:
+
+- Readable
+  - Well-documented
+  - Follows a code style
+- Efficient
+  - Computationally non wasteful
+  - DRY
+- Consistent
+ - Follows convention (when appropriate)
+ - Organized
