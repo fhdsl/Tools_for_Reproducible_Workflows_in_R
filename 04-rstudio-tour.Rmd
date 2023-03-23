@@ -118,7 +118,16 @@ Note that by the time you read this the versions will likely have changed and th
 
 You should then be directed by your computer on how to install RStudio once the download is complete. You may need to go to your downloads first and click on the RStudio file that was downloaded to start this process.
 
-See[here](https://jhudatascience.org/intro_to_r/modules/Setup/R_and_RStudio_installation.html) for more information.
+For Mac users, note that you will need to move the RStudio icon into the icon that looks like the Applications folder. 
+
+
+Drag and drop RStudio into the Applications folder to install on a Mac
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Drag and drop RStudio into the Applications folder to install on a Mac."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_58")
+```
+
+See[here](https://jhudatascience.org/intro_to_r/modules/Setup/R_and_RStudio_installation.html) for more information on the process of installing RStudio.
 
 If you run into trouble, check the following:
 
@@ -137,3 +146,77 @@ To check for updates you can go to the `Help` menu at the top of RStudio and the
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Check for updates for RStudio in the Help menu of RStudio."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_50")
 ```
+
+## Navigating RStudio
+
+Now that you hopefully have RStudio running on your machine, we will walk you through some of the major features that can really help you with your data analyses.
+
+First it is important to be familiar with the layout. When you first open RStudio you will see 3 panes.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "When RStudio is first opened you will see 3 panes"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_67")
+```
+
+The pane on the left (labeled "Pane 1" in the image) is where we write code.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the left is where we write and test code."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_67")
+```
+
+The pane on the top right (labeled "Pane 2" in the image) is where we can see what objects we have created and are actively in memory (meaning they can be used at that time) in what is called the "Environment".
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the upper right is where we see our objects."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_95")
+```
+
+
+The pane on the bottom right (labeled "Pane 3" in the image) is where we can find files on computer (the "Files" tab), see plots (the "Plots tab), and get coding help (the "Help tab).
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Whe pane on the lower right is where we see our files, plots, and where we get help."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_109")
+```
+
+
+While there are other tabs, don't worry about those for now. We will go deeper into RStudio as we continue. 
+
+
+Let's try an examples to get started.
+
+As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Running some code in RStudio"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
+```
+
+
+There is a hidden forth pane. This is only accessible when we start to make a script or a report with our code.
+
+To open this let's make what is called an R Markdown file by go to `File` --> `New File` -->`R Markdown` in the upper menu of RStudio.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Creating an R Markdown file in R Studio by selecting File, New File, R Markdown."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
+```
+
+Creating an R Markdown file starts with a pop-up and you can simply click the OK button.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Creating an R Markdown file starts with a pop-up and you can simply click the OK button."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
+```
+
+The new pane will open on the upper left.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The new pane will open on the upper left."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_176")
+```
+This pane is where we can write code that we keep in files like scripts or reports (in files like R Markdowns).
+
+Thus the pane that is below this new pane  is where we can test out code, but the top pane is where we can write code that we wish to save. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
+```
+
+
+This pane will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
+
