@@ -15,11 +15,11 @@ RStudio is what is called an integrated development environment(IDE) for writing
 It is designed to make working in R easier in a variety of ways:
 
 - it helps you write code by suggesting code based on what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
-- it helps you view the output of your code in an easier manner, especially plots
+- it helps you view the output of your code, this is especially true for creating reports or viewing plots
 - it helps you find errors in your code
 - it helps you keep track of any objects that you have assigned in R
 - it helps you orient yourself in terms of the files on your computer 
-- can be used to help track changes in your code and other files over time
+- it can help track changes in your code and other files over time
 
 
 <div class = "dictionary">
@@ -27,6 +27,104 @@ It is designed to make working in R easier in a variety of ways:
 - **IDE** - Integrated Development Environment - a computing environment for writing code, debugging code, and looking at the output of your code 
 - **RStudio** - an IDE designed especially for writing R code
 - **function** - a specific piece of code that performs a task - packages in R often have several functions
+- **objects** - objects in R could be anything that you can refer to with some name to recall again such as a data tables, vectors, functions, plots and more. 
 
 </div>
+
+We will dive deeper into these benefits later once we get started with RStudio, but first we will discuss how to make sure you have it downloaded and installed on your computer.
+
+## Installing RStudio
+In case you don't yet have RStudio on your computer, we will walk you through the process of getting started.
+
+### Installing and Updating R
+
+You first need to make sure that you have R. R is not the same as RStudio. R is instead the libraries needed to use R code on your computer and it is needed so that you can use RStudio. It is also good idea to update the version of R that you are using periodically. 
+
+<details> <summary> Click here for directions if you have never installed R before on your computer </summary> 
+
+You can install the latest version of R from the R project site located here: https://www.r-project.org/
+
+From here you can click on the menu option that says CRAN on the far left to start. Recall that CRAN stands for the **Comprehensive R Archive Network**.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Once you go to the r project website, you can click on the CRAN button to download the latest version of R"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_0")
+```
+
+This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve dowload speeds overall if everyone tries to. 
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "CRAN mirror list"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_11")
+```
+
+Once you click on one of the mirror links you will be taken to a new page to download R. For example, you could click on the Iowa state University mirror if you are located in the US somewhere.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Page to download R for computers with different operating systems, such as Mac or Windows"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_19")
+```
+
+You would want to click on the appropriate link for your computer. For example, if you have a Windows machine, click the link for Windows. 
+
+This will take you to a new page to select the appropriate link to download R. For Mac users this might be the most recent version of R which will look like R and several numbers afterwards. 
+
+</details> 
+
+<details><summary>Click here for instructions on how to update R.</summary>
+
+To update R, if you are using a Mac or Linux computer, you can follow the directions of installing R the first time.
+
+If you have a Windows computer, you can use the following code to update your version of R within an R session. You can start an R session by typing `R` into whatever command-line shell like Windows Terminal that you might have been using in the past. Then copy and paste this code and press enter. 
+
+```{r, eval=FALSE}
+# Check for the install r package and install if needed
+if(!require(installr)) {
+  install.packages("installr"); 
+  require(installr) #load installr pakage
+} 
+
+updateR()#update your version of R
+```
+
+</details>
+
+### Downloading RStudio
+
+Next we want to download RStudio. You can do so by going to the [Posit website at this link: https://posit.co/downloads/.
+
+<div class = "notice">
+
+Posit is a software company that used to be called RStudio that develops open-source R tools and packages. It is a Public Benefit Corporation (PBC) and a Certified B Corporation®, so it is committed to creating software that benefits the public. See [here](https://posit.co/about/pbc-report/) for more information.
+
+</div>
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Posit website for downloading RStudio"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_30")
+```
+
+There is a download button, which will take you to another page to choose if you want the free or paid version of RStudio. The free version should be enough for most users.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The free version of RStudio is likely all you need."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_37")
+```
+
+Then you need to scroll down to select the write download for your computer based on what kind of computer you have.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Select the appropriate link to download RStudio according to the type of computer you have."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_37")
+```
+
+Note that by the time you read this the versions will likely have changed and there may be slight variations in how the website appears.
+
+You should then be directed by your computer to install RStudio once the download is complete. You may need to go to your downloads first and click on the RStudio file that was downloaded to start this process.
+
+See[here](https://jhudatascience.org/intro_to_r/modules/Setup/R_and_RStudio_installation.html) for more information.
+
+If you run into trouble, check the following:
+
+- did you install the correct version of software for your operating system?
+   - Check that you installed the version right for your type of system, (`macOS` vs `Windows` for example)
+   - Check if maybe you need a different version for the age of your system. First check that your version of R was right - there are multiple versions for different `macOS` systems for example. You can check the apple icon (top left corner) and "About This Mac" to learn more about the age of your operating system. 
+   
+If your operating system is older (and you can't update it), try installing progressively older versions found [here](https://www.rstudio.com/products/rstudio/older-versions/) until it works. You will know if it worked if you try to open RStudio and you see an interface without a message about things going poorly. Here you can see an [example](https://community.rstudio.com/t/rstudio-desktop-crashes-on-startup-with-library-not-loaded/130296) of this. 
+
 
