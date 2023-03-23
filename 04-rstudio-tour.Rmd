@@ -211,7 +211,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 This pane is where we can write code that we keep in files like scripts or reports (in files like R Markdowns).
 
-Thus the pane that is below this new pane  is where we can test out code, but the top pane is where we can write code that we wish to save. 
+Thus the lower left pane is where we can test out code, but the top pane is where we can write code that we wish to save. 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
