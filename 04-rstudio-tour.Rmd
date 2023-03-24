@@ -160,7 +160,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 The pane on the left (labeled "Pane 1" in the image) is where we write code.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the left is where we write and test code."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_67")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_81")
 ```
 
 The pane on the top right (labeled "Pane 2" in the image) is where we can see what objects we have created and are actively in memory (meaning they can be used at that time) in what is called the "Environment".
@@ -185,7 +185,7 @@ Let's try an examples to get started.
 As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Running some code in RStudio"}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_142")
 ```
 
 
@@ -200,7 +200,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 Creating an R Markdown file starts with a pop-up and you can simply click the OK button.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Creating an R Markdown file starts with a pop-up and you can simply click the OK button."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_169")
 ```
 
 The new pane will open on the upper left.
