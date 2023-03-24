@@ -134,7 +134,8 @@ One popular example is R loops which can be particularly slow in R. Note that th
 
 - [Using lapply](https://statisticsglobe.com/avoid-for-loop-in-r)
 - [Using the purrr package](https://purrr.tidyverse.org/)
-- [Advanced R discusses alternative strategies](https://adv-r.hadley.nz/perf-improve.html?q=perfor#avoid-copies).
+- [Advanced R discusses alternative strategies](https://adv-r.hadley.nz/perf-improve.html?q=perfor#avoid-copies)
+- [The across function](https://dplyr.tidyverse.org/reference/across.html)
 
 **Further reading:**
 
