@@ -25,7 +25,7 @@ _This is the beauty of reproducibility, if you or someone else makes great code,
 
 We've mentioned previously that reproducibility is iterative work. This way of working refers to code work as much as anything else. You won't ever write perfect code on the first try, instead aim for each chunk to work one step at a time. Once it is working, take a break (perhaps until the next day), then return to it and look for ways to polish it and make it more efficient.
 
-For [more tips on how to work read this blog](https://www.ccdatalab.org/blog/not-so-secret-sauce-for-efficient-workflows).
+[For more tips on how to work read this blog](https://www.ccdatalab.org/blog/not-so-secret-sauce-for-efficient-workflows).
 
 ## Aspects of Reproducible code
 
