@@ -247,6 +247,7 @@ The editor pane (top left) will be the pane that we look at most of the time as 
 
 - **Console** - for testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio.
 - **Editor** - for writing code that you wish to save.
+- **R Markdown files** - files that allow you to save your code that allow for more features than a simple script.
 
 </div>
 
@@ -259,3 +260,4 @@ In summary...
 - When we open a file like an R markdown file, the top left pane called the Editor is for writing code we wish to save.
 - After opening a file, the lower left pane contains the Console which is where we test code.
 - R Markdown files are files that create reports of an analysis that can demonstrate more about what you did than a simple script and test to make sure that your code works.
+
