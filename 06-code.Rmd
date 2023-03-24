@@ -5,25 +5,25 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient , and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient, and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g221fb1e0594_0_0")
 ```
 
 ## Reproducibility means we don't need to reinvent the wheel!
 
-When you realize something that you need done, you should first use Google and look on GitHub and StackOverflow for is someone else has written something that works really well. Where at all possible, borrow good code and attribute the author -- no need to reinvent the wheel. As we said previously, R has a great community of users who are constantly creating new and great code, often in the form of packages that are ready for you to install and use.
+When you realize something that you need done, you should first use Google and look on GitHub and StackOverflow to see if someone else has written something that works really well. Where at all possible, borrow good code and attribute the author -- no need to reinvent the wheel. As we said previously, R has a great community of users who are constantly creating new and great code, often in the form of packages that are ready for you to install and use.
 
 _This is the beauty of reproducibility, if you or someone else makes great code, it can not only be re-run but it can be repurposed!_
 
 ### Tips for choosing packages to use:
 
-- Does the package have easy to use documentation to help guide you on how to use it properly? If the package has underdeveloped documentation it may be difficult for you or other to understand and use properly.
+- Does the package have easy to use documentation to help guide you on how to use it properly? If the package has underdeveloped documentation it may be difficult for you or others to understand and use properly.
 - Is the code actively being developed or maintained? Packages that are no longer being maintained will likely deprecate more quickly rendering them unusable in the future.
 - Is it a package that is commonly recognized by the community? Well recognized packages will be easier for others to comment on and help you with.
 
 ## The importance of iterative work
 
-We've mentioned previously that reproducibility is iterative work. This way of working refers to code work as much as anything else. You won't ever right perfect code on the first try, instead aim for each chunk to work one step at a time. Once it is working, take a break (perhaps until the next day), then return to it and look for ways to polish it and make it more efficient.
+We've mentioned previously that reproducibility is iterative work. This way of working refers to code work as much as anything else. You won't ever write perfect code on the first try, instead aim for each chunk to work one step at a time. Once it is working, take a break (perhaps until the next day), then return to it and look for ways to polish it and make it more efficient.
 
 For [more tips on how to work read this blog](https://www.ccdatalab.org/blog/not-so-secret-sauce-for-efficient-workflows).
 
@@ -130,12 +130,13 @@ You can identify what parts of your R code are the slowest or otherwise computat
 
 One popular example is R loops which can be particularly slow in R. Note that this doesn't mean you shouldn't ever use loops or other items in R, just that you should be aware that some items in R are particularly slower than others.
 
-**R Loop alternatives:**
+**R 'for loop' alternatives:**
 
-- [Using lapply](https://statisticsglobe.com/avoid-for-loop-in-r)
-- [Using the purrr package](https://purrr.tidyverse.org/)
+- [Using `apply` functions (an older option that comes with the basic installation of R)](https://statisticsglobe.com/avoid-for-loop-in-r)
 - [Advanced R discusses alternative strategies](https://adv-r.hadley.nz/perf-improve.html?q=perfor#avoid-copies)
 - [The across function](https://dplyr.tidyverse.org/reference/across.html)
+- [Using the `purrr` package](https://purrr.tidyverse.org/)
+- [A nice summary of these functions](https://jhudatascience.org/intro_to_r/modules/Functions/Functions.html#18)
 
 **Further reading:**
 
