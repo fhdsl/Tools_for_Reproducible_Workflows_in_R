@@ -157,6 +157,23 @@ First it is important to be familiar with the layout. When you first open RStudi
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_67")
 ```
 
+<details><summary>If your RStudio looks different click here.</summary>
+
+Click on the top menu of your RStudio - click where it says `Edit` --> `Preferences` --> `Pane Layout`.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Select Edit and then Preferences to get to the menu about pane layout."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_0")
+```
+
+The Pane Layout menu enables you to change the layout. The image below shows the default settings. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Pane Layout menu allows you to modify the layout of RStudio. This shows the default settings with Source on the top left, Console on the bottom left, Environment, History, Connections, and Build on the top right, and Files, Plots, Packages, Help, and VCS on the bottom right."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_5")
+```
+
+</details>
+
+
 The pane on the left (labeled "Pane 1" in the image) is where we write code.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the left is where we write and test code."}
