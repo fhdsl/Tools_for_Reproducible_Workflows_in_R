@@ -50,7 +50,7 @@ From here you can click on the menu option that says CRAN on the far left to sta
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_0")
 ```
 
-This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve dowload speeds overall if everyone tries to. 
+This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds overall if everyone tries to. 
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "CRAN mirror list"}
@@ -217,6 +217,18 @@ Thus the lower left pane is where we can test out code, but the top pane is wher
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
 ```
 
+The top pane where we save code is called the editor. The lower pane where we test code is called the console.
 
-This pane will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
 
+
+The editor pane will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
+
+## Conclusion
+
+In summary...
+
+- RStudio can help you write code in R and work with files on your computer.
+- There are 3 main panes when you first open RStudio, to see a fourth you need to create a new file like an R Markdown file.
+- When we open a file like an R markdown file, the top left pane called the Editor is for writing code we wish to save.
+- After opening a file, the lower left pane contains the Console which is where we test code.
+- R Markdown files are files that create reports of an analysis that can demonstrate more about what you did than a simple script and test to make sure that your code works.
