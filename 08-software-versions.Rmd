@@ -39,7 +39,7 @@ Perhaps the easiest way to begin to address computing environment variability is
 
 Generally at the end of your R notebook, you will want to print out your session info. You can do this by running the function `sessionInfo()` or the tidyverse version of this function from the devtools package, `devtools::session_info()`.
 
-We can run sessionInfo in this book (this book is powered by R).
+We can run `sessionInfo` in this book (this book was created using R tools).
 
 ```{r}
 sessionInfo()
