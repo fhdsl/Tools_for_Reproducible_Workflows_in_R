@@ -241,7 +241,14 @@ The top pane where we save code is called the editor. The lower pane where we te
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_198")
 ```
 
-The editor pane will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
+The editor pane (top left) will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
+
+<div class = "dictionary">
+
+- **Console** - for testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio.
+- **Editor** - for writing code that you wish to save.
+
+</div>
 
 ## Conclusion
 
