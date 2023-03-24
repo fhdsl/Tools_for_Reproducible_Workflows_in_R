@@ -1,0 +1,9 @@
+# R Markdown Reports
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test  pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats.Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20eecbcf66d_84_0")
+```
