@@ -69,6 +69,8 @@ Printing out session info is an easy way to record your computing environment in
 
 However, you may realize that while session info is useful for recording this information, it doesn't mitigate the frustration of setting up a computing environment in R. Nor does it help us with being able to directly share our computing environments.
 
+It can be incredibly handy for reproducibility purposes to be able to share the R computing environment you used for completing an analysis. This is not only helpful for others who may be interested in reproducing your analysis, but also for future you! If you come back to this analysis and attempt to re-run it, it is likely you've changed your R computing environment over time by installing or removing packages. `renv` will allow you to return to the environment you used at the time that you ran the analysis. 
+
 For that, we need a slightly more involved solution of using [`renv`](https://rstudio.github.io/renv/articles/renv.html). `renv` is an R package that allows you to take 'snapshots' of your R computing environment and use those to track, share, and build R environments.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "In general, package managers work by capturing a snapshot of the environment and when that environment snapshot is shared, it attempt to rebuild it. In this example we show one computing environment, and using a package manager, we can take  snapshot of it. That snapshot can be shared to another computer which can be used to attempt to build the computing environment on this computer. This will help address some differences in package versions between two individual’s computers. "}
