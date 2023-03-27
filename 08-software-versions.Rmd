@@ -5,6 +5,134 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+## Learning Objectives
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "In this software versions chapter our learning objectives are to be able to: Recognize that software versions influence data analysis results and reproducibility. Record packages used for an analysis. Use renv to make an R environment shareable to collaborators. Recognize containerization as a method to share your entire computing environment with others."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_43")
 ```
+
+As we discussed, reproducibility is on a continuum, meaning that it can range from being impossible to very easy to reproduce any given results. Some results can be effectively impossible to reproduce if there are too many barriers and set up needed to re-run the analysis. One of the most common barriers is the computing environment used run the analysis.
+
+<div class = "dictionary">
+**computing environment** - All the relevant pieces of software and their dependencies that were used on a computer at the time that an analysis or other project was run
+</div>
+
+## No two computers are the same
+
+A computing environment not only consists of the direct software that we use to analyze data, but all of the other software that our main pieces of software require to install and run properly.
+
+As we use our computers daily for work, we are constantly installing, updating, and removing software packages. Sometimes our computers do this automatically without us knowing. These software packages interact with and depend on each other, meaning it can be quite frustrating to try update even a single piece of software if it exists in a tangled mess of software dependencies. Computer scientists sometimes call this "[dependency hell](https://en.wikipedia.org/wiki/Dependency_hell)".
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is frustrated by their computer and says ‘I’m trying to reproduce Polly’s results but there’s 14 packages that I need to install that I can’t seem to get all the R packages dependencies resolved!’"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21dfe2f76f9_90_50")
+```
+
+As developers and maintainers of software continue to make updates and fixes to the software, the developers and maintainers of other interdependent software are doing similarly, meaning that software dependencies and the computing environments are not only a complicated mess at times, but also a moving target!
+
+## Software and package versions affect results!
+
+Sometimes if we have generally the same software installed for reproducing an analysis, we may feel that that is "close enough". And given all the other technical aspects of reproducibility, it can be easy to overlook what versions of software packages we are using. However, controlling for software versions is critical for creating reproducible analyses. Software versions can directly affect not only whether an analysis will be able to run, but the results of the analysis [@BeaulieuJones2017].
+
+## Session Info
+
+Perhaps the easiest way to begin to address computing environment variability is to record what the computing environment looks like at the time an analysis is run. In R, this is a fairly straightforward task.
+
+Generally at the end of your R notebook, you will want to print out your session info. You can do this by running the function `sessionInfo()` or the tidyverse version of this function from the devtools package, `devtools::session_info()`.
+
+We can run `sessionInfo` in this book (this book was created using R tools).
+
+```{r}
+sessionInfo()
+```
+
+Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.
+This print out may seem like a lot of nonsense at first, but it gives us some useful information in a pinch!
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is confused because their results are different after they have re-run their analysis. The parrot says: ‘Hmm… why am I getting a different result this time? Good thing I can check the session info to see if package versions might have caused this change!’"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_1030")
+```
+
+If we take a look at two different session info printouts, we can begin to spot the differences. These differences may give us clues into why an analysis ran differently.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Two session info printouts are show side by side. Highlighted we can see that they have different R versions: 4.0.2 vs 4.0.5. They also have different operating systems. The packages they have attached is rmarkdown but they also have different rmarkdown package versions!  If there are  discrepancies in re-runs of the analysis, the session info printout gives a record which may have clues to why that might be! This can give items to look into for determining why the results didn’t reproduce as expected."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_1333")
+```
+
+Printing out session info is an easy way to record your computing environment in hopes of increasing the reproducibility of your analysis!
+
+<div class = "dictionary">
+**session info** - A printout in R that displays information about the software and packages that were being used at the time the `sessionInfo()` or  `devtools::session_info()` functions were run.
+</div>
+
+## Snapshots with `renv`
+
+However, you may realize that while session info is useful for recording this information, it doesn't mitigate the frustration of setting up a computing environment in R. Nor does it help us with being able to directly share our computing environments.
+
+It can be incredibly handy for reproducibility purposes to be able to share the R computing environment you used for completing an analysis. This is not only helpful for others who may be interested in reproducing your analysis, but also for future you! If you come back to this analysis and attempt to re-run it, it is likely you've changed your R computing environment over time by installing or removing packages. `renv` will allow you to return to the environment you used at the time that you ran the analysis. 
+
+For that, we need a slightly more involved solution of using [`renv`](https://rstudio.github.io/renv/articles/renv.html). `renv` is an R package that allows you to take 'snapshots' of your R computing environment and use those to track, share, and build R environments.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "In general, package managers work by capturing a snapshot of the environment and when that environment snapshot is shared, it attempt to rebuild it. In this example we show one computing environment, and using a package manager, we can take  snapshot of it. That snapshot can be shared to another computer which can be used to attempt to build the computing environment on this computer. This will help address some differences in package versions between two individual’s computers. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_1492")
+```
+
+The `renv` workflow looks like this (as described by their documentation):
+
+> 1. Call `renv::init()` to initialize a new project-local environment with a private R library
+
+> 2. Work in the project as normal, installing and removing new R packages as they are needed in the project
+
+> 3. Call `renv::snapshot()` to save the state of the project library to the lockfile (called renv.lock)
+
+> 4. Continue working on your project, installing and updating R packages as needed
+
+> 5. Call `renv::snapshot()` again to save the state of your project library if your attempts to update R packages were successful, or call `renv::restore()` to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems
+
+To make this shareable to others, you will need to do two things:
+
+1. Be sure to commit and push the `renv.lock` file to your GitHub repository for your project.
+2. Be sure to describe that your project uses `renv` in the README of this project (commit and push this to your GitHub repository also).
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The renv workflow begins with intializing an environment with renv::init(). Then you install or remove packages and otherwise work in R as normal. When you are ready to update the renv snapshot, you run renv::snapshot(). You can now share this environment snapshot on GitHub or wherever. The environment can be restored using renv::restore()"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21dfe2f76f9_90_163")
+```
+
+The limitations of this method, [as noted by the `renv` authors](https://rstudio.github.io/renv/articles/renv.html#caveats), is that it really only tracks packages in R and cannot help track or enforce items that may affect the computing environment outside of R. So while it will aid in the reproducibility of your analysis, it will not cover everything.
+
+<div class = "dictionary">
+**renv** - An R package that helps you to share and record your R specific computing environment
+</div>
+
+## Containerization
+
+In order to truly reproduce a result with an identical computing environment you would need to use a containerized approach. To containerize a computing environment is to truly create an environment that is shippable to others. A container is analogous to a virtual machine. A computer runs a computing environment inside of it that is separate from the rest of the computer (hence why its called a container).
+
+One of the most popular containerization softwares is Docker. Docker allows you to build your computing environment and share it on its online platform in the form of images that you can download and run. In fact, this book is rendered by a Docker container!
+
+<div class = "warning">
+If you will be using a container with PHI or PII or other protected information, we recommend you take a look at [this resource](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf) to understand best practices for using Docker with sensitive data.
+</div>
+
+<div class = "dictionary">
+- **container** - A method for running software in a way that is shareable and Reproducible
+- **Docker** - A popular platform for containers
+</div>
+
+We will not cover Docker here but if you are interested in using a containerized approach like Docker, here are additional resources for learning:
+
+- [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/introduction/index.html)
+- [ITCR Training Network chapters about Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html)
+- [Docker documentation about getting started](https://www.docker.com/get-started/)
+- [How to ensure your Docker usage is HIPAA-Compliant](https://www.atlantic.net/hipaa-compliant-hosting/best-practices-for-creating-a-hipaa-compliant-docker-host/)
+- [HIPAA Compliant Containers](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf)
+- [Singularity is a different container platform that does some encryption](https://docs.sylabs.io/guides/latest/user-guide/) -- this can help if you are using data that needs to be protected.
+
+## Conclusion
+
+In summary:
+
+- Software versions affect the reproducibility of an analysis.
+- Printing out session info is a great way to record software versions.
+- `renv` is an R package that allows you to share your R specific computing environment.
+- Containerization softwares like Docker allow you to more completely share a replicate computing environment.
