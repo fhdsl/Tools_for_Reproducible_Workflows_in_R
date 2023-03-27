@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Tools for Reproducible Workflows in R</title>
-  <meta name="description" content="Tools for Reproducible Workflows in R" />
+  <title>Chapter 6 Reproducible Code | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 6 Reproducible Code | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Tools for Reproducible Workflows in R" />
+  <meta property="og:title" content="Chapter 6 Reproducible Code | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Tools for Reproducible Workflows in R" />
+  <meta name="twitter:title" content="Chapter 6 Reproducible Code | Tools for Reproducible Workflows in R" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="setting-up-your-project.html"/>
+<link rel="next" href="using-github-in-a-workflow.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -279,22 +279,210 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="header">
-<h1 class="title">Tools for Reproducible Workflows in R</h1>
-<p class="date"><em>March, 2023</em></p>
-</div>
-<div id="about-this-course" class="section level1 unnumbered">
-<h1>About this Course</h1>
-<p>Reproducibility of data analyses can be enhanced through the use of tools designed to manage the complexity involved in any data analysis designed to address an important scientific question. We focus on a few software tools that aid in project organization, collaboration, auditability of analyses, and maintaining the integrity of data and code. In this course, we view a data analysis as a complex system with many integrated parts that together produce analytic results. The tools we focus on here allow data analysts to diagnose unexpected results, quickly identify problems with data and code, and provide a basis for managing the dynamic nature of data analysis.</p>
-<p>This initiative is funded by the following grant: R25GM141505 from the National Institute of General Medical Sciences (NIGMS). Except where otherwise indicated, the contents of this course are available for use under the Creative Commons Attribution 4.0 license. You are free to adapt and share the work, but you must give appropriate credit, provide a link to the license, and indicate if changes were made. Sample attribution: Tools for Reproducible Workflows in R by <a href="https://hutchdatascience.org/">Fred Hutchinson Data Science Lab</a> and <a href="https://stat.utexas.edu/">University of Texas, Austin</a> (CC-BY 4.0). You can download the illustrations by clicking <a href="https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit?usp=sharing">here</a>.</p>
-<div id="available-course-formats" class="section level2" number="0.1">
-<h2><span class="header-section-number">0.1</span> Available course formats</h2>
-<p>This course is available in multiple formats which allows you to take it in the way that best suites your needs. You can take it for certificate which can be for free or fee.</p>
+<div id="reproducible-code" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Reproducible Code</h1>
+<p><img src="resources/images/06-code_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_0.png" title="Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient, and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project" alt="Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient, and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project" width="100%" style="display: block; margin: auto;" /></p>
+<div id="reproducibility-means-we-dont-need-to-reinvent-the-wheel" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Reproducibility means we don’t need to reinvent the wheel!</h2>
+<p>When you realize something that you need done, you should first use Google and look on GitHub and StackOverflow to see if someone else has written something that works really well. Where at all possible, borrow good code and attribute the author – no need to reinvent the wheel. As we said previously, R has a great community of users who are constantly creating new and great code, often in the form of packages that are ready for you to install and use.</p>
+<p><em>This is the beauty of reproducibility, if you or someone else makes great code, it can not only be re-run but it can be repurposed!</em></p>
+<div id="tips-for-choosing-packages-to-use" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Tips for choosing packages to use:</h3>
 <ul>
-<li>The material for this course can be viewed without login requirement on this <a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/">Bookdown website</a>. This format might be most appropriate for you if you rely on screen-reader technology.</li>
-<li>This course can be taken for <a href="LINK%20HERE">free certification through Leanpub</a>.</li>
-<li>This course can be taken on <a href="LINK%20HERE">Coursera for certification here</a> (but it is not available for free on Coursera).</li>
-<li>Our courses are open source, you can find the <a href="https://github.com/fhdsl/Tools_for_Reproducible_Workflows_in_R">source material for this course on GitHub</a>.</li>
+<li>Does the package have easy to use documentation to help guide you on how to use it properly? If the package has underdeveloped documentation it may be difficult for you or others to understand and use properly.</li>
+<li>Is the code actively being developed or maintained? Packages that are no longer being maintained will likely deprecate more quickly rendering them unusable in the future.</li>
+<li>Is it a package that is commonly recognized by the community? Well recognized packages will be easier for others to comment on and help you with.</li>
+</ul>
+</div>
+</div>
+<div id="the-importance-of-iterative-work" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> The importance of iterative work</h2>
+<p>We’ve mentioned previously that reproducibility is iterative work. This way of working refers to code work as much as anything else. You won’t ever write perfect code on the first try, instead aim for each chunk to work one step at a time. Once it is working, take a break (perhaps until the next day), then return to it and look for ways to polish it and make it more efficient.</p>
+<p><a href="https://www.ccdatalab.org/blog/not-so-secret-sauce-for-efficient-workflows">For more tips on how to work read this blog</a>.</p>
+</div>
+<div id="aspects-of-reproducible-code" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Aspects of Reproducible code</h2>
+<p><img src="resources/images/06-code_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_6.png" title="Reproducible code is: Readable meaning it is well-documented, uses well-known functions when appropriate, and follows a code style. Efficient meaning it doesn’t use up more computational resources than necessary and follows the advice of DRY (don’t repeat yourself). Consistent meaning it follows conventions and is organized" alt="Reproducible code is: Readable meaning it is well-documented, uses well-known functions when appropriate, and follows a code style. Efficient meaning it doesn’t use up more computational resources than necessary and follows the advice of DRY (don’t repeat yourself). Consistent meaning it follows conventions and is organized" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="readable" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Readable</h2>
+<p>Reproducible code is readable code. In order for other people to use your code, they will need to be able to understand it. Because of that, code being readable is more important than code being innovative or clever.</p>
+<p><img src="resources/images/06-code_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_120.png" title="Reproducible parrot is looking at their computer and says ‘It’s so easy for me to understand what is going on with this code because it is so readable and follows a style!’" alt="Reproducible parrot is looking at their computer and says ‘It’s so easy for me to understand what is going on with this code because it is so readable and follows a style!’" width="100%" style="display: block; margin: auto;" /></p>
+<div id="well-documented-1" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Well-documented</h3>
+<p>Reproducible code is well documented code! This includes (but isn’t limited to):</p>
+<ul>
+<li>A README that can get individuals up to speed on the project quickly</li>
+<li>Code and notebooks that have a healthy amount of comments</li>
+</ul>
+<p>These bits of documentation are not only helpful for others reading your project but for you! As time passes, future you will forget what you of today was thinking when you wrote this code. Helpful code comments can help jog your memory of what the code is doing and perhaps what the next steps in the project need to be.</p>
+<div id="readmes" class="section level4" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> READMEs</h4>
+<p>READMEs are a universal signal to people looking at the project that they should READ this file to get a rundown on the project.</p>
+<p><img src="resources/images/06-code_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_260.png" title="Reproducible Parrot is looking at a set of project files that include a file called a ‘README.md’. The parrot says ‘I was so confused on where to start with this project but the README really brought me up to speed!" alt="Reproducible Parrot is looking at a set of project files that include a file called a ‘README.md’. The parrot says ‘I was so confused on where to start with this project but the README really brought me up to speed!" width="100%" style="display: block; margin: auto;" /></p>
+<p>READMEs should include:</p>
+<ol style="list-style-type: decimal">
+<li>A summary of the goals and intentions of the project.</li>
+<li>Usage instructions that explain exactly what commands and packages need to be used to re-run analyses.</li>
+<li>Explanation of what software dependencies are needed for your project.</li>
+<li>A basic summary of what files are there; which are input and output files.</li>
+<li>Any other information that would be relevant to someone trying to understand the project.</li>
+</ol>
+<p>Here’s a <a href="https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md">template README</a> that you can use an example.</p>
+<div class="dictionary">
+<ul>
+<li><strong>README</strong> - A file in a project that has the start up summary information that could get someone acclimated to the project.</li>
+</ul>
+</div>
+</div>
+<div id="code-comments" class="section level4" number="6.4.1.2">
+<h4><span class="header-section-number">6.4.1.2</span> Code comments</h4>
+<p>A healthy amount of code comments doesn’t mean that every line needs a comment (though perhaps at sections that need future explanation they might). Helpful code comments don’t just echo what the code is doing but are explanatory. <a href="https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/">StackOverflow has a great article</a> about rules for writing helpful code comments. we’ll echo the rules here:</p>
+<blockquote>
+<p>Rule 1: Comments should not duplicate the code.</p>
+</blockquote>
+<blockquote>
+<p>Rule 2: Good comments do not excuse unclear code.</p>
+</blockquote>
+<blockquote>
+<p>Rule 3: If you can’t write a clear comment, there may be a problem with the code.</p>
+</blockquote>
+<blockquote>
+<p>Rule 4: Comments should dispel confusion, not cause it.</p>
+</blockquote>
+<blockquote>
+<p>Rule 5: Explain unidiomatic code in comments.</p>
+</blockquote>
+<blockquote>
+<p>Rule 6: Provide links to the original source of copied code.</p>
+</blockquote>
+<blockquote>
+<p>Rule 7: Include links to external references where they will be most helpful.</p>
+</blockquote>
+<blockquote>
+<p>Rule 8: Add comments when fixing bugs.</p>
+</blockquote>
+<blockquote>
+<p>Rule 9: Use comments to mark incomplete implementations.</p>
+</blockquote>
+</div>
+</div>
+<div id="follows-a-code-style-1" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Follows a code style</h3>
+<p>Code style helps make code readable. Appropriate spacing, punctuation, and grammar are not always essential for getting a message across, but it can certainly b3 dis-tRaCTIng to readers if conventions aren’t followed.</p>
+<p><strong>Basic Example:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="reproducible-code.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad: Should use &lt;- and have a variable name that is informative</span></span>
+<span id="cb1-2"><a href="reproducible-code.html#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb1-3"><a href="reproducible-code.html#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="reproducible-code.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bad: Irregular spacing is distracting</span></span>
+<span id="cb1-5"><a href="reproducible-code.html#cb1-5" aria-hidden="true" tabindex="-1"></a>numbers<span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
+<span id="cb1-6"><a href="reproducible-code.html#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="reproducible-code.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Good!</span></span>
+<span id="cb1-8"><a href="reproducible-code.html#cb1-8" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div>
+<p>Here’s some style guides you can use:</p>
+<ul>
+<li><a href="https://google.github.io/styleguide/Rguide.html">Google’s R Style Guide</a></li>
+<li><a href="https://style.tidyverse.org/index.html">Tidyverse Style Guide</a></li>
+</ul>
+<p><a href="https://www.tidyverse.org/blog/2017/12/styler-1.0.0/">R packages like styler</a> can automatically style code for you.</p>
+</div>
+</div>
+<div id="efficient" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Efficient</h2>
+<p>Reproducible code is efficient code. Efficiency helps reproducibility in that code that takes up less resources and is not redundant can be re-run and debugged more easily.</p>
+<div id="doesnt-use-up-more-computational-resources-than-necessary" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Doesn’t use up more computational resources than necessary</h3>
+<p>R is not meant to be a fast language. R code can be computationally costly if it’s written in the wrong way.</p>
+<p>You can identify what parts of your R code are the slowest or otherwise computationally costly by using the <a href="https://rstudio.github.io/profvis/"><code>profvis</code></a> and <a href="https://bench.r-lib.org/"><code>bench</code></a> packages.</p>
+<p>One popular example is R loops which can be particularly slow in R. Note that this doesn’t mean you shouldn’t ever use loops or other items in R, just that you should be aware that some items in R are particularly slower than others.</p>
+<p><strong>R ‘for loop’ alternatives:</strong></p>
+<ul>
+<li><a href="https://statisticsglobe.com/avoid-for-loop-in-r">Using <code>apply</code> functions (an older option that comes with the basic installation of R)</a></li>
+<li><a href="https://adv-r.hadley.nz/perf-improve.html?q=perfor#avoid-copies">Advanced R discusses alternative strategies</a></li>
+<li><a href="https://dplyr.tidyverse.org/reference/across.html">The across function</a></li>
+<li><a href="https://purrr.tidyverse.org/">Using the <code>purrr</code> package</a></li>
+<li><a href="https://jhudatascience.org/intro_to_r/modules/Functions/Functions.html#18">A nice summary of these functions</a></li>
+</ul>
+<p><strong>Further reading:</strong></p>
+<ul>
+<li>Hadley Wickham has a <a href="https://adv-r.hadley.nz/perf-improve.html?q=perfor#perf-improve">great chapter in Advanced R</a> that covers these concepts in more detail.</li>
+</ul>
+</div>
+<div id="is-dry-dont-repeat-yourself" class="section level3" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Is DRY (don’t repeat yourself)</h3>
+<p>DRY is an acronym for “don’t repeat yourself”. Non-redundant code is more reproducible because it is easier to maintain and to read.</p>
+<p>Let’s take a look at an example from <a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/writing-durable-code.html#dry-up-your-code">this Reproducibility in Cancer Informatics course</a> about what DRY vs non-DRY code might look like:</p>
+<p>Non-DRY or WET (write everything twice) code might look like this:</p>
+<pre><code>paste(&#39;Hello&#39;,&#39;John&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Susan&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Matt&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Anne&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Joe&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Tyson&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Julia&#39;, &#39;welcome to this course&#39;)
+paste(&#39;Hello&#39;,&#39;Cathy&#39;, &#39;welcome to this course&#39;)</code></pre>
+<p>Note that if you want to change something in eight of these messages you would have to change all eight lines.</p>
+<p>To DRY up this code, we could functionalize it:</p>
+<pre><code>GreetStudent &lt;- function(name) {
+ greeting &lt;- paste(&#39;Hello&#39;, name, &#39;welcome to this course&#39;)
+ return(greeting)
+}
+
+class_names &lt;- c(&#39;John&#39;, &#39;Susan&#39;, &#39;Matt&#39; ,&#39;Anne&#39;, &#39;Joe&#39;, &#39;Tyson&#39;, &#39;Julia&#39;, &#39;Cathy&#39;)
+
+lapply(class_names, GreetStudent)</code></pre>
+<p>Now, if we wanted to edit the greeting pasted, we’d only have to change it once.</p>
+<div class="dictionary">
+<ul>
+<li><strong>DRY code</strong> - Code that doesn’t repeat itself and because of that is more efficient</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="consistent-1" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Consistent</h2>
+<p>Consistency is key for reproducibility. Not only do we want code to run consistently, but it will be more understandable to our future selves and to others if it follows a pattern.</p>
+<div id="follows-conventions" class="section level3" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> Follows conventions</h3>
+<p>Although there’s always a time to break conventions, often times conventions lend to readability. For example, in R using <code>&lt;-</code> for assignments is less likely to be distracting than using <code>=</code>. This is related to following a style guide. In general we recommend using the tidyverse conventions and style.</p>
+<p>However, this advice, like a lot of the advice in this chapter is highly dependent on the context and goals of the project and code being written. There are times that the conventional way to write something might not suit the project because it is inefficient or otherwise clashes with other goals of reproducibility.</p>
+</div>
+<div id="is-organized" class="section level3" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Is organized</h3>
+<p>In the previous chapter, we discussed how projects should be organized in order to be reproducible, but this also applies to code. Sometimes as you have been working on code, you may realize that as it has been developing it doesn’t flow in an organized manner.</p>
+<p>Just as with regular writing that is disorganized, code that is disorganized can be hard to follow and hard to bug. For example, if you have hard coded a multiple variables or have loaded multiple packages, it makes sense to group these items together so they are easier to find and fix.</p>
+<p>A code outline for an analysis notebook for example might look like:</p>
+<ul>
+<li>Describe the goals</li>
+<li>Load in the libraries and any source code</li>
+<li>Declare any hard coded variables</li>
+<li>Read in the data<br />
+</li>
+<li>Clean the data</li>
+<li>Make plots and gather statistics</li>
+<li>Summarize results</li>
+<li>Print out the <a href="">session info</a> we’ll discuss more about this in a future chapter.</li>
+</ul>
+</div>
+</div>
+<div id="conclusion-2" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> Conclusion</h2>
+<p>The best way to find out if your code meets these concepts or how it can better become more reproducible is through code review. We will briefly discuss code review in future chapters.</p>
+<p>In summary, reproducible code is:</p>
+<ul>
+<li>Readable
+<ul>
+<li>Well-documented</li>
+<li>Follows a code style</li>
+</ul></li>
+<li>Efficient
+<ul>
+<li>Computationally non wasteful</li>
+<li>DRY</li>
+</ul></li>
+<li>Consistent</li>
+<li>Follows convention (when appropriate)</li>
+<li>Organized</li>
 </ul>
 
 </div>
@@ -312,8 +500,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="setting-up-your-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="using-github-in-a-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
