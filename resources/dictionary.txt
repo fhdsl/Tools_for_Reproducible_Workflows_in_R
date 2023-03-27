@@ -1,3 +1,13 @@
+functionalize
+Hadley
+preprint
+iteratively
+purrr
+StackOverflow
+styler
+tidyverse
+Wickham
+tRaCTIng
 HIPAA
 iteratively
 lockfile
