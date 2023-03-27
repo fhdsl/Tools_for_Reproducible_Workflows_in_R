@@ -1,3 +1,16 @@
+HIPAA
+iteratively
+lockfile
+preprint
+README
+renv
+lockfile
+Carpentries
+devtools
+shippable
+tidyverse
+sessionInfo
+softwares
 NIGMS
 programmatically
 README
