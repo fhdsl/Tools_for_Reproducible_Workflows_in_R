@@ -3,4 +3,32 @@
 
 
 
+In this chapter we will talk about a very useful R-related tool called RStudio. RStudio is an environment for using R that can be extremely helpful for writing code and making your analyses reproducible. 
+
 ![](resources/images/04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_0.png){width=100%}
+
+## Why use RStudio?
+
+RStudio is what is called an integrated development environment(IDE) for writing code in R (although it also has compatibility for other languages).
+
+It is designed to make working in R easier in a variety of ways:
+
+- it helps you write code by suggesting code based on what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
+- it helps you view the output of your code in an easier manner, especially plots
+- it helps you find errors in your code
+- it helps you keep track of any objects that you have assigned in R
+- it helps you orient yourself in terms of the files on your computer 
+- can be used to help track changes in your code and other files over time
+
+
+<div class = "dictionary">
+
+- **IDE** - Integrated Development Environment - a computing environment for writing code, debugging code, and looking at the output of your code 
+- **RStudio** - an IDE designed especially for writing R code
+- **function** - a specific piece of code that performs a task - packages in R often have several functions
+
+</div>
+
+
+
+
