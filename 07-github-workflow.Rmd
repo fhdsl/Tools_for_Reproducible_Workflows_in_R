@@ -25,6 +25,11 @@ This problem is what git, a version control system can address. It is a system t
 The most common way git is used is in conjunction with an online platform called GitHub.
 [GitHub](https://github.com/) is an online platform for sharing code.
 
+<div class = "dictionary">
+- **version control** a method of tracking files as they are changed throughout a project.
+- **GitHub** an online platform for sharing code in a version controlled manner.
+</div>
+
 It aids reproducibility by being online in a way that is easily shareable to others in a version controlled way. GitHub allows anyone at anytime to take a look at and obtain your code.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot has shared their analysis on GitHub allowing their fellow parrot friend to observe and learn from the code and results! Reproducible parrot’s friend says ‘This analysis is great and really helps inform the field! Glad it was shared on GitHub!’"}
@@ -49,7 +54,7 @@ GitHub is also handy for collaborating with others on your code, not only becaus
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_503")
 ```
 
-## GitHub terms
+## GitHub Workflow
 
 Git can feel overwhelming to a lot of folks and it has a really deep and complicated system. However, truthfully for most instances you will only need the same few commands in the same series of steps which we will cover here.
 
@@ -57,20 +62,28 @@ Git can feel overwhelming to a lot of folks and it has a really deep and complic
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2282797b55b_0_7")
 ```
 
-Git has its own set of terms that we need to use in order to communicate about it. We will briefly define them here but don't stress if it doesn't completely make sense to you just yet. As we walk through the typical workflow steps, it will make more sense!
+One reason that git and GitHub can feel overwhelming to folks is that there are a number of terms that are used to describe the different commands. We will walk through the typical workflow steps, and define these terms as we use them.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "There are so many git terms it can be difficult to keep track of them all! A computer with the GitHub cat symbol has question marks above it with the terms: pull, add, clone, branch, remote, commit, and push around it. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_5")
 ```
 
-<div
+### Create your GitHub account
 
-## GitHub Workflow
+Before we get started with GitHub, if you do not have a GitHub account, [go here to make one.](https://github.com/)
 
-## Creating a new repo
+### Creating a new repository
 
+Whenever you are starting a new project 
+<div class = "dictionary">
+- **repository** - a group of project files
+</div>
 
 ## Opening a PR
+
+<div class = "dictionary">
+- **clone** - making a copy of a code base on your computer.
+</div>
 
 Following these steps: https://usethis.r-lib.org/articles/pr-functions.html
 
