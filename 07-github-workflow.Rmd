@@ -9,36 +9,61 @@ ottrpal::set_knitr_image_path()
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_33")
 ```
 
+## What is version control
+
+Version control is system that allows you to track your files as you work on them.
+Whether you've wrote a lot of code or written other documents, you've likely encountered the need for version control. As this comic from Piled Higher and Deeper describes, files can go through a lot of edits and revisions (this is true of code too)! And it doesn't take long for it to be difficult or even impossible to track the various revisions of even one file let alone dozens or hundreds of files that may be a part of a data science project.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The comic from Piled Higher and Deeper PhdComics.com is titled FINAL.doc. The student takes a paper to the professor who edits it and now calls it FINAL_rev2.doc. After another round of revisions, its now called FINAL_rev6.COMMENTS.doc, and then FINAL_rev.8.comments5.CORRECTIONS.doc, then FINAL_rev18.comments7.corrections9.MORE.30.doc, then FINAL_rev.22.comments49.corrections.10#%WHYDIDICOMETOGRADSCHOOL????.doc"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2282797b55b_0_0")
+```
+
+This problem is what git, a version control system can address. It is a system that allows you to track your files, keep a history of them and otherwise handle changes through the history of your project.
 
 ## What's GitHub?
 
-GitHub is an online platform for sharing code. It is for use with `git` a version control language. Version control is
+The most common way git is used is in conjunction with an online platform called GitHub.
+[GitHub](https://github.com/) is an online platform for sharing code.
 
+It aids reproducibility by being online in a way that is easily shareable to others in a version controlled way. GitHub allows anyone at anytime to take a look at and obtain your code.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot has shared their analysis on GitHub allowing their fellow parrot friend to observe and learn from the code and results! Reproducible parrot’s friend says ‘This analysis is great and really helps inform the field! Glad it was shared on GitHub!’"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_415")
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot says ‘I’m interested in writing some code to experiment with something in the data, but I’m not sure if I’ll be keep this or not. Good thing version control allows me to track this in a way that doesn’t interfere with my main, polished analysis!’ On the side of the image shows a branching off of the main code base that says ‘test analysis’ This test analysis can be later merged with the main analysis if needed or it can be kept tracked but not added to the main analysis."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_459")
-```
-
+Because code on GitHub is version controlled, it allows you to track your code and project files as you and others continue to work on them. This can be really useful for documenting not only the changes to your analysis, but the rationale and communications that led to those changes.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot is confused and says ‘I don’t remember why I wrote this analysis this way. Good thing GitHub has my well documented analysis tracked. ‘ The parrot’s computer shows code and an hourglass with a GitHub symbol over it."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_488")
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy.
-"}
+GitHub and its version control also allows you to be able to take the side journeys that often pop up with data science projects but in a way that allows you to ensure that the main files stay safe as you experiment.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Reproducible parrot says ‘I’m interested in writing some code to experiment with something in the data, but I’m not sure if I’ll be keep this or not. Good thing version control allows me to track this in a way that doesn’t interfere with my main, polished analysis!’ On the side of the image shows a branching off of the main code base that says ‘test analysis’ This test analysis can be later merged with the main analysis if needed or it can be kept tracked but not added to the main analysis."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_459")
+```
+
+GitHub is also handy for collaborating with others on your code, not only because it is online, but the version controlled nature of it, allows you and any team members to work on the same files simultaneously without fear that the changes will be impossible to merge together. Git and GitHub have systems to do just this.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_503")
 ```
 
 ## GitHub terms
 
+Git can feel overwhelming to a lot of folks and it has a really deep and complicated system. However, truthfully for most instances you will only need the same few commands in the same series of steps which we will cover here.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "This comic from xkcd illustrates that git is often seen as very complicated. The one stick figure says ‘This is git, it tracks collaborative work on projects through a beautiful ditstributed graphic theory tree model’ The other stick figure says ‘cool how do we use it’? The first stick figure says ‘No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project and download a fresh copy.’"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2282797b55b_0_7")
+```
+
+Git has its own set of terms that we need to use in order to communicate about it. We will briefly define them here but don't stress if it doesn't completely make sense to you just yet. As we walk through the typical workflow steps, it will make more sense!
+
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "There are so many git terms it can be difficult to keep track of them all! A computer with the GitHub cat symbol has question marks above it with the terms: pull, add, clone, branch, remote, commit, and push around it. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g201bd406763_37_5")
 ```
 
+<div
 
 ## GitHub Workflow
 
