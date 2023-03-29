@@ -7,3 +7,15 @@ ottrpal::set_knitr_image_path()
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test  pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats.Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20eecbcf66d_84_0")
 ```
+
+## Reports support reproducibility
+
+Using R Markdown files helps you to create supports that can more transparently show what you did for your analysis and it can help you to test that your code works as expected. 
+
+The following are reasons why R Markdown files are helpful:
+
+- They allow you to show and share your code and the output of your code (this can be done in several ways depending on what you want)
+- They allow you to test if your code works outside of what is active in your environment
+- They allow you to test sections and all previous sections of your code out to troubleshoot 
+- They help you understand what might be wrong with your code in smaller sections of code if you have an issue
+
