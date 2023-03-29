@@ -151,6 +151,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Now that you hopefully have RStudio running on your machine, we will walk you through some of the major features that can really help you with your data analyses.
 
+### Default Layout
+
 First it is important to be familiar with the layout. When you first open RStudio you will see 3 panes.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "When RStudio is first opened you will see 3 panes"}
@@ -197,7 +199,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 While there are other tabs, don't worry about those for now. We will go deeper into RStudio as we continue. 
 
 
-Let's try an examples to get started.
+Let's try an example to get started.
 
 As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
 
@@ -205,6 +207,13 @@ As an example, we could type in the code `head(iris)` and press enter to see the
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_142")
 ```
 
+Now let's try another example where instead of just printing some data to the screen we assign a data object that will show up in the environment using the `<-` notation. This is useful in a situation if we want to modify the iris data somehow but want to keep the original version.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "If you create an object in RStudio, it will show up in the environment pane."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g1fa1583c827_0_4")
+```
+
+### The Hidden Pane
 
 There is a hidden fourth pane. This is only accessible when we start to make a script or a report with our code.
 
