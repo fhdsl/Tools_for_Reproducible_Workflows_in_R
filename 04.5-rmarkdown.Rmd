@@ -62,6 +62,31 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Now let's discuss how to start writing code in such a file.
 
+## Writing code in R Markdown files
+
+At the top of an R Markdown file you will see some special code that is called [YAML](https://en.wikipedia.org/wiki/YAML) code. It is commonly used to configure programming projects. It does the same for our R Markdown reports. A major difference between R and YAML is that spacing really matters for YAML.
+
+What do we mean by configure? Configuration in programming generally refers to setting things up. 
+
+<div class = "dictionary">
+
+- **YAML** - A language that helps set things up and shows up by defualt when you open an R Markdown file. It is written between the two `---`.
+- **Configuration** - A setup for a programming project.
+
+</div>
+
+Here we can see what the top of an R Markdown file looks like after we first open one.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The YAML code at the top of R Markdown files sets up how the file will look and be rendered.  Here we see that title specifies a title, author lists an author name, date will list a date, and output will specify how we want the file report to be rendered.  The three dashed lines indicate the start and end of the YAML section."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g1fa1583c827_0_16")
+```
+
+
+
+
+You can modify the `"Untitled"` text after `title:` to specify the title of your report. 
+
+
 
 
 
