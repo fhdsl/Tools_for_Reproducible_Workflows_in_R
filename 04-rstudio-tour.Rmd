@@ -34,6 +34,7 @@ It is designed to make working in R easier in a variety of ways:
 We will dive deeper into these benefits later once we get started with RStudio, but first we will discuss how to make sure you have it downloaded and installed on your computer.
 
 ## Installing RStudio
+
 In case you don't yet have RStudio on your computer, we will walk you through the process of getting started.
 
 ### Installing and Updating R
@@ -87,15 +88,17 @@ updateR()#update your version of R
 
 </details>
 
-### Downloading RStudio
+### Installing RStudio
 
-Next we want to download RStudio. You can do so by going to the Posit website at this link: https://posit.co/.
+Next we want to download and install RStudio. You can do so by going to the Posit website at this link: https://posit.co/.
 
 <div class = "notice">
 
 Posit is a software company that used to be called RStudio that develops open-source R tools and packages. It is a Public Benefit Corporation (PBC) and a Certified B Corporation®, so it is committed to creating software that benefits the public. See [here](https://posit.co/about/pbc-report/) for more information.
 
 </div>
+
+<details><summary> Click here for instructions on how to download and install RStudio. </summary>
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Posit website for downloading RStudio"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_30")
@@ -137,9 +140,11 @@ If you run into trouble, check the following:
    
 If your operating system is older (and you can't update it), try installing progressively older versions found [here](https://www.rstudio.com/products/rstudio/older-versions/) until it works. You will know if it worked if you try to open RStudio and you see an interface without a message about things going poorly. Here you can see an [example](https://community.rstudio.com/t/rstudio-desktop-crashes-on-startup-with-library-not-loaded/130296) of this. 
 
+</details>
+
 ### Updating RStudio
 
-It is also a good idea to keep RStudio up-to-date. New features become available as the Posit team works on developing RStudio.
+It is also a good idea to keep RStudio up-to-date. New features become available as the Posit team works on developing RStudio. So if you already have RStudio, you might want to check to see if your version is up-to-date.
 
 To check for updates you can go to the `Help` menu at the top of RStudio and then click on `Check for Updates`. 
 
