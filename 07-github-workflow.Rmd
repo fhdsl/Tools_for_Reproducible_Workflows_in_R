@@ -74,61 +74,208 @@ Before we get started with GitHub, if you do not have a GitHub account, [go here
 
 ### Creating a new repository
 
-Whenever you are starting a new project 
+Whenever you are starting a new project you will want to start by creating a new repository on GitHub. You can generally do this by going to GitHub and [choosing "New repository" from the menu](https://github.com/new).
+
 <div class = "dictionary">
 - **repository** - a group of project files
 </div>
 
-## Opening a PR
+On this new repository page, you will want to create a description that summarizes what this project will be (you can always change this later).
 
-<div class = "dictionary">
-- **clone** - making a copy of a code base on your computer.
-</div>
+Also choose the "Add a README file" option because every project should have a README.
 
-Following these steps: https://usethis.r-lib.org/articles/pr-functions.html
+For the `Add .gitignore` option, it would be handy to choose the `R` gitignore template. [gitignore files are handy](https://git-scm.com/docs/gitignore#:~:text=A%20gitignore%20file%20specifies%20intentionally,gitignore%20file%20specifies%20a%20pattern.). They are a way to tell GitHub that you don't want a particular file tracked. It's just important for us to track the important files as it is for us to declutter our project by not adding unnecessary files.  
 
-Started new project from GitHub repository.
+You may want to choose a license. We recommend choosing something that allows others to freely use your code but with attribution like a Creative Commons license.
 
-Here’s more instructions on setting up a repo in the cloud: https://datatrail-jhu.github.io/DataTrail/cloning-a-repository.html
+Then you are ready to click "Create repository". Keep in mind what the location and name of this repository is. In GitHub repositories are named like this: `username/repository_name`.
 
+### Setting up your repository locally
 
-Run
+\*This section is adapted from the [DataTrail course](https://datatrail-jhu.github.io/DataTrail/cloning-a-repository.html#step-3-set-up-github-credentials).
+
+In order to be able to access everything in your GitHub repository from RStudio cloud, you will need to set up GitHub credentials. You should only need to do this once per project.
+
+1. In your RStudio interface, make sure that you are in the `Console` tab.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Go to the Console tab"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec69c_0_3")
+```
+
+2. Now use the command below to install the package `usethis`. Copy and paste it in the Console window and click Enter on your keyboard. This package will help us manage our GitHub credentials from RStudio more easily.
+
 ```
 install.packages("usethis")
 ```
+This will take a minute or so to install. Remember that red text doesn't mean an error necessarily.
+
+3. Now to use this package, we need to attach its library using the following command:
 
 ```
 library("usethis")
 ```
 
+4. RStudio and GitHub require you make a special fancy password to use as credentials called a **GitHub Personal Access Token** (sometimes abbreviated as a "PAT").
+
+To create a 'PAT' from RStudio we can run this handy command:
+
 ```
 usethis::create_github_token()
 ```
+Running this command will open up a window in your GitHub that will ask you for your password. Login to GitHub as you normally would.
 
-The boxes checked that you need should already be there
+This will open up a page in GitHub for creating a `New personal access token`.
 
-Login to GitHub, name token, click “generate token” at bottom of screen
-Run
+Underneath the `Note` put something that reminds you what this PAT is for. Something like `RStudioCloud Access`. (Note that each PAT you make needs its own unique `Note` though).
+
+Underneath the `Select scopes` section **you don't need to do anything**, `usethis` package already chose the permissions we need.
+
+Scroll all the way down on this page and click `Generate Token`. You've created your first PAT! **Do not close this window**, keep it handy for now. Note that in the image below we blocked out our PAT, but yours will show a jumble of letters and numbers
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "After running the usethis::create_github_token() a window from GitHub should open up. Click Generate Toekn button and keep this window handy. Then click the copy symbol (two squares). "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec69c_0_81")
 ```
+
+5. Return back to your RStudio while keeping your PAT handy.
+In the `Console` window, run this command:
+
+```r
 gitcreds::gitcreds_set()
 ```
 
-Copy the token and paste it to the prompt in Posit cloud
-It should tell you:
+It will ask you to `? Enter password or token`. Copy your PAT and paste it into the command window and press Enter.
 
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Paste PAT in the Console window after running gitcreds::gitcreds_set()"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec69c_0_158")
+```
+
+After you enter your PAT here you should get a message like:
 ```
 -> Adding new credentials...
--> Removing credentials from cache...
+-> Removing credetials from cache...
 -> Done.
 ```
 
-If all went well.
+You are now free to close that GitHub PAT window. Note that you will want to be very careful with your PAT. **Do not share it or put it anywhere that others could see it or access it!**
 
-Now we can create a new branch with
+7. Now we also need to add your username and email to the RStudio GitHub credentials by running a command like below.
+But replace the example **username** and **email** with what corresponds to your GitHub account.
 
-pr_init(branch = "cansavvy/transfer-chapt2")
+```
+use_git_config(user.name = "Jane", user.email = "jane@example.org")
+```
 
-This branch will be called "cansavvy/transfer-chapt2" but you can put in here whatever you want your branch to be called.
+Run this in the `Console` tab as well and click Enter.
+
+8. Now to double check that everything is set, we can run this command to have the `usethis` package echo back our credentials:
+
+```
+git_sitrep()
+```
+It will give you output that looks similar to this: (but note it will have your own user name, and repository name and etc.)
+
+```
+Git config (global)
+• Name: 'Jane'
+• Email: 'jane@example.org'
+• Global (user-level) gitignore file: <unset>
+• Vaccinated: FALSE
+ℹ See `?git_vaccinate` to learn more
+• Default Git protocol: 'https'
+• Default initial branch name: <unset>
+GitHub
+• Default GitHub host: 'https://github.com'
+• Personal access token for 'https://github.com': '<discovered>'
+• GitHub user: 'Jane'
+• Token scopes: 'gist, repo, user, workflow'
+• Email(s): 'jane@example.org (primary)'
+✖ Local Git user's email ('jane@example.org') doesn't appear to be registered with GitHub.
+Git repo for current project
+• Active usethis project: '/cloud/project'
+• Default branch: 'master'
+• Current local branch -> remote tracking branch:
+  'master' -> 'origin/master'
+GitHub remote configuration
+• Type = 'theirs'
+• Host = 'https://github.com'
+• Config supports a pull request = FALSE
+• origin = 'JaneEverydayDoe/first_project' (can not push)
+• upstream = <not configured>
+• Desc = The only configured GitHub remote is 'origin', which
+  you cannot push to.
+  If your goal is to make a pull request, you must fork-and-clone.
+  `usethis::create_from_github()` can do this.
+
+  Read more about the GitHub remote configurations that usethis supports at:
+  'https://happygitwithr.com/common-remote-setups.html'
+
+```
+
+You should see that `Name`, `email` have your credentials set as well as a `Personal access token for 'https://github.com': '<discovered>'`
+
+You can run `git_sitrep()` at anytime to see what your credentials and settings are.
+
+Yay! Now you should be able to use GitHub from RStudio!
+
+### Cloning your repository
+
+In git, to `clone` something is to get a copy of your project to your computer to work from.
+
+<div class = "dictionary">
+- **clone** - making a copy of a code base on your computer.
+</div>
+
+In RStudio we can do this using the `usethis` package again. In GitHub repositories are named like this: `username/repository_name`. Sometimes instead of a `username` it may be a github organization.
+
+```
+create_from_github("username/repository_name")
+```
+
+If this happens successfully, you should see this kind of message:
+
+```
+ℹ Defaulting to 'https' Git protocol
+✔ Setting `fork = FALSE`
+✔ Creating 'some-file-path-on-your-computer/repository_name'
+✔ Cloning repo from 'https://github.com/username/repository_name.git' into  'some-file-path-on-your-computer/repository_name'
+✔ Setting active project to 'some-file-path-on-your-computer/repository_name'
+ℹ Default branch is 'main'
+✔ Opening 'some-file-path-on-your-computer/repository_name' in new RStudio session
+✔ Setting active project to '<no active project>'
+```
+
+This will also open up a new RStudio window. Now you are ready to get to work!
+
+### Opening a PR
+
+A pull request (sometimes abbreviated PR) is a way of being able to review changes before you incorporate them into your main, more polished product. It is a highly effective system for doing code review and otherwise communicating about your data analysis to increase its reproducibility.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "A direct changes set up: Doesn’t allow for others to easily review and give feedback. Is more likely to lead to mistakes being published and disrupting course experience. Rationale of the changes made are less likely to be clear. Is quicker in the short-term. A pull request model: Encourages collaboration and feedback. Adds an extra safety net so mistakes are less likely to be published and disrupt course experience. Encourages more clear documentation and tracking about the changes being made. Requires more time and effort to do it right; but this generally has long-term payoffs!"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec77f_0_88")
+```
+
+Pull requests are based on copies of the project repository that are called `branches`.
+When we do work on a project we will want to do it somewhere that is separate from our main set of code. Branches are yet another copy of the code that is used for developing purposes.
+
+<div class = "dictionary">
+- **pull request** - a method of working on and incorporating file changes in a way that allow things to be reviewed and discussed on GitHub.
+- **branch** - another copy and version of your project that you can work from and create a pull request.
+</div>
+
+#### Creating a new branch
+
+A `main` branch is where you will keep your best, most vetted version of the project. Your `main` branch will already exist on your project when you create it.
+
+Other branches are generally made with the purpose of eventually having them reviewed and polished to the point that they are to add their changes to the `main` branch.
+
+```
+pr_init(branch = "new_branch_name")
+```
+
+This branch will be called "new_branch_name" but you should call your branch whatever would be representative of the work you will be doing on this.
+
+Staying focused on one task for a PR
 
 Grab the file from the repo
 
@@ -148,3 +295,10 @@ Click Create pull request
 Green is to push and blue arrow is to pull
 
 You can also use pr_push() whatever is comfortable
+
+ This step of incorporating changes into a branch and combining two branches together is called `merging`. The goal of a merge is to combine two branches in such a way that keeps your desired changes from both copies.
+
+<div class = "dictionary">
+- **main** - the branch name that is typically used for the main, most polished and live version of your project that others will be brought to first.
+- **merge** - combining the files from two branches into one.
+</div>
