@@ -349,6 +349,7 @@ Now if you continue to work with your files, you can go through the same steps o
 5) Commit the changes
 6) Push the changes by running `pr_push()` (You can also click the green arrow to push if you prefer).
 
+
 You can repeat these steps as many times as you need until you feel the file changes on your PR page are ready for someone else to review. If you don't have someone else on your team to review the changes, you can alternatively let them sit for a day or two and let "future You" review your file changes. Future you or others on your project might have a fresh take on these files. We will talk more about code review in a later chapter.
 
 Code review is perhaps the most powerful tool for making reproducible analyses. And now that you know how to make pull requests on GitHub, you have an excellent platform and system for version controlling and tracking, and reviewing your files! Congrats!
@@ -370,4 +371,16 @@ Recall that we said the `main` branch is the most polished and readily viewable 
 
 On your pull request page, scroll to the bottom to the big green button where it says `Merge pull request`. Be careful to not press this button before you are sure that everyone on your team is ready.
 
-After you've clicked it, hooray! You've completed your first merge of a pull request. 
+After you've clicked it, hooray! You've completed your first merge of a pull request.
+
+It may feel like we've described a lot of steps, but getting into the GitHub workflow and utilizing its benefits is all about habits! We promise it will increase the reproducibility of your analyses if you are able to stick with this process!
+
+## Conclusion
+
+We also discussed in this chapter how version control and GitHub are great tools for reproducibility and we walked through the GitHub workflow process as completed in RStudio.
+
+To summarize, the Github workflow process looks like this:
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Create a repository on GitHub. Clone that project to your computer - create_from_github("username/repository_name"). Make a new branch with pr_init(“branch_name). Edit code and files as you normally would. Commit the file changes by checking file boxes and clicking commit. Push the changes so they are online - pr_push(). Fill in the description of your pull request. Discuss pull request and repeat 4 - 6 steps as needed. Merge the changes! "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec77f_0_335")
+```
