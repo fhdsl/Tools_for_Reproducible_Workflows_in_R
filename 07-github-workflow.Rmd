@@ -381,6 +381,6 @@ We also discussed in this chapter how version control and GitHub are great tools
 
 To summarize, the Github workflow process looks like this:
 
-```{r, fig.align='center', echo = FALSE, fig.alt= "Create a repository on GitHub. Clone that project to your computer - create_from_github("username/repository_name"). Make a new branch with pr_init(“branch_name). Edit code and files as you normally would. Commit the file changes by checking file boxes and clicking commit. Push the changes so they are online - pr_push(). Fill in the description of your pull request. Discuss pull request and repeat 4 - 6 steps as needed. Merge the changes! "}
+```{r, fig.align='center', echo = FALSE, fig.alt= "Create a repository on GitHub. Clone that project to your computer - create_from_github('username/repository_name'). Make a new branch with pr_init(“branch_name). Edit code and files as you normally would. Commit the file changes by checking file boxes and clicking commit. Push the changes so they are online - pr_push(). Fill in the description of your pull request. Discuss pull request and repeat 4 - 6 steps as needed. Merge the changes! "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2288a8ec77f_0_335")
 ```
