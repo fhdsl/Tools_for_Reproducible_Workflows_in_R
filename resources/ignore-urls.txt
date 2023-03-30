@@ -4,4 +4,4 @@ https://www.contributor-covenant.org/faq][FAQ].
 https://www.contributor-covenant.org/translations][translations].
 https://github.com/jhudsl/OTTR_Template/issues/new/choose)!
 https://github.com/username/repository_name.git
-https://github.com/username/repository_name/compare/branch_name	
+https://github.com/username/repository_name/compare/branch_name
