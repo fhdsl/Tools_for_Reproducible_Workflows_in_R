@@ -99,6 +99,7 @@ Hopefully you can already start to appreciate how useful it can be to send peopl
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_39")
 ```
 
+It's important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on only the code written in the R Markdown file. It can't use code that was tested in the Console or run interatively in the R Markdown file (more on that soon). 
 
 Now let's discuss how to start writing code in such a file.
 
@@ -126,7 +127,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to change the author section  where it says `"your name"` in the example if that was not by default want you wanted in your file. 
 
-### A Code Chunk
+### Code chunks
 
 Next as we scroll down, we will see gray section with some notation which is called a code "chunk".
 
@@ -152,7 +153,11 @@ As we scroll past some text within the R Markdown file, we will see another chun
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_286")
 ```
 
+### Running chunks
+
 Here we will see a green triangular button with its point facing to the right. This is the play button. If you try pressing this button inside of RStudio, you will see a preview of what the code does. It should show the summary of the `cars` data.
+
+
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of what the code looks like after the play button is pressed for the second chunk."}
@@ -161,13 +166,23 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Pretty nifty!
 
+This is similar to testing our code in the console, in that if we assign an object it will show up in the environment.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Running a code chunk is like testing in the console, it will add any objects to the environment. Image shows that pressing the run button on a chunk that assigns data will create an object that shows up in the environment."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_311")
+```
+
+### Running previous chunks
+
 You may also notice that there is another button to the left of the play button. This button allows you to play all previous chunks before this chunk.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of the second R chunk in a new R Markdown file. Importantly there is a play previous button that allows you to run the code within the chunks before this chunk."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
 ```
 
-This is super helpful for making sure that your code works properly and isn't working simply because you have something in your environment from code that you tested in the console but did not save anywhere. 
+This is super helpful for making sure that your code works properly and isn't working simply because you have something in your environment from code that you tested in the console but did not save it anywhere. Other issues can happen if you run a code chunk out of order or changed the code in the chunk after running it previously. Therefore we recommend cleaning the enviornment (which we will describe in the next section) and testing out that your chunks work well together.
+
+## Cleaning the environment
 
 We also suggest cleaning out your environment somewhat regularly when you are interactively testing your R Markdown file using chunks. To do so, you can press the button that looks like a broom in the upper right pane. 
 
@@ -175,5 +190,67 @@ We also suggest cleaning out your environment somewhat regularly when you are in
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_305")
 ```
 
+The ultimate test though is to press the `Knit` button and make sure you have all the code necessary to allow the report to render.
 
+## Fancy chunks
+
+You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is every new R Markdown file when you first create it, is hidden. This is because it sets up how all the other chunks work (by default) and it isn't really important for the analysis. Recall that we hide the code and any output, using `include = FALSE`. If we just want to hide on or the other we can use different specifications. 
+
+The easiest way to do this is to click on the little gear symbol for the R chunk you wish to modify.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image showing the gear button within a chunk."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_319")
+```
+
+
+
+This will open a menu about how that chunk should be set up. The pulldown menu can be used to select if you want the code to be hidden, the output to be hidden, both, or none to be hidden (the default).
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image of the chunk settings menu, where you can change the name of the chunk and use the pull down menu to change the output."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_326")
+```
+## Finding chunks
+
+If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you dont, you can more easily move around from one chunk to another using a special menu button created just for this! 
+
+There is a very small menu at the bottom of the R Markdown file editor that helps you move around. It will look slightly different depending on what your chunks are named, but will have a gold hashtag button.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The chunk search menu at the lower left corner of the R Markdown editor allows you to move form one chunk to another more easily."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_332")
+```
+
+
+## Add chunks
+
+To add new chunks you can either click on the chunk button on the top right of the R Markdown editor, which looks like a green square with a "C" in it and a plus sign on the corner. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The button to add new chunks is located on the upper right corner of the R Markdown Editor. It looks like a green square with a C in it. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_345")
+```
+
+## More on running chunks
+
+If you want to do anything fancier than running the current or previous chunks there is also a Run menu right next to the new chunk button. If you click on the arrow next to it, it will show you the advanced options. Otherwise it will just run all the chunks (which is similar to knitting but it will not render the report and may use objects that are in the environment).
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The chunk run menu button is located to the right of the new chunk button. Click the arrow next to it to get more advanced options."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_356")
+```
+
+The menu allows you to run all chunks below a specific chunk or run selected lines of code and more.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The chunk run menu allows you to run all chunks below a chunk.  "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_339")
+```
+
+The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_367")
+```
+
+
+## Text and headers
+
+## Asthetics
 
