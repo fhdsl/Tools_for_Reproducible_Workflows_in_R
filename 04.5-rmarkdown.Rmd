@@ -233,7 +233,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 If you want to do anything fancier than running the current or previous chunks there is also a Run menu right next to the new chunk button. If you click on the arrow next to it, it will show you the advanced options. Otherwise it will just run all the chunks (which is similar to knitting but it will not render the report and may use objects that are in the environment).
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The chunk run menu button is located to the right of the new chunk button. Click the arrow next to it to get more advanced options."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The chunk run menu button is located to the right of the new chunk button. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_356")
 ```
 
@@ -254,3 +254,37 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Asthetics
 
+Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our insititute or at least makes the report look really polished. 
+
+You can make changes to the asthetics of the report in very few steps. 
+
+First locate the settings button for the R Markdown editor, which looks like a gear an is located next to the `Knit` button.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the asthetics of your rendered report."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_382")
+```
+
+Then scroll down and select "Output Options". This menu also has nice features if you don't like the defualt ways that the chunks preview output. For example, many people perfer to preview code in the console instead.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Scroll down to the Output Options to open the menu about aesthetics."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_463")
+```
+
+This will open a new window that has a dropdown that you can use to apply a theme to the report. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Use the dropdown menu next to the Apply theme section to change the theme of your R Markdown report."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_376
+")
+```
+This will modify the YAML code in your R Markdown file to add a line about the theme.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Selecting a different theme will modify the YAML code to change the way the report renders."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_393")
+```
+
+When the report is rendered it will have a different look.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The cerulean theme changes the way the report renders so that the fonts are different colors and more."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_404")
+```
