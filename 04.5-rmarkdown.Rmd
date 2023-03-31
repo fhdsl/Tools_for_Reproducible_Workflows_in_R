@@ -4,7 +4,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test  pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats.Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats. Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20eecbcf66d_84_0")
 ```
 
@@ -320,3 +320,18 @@ When the report is rendered it will have a different look.
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The cerulean theme changes the way the report renders so that the fonts are different colors and more."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_404")
 ```
+
+
+## Report file types
+
+You can render your report as other file types besides html. This might be useful if a collaborator wants a PDF of your report. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "You can render your report as other file types besides html. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_499")
+```
+
+
+## Issues
+
+## Conclusion
+
