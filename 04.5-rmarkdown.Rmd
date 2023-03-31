@@ -167,5 +167,13 @@ You may also notice that there is another button to the left of the play button.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
 ```
 
+This is super helpful for making sure that your code works properly and isn't working simply because you have something in your environment from code that you tested in the console but did not save anywhere. 
+
+We also suggest cleaning out your environment somewhat regularly when you are interactively testing your R Markdown file using chunks. To do so, you can press the button that looks like a broom in the upper right pane. 
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image showing the location of the broom button to clean the environment."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_305")
+```
+
 
 
