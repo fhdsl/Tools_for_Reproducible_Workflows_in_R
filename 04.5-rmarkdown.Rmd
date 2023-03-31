@@ -60,9 +60,51 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 </details>
 
+Once open the file your RStudio should look something like this:
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Example of how RStudio looks when you open a new R Markdown file. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_0")
+```
+
+## Rendering R Markdown files
+
+There is a special `Knit` button that looks like a ball of yarn with a knitting needle at the top of the R Markdown files that helps you create your report. Since R Markdown files by default have some code, we can press this to see what a rendered report might look like before we start writing our own code.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Knit button at the top of the R Markdown file allows us to create a nice report from the file."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g1fa1583c827_0_16")
+```
+ 
+You will likely be prompted to give the file a name after you press the Knit button and to confirm where you want to save the rendered version.
+
+You will then see in a second or two (after some information is printed on the Render tab in the lower left pane) a screen pop up with the rendered version of the report. 
+
+This will look something like this:
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Rendered R Markdown example after pressing the Knit button after making a new R Markdown file."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_20")
+```
+Here we can see that there are some headers and text information, as well as some code shown in the gray box. We also see that this code is followed by the output of the code, where we see a summary of the `cars` dataset.
+
+If you scroll down you will see an example of what a plot looks like in such a report.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of the plot that is included in R Markdown files by default if you scroll down in the rendered report."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_26")
+```
+
+Hopefully you can already start to appreciate how useful it can be to send people a report of your code with the output of your code and plots, as opposed to just a simple script.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "A cartoon showing the parrot being confused about what a plot might look like from a script and happy about knowing how a plot looks and what code it took to create it with an R Markdown file"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_39")
+```
+
+
 Now let's discuss how to start writing code in such a file.
 
 ## Writing code in R Markdown files
+
+### The YAML
 
 At the top of an R Markdown file you will see some special code that is called [YAML](https://en.wikipedia.org/wiki/YAML) code. It is commonly used to configure programming projects. It does the same for our R Markdown reports. A major difference between R and YAML is that spacing really matters for YAML.
 
@@ -78,13 +120,13 @@ What do we mean by configure? Configuration in programming generally refers to s
 Here we can see what the top of an R Markdown file looks like after we first open one.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The YAML code at the top of R Markdown files sets up how the file will look and be rendered.  Here we see that title specifies a title, author lists an author name, date will list a date, and output will specify how we want the file report to be rendered.  The three dashed lines indicate the start and end of the YAML section."}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g1fa1583c827_0_16")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_8")
 ```
 
 
+You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to change the author section  where it says `"your name"` in the example if that was not by default want you wanted in your file. 
 
-
-You can modify the `"Untitled"` text after `title:` to specify the title of your report. 
+### A Code Chunk
 
 
 
