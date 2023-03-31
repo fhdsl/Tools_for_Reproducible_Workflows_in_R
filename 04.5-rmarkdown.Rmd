@@ -128,7 +128,44 @@ You can modify the `"Untitled"` text after `title:` to specify the title of your
 
 ### A Code Chunk
 
+Next as we scroll down, we will see gray section with some notation which is called a code "chunk".
 
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image of a code chunk in the R Markdown file."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_278")
+```
+
+The notation here means the following:
+
+- The three single quotes `"```"` indicates that the lines following until we reach the next three single quotation marks is where some code will be. This is what we call an R chunk. 
+- The `{r}` indicates that we are going to write the code using R code.
+- Extra information can be added inside the `{r}` notation to give the chunk a name, in this case it is called `setup`.
+- The `include = FALSE` means that it will not show up in the rendered report.
+
+
+
+This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should be "echoed" with `echo = TRUE` in the report. You don't need to worry to much about any of this now, just recognize that this is a chunk of code. 
+
+As we scroll past some text within the R Markdown file, we will see another chunk.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of the second R chunk in a new R Markdown file. Importantly there is a green play button that allows you to run the code within the chunk and see a preview of the output."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_286")
+```
+
+Here we will see a green triangular button with its point facing to the right. This is the play button. If you try pressing this button inside of RStudio, you will see a preview of what the code does. It should show the summary of the `cars` data.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of what the code looks like after the play button is pressed for the second chunk."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_292")
+```
+
+Pretty nifty!
+
+You may also notice that there is another button to the left of the play button. This button allows you to play all previous chunks before this chunk.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of the second R chunk in a new R Markdown file. Importantly there is a play previous button that allows you to run the code within the chunks before this chunk."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
+```
 
 
 
