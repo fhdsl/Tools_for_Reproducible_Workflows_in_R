@@ -252,6 +252,38 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Text and headers
 
+You will notice that there is text written around the code chunks that you can use to describe what you did in your analysis and why. 
+
+There are a couple of formatting options that can be very useful to know. 
+
+### Headers
+
+Using hashtags creates headers. One hashtag creates to highest level header, adding more hashtags add subsequent smaller headers. For example text with two `##` will be smaller than text with one `#`. The hashtags need to be on the far right of the line and you need a space in between the hashtags and the text to create the header.
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Adding one hashtag creates the top level header. Using additional hashtags creates smaller headers."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_470")
+```
+
+### Bold and Italics
+
+Bold text can be created using `**` around the text. 
+
+Italic text can be created using `*` around the text. 
+
+To do both you can use `***` around the text.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Using two asterisks around text creates bold text. Using one creates italic text. Using three creates text that is both bold and in italic."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_482")
+```
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Help menu of RStudio has can open a markdown reference guide in the lower right pane under the help tab if you would like to learn more about writing text in R Markdown files."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_493")
+```
+
+
+
 ## Asthetics
 
 Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our insititute or at least makes the report look really polished. 
