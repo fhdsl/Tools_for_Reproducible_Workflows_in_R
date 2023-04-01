@@ -282,9 +282,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_493")
 ```
 
+## Additional Features
 
-
-## Asthetics
+### Asthetics
 
 Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our insititute or at least makes the report look really polished. 
 
@@ -322,7 +322,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-## Report file types
+### Report file types
 
 You can render your report as other file types besides html. This might be useful if a collaborator wants a PDF of your report. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information.
 
@@ -336,7 +336,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 If you like to work with keyboard shortcuts instead of pointing and clicking, you might also want to check out this [link](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts).
 
 
-## Table of Contents
+### Table of Contents
 
 Sometimes if your report is very long, it can help to add a table of contents. 
 
@@ -347,7 +347,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-## Code folding
+### Code folding
 
 It can also help to use what is called code folding to make your report easier to read. To do this you can add  `code_folding: 'hide'` to cause your code to be folded.
 
@@ -363,7 +363,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-## Code Download
+### Code Download
 
 You can allow others to download your code by adding `code_download: true`. The code button the top right will allow them to download the R Markdown file.
 
@@ -374,7 +374,7 @@ Be careful about allowing this if you use code that works with data with PHI. Ju
 
 </div>
 
-## Date
+### Automatic Date
 
 Using `date: "`r Sys.Date()`"` in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.
 
@@ -387,4 +387,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 In summary, R Markdown files can help you to create nice looking reports that help others to understand not only what code you used, but also what the results of your code were. 
 
+ - Code is written in gray sections called chunks that have play buttons that allow you to preview the code
+ - The Knit button allows you to render the full report and test that all of the needed code is in the file
+ - Using the Knit button does not rely on anything in the environment, all objects needed or any data that needs to be imported must be done within the R Markdown file code
+ - New chunks can be added using the new code chunk buttonm which looks like a green square with a "C" in it at the top of the R Markdown editor
+ - Chunks can be set up to hide the code, or the output, or hide both, or hide neither (the default)
+ - The gear button on each chunk can be used to set the output for a given chunk
+ - The play previous button to the left of the play button will run the code for all previous chunks
+ - To make sure that you are not relying on code that was just run in the console or run by playing a chunk, it is advisable to clean the environment with the broom button from time to time
+ - There are additional features to make your R Markdown report showcase your code and the output of your code in more readable ways, including adding a table of contents or folding code, so that readers can click to see the code that created a particular output.
 
