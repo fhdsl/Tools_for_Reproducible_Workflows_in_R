@@ -99,7 +99,7 @@ Hopefully you can already start to appreciate how useful it can be to send peopl
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_39")
 ```
 
-It's important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on only the code written in the R Markdown file. It can't use code that was tested in the Console or run interatively in the R Markdown file (more on that soon). 
+It's important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on only the code written in the R Markdown file. It can't use code that was tested in the Console or run interactively in the R Markdown file (more on that soon). 
 
 Now let's discuss how to start writing code in such a file.
 
@@ -113,7 +113,8 @@ What do we mean by configure? Configuration in programming generally refers to s
 
 <div class = "dictionary">
 
-- **YAML** - A language that helps set things up and shows up by defualt when you open an R Markdown file. It is written between the two `---`.
+- **Knit** - Knitting an R Markdown file executes all the code and then converts the file into a rendered report of a different file type  
+- **YAML** - A language that helps set things up and shows up by default when you open an R Markdown file. It is written between the two `---`.
 - **Configuration** - A setup for a programming project.
 
 </div>
@@ -137,14 +138,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The notation here means the following:
 
-- The three single quotes `"```"` indicates that the lines following until we reach the next three single quotation marks is where some code will be. This is what we call an R chunk. 
+- The three back ticks `"```"` indicate the barriers of where some code will be in between. This is what we call an R chunk. 
 - The `{r}` indicates that we are going to write the code using R code.
-- Extra information can be added inside the `{r}` notation to give the chunk a name, in this case it is called `setup`.
+- Extra information can be added inside the curly barcket `{}` notation to give the chunk a name, in this case it is called `setup`.
 - The `include = FALSE` means that it will not show up in the rendered report.
 
 
-
-This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should be "echoed" with `echo = TRUE` in the report. You don't need to worry too much about any of this now, just recognize that this is a chunk of code. 
+This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should show up with `echo = TRUE` in the report. You don't need to worry too much about any of this now, just recognize that this is a chunk of code. 
 
 As we scroll past some text within the R Markdown file, we will see another chunk.
 
@@ -174,6 +174,13 @@ This is similar to testing our code in the console, in that if we assign an obje
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_311")
 ```
 
+<div class = "dictionary">
+
+- **Code chunk** - A piece of code in an R Markdown file. The code can be previewed pressing the play button for the chunk, which is equivalent to running the code in the console.
+
+</div>
+
+
 ### Running previous chunks
 
 You may also notice that there is another button to the left of the play button. This button allows you to play all previous chunks before this chunk.
@@ -182,7 +189,7 @@ You may also notice that there is another button to the left of the play button.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
 ```
 
-This is super helpful for making sure that your code works properly and isn't working simply because you have something in your environment from code that you tested in the console but did not save it anywhere. Other issues can happen if you run a code chunk out of order or changed the code in the chunk after running it previously. Therefore we recommend cleaning the enviornment (which we will describe in the next section) and testing out that your chunks work well together.
+This is super helpful for making sure that your code works properly and isn't working simply because you have something in your environment from code that you tested in the console but did not save it anywhere. Other issues can happen if you run a code chunk out of order or changed the code in the chunk after running it previously. Therefore we recommend cleaning the environment (which we will describe in the next section) and testing out that your chunks work well together.
 
 ## Cleaning the environment
 
@@ -194,7 +201,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The ultimate test though is to press the `Knit` button and make sure you have all the code necessary to allow the report to render.
 
-## Fancy chunks
+## Chunk setup
 
 You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is every new R Markdown file when you first create it, is hidden. This is because it sets up how all the other chunks work (by default) and it isn't really important for the analysis. Recall that we hide the code and any output, using `include = FALSE`. If we just want to hide on or the other we can use different specifications. 
 
@@ -206,15 +213,16 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 
 
-This will open a menu about how that chunk should be set up. The pulldown menu can be used to select if you want the code to be hidden, the output to be hidden, both, or none to be hidden (the default).
+This will open a menu about how that chunk should be set up. The dropdown menu can be used to select if you want the code to be hidden, the output to be hidden, both, or none to be hidden (the default).
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image of the chunk settings menu, where you can change the name of the chunk and use the pull down menu to change the output."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_326")
 ```
+
 ## Finding chunks
 
-If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you dont, you can more easily move around from one chunk to another using a special menu button created just for this! 
+If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you don't, you can more easily move around from one chunk to another using a special menu button created just for this! 
 
 There is a very small menu at the bottom of the R Markdown file editor that helps you move around. It will look slightly different depending on what your chunks are named, but will have a gold hashtag button.
 
@@ -290,19 +298,19 @@ We will cover a several additional features that we have found to be especially 
 
 We also recommend checking out the [R Markdown cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) for even more tricks and tips.
 
-### Asthetics
+### Aesthetics
 
-Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our insititute or at least makes the report look really polished. 
+Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our institute or at least makes the report look really polished. 
 
-You can make changes to the asthetics of the report in very few steps. 
+You can make changes to the aesthetics of the report in very few steps. 
 
 First locate the settings button for the R Markdown editor, which looks like a gear an is located next to the `Knit` button.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the asthetics of your rendered report."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the aesthetics of your rendered report."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_382")
 ```
 
-Then scroll down and select "Output Options". This menu also has nice features if you don't like the defualt ways that the chunks preview output. For example, many people perfer to preview code in the console instead.
+Then scroll down and select "Output Options". This menu also has nice features if you don't like the default ways that the chunks preview output. For example, many people prefer to preview code in the console instead.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Scroll down to the Output Options to open the menu about aesthetics."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_463")
@@ -346,7 +354,7 @@ If you like to work with keyboard shortcuts instead of pointing and clicking, yo
 
 Sometimes if your report is very long, it can help to add a table of contents. 
 
-This can be done by adding `toc: true` and `toc_float: true` to the yaml underneath the `html_document:` code. The spacing is very important with this! The `toc_float: true` makes the table of contents on the side as opposed to just the top.
+This can be done by adding `toc: true` and `toc_float: true` to the YAML underneath the `html_document:` code. The spacing is very important with this! The `toc_float: true` makes the table of contents on the side as opposed to just the top.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Modifying the YAML can add a table of contents to the R Markdown file report. Headings can be used to navigate."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_517")
@@ -396,10 +404,12 @@ In summary, R Markdown files can help you to create nice looking reports that he
  - Code is written in gray sections called chunks that have play buttons that allow you to preview the code
  - The Knit button allows you to render the full report and test that all of the needed code is in the file
  - Using the Knit button does not rely on anything in the environment, all objects needed or any data that needs to be imported must be done within the R Markdown file code
- - New chunks can be added using the new code chunk buttonm which looks like a green square with a "C" in it at the top of the R Markdown editor
+ - New chunks can be added using the new code chunk button which looks like a green square with a "C" in it at the top of the R Markdown editor
  - Chunks can be set up to hide the code, or the output, or hide both, or hide neither (the default)
  - The gear button on each chunk can be used to set the output for a given chunk
  - The play previous button to the left of the play button will run the code for all previous chunks
  - To make sure that you are not relying on code that was just run in the console or run by playing a chunk, it is advisable to clean the environment with the broom button from time to time
+ - hashtags are used to create headers, the fewer the hashtags the larger the header
+ - Asterisk around text creates bold or italic font
  - There are additional features to make your R Markdown report showcase your code and the output of your code in more readable ways, including adding a table of contents or folding code, so that readers can click to see the code that created a particular output.
 
