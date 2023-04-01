@@ -152,6 +152,21 @@ To check for updates you can go to the `Help` menu at the top of RStudio and the
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_50")
 ```
 
+
+If you don’t need to update RStudio, when you check with this method RStudio will let you know that you are using the newest version.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An example of the popup that shows you that you are using the newest version of RStudio."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_557")
+```
+
+With recent versions RStudio will also give you a popup to let you know that you could update.
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Popup indicating that you could update RStudio."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_563")
+```
+
+
+
 ## Navigating RStudio
 
 Now that you hopefully have RStudio running on your machine, we will walk you through some of the major features that can really help you with your data analyses.
