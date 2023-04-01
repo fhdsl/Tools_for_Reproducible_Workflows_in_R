@@ -144,7 +144,7 @@ The notation here means the following:
 
 
 
-This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should be "echoed" with `echo = TRUE` in the report. You don't need to worry to much about any of this now, just recognize that this is a chunk of code. 
+This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should be "echoed" with `echo = TRUE` in the report. You don't need to worry too much about any of this now, just recognize that this is a chunk of code. 
 
 As we scroll past some text within the R Markdown file, we will see another chunk.
 
@@ -152,6 +152,8 @@ As we scroll past some text within the R Markdown file, we will see another chun
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An image of the second R chunk in a new R Markdown file. Importantly there is a green play button that allows you to run the code within the chunk and see a preview of the output."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_286")
 ```
+
+This chunk also has a name, "cars". It is not necessary to name chunks, but it can help you to navigate to a particular chunk later, if you do name them.
 
 ### Running chunks
 
@@ -283,6 +285,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 ## Additional Features
+
+We will cover a several additional features that we have found to be especially useful.
+
+We also recommend checking out the [R Markdown cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) for even more tricks and tips.
 
 ### Asthetics
 
