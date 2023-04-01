@@ -12,14 +12,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 RStudio is what is called an **integrated development environment (IDE)** for writing code in R (although it also has compatibility for other languages).
 
-It is designed to make working in R easier in a variety of ways:
+It is designed to make working in R easier in a variety of ways by helping you:
 
-- it helps you write code by making suggestions to complete what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
-- it helps you view the output of your code, this is especially true for creating reports or viewing plots
-- it helps you find errors in your code
-- it helps you keep track of any objects that you have assigned in R
-- it helps you orient yourself in terms of the files on your computer 
-- it can help track changes in your code and other files over time
+- write code by using suggestions to complete what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)
+- view the output of your code, this is especially true for creating reports or viewing plots
+- find errors in your code
+- keep track of any objects that you have assigned in R
+- orient yourself in terms of the files on your computer 
+- track changes in your code and other files over time 
 
 
 <div class = "dictionary">
@@ -51,7 +51,7 @@ From here you can click on the menu option that says CRAN on the far left to sta
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_0")
 ```
 
-This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds for everyone overall. 
+This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds for everyone overall if people use appropriate mirrors. 
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "CRAN mirror list"}
@@ -264,6 +264,8 @@ The editor pane (top left) will be the pane that we look at most of the time as 
 - **R Markdown files** - files that allow you to save your code that allow for more features than a simple script.
 
 </div>
+
+## Find Errors
 
 ## Conclusion
 
