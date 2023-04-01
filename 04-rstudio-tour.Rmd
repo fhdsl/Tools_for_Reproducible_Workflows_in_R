@@ -181,7 +181,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 </details>
 
 
-The pane on the left (labeled "Pane 1" in the image) is where we write code.
+The pane on the left (labeled "Pane 1" in the image) is where we can work on code interactively. There are two tabs here. The Terminal tab and the Console tab. The Terminal tab is for interacting with the computer outside of R. Whereas the Console tab is for interacting with R. We'll focus on the Console tab for now. 
+
+The Console tab is where we can 'talk' to R and interactively work on our code. The code we write here will not be saved to a script or file, but instead the outcome of the code will immediately be performed we click `enter`.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the left is where we write and test code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_81")
