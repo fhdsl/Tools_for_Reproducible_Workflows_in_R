@@ -74,7 +74,7 @@ This will take you to a new page to select the appropriate link to download R. F
 
 To update R, if you are using a Mac or Linux computer, you can follow the directions of installing R the first time.
 
-If you have a Windows computer, you can use the following code to update your version of R within an R session. You can start an R session by typing `R` into whatever command-line shell like Windows Terminal that you might have been using in the past. Then copy and paste this code and press enter. 
+If you have a Windows computer, you can use the following code to update your version of R within an R session. You can start an R session by typing `R` into Command Prompt window. If you have not used the Command Prompt window, [read instructions here](https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/) about how to find it. After opening your Command Prompt window, copy and paste this code and press enter. 
 
 ```{r, eval=FALSE}
 # Check for the install r package and install if needed
