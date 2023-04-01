@@ -94,7 +94,7 @@ Next we want to download and install RStudio. You can do so by going to the Posi
 
 <div class = "notice">
 
-Posit is a software company that used to be called RStudio that develops open-source R tools and packages. It is a Public Benefit Corporation (PBC) and a Certified B Corporation®, so it is committed to creating software that benefits the public. See [here](https://posit.co/about/pbc-report/) for more information.
+Posit is a software company that used to be called RStudio that develops open-source data science tools and packages. It is a Public Benefit Corporation (PBC) and a Certified B Corporation®, so it is committed to creating software that benefits the public. See [here](https://posit.co/about/pbc-report/) for more information.
 
 </div>
 
