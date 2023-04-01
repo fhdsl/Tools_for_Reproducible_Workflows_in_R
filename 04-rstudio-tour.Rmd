@@ -220,7 +220,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 While there are other tabs, don't worry about those for now. We will go deeper into RStudio as we continue. 
 
-
+<div class = "dictionary">
+- **Console** - The window that allows us to interactively give R code and press enter to run it. 
+- **Environment** - R's working memory of objects you have assigned -- told R to remember using `<-`
+- **Assignment** - How we tell R to remember something using the `<-` characters. 
+</div>
 Let's try an example to get started.
 
 As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
