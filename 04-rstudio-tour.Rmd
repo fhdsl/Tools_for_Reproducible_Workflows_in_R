@@ -134,7 +134,7 @@ See[here](https://jhudatascience.org/intro_to_r/modules/Setup/R_and_RStudio_inst
 
 If you run into trouble, check the following:
 
-- did you install the correct version of software for your operating system?
+- Did you install the correct version of software for your operating system?
    - Check that you installed the version right for your type of system, (`macOS` vs `Windows` for example)
    - Check if maybe you need a different version for the age of your system. First check that your version of R was right - there are multiple versions for different `macOS` systems for example. You can check the apple icon (top left corner) and "About This Mac" to learn more about the age of your operating system. 
    
