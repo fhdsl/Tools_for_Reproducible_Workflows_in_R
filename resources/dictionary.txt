@@ -43,6 +43,10 @@ GDSCN
 GitHub
 Github
 GH
+hashtags
+hashtag
+Hashtag
+Hashtags
 Ihaka
 impactful
 ITCR
@@ -61,5 +65,7 @@ UE
 UE5
 reproducibility
 RStudio
+Sys
 underserved
 www
+YAML
