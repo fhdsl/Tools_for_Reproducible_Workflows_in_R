@@ -251,13 +251,13 @@ Thus the lower left pane is where we can test out code, but the top pane is wher
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
 ```
 
-The top pane where we save code is called the editor. The lower pane where we test code is called the console.
+The top pane where we save code is called the Editor. The lower pane where we test code is called the Console.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The editor in the top left, also called source, is where we write code we want to save. The lower left is the console where we do quick tests of our code."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Editor in the top left, also called source, is where we write code we want to save. The lower left is the Console where we do quick tests of our code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_198")
 ```
 
-The editor pane (top left) will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
+The Editor pane (top left) will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
 
 <div class = "dictionary">
 
