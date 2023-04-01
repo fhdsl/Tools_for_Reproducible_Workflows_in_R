@@ -213,7 +213,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The pane on the bottom right (labeled "Pane 3" in the image) is where we can find files on computer (the "Files" tab), see plots (the "Plots tab), and get coding help (the "Help tab).
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Whe pane on the lower right is where we see our files, plots, and where we get help."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the lower right is where we see our files, plots, and where we get help."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_109")
 ```
 
