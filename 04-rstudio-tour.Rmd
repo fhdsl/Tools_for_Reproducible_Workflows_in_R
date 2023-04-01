@@ -51,7 +51,7 @@ From here you can click on the menu option that says CRAN on the far left to sta
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_0")
 ```
 
-This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds overall if everyone tries to. 
+This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds for everyone overall. 
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "CRAN mirror list"}
