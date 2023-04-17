@@ -1,41 +1,40 @@
 
-{quiz, id: reproducible_code, attempts: 10}
+{quiz, id: components, attempts: 10}
 
-## Reproducible code
+## Components of reproducibility
 
-? What are the three aspects of reproducible code?
+? What does "reproducibility on a continuum" mean?
 
-A) Readable, well-documented, and consistent
-b) Innovative, clever, and organized
-c) Polished, efficient, and commented
-d) Intuitive, well-maintained, and universal
+a) Reproducibility that can only be achieved with perfect execution
+B) Reproducibility that needs iterative work to improve
+c) Reproducibility that is dependent on the researcher's expertise
+d) Reproducibility that is achievable only for certain types of analyses
 
-? What is the importance of code being readable?
+? Which of the following is not a component of reproducibility?
 
-A) It makes it easier for others to use and understand the code.
-b) It makes it more innovative and clever.
-c) It makes it more efficient and organized.
-d) It makes it more polished and consistent.
+a) Transparency
+b) Accessibility
+c) Consistency
+D) Efficiency
 
-? What should a README file include?
+? What does "open source" mean in the context of reproducibility?
 
-A) A summary of the project's goals and intentions, usage instructions, software dependencies, file descriptions, and any other relevant information.
-b) A summary of the project's goals and intentions and software dependencies.
-c) A summary of the project's goals and intentions and file descriptions.
-d) A summary of the project's goals and intentions and usage instructions.
+A)  Making data and code available for anyone to access and modify
+b) Providing data and code upon request by email
+c) Publishing data and code behind a paywall
+d) Storing data and code on a personal computer
 
-? What are some rules for writing helpful code comments?
+? Why is data sharing important in promoting the open source-ness of an analysis?
 
-a) Comments should not duplicate the code, good comments excuse unclear code, and comments should dispel confusion.
-b) Comments should duplicate the code, good comments excuse unclear code, and comments should cause confusion.
-C) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should dispel confusion.
-d) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should cause confusion.
+a) It makes the analysis more complex and difficult to execute
+b) It helps others to be able to publish conclusions about our data
+C) It helps others be able to truly reproduce the analysis by using the same data
+d) It exposes personal identifiable information to the public
 
-? What should you look for when choosing a package to use?
 
-a) Intuitive design, compatibility with many languages, and long-term support.
-b) Innovative functionality, efficient code, and well-organized documentation.
-c) Cheap price, high popularity, and diverse functions.
-D) Easy-to-use documentation, active development/maintenance, and community recognition.
+? True or False: if your data has PHI or PII you cannot make your analysis open source or reproducible.
+
+a) TRUE - There is no methods that will allow you to share your methods and data in a safe way.
+B) FALSE! - These are not mutually exclusive goals! but will take a bit of thoughtful planning and using controlled access methods so that all individuals' data are well protected!
 
 {/quiz}
