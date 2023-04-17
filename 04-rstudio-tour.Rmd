@@ -229,7 +229,7 @@ Let's try an example to get started.
 
 As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Running some code in RStudio"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "In Pane one, in our Console window, we can run code interactively. Here we are running the code head(iris) which prints out a data set about flowers for us to look at. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_142")
 ```
 
