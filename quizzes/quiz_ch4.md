@@ -1,7 +1,7 @@
 
-{quiz, id: quiz_name_here, attempts: 10}
+{quiz, id: rstudio, attempts: 10}
 
-## Template quiz
+## RStudio Quiz
 
 ? What is RStudio?
 
