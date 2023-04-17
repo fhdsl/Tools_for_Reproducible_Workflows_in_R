@@ -47,6 +47,17 @@ follows-conventions
 is-organized
 conclusion-2
 using-github-in-a-workflow
+what-is-version-control
+whats-github
+github-workflow
+create-your-github-account
+creating-a-new-repository
+setting-up-your-repository-locally
+cloning-your-repository
+opening-a-pr
+creating-a-new-branch
+merging-a-pull-request
+conclusion-3
 software-versions
 learning-objectives-2
 no-two-computers-are-the-same
@@ -54,7 +65,7 @@ software-and-package-versions-affect-results
 session-info
 snapshots-with-renv
 containerization
-conclusion-3
+conclusion-4
 sharing-data
 functions
 project-maintenance-and-updates
