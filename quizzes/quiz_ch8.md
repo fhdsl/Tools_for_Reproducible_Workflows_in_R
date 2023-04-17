@@ -1,5 +1,5 @@
 
-{quiz, id: quiz_name_here, attempts: 10}
+{quiz, id: software_versions, attempts: 10}
 
 ## Software versions
 

@@ -1,7 +1,7 @@
 
-{quiz, id: quiz_name_here, attempts: 10}
+{quiz, id: reproducible_code, attempts: 10}
 
-## Template quiz
+## Reproducible code
 
 ? What are the three aspects of reproducible code?
 
