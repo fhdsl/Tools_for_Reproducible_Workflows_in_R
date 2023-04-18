@@ -32,7 +32,7 @@ C) It helps others be able to truly reproduce the analysis by using the same dat
 d) It exposes personal identifiable information to the public
 
 
-? True or False: if your data has PHI or PII you cannot make your analysis open source or reproducible.
+? True or False - if your data has PHI or PII you cannot make your analysis open source or reproducible.
 
 a) TRUE - There is no methods that will allow you to share your methods and data in a safe way.
 B) FALSE! - These are not mutually exclusive goals! but will take a bit of thoughtful planning and using controlled access methods so that all individuals' data are well protected!
