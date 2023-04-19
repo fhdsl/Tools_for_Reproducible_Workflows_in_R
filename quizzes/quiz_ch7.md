@@ -15,7 +15,7 @@ d) A method for collaborating on the same code simultaneously.
 a) It allows you to store your code in a way that obscures it from others.
 b) It provides a way to publish your research in a peer reviewed manuscript.
 C) It allows you to track your code and project files as you and others continue to work on them.
-d) It makes it easy direct message different team members. .
+d) It makes it easy direct message different team members.
 
 ? TRUE or FALSE - README files are only needed in certain types of education based projects?
 
