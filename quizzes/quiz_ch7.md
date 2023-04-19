@@ -10,7 +10,7 @@ b) An online platform for sharing code.
 c) A way to experiment with different code without affecting the main analysis.
 d) A method for collaborating on the same code simultaneously.
 
-? What is the benefit of using GitHub for sharing code?
+? What is the major benefit of using GitHub for sharing code?
 
 a) It allows you to store your code in a way that obscures it from others.
 b) It provides a way to publish your research in a peer reviewed manuscript.
