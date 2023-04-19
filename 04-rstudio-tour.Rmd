@@ -310,6 +310,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 Note that just because RStudio thinks your code is free of errors, it does not necessarily mean that your code is correct. RStudio can detect certain syntax issues, but it does not detect all types of errors. However, you can probably see how it could be very helpful!
 
 
+## Keyboard Shortcuts
+
+There are lots of useful keyboard shortcuts for RStudio that can save you time. 
+
+Check out this [link](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts) if you are interested!
+
+
 ## Conclusion
 
 In summary...
