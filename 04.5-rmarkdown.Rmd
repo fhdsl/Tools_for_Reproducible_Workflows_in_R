@@ -147,7 +147,7 @@ The notation here means the following:
 
 - The three back ticks `"```"` indicate the barriers of where some code will be in between. This is what we call an R chunk. 
 - The `{r}` indicates that we are going to write the code using R code.
-- Extra information can be added inside the curly barcket `{}` notation to give the chunk a name, in this case it is called `setup`.
+- Extra information can be added inside the curly bracket `{}` notation to give the chunk a name, in this case it is called `setup`.
 - The `include = FALSE` means that it will not show up in the rendered report.
 
 
@@ -201,7 +201,7 @@ You may also notice that there is another button to the left of the play button.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
 ```
 
-This is super helpful for eproducibility in terms of making sure that your code isn't working simply because you have something in your environment from code that you tested in the console but did not save. 
+This is super helpful for reproducibility in terms of making sure that your code isn't working simply because you have something in your environment from code that you tested in the console but did not save. 
 
 Issues can happen if you run a code chunk out of order or change the code in a chunk after running it previously. This can make you think that you have all the code that you need saved to obtain the result that you found, when in fact you do not.
 
@@ -319,7 +319,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-The text surrounding our code and the output of our code can be extremely helpful in explaining to others what steps we took in our analysis, why we made certian decisions, the sources for our data and more. All of this information is extremely helpful for reproducibility!
+The text surrounding our code and the output of our code can be extremely helpful in explaining to others what steps we took in our analysis, why we made certain decisions, the sources for our data and more. All of this information is extremely helpful for reproducibility!
 
 ## Additional Features
 
