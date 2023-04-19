@@ -14,7 +14,7 @@ d) The programming language used to run an analysis
 
 A) The feeling of frustration when trying to update software that exists in a tangled mess of software dependencies
 b) The name of a popular computer game
-c) The process of trying to find software dependencies
+c) The process of trying to find software that is useful
 d) The feeling of euphoria when all software dependencies have been resolved
 
 ? Why is it important to control for software versions in creating reproducible analyses?
