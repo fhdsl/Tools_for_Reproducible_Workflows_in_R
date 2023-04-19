@@ -220,14 +220,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 While there are other tabs, don't worry about those for now. We will go deeper into RStudio as we continue. 
 
-<div class = "dictionary">
-- **Console** - The window that allows us to interactively give R code and press enter to run it. 
-- **Environment** - R's working memory of objects you have assigned -- told R to remember using `<-`
-- **Assignment** - How we tell R to remember something using the `<-` characters. 
-</div>
-Let's try an example to get started.
 
-As an example, we could type in the code `head(iris)` and press enter to see the code execute and preview.
+Let's try some examples to get started.
+
+As an example, we could type in the code `head(iris)` into Pane 1 in the Console and press the `enter` key to see the code execute and preview.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "In Pane one, in our Console window, we can run code interactively. Here we are running the code head(iris) which prints out a data set about flowers for us to look at. "}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_142")
@@ -238,6 +234,13 @@ Now let's try another example where instead of just printing some data to the sc
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "If you create an object in RStudio, it will show up in the environment pane."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g1fa1583c827_0_4")
 ```
+
+
+<div class = "dictionary">
+- **Console** - The window that allows us to interactively give R code and press enter to run it but **not save** the code. 
+- **Environment** - R's working memory of objects you have assigned -- need to tell R to remember using `<-`
+- **Assignment** - How we tell R to remember something using the `<-` characters. 
+</div>
 
 ### The Hidden Pane
 
