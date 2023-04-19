@@ -173,7 +173,7 @@ Now that you hopefully have RStudio running on your machine, we will walk you th
 
 ### Default Layout
 
-First it is important to be familiar with the layout. When you first open RStudio you will see 3 panes.
+First it is important to be familiar with the layout. When you first open RStudio, you will see 3 panes.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "When RStudio is first opened you will see 3 panes"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_67")
@@ -187,7 +187,7 @@ Click on the top menu of your RStudio - click where it says `Edit` --> `Preferen
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_0")
 ```
 
-The Pane Layout menu enables you to change the layout. The image below shows the default settings. Note that some of this may look different. In particular VCS may not appear if you are not using a version control system. More on that to come in later chapters!
+The Pane Layout menu enables you to change the layout. The image below shows the default settings. Note that VCS may not appear if you are not using a version control system. More on that to come in later chapters!
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Pane Layout menu allows you to modify the layout of RStudio. This shows the default settings with Source on the top left, Console on the bottom left, Environment, History, Connections, and Build on the top right, and Files, Plots, Packages, Help, VCS (version control) on the bottom right."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_5")
@@ -198,7 +198,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The pane on the left (labeled "Pane 1" in the image) is where we can work on code interactively. There are two tabs here. The Terminal tab and the Console tab. The Terminal tab is for interacting with the computer outside of R. Whereas the Console tab is for interacting with R. We'll focus on the Console tab for now. 
 
-The Console tab is where we can 'talk' to R and interactively work on our code. The code we write here will not be saved to a script or file, but instead the outcome of the code will immediately be performed we click `enter`.
+The Console tab is where we can 'talk' to R and interactively work on our code. The code we write here will **not be saved** to a script or file, but instead the code will immediately be performed when we click `enter` and any resulting output that can be printed will be shown.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The pane on the left is where we write and test code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_81")
