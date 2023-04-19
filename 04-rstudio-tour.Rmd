@@ -244,7 +244,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ### The Hidden Pane
 
-There is a hidden fourth pane. This is only accessible when we start to make a script or a report with our code.
+There is a hidden fourth pane. This is only accessible when we start to make a script or a report with our code. This is where we recommend that you write your code - as this is where we will save our code! If you get used to writing most of your code in the Console, you might forget what code actually worked. Additionally, as we are trying to make our code reproducible, it's a good idea to start saving it as we write it!
 
 To open this let's make what is called an R Markdown file by go to `File` --> `New File` -->`R Markdown` in the upper menu of RStudio.
 
@@ -269,7 +269,7 @@ This pane is where we can write code that we keep in files like scripts or repor
 
 Thus the lower left pane is where we can test out code, but the top pane is where we can write code that we wish to save. Since it can be easy to forget to save code, we suggest that instead you use a special file type that will allow you to test code that you save. We will discuss that in the next section. 
 
-In order to make our analysis truly reproducible we will need **every single step** written down. This is why using the Console is great for testing things, but not so great for actually performing your analysis. 
+In order to make our analysis truly reproducible we will need to have **every single step** written down. This is why using the Console is great for testing things, but not so great for actually performing your analysis. 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
@@ -294,6 +294,21 @@ R Markdown files allow you to have the code for your analysis, the output from t
 </div>
 
 ## Find Errors
+
+Another nice thing about RStudio, is that it can help you troubleshoot your code. 
+
+It helps to identify common coding mistakes. It will indicate a potential problem by showing a red circle with an "x" in it on the far left of the Editor near the line of code that it thinks is problematic. Note that sometimes errors may occur earlier in your code than where RStudio starts to notice an issue.
+
+
+Here is an example of such a case. Here we have an extra parentheses in our code. 
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "An example of RStudio showing a potential coding error. Hovering over the red circle with the x near the line of code that it sees an issue with, will give a message about what might be wrong."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g219ee06dc74_531_0")
+```
+
+Note that just because RStudio thinks your code is free of errors, it does not necessarily mean that your code is correct. RStudio can detect certain syntax issues, but it does not detect all types of errors. However, you can probably see how it could be very helpful!
+
 
 ## Conclusion
 
