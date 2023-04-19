@@ -26,7 +26,7 @@ d) Because it ensures that the analysis is correct
 
 ? What is session info?
 
-A) A printout in R that displays information about the software and packages that were being used at the time the sessionInfo() function was run.
+A) A printout in R that displays information about the software and packages that were being used at the time the sessionInfo() function was run
 b) A list of all the sessions a user has logged into on their computer
 c) A summary of all the analyses run on a computer
 d) A description of the physical components of a computer
