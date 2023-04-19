@@ -203,6 +203,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The ultimate test though is to press the `Knit` button and make sure you have all the code necessary to allow the report to render.
 
+## Restarting R Session
+
+To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file. to make sure that anything you loaded during your previous session isn't what was allowing your code to run successfully. 
+
+
+
 ## Chunk setup
 
 You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is every new R Markdown file when you first create it, is hidden. This is because it sets up how all the other chunks work (by default) and it isn't really important for the analysis. Recall that we hide the code and any output, using `include = FALSE`. If we just want to hide on or the other we can use different specifications. 
