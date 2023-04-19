@@ -187,7 +187,7 @@ Click on the top menu of your RStudio - click where it says `Edit` --> `Preferen
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_0")
 ```
 
-The Pane Layout menu enables you to change the layout. The image below shows the default settings. 
+The Pane Layout menu enables you to change the layout. The image below shows the default settings. Note that some of this may look different. In particular VCS may not appear if you are not using a version control system. More on that to come in later chapters!
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Pane Layout menu allows you to modify the layout of RStudio. This shows the default settings with Source on the top left, Console on the bottom left, Environment, History, Connections, and Build on the top right, and Files, Plots, Packages, Help, VCS (version control) on the bottom right."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g22370a5f292_430_5")
