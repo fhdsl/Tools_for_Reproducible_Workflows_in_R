@@ -62,13 +62,13 @@ sessionInfo()
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] knitr_1.33      magrittr_2.0.3  hms_0.5.3       R6_2.4.1       
-##  [5] rlang_1.0.6     fastmap_1.1.1   stringr_1.4.0   httr_1.4.2     
-##  [9] tools_4.0.2     xfun_0.26       cli_3.6.0       htmltools_0.5.4
-## [13] ellipsis_0.3.1  ottrpal_1.0.1   yaml_2.2.1      digest_0.6.25  
-## [17] tibble_3.0.3    lifecycle_1.0.3 crayon_1.3.4    bookdown_0.24  
-## [21] readr_1.4.0     vctrs_0.5.2     fs_1.5.0        curl_4.3       
-## [25] evaluate_0.20   rmarkdown_2.10  stringi_1.5.3   compiler_4.0.2 
-## [29] pillar_1.4.6    pkgconfig_2.0.3
+##  [5] rlang_1.1.0     fastmap_1.1.1   fansi_0.4.1     stringr_1.4.0  
+##  [9] httr_1.4.2      tools_4.0.2     xfun_0.26       utf8_1.1.4     
+## [13] cli_3.6.1       htmltools_0.5.5 ottrpal_1.0.1   yaml_2.2.1     
+## [17] digest_0.6.25   tibble_3.2.1    lifecycle_1.0.3 bookdown_0.24  
+## [21] readr_1.4.0     vctrs_0.6.1     fs_1.5.0        curl_4.3       
+## [25] glue_1.4.2      evaluate_0.20   rmarkdown_2.10  stringi_1.5.3  
+## [29] compiler_4.0.2  pillar_1.9.0    pkgconfig_2.0.3
 ```
 
 Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.

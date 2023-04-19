@@ -1,5 +1,8 @@
 Cmd
 Ctrl
+declutter
+github
+gitignore
 filetype
 functionalize
 Hadley
@@ -14,8 +17,10 @@ tRaCTIng
 HIPAA
 iteratively
 lockfile
+primetime
 preprint
 README
+RMarkdown
 renv
 lockfile
 Carpentries
@@ -72,3 +77,4 @@ Sys
 underserved
 www
 YAML
+Yay
