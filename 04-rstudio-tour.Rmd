@@ -316,7 +316,7 @@ There are lots of useful keyboard shortcuts for RStudio that can save you time.
 
 Check out this [link](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts) if you are interested!
 
-The most helpful shortcut, is for testing code in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows & Linux computers or Cmd+Return on Mac computers.
+The most helpful shortcut, is for testing a selection of code in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows & Linux computers or Cmd+Return on Mac computers.
 
 ## Conclusion
 
