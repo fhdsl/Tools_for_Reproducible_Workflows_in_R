@@ -245,7 +245,7 @@ There is a hidden fourth pane. This is only accessible when we start to make a s
 
 To open this let's make what is called an R Markdown file by go to `File` --> `New File` -->`R Markdown` in the upper menu of RStudio.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Creating an R Markdown file in R Studio by selecting File, New File, R Markdown."}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Creating an R Markdown file in RStudio by selecting File, New File, R Markdown."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_127")
 ```
 
