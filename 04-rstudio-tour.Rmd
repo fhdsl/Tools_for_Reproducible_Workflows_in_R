@@ -287,7 +287,7 @@ R Markdown files allow you to have the code for your analysis, the output from t
 
 <div class = "dictionary">
 
-- **Console** - for quickly testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio. Testing of code here does not have some features that testing in an R Markdown file has.
+- **Console** - for quickly testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio. Testing of code here does not have some features that testing in an R Markdown file has so we don't generally recommend it.
 - **Editor** - for writing code that you wish to save.
 - **R Markdown files** - files that allow you to save your code that allow for more features than a simple script.
 
