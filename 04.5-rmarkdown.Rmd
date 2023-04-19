@@ -87,6 +87,7 @@ This will look something like this:
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Rendered R Markdown example after pressing the Knit button after making a new R Markdown file."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_20")
 ```
+
 Here we can see that there are some headers and text information, as well as some code shown in the gray box. We also see that this code is followed by the output of the code, where we see a summary of the `cars` dataset.
 
 If you scroll down you will see an example of what a plot looks like in such a report.
@@ -331,6 +332,7 @@ This will open a new window that has a dropdown that you can use to apply a them
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_376
 ")
 ```
+
 This will modify the YAML code in your R Markdown file to add a line about the theme.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Selecting a different theme will modify the YAML code to change the way the report renders."}
