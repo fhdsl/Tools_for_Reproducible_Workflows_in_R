@@ -205,8 +205,9 @@ The ultimate test though is to press the `Knit` button and make sure you have al
 
 ## Restarting R Session
 
-To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file. to make sure that anything you loaded during your previous session isn't what was allowing your code to run successfully. 
+To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file to make sure that anything you loaded during your previous session (but didn't save in your code) wasn't allowing your code to run successfully. 
 
+To do so, you can click on the `Session` tab of the upper menu of RStudio and click `Restart R`. 
 
 
 ## Chunk setup
