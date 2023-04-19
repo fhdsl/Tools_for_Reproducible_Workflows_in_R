@@ -14,7 +14,7 @@ Using R Markdown files helps you to create supports that can more transparently 
 
 The following are reasons why R Markdown files help reproducibility:
 
-- They allow you to show and share your code and the output of your code (this can be done in several ways depending on what you want)
+- They allow you to show and share your code and the output of your code in one place! (this can be done in several ways depending on what you want)
 - They allow you to test if your code works outside of what is active in your environment
 - They allow you to test sections and all previous sections of your code out to troubleshoot 
 - They help you understand what might be wrong with your code in smaller sections of code if you have an issue
