@@ -5,10 +5,12 @@
 
 ? What does "reproducibility on a continuum" mean?
 
-a) Reproducibility that can only be achieved with perfect execution
-B) Reproducibility that needs iterative work to improve
-c) Reproducibility that is dependent on the researcher's expertise
-d) Reproducibility that is achievable only for certain types of analyses
+C) Reproducibility that needs iterative work to improve
+C) Reproducibility that improves over time through iterations
+o) Reproducibility that is dependent on the researcher's expertise
+o) Reproducibility that is achievable only for certain types of analyses
+m) Reproducibility that can only be achieved with perfect execution
+m) Reproducibility that allows everyone everywhere to get the exact same results with your code and data
 
 ? Which of the following is not a component of reproducibility?
 
