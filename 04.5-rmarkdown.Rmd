@@ -46,7 +46,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 This pane is where we can write code to save in our R Markdown report.
 
-Thus the lower left pane is where we can test out code, but the top pane is where we can write code that we wish to save. 
+Thus the lower left pane is where we can test out code (although we do not generally recommend it), but the top pane is where we can write code that we wish to save. 
+
+Note that you can also test code in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows & Linux computers or Cmd+Return on Mac computers.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
