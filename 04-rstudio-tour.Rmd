@@ -90,7 +90,7 @@ updateR()#update your version of R
 
 ### Installing RStudio
 
-Next we want to download and install RStudio. You can do so by going to the Posit website at this link: https://posit.co/. Note that you should be able to download the completely free option. 
+Next we want to download and install RStudio. You can do so by going to the Posit website at this link: https://posit.co/. Note that you can likely accomplish all you need with the completely free option. 
 
 <div class = "notice">
 
