@@ -8,7 +8,7 @@
 A) A language for working with data
 b) A set of code that allows you to do various things
 c) A type of programming notation
-d) A language for creating websites
+d) A language specifically for creating websites
 
 ? What does "open source" mean?
 
