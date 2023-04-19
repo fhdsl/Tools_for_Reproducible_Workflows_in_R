@@ -267,7 +267,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 This pane is where we can write code that we keep in files like scripts or reports (in files like R Markdowns).
 
-Thus the lower left pane is where we can test out code, but the top pane is where we can write code that we wish to save. Since it can be easy to forget to save code, we suggest that instead you use a special file type that will allow you to test code that you save. We will discuss that in the next section. 
+Thus the lower left pane is where we can test out code (although we don't recommend it), but the top pane is where we can write code that we wish to save (and also test it!). Since it can be easy to forget to save code, we suggest that instead you use a special file type that will allow you to test code that you save. We will discuss that in the next section. 
 
 In order to make our analysis truly reproducible we will need to have **every single step** written down. This is why using the Console is great for testing things, but not so great for actually performing your analysis. 
 
@@ -275,7 +275,7 @@ In order to make our analysis truly reproducible we will need to have **every si
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_186")
 ```
 
-The top pane where we save code is called the Editor. The lower pane where we test code is called the Console.
+The top pane where we save code is called the Editor. The lower pane for quick tests of code is called the Console.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The Editor in the top left, also called source, is where we write code we want to save. The lower left is the Console where we do quick tests of our code."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20ed7630a13_1_198")
@@ -287,7 +287,7 @@ R Markdown files allow you to have the code for your analysis, the output from t
 
 <div class = "dictionary">
 
-- **Console** - for testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio.
+- **Console** - for quickly testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio. Testing of code here does not have some features that testing in an R Markdown file has.
 - **Editor** - for writing code that you wish to save.
 - **R Markdown files** - files that allow you to save your code that allow for more features than a simple script.
 
@@ -323,7 +323,7 @@ In summary...
 
 - RStudio can help you write code in R and work with files on your computer.
 - There are 3 main panes when you first open RStudio, to see a fourth you need to create a new file like an R Markdown file.
-- When we open a file like an R markdown file, the top left pane called the Editor is for writing code we wish to save.
+- When we open a file like an R Markdown file, the top left pane called the Editor is for writing code we wish to save.
 - After opening a file, the lower left pane contains the Console which is where we test code.
 - R Markdown files are files that create reports of an analysis that can demonstrate more about what you did than a simple script and test to make sure that your code works.
 
