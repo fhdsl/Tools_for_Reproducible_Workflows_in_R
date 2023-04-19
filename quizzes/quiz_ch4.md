@@ -34,7 +34,7 @@ d) Neither A nor B
 What is the purpose of an R Markdown file in RStudio?
 
 a) To test code
-b) To write code that you wish to save
+b) To write code in the Console
 C) To have the code for your analysis, the output from the analysis, and your written thoughts and rationale for your analysis all in one place
 d) To run code in parallel
 
