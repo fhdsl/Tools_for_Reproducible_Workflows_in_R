@@ -14,29 +14,40 @@ m) Reproducibility that allows everyone everywhere to get the exact same results
 
 ? Which of the following is not a component of reproducibility?
 
-a) Transparency
-b) Accessibility
-c) Consistency
-D) Efficiency
+C) Efficiency
+C) Speed
+o) Transparency
+o) Clarity
+m) Accessibility
+m) Consistency
+
 
 ? What does "open source" mean in the context of reproducibility?
 
-A)  Making data and code available for anyone to access and modify
-b) Providing data and code upon request by email
-c) Publishing data and code behind a paywall
-d) Storing data and code on a personal computer
+C) Making data and code available for anyone to access and modify
+C) Providing access to the data and code publicly where possible
+o) Providing data and code upon request by email
+o) Publishing data and code behind a paywall
+m) Storing data and code on a personal computer
+m) Not keeping the code for an analysis
 
 ? Why is data sharing important in promoting the open source-ness of an analysis?
 
-a) It makes the analysis more complex and difficult to execute
-b) It helps others to be able to publish conclusions about our data
 C) It helps others be able to truly reproduce the analysis by using the same data
-d) It exposes personal identifiable information to the public
+o) It makes the analysis more complex and difficult to execute
+o) It makes it less clear what was done in our analyses
+m) It helps others to be able to publish conclusions about our data
+m) It exposes personal identifiable information to the public
 
 
-? True or False - if your data has PHI or PII you cannot make your analysis open source or reproducible.
+? Whic of the following is correct about this statement - if your data has PHI or PII you cannot make your analysis open source or reproducible.
 
-a) TRUE - There is no methods that will allow you to share your methods and data in a safe way.
-B) FALSE! - These are not mutually exclusive goals! Some thoughtful planning and use of controlled access methods can ensure that all individuals' data are well protected!
+C) These are not mutually exclusive goals! Some thoughtful planning and use of controlled access methods can ensure that all individuals' data are well protected!
+C) You can protect data and not share it, but share the code in a careful manner that does not expose details about the data.
+o) You can make your analysis reproducible but not open source
+o) You can make your analysis open source but not reproducible
+m) There are no methods that will allow you to share your methods and data in a safe way.
+m) Sharing your code is always unsafe when it comes to PHI or PII
+
 
 {/quiz}
