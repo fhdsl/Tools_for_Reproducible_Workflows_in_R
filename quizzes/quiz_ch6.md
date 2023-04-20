@@ -23,23 +23,30 @@ m) It makes it more appealing to others.
 
 ? What should a README file include?
 
-A) A summary of the project's goals and intentions, usage instructions, software dependencies, file descriptions, and any other relevant information.
-b) A summary of the project's goals and intentions and software dependencies.
-c) A summary of the project's goals and intentions and file descriptions.
-d) A summary of the project's goals and intentions and usage instructions.
+C) A summary of the project's goals and intentions, usage instructions, software dependencies, file descriptions, and any other relevant information.
+C) A summary of all relevant information related to the project's goals and intentions, usage instructions of the software, software dependencies, and file descriptions.
+o) A summary of the project's goals and intentions and software dependencies.
+o) A summary of the project's goals and intentions and file descriptions.
+m) A summary of the project's goals and intentions and usage instructions.
+m) A summary of the project's goals and intentions, usage instructions, and summary of dependencies.
 
 ? What are some rules for writing helpful code comments?
 
-a) Comments should not duplicate the code, good comments excuse unclear code, and comments should dispel confusion.
-b) Comments should duplicate the code, good comments excuse unclear code, and comments should cause confusion.
 C) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should dispel confusion.
-d) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should cause confusion.
+C) Comments should not duplicate the code, comments should not excuse unclear code, and comments should dispel confusion.
+o) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should cause confusion.
+o) Comments should duplicate the code, good comments excuse unclear code, and comments should cause confusion.
+m) Comments should not duplicate the code, good comments excuse unclear code, and comments should dispel confusion.
+m) Comments should duplicate the code, comments should not excuse unclear code, and comments should dispel confusion.
 
 ? What should you look for when choosing a package to use?
 
-a) Intuitive design, compatibility with many languages, and long-term support.
-b) Innovative functionality, efficient code, and well-organized documentation.
-c) Cheap price, high popularity, and diverse functions.
-D) Easy-to-use documentation, active development/maintenance, and community recognition.
+C) Easy-to-use documentation, active development/maintenance, and community recognition.
+C) Easy-to-use documentation, community recognition, and active development/maintenance.
+o) Cheap price, high popularity, and diverse functions.
+o) Innovative, cheap price, community recognition.
+m) Intuitive design, compatibility with many languages, and long-term support.
+m) Innovative functionality, efficient code, and well-organized documentation.
+
 
 {/quiz}
