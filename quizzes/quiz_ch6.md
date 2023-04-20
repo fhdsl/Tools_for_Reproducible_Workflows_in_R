@@ -5,17 +5,21 @@
 
 ? What are the three aspects of reproducible code?
 
-A) Readable, well-documented, and consistent
-b) Innovative, clever, and organized
-c) Polished, efficient, and commented
-d) Intuitive, well-maintained, and universal
+C) Readable, well-documented, and consistent
+C) Readable, consistent, and well-documented
+o) Intuitive, well-maintained, and universally appealing
+o) Concise, efficient, well-reasoned
+m) Innovative, clever, and organized
+m) Polished, efficient, and commented
 
 ? What is the importance of code being readable?
 
-A) It makes it easier for others to use and understand the code.
-b) It makes it more innovative and clever.
-c) It makes it more efficient and organized.
-d) It makes it more polished and consistent.
+C) It makes it easier for others to use and understand the code.
+C) It makes it easier for others to understand what the code is doing.
+o) It makes it more innovative and clever.
+o) It makes it more efficient and organized.
+m) It makes it more polished and consistent.
+m) It makes it more appealing to others.
 
 ? What should a README file include?
 
