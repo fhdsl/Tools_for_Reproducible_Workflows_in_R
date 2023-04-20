@@ -5,10 +5,12 @@
 
 ? What is version control?
 
-A) A method of tracking files as they are changed throughout a project.
-b) An online platform for sharing code.
-c) A way to experiment with different code without affecting the main analysis.
-d) A method for collaborating on the same code simultaneously.
+C) A method of tracking files as they are changed throughout a project.
+C) A method of tracking changes to files over time.
+o) An online platform for sharing code.
+o) An online platform for discussing code.
+m) A way to experiment with different code without affecting the main analysis.
+m) A method for collaborating on the same code simultaneously.
 
 ? What is the major benefit of using GitHub for sharing code?
 
