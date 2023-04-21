@@ -391,7 +391,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-### Code folding
+### Code Folding
 
 Earlier we talked about hiding code but discussed that usually you want to share the code if possible. Code folding is really great option for this issue! It allows you to create a clean report with a button for people to click to see the code within the code chunk that resulted in the various outputs of the report. 
 
