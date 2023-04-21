@@ -292,6 +292,8 @@ You will notice that there is text written around the code chunks that you can u
 
 There are a couple of formatting options that can be very useful to know. 
 
+If you want to know more, you can check out this [guide](https://www.markdownguide.org/) about Markdown in general. The syntax will be the same for R Markdown files too.
+
 ### Headers
 
 Using hashtags creates headers. One hashtag creates to highest level header, adding more hashtags add subsequent smaller headers. For example text with two `##` will be smaller than text with one `#`. The hashtags need to be on the far right of the line and you need a space in between the hashtags and the text to create the header.
