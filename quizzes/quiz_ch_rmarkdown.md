@@ -32,7 +32,7 @@ d) You can press the run previous chunks button to run the code for all chunks e
 ? Which of the following is NOT true about R Markdown files?
 a) you can choose to hide your code or the output of the code in the final rendered report
 b) you can render the report into different kinds of file types like html or pdf by altering the YAML code at the top
-c) you can modify the aesthetics of the report
+c) You can modify the aesthetics of the report
 D) R Markdown files only render the output of your code and never show your actual code 
 
 ?
