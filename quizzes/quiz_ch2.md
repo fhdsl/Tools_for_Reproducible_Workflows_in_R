@@ -1,8 +1,9 @@
 
-{quiz, id: reproducible_code, attempts: 10}
+{quiz, id: why_r, attempts: 10}
 
 ## What is R?
 
+{choose-answers: 4}
 ? What is R?
 
 C) A language for working with data
@@ -12,7 +13,7 @@ o) Code for specifically making maps
 m) A type of programming notation
 m) A language specifically for creating websites
 
-
+{choose-answers: 4}
 ? What does "open source" mean?
 
 C) The code is publicly available and others are able to contribute to it
@@ -22,6 +23,7 @@ o) The code is only available to users with a GitHub account
 m) The code is hidden and can't be accessed by users
 m) The code is open for viewing but not modification
 
+{choose-answers: 4}
 ? What is an R package?
 C) A set of code that can be shared between users
 C) Code that can be shared with others, either privately or publicly
@@ -30,6 +32,7 @@ o) A way to make your code more efficient
 m) A way to protect your code from being seen by others
 m) A type of statistical analysis
 
+{choose-answers: 4}
 ? What is one benefit of having a rich and active community in R?
 C) More resources for finding help and tutorials
 C) More opportunities to find others who can help you make your code reproducible

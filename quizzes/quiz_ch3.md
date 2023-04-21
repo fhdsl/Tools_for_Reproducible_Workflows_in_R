@@ -3,6 +3,7 @@
 
 ## Components of reproducibility
 
+{choose-answers: 4}
 ? What does "reproducibility on a continuum" mean?
 
 C) Reproducibility that needs iterative work to improve
@@ -12,6 +13,7 @@ o) Reproducibility that is achievable only for certain types of analyses
 m) Reproducibility that can only be achieved with perfect execution
 m) Reproducibility that allows everyone everywhere to get the exact same results with your code and data
 
+{choose-answers: 4}
 ? Which of the following is not a component of reproducibility?
 
 C) Efficiency
@@ -21,7 +23,7 @@ o) Clarity
 m) Accessibility
 m) Consistency
 
-
+{choose-answers: 4}
 ? What does "open source" mean in the context of reproducibility?
 
 C) Making data and code available for anyone to access and modify
@@ -31,6 +33,7 @@ o) Publishing data and code behind a paywall
 m) Storing data and code on a personal computer
 m) Not keeping the code for an analysis
 
+{choose-answers: 4}
 ? Why is data sharing important in making an analysis open source?
 
 C) It helps others be able to truly reproduce the analysis by using the same data
@@ -40,7 +43,7 @@ o) It makes it less clear what was done in our analyses
 m) It helps others to be able to publish conclusions about our data
 m) It exposes personal identifiable information to the public
 
-
+{choose-answers: 4}
 ? Which of the following is correct about this statement - if your data has PHI or PII you cannot make your analysis open source or reproducible.
 
 C) These are not mutually exclusive goals! Some thoughtful planning and use of controlled access methods can ensure that all individuals' data are well protected!

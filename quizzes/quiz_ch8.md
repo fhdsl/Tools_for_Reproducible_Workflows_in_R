@@ -3,6 +3,7 @@
 
 ## Software versions
 
+{choose-answers: 4}
 ? What is a computing environment?
 
 C) All the relevant pieces of software and their dependencies that were used on a computer at the time that an analysis or other project was run
@@ -12,6 +13,7 @@ o) A type of network of computers
 m) The physical components of a computer
 m) The programming language used to run an analysis
 
+{choose-answers: 4}
 ? What is "dependency hell"?
 
 C) The feeling of frustration when trying to update software that exists in a tangled mess of software dependencies
@@ -21,6 +23,7 @@ o) The frustration of trying to understand what structure might be needed to wri
 m) The process of trying to find software that is useful
 m) The feeling of euphoria when all software dependencies have been resolved
 
+{choose-answers: 4}
 ? Why is it important to control for software versions in creating reproducible analyses?
 
 C) Because software versions can directly affect not only whether an analysis will be able to run, but the results of the analysis
@@ -30,6 +33,7 @@ o) Because it makes the analysis more efficient
 m) Because it makes the analysis easier to understand
 m) Because it ensures that the analysis is correct
 
+{choose-answers: 4}
 ? What is session info?
 
 C) A printout in R that displays information about the software and packages that were being used at the time the sessionInfo function was run

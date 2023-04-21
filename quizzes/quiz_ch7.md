@@ -1,8 +1,9 @@
 
-{quiz, id: quiz_name_here, attempts: 10}
+{quiz, id: github, attempts: 10}
 
 ## GitHub Workflow
 
+{choose-answers: 4}
 ? What is version control?
 
 C) A method of tracking files as they are changed throughout a project.
@@ -12,6 +13,7 @@ o) An online platform for discussing code.
 m) A way to experiment with different code without affecting the main analysis.
 m) A method for collaborating on the same code simultaneously.
 
+{choose-answers: 4}
 ? What is the major benefit of using GitHub for sharing code?
 
 C) It allows you to track your code and project files as you and others continue to work on them.
@@ -21,6 +23,7 @@ o) It allows you to add comments to your code.
 m) It provides a way to publish your research in a peer reviewed manuscript.
 m) It makes it easy to add citations to your code.
 
+{choose-answers: 4}
 ? Which of the following is true about README files?
 
 C) Many projects use READMEs! They help orient a person to a project
@@ -30,6 +33,7 @@ o) README files are only needed for public facing projects
 m) README files are only needed in certain types of education based projects
 m) README files are only needed for research projects
 
+{choose-answers: 4}
 ? Why did we create a GitHub Personal Access Token (PAT) that we provided to the `usethis` package in RStudio?
 
 C) To be able to access everything in your GitHub repository from RStudio/Posit Cloud
