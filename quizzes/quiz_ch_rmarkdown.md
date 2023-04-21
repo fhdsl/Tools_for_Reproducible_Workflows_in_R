@@ -17,7 +17,7 @@ c) They allow you to share the code and the output of the code easily with other
 d) All of the above
 
 ? How do you create a new R Markdown file?
-a) A new R markdown file is automatically opened when you start RStudio
+a) A new R Markdown file is automatically opened when you start RStudio
 b) You right click the code in the console and save it
 C) You click on the File tab to open a new R Markdown file which opens a new pane to write and test code in
 d) you right click on the environment and save it
