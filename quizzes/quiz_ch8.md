@@ -6,9 +6,9 @@
 ? What is a computing environment?
 
 C) All the relevant pieces of software and their dependencies that were used on a computer at the time that an analysis or other project was run
-C) All the computing infrastructure (including softare and their dependencies) that enables a project at a given time
+C) All the computing infrastructure (including software and their dependencies) that enables a project at a given time
 o) A type of operating system
-o) A type of wifi
+o) A type of network of computers
 m) The physical components of a computer
 m) The programming language used to run an analysis
 

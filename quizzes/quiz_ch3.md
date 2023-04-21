@@ -31,16 +31,17 @@ o) Publishing data and code behind a paywall
 m) Storing data and code on a personal computer
 m) Not keeping the code for an analysis
 
-? Why is data sharing important in promoting the open source-ness of an analysis?
+? Why is data sharing important in making an analysis open source?
 
 C) It helps others be able to truly reproduce the analysis by using the same data
+C) It helps other people to be able to reproduce the analysis, as they need to attempt the analysis with your data to do so
 o) It makes the analysis more complex and difficult to execute
 o) It makes it less clear what was done in our analyses
 m) It helps others to be able to publish conclusions about our data
 m) It exposes personal identifiable information to the public
 
 
-? Whic of the following is correct about this statement - if your data has PHI or PII you cannot make your analysis open source or reproducible.
+? Which of the following is correct about this statement - if your data has PHI or PII you cannot make your analysis open source or reproducible.
 
 C) These are not mutually exclusive goals! Some thoughtful planning and use of controlled access methods can ensure that all individuals' data are well protected!
 C) You can protect data and not share it, but share the code in a careful manner that does not expose details about the data.
