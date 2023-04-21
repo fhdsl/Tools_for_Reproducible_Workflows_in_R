@@ -20,7 +20,7 @@ d) All of the above
 a) A new R Markdown file is automatically opened when you start RStudio
 b) You right click the code in the console and save it
 C) You click on the File tab to open a new R Markdown file which opens a new pane to write and test code in
-d) you right click on the environment and save it
+d) You right click on the environment and save it
 
 
 ? Which of the following is NOT how you test the code in an R Markdown file?
