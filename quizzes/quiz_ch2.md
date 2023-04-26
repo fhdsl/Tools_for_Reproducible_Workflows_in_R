@@ -41,4 +41,9 @@ o) Less development by others needed to use R for various tasks
 m) Less support for users
 m) More difficult to find others who use R
 
+? Why is R useful for reproducibility in analyses? 
+a) It is free which means pricing is not a barrier to reproducing results with R.
+b) It has an active community who can contribute and review the reproducibility of it.
+c) It has an active developer community who has made lots of handy tools which aid reproducibility. 
+D) All of the above
 {/quiz}
