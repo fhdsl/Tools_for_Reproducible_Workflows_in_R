@@ -1,46 +1,57 @@
 
-{quiz, id: github, attempts: 10}
+{quiz, id: reproducible_code, attempts: 10}
 
-## GitHub Workflow
-
-{choose-answers: 4}
-? What is version control?
-
-C) A method of tracking files as they are changed throughout a project.
-C) A method of tracking changes to files over time.
-o) An online platform for sharing code.
-o) An online platform for discussing code.
-m) A way to experiment with different code without affecting the main analysis.
-m) A method for collaborating on the same code simultaneously.
+## Reproducible code
 
 {choose-answers: 4}
-? What is the major benefit of using GitHub for sharing code?
+? What are the three aspects of reproducible code?
 
-C) It allows you to track your code and project files as you and others continue to work on them.
-C) It enables you to track the changes in your code and project files as you and others modify them over time.
-o) It allows you to store your code in a way that obscures it from others.
-o) It allows you to add comments to your code. 
-m) It provides a way to publish your research in a peer reviewed manuscript.
-m) It makes it easy to add citations to your code.
-
-{choose-answers: 4}
-? Which of the following is true about README files?
-
-C) Many projects use READMEs! They help orient a person to a project
-C) README files can be helpful for any kind of computational project to help others better understand what the files are for and what the main goals of the project are
-o) Only education based software needs to be concerned with documentation 
-o) README files are only needed for public facing projects
-m) README files are only needed in certain types of education based projects
-m) README files are only needed for research projects
+C) Readable, well-documented, and consistent
+C) Readable, consistent, and well-documented
+o) Intuitive, well-maintained, and universally appealing
+o) Concise, efficient, well-reasoned
+m) Innovative, clever, and organized
+m) Polished, efficient, and commented
 
 {choose-answers: 4}
-? Why did we create a GitHub Personal Access Token (PAT) that we provided to the `usethis` package in RStudio?
+? What is the importance of code being readable?
 
-C) To be able to access everything in your GitHub repository from RStudio/Posit Cloud
-C) to gain access to our GitHub repository from RStudio/Posit Cloud
-o) To attach a library to RStudio
-o) to load packages in RStudio Cloud
-m) To create a new repository on GitHub
-m) To use the `testthis` package
+C) It makes it easier for others to use and understand the code.
+C) It makes it easier for others to understand what the code is doing.
+o) It makes it more innovative and clever.
+o) It makes it more efficient and organized.
+m) It makes it more polished and consistent.
+m) It makes it more appealing to others.
+
+{choose-answers: 4}
+? What should a README file include?
+
+C) A summary of the project's goals and intentions, usage instructions, software dependencies, file descriptions, and any other relevant information.
+C) A summary of all relevant information related to the project's goals and intentions, usage instructions of the software, software dependencies, and file descriptions.
+o) A summary of the project's goals and intentions and software dependencies.
+o) A summary of the project's goals and intentions and file descriptions.
+m) A summary of the project's goals and intentions and usage instructions.
+m) A summary of the project's goals and intentions, usage instructions, and summary of dependencies.
+
+{choose-answers: 4}
+? What are some rules for writing helpful code comments?
+
+C) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should dispel confusion.
+C) Comments should not duplicate the code, comments should not excuse unclear code, and comments should dispel confusion.
+o) Comments should not duplicate the code, good comments do not excuse unclear code, and comments should cause confusion.
+o) Comments should duplicate the code, good comments excuse unclear code, and comments should cause confusion.
+m) Comments should not duplicate the code, good comments excuse unclear code, and comments should dispel confusion.
+m) Comments should duplicate the code, comments should not excuse unclear code, and comments should dispel confusion.
+
+{choose-answers: 4}
+? What should you look for when choosing a package to use?
+
+C) Easy-to-use documentation, active development/maintenance, and community recognition.
+C) Easy-to-use documentation, community recognition, and active development/maintenance.
+o) Cheap price, high popularity, and diverse functions.
+o) Innovative, cheap price, community recognition.
+m) Intuitive design, compatibility with many languages, and long-term support.
+m) Innovative functionality, efficient code, and well-organized documentation.
+
 
 {/quiz}
