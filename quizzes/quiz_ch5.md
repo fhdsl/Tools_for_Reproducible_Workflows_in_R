@@ -1,7 +1,7 @@
 
 {quiz, id: rmarkdown, attempts: 10}
 
-## RStudio Quiz
+## R Markdown Quiz
 
 ? What is an R Markdown file?
 
