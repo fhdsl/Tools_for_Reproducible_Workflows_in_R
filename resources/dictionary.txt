@@ -69,12 +69,15 @@ NHGRI
 NIGMS
 ottrpal
 Pandoc
-UE
-UE5
+PBC
 reproducibility
 RStudio
+Rmarkdown
 Sys
+UE
+UE5
 underserved
+VCS
 www
 YAML
 Yay
