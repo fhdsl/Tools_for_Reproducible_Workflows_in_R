@@ -28,6 +28,16 @@ accessible
 conclusion-1
 a-tour-of-rstudio
 why-use-rstudio
+installing-rstudio
+installing-and-updating-r
+installing-rstudio-1
+updating-rstudio
+navigating-rstudio
+default-layout
+the-hidden-pane
+find-errors
+keyboard-shortcuts
+conclusion-2
 setting-up-your-project
 reproducible-code
 reproducibility-means-we-dont-need-to-reinvent-the-wheel
@@ -45,7 +55,7 @@ is-dry-dont-repeat-yourself
 consistent-1
 follows-conventions
 is-organized
-conclusion-2
+conclusion-3
 using-github-in-a-workflow
 what-is-version-control
 whats-github
@@ -57,7 +67,7 @@ cloning-your-repository
 opening-a-pr
 creating-a-new-branch
 merging-a-pull-request
-conclusion-3
+conclusion-4
 software-versions
 learning-objectives-2
 no-two-computers-are-the-same
@@ -65,7 +75,7 @@ software-and-package-versions-affect-results
 session-info
 snapshots-with-renv
 containerization
-conclusion-4
+conclusion-5
 sharing-data
 functions
 project-maintenance-and-updates
