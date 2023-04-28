@@ -1,8 +1,9 @@
+Cmd
+Ctrl
 declutter
 github
 gitignore
-primetime
-Yay
+filetype
 functionalize
 Hadley
 preprint
@@ -16,8 +17,10 @@ tRaCTIng
 HIPAA
 iteratively
 lockfile
+primetime
 preprint
 README
+RMarkdown
 renv
 lockfile
 Carpentries
@@ -48,6 +51,10 @@ GDSCN
 GitHub
 Github
 GH
+hashtags
+hashtag
+Hashtag
+Hashtags
 Ihaka
 impactful
 ITCR
@@ -65,8 +72,12 @@ Pandoc
 PBC
 reproducibility
 RStudio
+Rmarkdown
+Sys
 UE
 UE5
 underserved
 VCS
 www
+YAML
+Yay
