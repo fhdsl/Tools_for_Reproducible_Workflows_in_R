@@ -7,16 +7,16 @@
 
 ## What is version control
 
-Version control is system that allows you to track your files as you work on them.
-Whether you've wrote a lot of code or written other documents, you've likely encountered the need for version control. As this comic from Piled Higher and Deeper describes, files can go through a lot of edits and revisions (this is true of code too)! And it doesn't take long for it to be difficult or even impossible to track the various revisions of even one file let alone dozens or hundreds of files that may be a part of a data science project.
+Version control is system that allows you to track your files over time as you work on them.
+Whether you've written a lot of code or written other documents, you've likely encountered the need for version control. As this comic from Piled Higher and Deeper describes, files can go through a lot of edits and revisions (this is true of code too)! And it doesn't take long for it to be difficult or even impossible to track the various revisions of even one file, let alone the dozens or hundreds of files that may be a part of a data science project.
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_0.png){width=100%}
 
-This problem is what git, a version control system can address. It is a system that allows you to track your files, keep a history of them and otherwise handle changes through the history of your project.
+This problem is what Git, a version control system, can address. It is a system that allows you to track your files, keep a history of them, and otherwise handle changes through the history of your project.
 
 ## What's GitHub?
 
-The most common way git is used is in conjunction with an online platform called GitHub.
+Git is most commonly used is in conjunction with an online platform called GitHub.
 [GitHub](https://github.com/) is an online platform for sharing code.
 
 <div class = "dictionary">
@@ -24,7 +24,7 @@ The most common way git is used is in conjunction with an online platform called
 - **GitHub** an online platform for sharing code in a version controlled manner.
 </div>
 
-It aids reproducibility by being online in a way that is easily shareable to others in a version controlled way. GitHub allows anyone at anytime to take a look at and obtain your code.
+GitHub aids reproducibility by being online in a way that easily makes code shareable to others in a version controlled way. GitHub allows anyone at anytime to take a look at and obtain your code.
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_415.png){width=100%}
 
@@ -32,11 +32,11 @@ Because code on GitHub is version controlled, it allows you to track your code a
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_488.png){width=100%}
 
-GitHub and its version control also allows you to be able to take the side journeys that often pop up with data science projects but in a way that allows you to ensure that the main files stay safe as you experiment.
+GitHub and Git also allow you to take the side journeys that often pop up with data science projects, but in a way that allows you to ensure that the main files stay safe as you experiment.
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_459.png){width=100%}
 
-GitHub is also handy for collaborating with others on your code, not only because it is online, but the version controlled nature of it, allows you and any team members to work on the same files simultaneously without fear that the changes will be impossible to merge together. Git and GitHub have systems to do just this.
+GitHub is also handy for collaborating with others on your code, not only because it is online, but the version controlled nature of it allows you and any team members to work on the same files simultaneously without fear that the changes will be impossible to merge together. Git and GitHub have systems to do just this.
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_503.png){width=100%}
 
@@ -46,7 +46,7 @@ Git can feel overwhelming to a lot of folks and it has a really deep and complic
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_7.png){width=100%}
 
-One reason that git and GitHub can feel overwhelming to folks is that there are a number of terms that are used to describe the different commands. We will walk through the typical workflow steps, and define these terms as we use them.
+One reason that Git and GitHub can feel overwhelming to folks is that there are a number of terms that are used to describe the different commands. We will walk through the typical workflow steps, and define these terms as we use them.
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_5.png){width=100%}
 
@@ -66,7 +66,7 @@ On this new repository page, you will want to create a description that summariz
 
 Also choose the "Add a README file" option because every project should have a README.
 
-For the `Add .gitignore` option, it would be handy to choose the `R` gitignore template. [gitignore files are handy](https://git-scm.com/docs/gitignore#:~:text=A%20gitignore%20file%20specifies%20intentionally,gitignore%20file%20specifies%20a%20pattern.). They are a way to tell GitHub that you don't want a particular file tracked. It's just important for us to track the important files as it is for us to declutter our project by not adding unnecessary files.  
+For the `Add .gitignore` option, it would be handy to choose the `R` gitignore template. These [gitignore files are handy](https://git-scm.com/docs/gitignore#:~:text=A%20gitignore%20file%20specifies%20intentionally,gitignore%20file%20specifies%20a%20pattern.). They are a way to tell GitHub that you don't want a particular file tracked. It's just important for us to track the important files as it is for us to declutter our project by not adding unnecessary files.  
 
 You may want to choose a license. We recommend choosing something that allows others to freely use your code but with attribution like a Creative Commons license.
 
@@ -108,7 +108,7 @@ This will open up a page in GitHub for creating a `New personal access token`.
 
 Underneath the `Note` put something that reminds you what this PAT is for. Something like `RStudioCloud Access`. (Note that each PAT you make needs its own unique `Note` though).
 
-Underneath the `Select scopes` section **you don't need to do anything**, `usethis` package already chose the permissions we need.
+Underneath the `Select scopes` section **you don't need to do anything**. The `usethis` package already chose the permissions we need.
 
 Scroll all the way down on this page and click `Generate Token`. You've created your first PAT! **Do not close this window**, keep it handy for now. Note that in the image below we blocked out our PAT, but yours will show a jumble of letters and numbers
 
@@ -136,7 +136,7 @@ After you enter your PAT here you should get a message like:
 You are now free to close that GitHub PAT window. Note that you will want to be very careful with your PAT. **Do not share it or put it anywhere that others could see it or access it!**
 
 7. Now we also need to add your username and email to the RStudio GitHub credentials by running a command like below.
-But replace the example **username** and **email** with what corresponds to your GitHub account.
+Be sure to replace the example **username** and **email** with what corresponds to your GitHub account.
 
 ```
 use_git_config(user.name = "Jane", user.email = "jane@example.org")
@@ -196,7 +196,7 @@ Yay! Now you should be able to use GitHub from RStudio!
 
 ### Cloning your repository
 
-In git, to `clone` something is to get a copy of your project to your computer to work from.
+In Git, to `clone` something means to get a copy of your project onto your computer to work on.
 
 <div class = "dictionary">
 - **clone** - making a copy of a code base on your computer.
@@ -255,7 +255,7 @@ Now that you have created a branch, you are ready to make changes to your files.
 
 Now make any change to a file for the purposes of this tutorial. For example, you could add a sentence to your README file to explain what this project will be. Then save the file change.
 
-In RStudio, if we go to the `Git` tab we should see that the file we changed has an `M` next to it to signify it has been modified. In order to officially add these changes that we've made to our branch, we need to `commit` them.  
+In RStudio, if we go to the `Git` tab (typically located in the lower right pane) we should see that the file we changed has an `M` next to it to signify it has been modified. In order to officially add these changes that we've made to our branch, we need to `commit` them.  
 
 <div class = "dictionary">
 - **commit** - the action of officially adding a file change to a branch.
@@ -265,7 +265,7 @@ To do this, we first need to check the box(es) next to the files we'd like to co
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_150.png)
 
-After clicking the commit button, a new window will pop up that shows us the changes we are committing. In this window, we will need to add a commit message. Again, we should try to write something informative about what we were doing to these files we are committing. Then after we've written this commit message, we need to click `Commit` in this window.
+After clicking the commit button, a new window will pop up that shows us the changes we are committing. Sections in green are new additions or modifications. Sections in red are the old sections that got changed or removed. In this window, we will need to add a commit message. Again, we should try to write something informative about what we were doing to these files we are committing. Then after we've written this commit message, we need to click `Commit` in this window.
 
 
 ![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_164.png)
