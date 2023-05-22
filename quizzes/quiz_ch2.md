@@ -46,4 +46,5 @@ a) It is free which means pricing is not a barrier to reproducing results with R
 b) It has an active community who can contribute and review the reproducibility of it.
 c) It has an active developer community who has made lots of handy tools which aid reproducibility. 
 D) All of the above
+
 {/quiz}
