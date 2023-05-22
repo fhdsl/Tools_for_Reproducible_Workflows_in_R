@@ -65,7 +65,6 @@ code-folding
 code-download
 automatic-date
 conclusion-3
-setting-up-your-project
 reproducible-code
 reproducibility-means-we-dont-need-to-reinvent-the-wheel
 tips-for-choosing-packages-to-use
@@ -103,8 +102,4 @@ session-info
 snapshots-with-renv
 containerization
 conclusion-6
-sharing-data
-functions
-project-maintenance-and-updates
-collaborations-through-github
 references
