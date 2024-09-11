@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 R Markdown Reports | Tools for Reproducible Workflows in R</title>
   <meta name="description" content="Chapter 5 R Markdown Reports | Tools for Reproducible Workflows in R" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 R Markdown Reports | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -30,8 +29,7 @@
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="a-tour-of-rstudio.html"/>
-<link rel="next" href="setting-up-your-project.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<link rel="next" href="reproducible-code.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -89,11 +88,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
+code span.at { color: #204a87; } /* Attribute */
 code span.bn { color: #0000cf; } /* BaseN */
 code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
+code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #8f5902; font-style: italic; } /* Comment */
 code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
@@ -102,14 +101,14 @@ code span.dv { color: #0000cf; } /* DecVal */
 code span.er { color: #a40000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
 code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
 code span.ot { color: #8f5902; } /* Other */
 code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
 code span.ss { color: #4e9a06; } /* SpecialString */
 code span.st { color: #4e9a06; } /* String */
 code span.va { color: #000000; } /* Variable */
@@ -117,6 +116,10 @@ code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -252,63 +255,58 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.14" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#conclusion-3"><i class="fa fa-check"></i><b>5.14</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>6</b> Setting up your project</a></li>
-<li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
+<li class="chapter" data-level="6" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>6</b> Reproducible Code</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>7.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
+<li class="chapter" data-level="6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>6.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>7.1.1</b> Tips for choosing packages to use:</a></li>
+<li class="chapter" data-level="6.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>6.1.1</b> Tips for choosing packages to use:</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>7.2</b> The importance of iterative work</a></li>
-<li class="chapter" data-level="7.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>7.3</b> Aspects of Reproducible code</a></li>
-<li class="chapter" data-level="7.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>7.4</b> Readable</a>
+<li class="chapter" data-level="6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>6.2</b> The importance of iterative work</a></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>6.3</b> Aspects of Reproducible code</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>6.4</b> Readable</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>7.4.1</b> Well-documented</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>7.4.2</b> Follows a code style</a></li>
+<li class="chapter" data-level="6.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>6.4.1</b> Well-documented</a></li>
+<li class="chapter" data-level="6.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>6.4.2</b> Follows a code style</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>7.5</b> Efficient</a>
+<li class="chapter" data-level="6.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>6.5</b> Efficient</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>7.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
-<li class="chapter" data-level="7.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>7.5.2</b> Is DRY (don’t repeat yourself)</a></li>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>6.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>6.5.2</b> Is DRY (don’t repeat yourself)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>7.6</b> Consistent</a>
+<li class="chapter" data-level="6.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>6.6</b> Consistent</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>7.6.1</b> Follows conventions</a></li>
-<li class="chapter" data-level="7.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>7.6.2</b> Is organized</a></li>
+<li class="chapter" data-level="6.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>6.6.1</b> Follows conventions</a></li>
+<li class="chapter" data-level="6.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>6.6.2</b> Is organized</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>7.7</b> Conclusion</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>6.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>8</b> Using GitHub in a workflow</a>
+<li class="chapter" data-level="7" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>7</b> Using GitHub in a workflow</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>8.1</b> What is version control</a></li>
-<li class="chapter" data-level="8.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>8.2</b> What’s GitHub?</a></li>
-<li class="chapter" data-level="8.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>8.3</b> GitHub Workflow</a>
+<li class="chapter" data-level="7.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>7.1</b> What is version control</a></li>
+<li class="chapter" data-level="7.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>7.2</b> What’s GitHub?</a></li>
+<li class="chapter" data-level="7.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>7.3</b> GitHub Workflow</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>8.3.1</b> Create your GitHub account</a></li>
-<li class="chapter" data-level="8.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>8.3.2</b> Creating a new repository</a></li>
-<li class="chapter" data-level="8.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>8.3.3</b> Setting up your repository locally</a></li>
-<li class="chapter" data-level="8.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>8.3.4</b> Cloning your repository</a></li>
-<li class="chapter" data-level="8.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>8.3.5</b> Opening a PR</a></li>
-<li class="chapter" data-level="8.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>8.3.6</b> Merging a pull request</a></li>
+<li class="chapter" data-level="7.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>7.3.1</b> Create your GitHub account</a></li>
+<li class="chapter" data-level="7.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>7.3.2</b> Creating a new repository</a></li>
+<li class="chapter" data-level="7.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>7.3.3</b> Setting up your repository locally</a></li>
+<li class="chapter" data-level="7.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>7.3.4</b> Cloning your repository</a></li>
+<li class="chapter" data-level="7.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>7.3.5</b> Opening a PR</a></li>
+<li class="chapter" data-level="7.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>7.3.6</b> Merging a pull request</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>8.4</b> Conclusion</a></li>
+<li class="chapter" data-level="7.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
+<li class="chapter" data-level="8" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>8</b> Software versions</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
-<li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
-<li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
-<li class="chapter" data-level="9.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>9.5</b> Snapshots with <code>renv</code></a></li>
-<li class="chapter" data-level="9.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>9.6</b> Containerization</a></li>
-<li class="chapter" data-level="9.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>9.7</b> Conclusion</a></li>
+<li class="chapter" data-level="8.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>8.2</b> No two computers are the same</a></li>
+<li class="chapter" data-level="8.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>8.3</b> Software and package versions affect results!</a></li>
+<li class="chapter" data-level="8.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>8.4</b> Session Info</a></li>
+<li class="chapter" data-level="8.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>8.5</b> Snapshots with <code>renv</code></a></li>
+<li class="chapter" data-level="8.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>8.6</b> Containerization</a></li>
+<li class="chapter" data-level="8.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>8.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="sharing-data.html"><a href="sharing-data.html"><i class="fa fa-check"></i><b>10</b> Sharing Data</a></li>
-<li class="chapter" data-level="11" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>11</b> Functions</a></li>
-<li class="chapter" data-level="12" data-path="project-maintenance-and-updates.html"><a href="project-maintenance-and-updates.html"><i class="fa fa-check"></i><b>12</b> Project maintenance and updates</a></li>
-<li class="chapter" data-level="13" data-path="collaborations-through-github.html"><a href="collaborations-through-github.html"><i class="fa fa-check"></i><b>13</b> Collaborations through GitHub</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
 <p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
@@ -344,11 +342,11 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="r-markdown-reports" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> R Markdown Reports</h1>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20eecbcf66d_84_0.png" title="Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats. Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code." alt="Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats. Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code." width="100%" style="display: block; margin: auto;" /></p>
-<div id="reports-support-reproducibility" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Reports support reproducibility</h2>
+<div id="r-markdown-reports" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> R Markdown Reports<a href="r-markdown-reports.html#r-markdown-reports" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20eecbcf66d_84_0.png" alt="Learning objectives are to be able to: Explain why R Markdown files are useful for creating data analysis reports. Recognize how to test pieces of code within R Markdown files. Recognize how to create a full R Markdown file report in html and other formats. Explain that R Markdowns generate reports from code in a way that is a bit closer to someone else trying your code." width="100%" style="display: block; margin: auto;" /></p>
+<div id="reports-support-reproducibility" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Reports support reproducibility<a href="r-markdown-reports.html#reports-support-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using R Markdown files helps you to create supports that can more transparently show what you did for your analysis and it can help you to test that your code works as expected. Scripts allow you to save code, but they do not allow you to have the following additional benefits.</p>
 <p>The following are reasons why R Markdown files help reproducibility:</p>
 <ul>
@@ -358,51 +356,51 @@ div.csl-indent {
 <li>They help you understand what might be wrong with your code in smaller sections of code if you have an issue</li>
 </ul>
 </div>
-<div id="getting-started-with-r-markdown" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Getting Started with R Markdown</h2>
+<div id="getting-started-with-r-markdown" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Getting Started with R Markdown<a href="r-markdown-reports.html#getting-started-with-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>OK, so now we know how to make a new R Markdown file from the previous section.</p>
 <details>
 <summary>
 Click here for a review on how to create R Markdown files in RStudio.
 </summary>
 <p>To open a new R Markdown file by go to <code>File</code> –&gt; <code>New File</code> –&gt;<code>R Markdown</code> in the upper menu of RStudio.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_127.png" title="Creating an R Markdown file in R Studio by selecting File, New File, R Markdown." alt="Creating an R Markdown file in R Studio by selecting File, New File, R Markdown." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_127.png" alt="Creating an R Markdown file in R Studio by selecting File, New File, R Markdown." width="100%" style="display: block; margin: auto;" /></p>
 <p>Creating an R Markdown file starts with a pop-up and you can simply click the OK button.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_169.png" title="Creating an R Markdown file starts with a pop-up and you can simply click the OK button." alt="Creating an R Markdown file starts with a pop-up and you can simply click the OK button." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_169.png" alt="Creating an R Markdown file starts with a pop-up and you can simply click the OK button." width="100%" style="display: block; margin: auto;" /></p>
 <p>The new pane will open on the upper left.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_176.png" title="The new pane will open on the upper left." alt="The new pane will open on the upper left." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_176.png" alt="The new pane will open on the upper left." width="100%" style="display: block; margin: auto;" /></p>
 <p>This pane is where we can write code to save in our R Markdown report.</p>
 <p>Thus the lower left pane is where we can test out code (although we do not generally recommend it), but the top pane is where we can write code that we wish to save.</p>
 <p>Note that you can also test selected code (or a current line) in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows &amp; Linux computers or Cmd+Return on Mac computers.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_186.png" title="The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test." alt="The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_186.png" alt="The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test." width="100%" style="display: block; margin: auto;" /></p>
 <p>The top pane where we save code is called the editor. The lower pane where we test code is called the console.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_198.png" title="The editor in the top left, also called source, is where we write code we want to save. The lower left is the console where we do quick tests of our code." alt="The editor in the top left, also called source, is where we write code we want to save. The lower left is the console where we do quick tests of our code." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_198.png" alt="The editor in the top left, also called source, is where we write code we want to save. The lower left is the console where we do quick tests of our code." width="100%" style="display: block; margin: auto;" /></p>
 </details>
 <p>Once open the file your RStudio should look something like this:</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_0.png" title="Example of how RStudio looks when you open a new R Markdown file. " alt="Example of how RStudio looks when you open a new R Markdown file. " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_0.png" alt="Example of how RStudio looks when you open a new R Markdown file. " width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="rendering-r-markdown-files" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Rendering R Markdown files</h2>
+<div id="rendering-r-markdown-files" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Rendering R Markdown files<a href="r-markdown-reports.html#rendering-r-markdown-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There is a special <code>Knit</code> button that looks like a ball of yarn with a knitting needle at the top of the R Markdown files that helps you create your report. Since R Markdown files by default have some code, we can press this to see what a rendered report might look like before we start writing our own code.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_16.png" title="The Knit button at the top of the R Markdown file allows us to create a nice report from the file." alt="The Knit button at the top of the R Markdown file allows us to create a nice report from the file." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_16.png" alt="The Knit button at the top of the R Markdown file allows us to create a nice report from the file." width="100%" style="display: block; margin: auto;" /></p>
 <p>You will likely be prompted to give the file a name after you press the Knit button and to confirm where you want to save the rendered version.</p>
 <p>You will then see in a second or two (after some information is printed on the Render tab in the lower left pane) a screen pop up with the rendered version of the report.</p>
 <p>This will look something like this:</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_20.png" title="Rendered R Markdown example after pressing the Knit button after making a new R Markdown file." alt="Rendered R Markdown example after pressing the Knit button after making a new R Markdown file." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_20.png" alt="Rendered R Markdown example after pressing the Knit button after making a new R Markdown file." width="100%" style="display: block; margin: auto;" /></p>
 <p>Here we can see that there are some headers and text information, as well as some code shown in the gray box. We also see that this code is followed by the output of the code, where we see a summary of the <code>cars</code> dataset.</p>
 <p>If you scroll down you will see an example of what a plot looks like in such a report.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_26.png" title="An image of the plot that is included in R Markdown files by default if you scroll down in the rendered report." alt="An image of the plot that is included in R Markdown files by default if you scroll down in the rendered report." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_26.png" alt="An image of the plot that is included in R Markdown files by default if you scroll down in the rendered report." width="100%" style="display: block; margin: auto;" /></p>
 <p>Hopefully you can already start to appreciate how useful it can be to send people a report of your code with the output of your code and plots, as opposed to just a simple script, which can’t show the output of our code!</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_39.png" title="A cartoon showing the parrot being confused about what a plot might look like from a script and happy about knowing how a plot looks and what code it took to create it with an R Markdown file" alt="A cartoon showing the parrot being confused about what a plot might look like from a script and happy about knowing how a plot looks and what code it took to create it with an R Markdown file" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_39.png" alt="A cartoon showing the parrot being confused about what a plot might look like from a script and happy about knowing how a plot looks and what code it took to create it with an R Markdown file" width="100%" style="display: block; margin: auto;" /></p>
 <p>It’s important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on <strong>only the code written in the R Markdown file</strong>. It can’t use code that was tested in the Console or run interactively in the R Markdown file (more on that soon).</p>
 <p>This process really helps with reproducibility because it helps us make sure that all the instructions needed (loading packages, assigning objects, etc) are within the code that we saved in the R Markdown file.</p>
 <p>If anything is missing, the file will either not knit and you will get an error, or you may see that the output of the code is different than you expected.</p>
 <p>Now let’s discuss how to start writing code in such a file.</p>
 </div>
-<div id="writing-code-in-r-markdown-files" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Writing code in R Markdown files</h2>
-<div id="the-yaml" class="section level3" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> The YAML</h3>
+<div id="writing-code-in-r-markdown-files" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Writing code in R Markdown files<a href="r-markdown-reports.html#writing-code-in-r-markdown-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-yaml" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> The YAML<a href="r-markdown-reports.html#the-yaml" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>At the top of an R Markdown file you will see some special code that is called <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> code. It is commonly used to configure programming projects. It does the same for our R Markdown reports. A major difference between R and YAML is that spacing really matters for YAML.</p>
 <p>What do we mean by configure? Configuration in programming generally refers to setting things up.</p>
 <div class="dictionary">
@@ -414,13 +412,13 @@ Click here for a review on how to create R Markdown files in RStudio.
 </ul>
 </div>
 <p>Here we can see what the top of an R Markdown file looks like after we first open one.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_8.png" title="The YAML code at the top of R Markdown files sets up how the file will look and be rendered.  Here we see that title specifies a title, author lists an author name, date will list a date, and output will specify how we want the file report to be rendered.  The three dashed lines indicate the start and end of the YAML section." alt="The YAML code at the top of R Markdown files sets up how the file will look and be rendered.  Here we see that title specifies a title, author lists an author name, date will list a date, and output will specify how we want the file report to be rendered.  The three dashed lines indicate the start and end of the YAML section." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_8.png" alt="The YAML code at the top of R Markdown files sets up how the file will look and be rendered.  Here we see that title specifies a title, author lists an author name, date will list a date, and output will specify how we want the file report to be rendered.  The three dashed lines indicate the start and end of the YAML section." width="100%" style="display: block; margin: auto;" /></p>
 <p>You can modify the <code>"Untitled"</code> text after <code>title:</code> to specify the title of your report. If you want to change the author section where it says <code>"your name"</code> in the example if that was not by default want you wanted in your file.</p>
 </div>
-<div id="code-chunks" class="section level3" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> Code chunks</h3>
+<div id="code-chunks" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Code chunks<a href="r-markdown-reports.html#code-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Next as we scroll down, we will see gray section with some notation which is called a code “chunk”.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_278.png" title="Image of a code chunk in the R Markdown file." alt="Image of a code chunk in the R Markdown file." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_278.png" alt="Image of a code chunk in the R Markdown file." width="100%" style="display: block; margin: auto;" /></p>
 <p>The notation here means the following:</p>
 <ul>
 <li>The three back ticks <code>"```"</code> indicate the barriers of where some code will be in between. This is what we call an R chunk.</li>
@@ -430,16 +428,16 @@ Click here for a review on how to create R Markdown files in RStudio.
 </ul>
 <p>This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should show up with <code>echo = TRUE</code> in the report. You don’t need to worry too much about any of this now, just recognize that this is a chunk of code.</p>
 <p>As we scroll past some text within the R Markdown file, we will see another chunk.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_286.png" title="An image of the second R chunk in a new R Markdown file. Importantly there is a green play button that allows you to run the code within the chunk and see a preview of the output." alt="An image of the second R chunk in a new R Markdown file. Importantly there is a green play button that allows you to run the code within the chunk and see a preview of the output." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_286.png" alt="An image of the second R chunk in a new R Markdown file. Importantly there is a green play button that allows you to run the code within the chunk and see a preview of the output." width="100%" style="display: block; margin: auto;" /></p>
 <p>This chunk also has a name, “cars”. It is not necessary to name chunks, but it can help you to navigate to a particular chunk later, if you do name them.</p>
 </div>
-<div id="running-chunks" class="section level3" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Running chunks</h3>
+<div id="running-chunks" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Running chunks<a href="r-markdown-reports.html#running-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Here we will see a green triangular button with its point facing to the right. This is the play button. If you try pressing this button inside of RStudio, you will see a preview of what the code does. It should show the summary of the <code>cars</code> data.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_292.png" title="An image of what the code looks like after the play button is pressed for the second chunk." alt="An image of what the code looks like after the play button is pressed for the second chunk." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_292.png" alt="An image of what the code looks like after the play button is pressed for the second chunk." width="100%" style="display: block; margin: auto;" /></p>
 <p>Pretty nifty!</p>
 <p>This is similar to testing our code in the console, in that if we assign an object it will show up in the environment.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_311.png" title="Running a code chunk is like testing in the console, it will add any objects to the environment. Image shows that pressing the run button on a chunk that assigns data will create an object that shows up in the environment." alt="Running a code chunk is like testing in the console, it will add any objects to the environment. Image shows that pressing the run button on a chunk that assigns data will create an object that shows up in the environment." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_311.png" alt="Running a code chunk is like testing in the console, it will add any objects to the environment. Image shows that pressing the run button on a chunk that assigns data will create an object that shows up in the environment." width="100%" style="display: block; margin: auto;" /></p>
 <div class="dictionary">
 <ul>
 <li><strong>Code chunk</strong> - A piece of code in an R Markdown file. The code can be previewed pressing the play button for the chunk, which is equivalent to running the code in the console.</li>
@@ -447,134 +445,134 @@ Click here for a review on how to create R Markdown files in RStudio.
 </div>
 <p>Writing our code in chunks (as opposed to one long script) can help with reproducibility, as we can better determine where possible changes may have occurred and how that influenced the results in a step-wise fashion, instead of just one final output.</p>
 </div>
-<div id="running-previous-chunks" class="section level3" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> Running previous chunks</h3>
+<div id="running-previous-chunks" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Running previous chunks<a href="r-markdown-reports.html#running-previous-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You may also notice that there is another button to the left of the play button. This button allows you to play all previous chunks before this chunk.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_297.png" title="An image of the second R chunk in a new R Markdown file. Importantly there is a play previous button that allows you to run the code within the chunks before this chunk." alt="An image of the second R chunk in a new R Markdown file. Importantly there is a play previous button that allows you to run the code within the chunks before this chunk." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_297.png" alt="An image of the second R chunk in a new R Markdown file. Importantly there is a play previous button that allows you to run the code within the chunks before this chunk." width="100%" style="display: block; margin: auto;" /></p>
 <p>This is super helpful for reproducibility in terms of making sure that your code isn’t working simply because you have something in your environment from code that you tested in the console but did not save.</p>
 <p>Issues can happen if you run a code chunk out of order or change the code in a chunk after running it previously. This can make you think that you have all the code that you need saved to obtain the result that you found, when in fact you do not.</p>
 <p>Therefore we recommend cleaning the environment (which we will describe in the next section) and testing out that your chunks work well together by knitting the document. If you get an error you can run subsets of your code chunks together using the play previous button, until you identify where the issue occurred.</p>
 </div>
 </div>
-<div id="cleaning-the-environment" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Cleaning the environment</h2>
+<div id="cleaning-the-environment" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Cleaning the environment<a href="r-markdown-reports.html#cleaning-the-environment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We suggest cleaning out your environment somewhat regularly when you are interactively testing your R Markdown file using chunks. To do so, you can press the button that looks like a broom in the upper right pane.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_305.png" title="Image showing the location of the broom button to clean the environment." alt="Image showing the location of the broom button to clean the environment." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_305.png" alt="Image showing the location of the broom button to clean the environment." width="100%" style="display: block; margin: auto;" /></p>
 <p>The ultimate test though is to press the <code>Knit</code> button and make sure you have all the code necessary to allow the report to render.</p>
 </div>
-<div id="restarting-r-session" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Restarting R Session</h2>
+<div id="restarting-r-session" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Restarting R Session<a href="r-markdown-reports.html#restarting-r-session" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file to make sure that anything you loaded during your previous session (but didn’t save in your code) wasn’t allowing your code to run successfully.</p>
 <p>To do so, you can click on the <code>Session</code> tab of the upper menu of RStudio and click <code>Restart R</code>.</p>
 </div>
-<div id="chunk-setup" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> Chunk setup</h2>
+<div id="chunk-setup" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Chunk setup<a href="r-markdown-reports.html#chunk-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is in every new R Markdown file (when you first open one) is hidden. This is because it sets up how all the other chunks work (by default) and it isn’t really important for the analysis. Recall that we hide the code and any output, using <code>include = FALSE</code>. If we just want to hide one or the other we can use different specifications.</p>
 <p>The easiest way to do this is to click on the little gear symbol for the R chunk you wish to modify.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_319.png" title="Image showing the gear button within a chunk." alt="Image showing the gear button within a chunk." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_319.png" alt="Image showing the gear button within a chunk." width="100%" style="display: block; margin: auto;" /></p>
 <p>This will open a menu about how that chunk should be set up. The dropdown menu can be used to select if you want the code to be hidden, the output to be hidden, both, or none to be hidden (the default).</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_326.png" title="Image of the chunk settings menu, where you can change the name of the chunk and use the pull down menu to change the output." alt="Image of the chunk settings menu, where you can change the name of the chunk and use the pull down menu to change the output." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_326.png" alt="Image of the chunk settings menu, where you can change the name of the chunk and use the pull down menu to change the output." width="100%" style="display: block; margin: auto;" /></p>
 <p>For reproducibility purposes, we generally suggest that you share the code, however, sometimes reports can get very difficult to read if you have all the code shown. So there are times where you might focus on a particular part of an analysis. We will also describe a nifty trick to allow readers of your report to see the code if they want to, but have it hidden most of the time.</p>
 </div>
-<div id="finding-chunks" class="section level2" number="5.8">
-<h2><span class="header-section-number">5.8</span> Finding chunks</h2>
+<div id="finding-chunks" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Finding chunks<a href="r-markdown-reports.html#finding-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you don’t, you can more easily move around from one chunk to another using a special menu button created just for this!</p>
 <p>There is a very small menu at the bottom of the R Markdown file editor that helps you move around. It will look slightly different depending on what your chunks are named, but will have a gold hashtag button.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_332.png" title="The chunk search menu at the lower left corner of the R Markdown editor allows you to move form one chunk to another more easily." alt="The chunk search menu at the lower left corner of the R Markdown editor allows you to move form one chunk to another more easily." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_332.png" alt="The chunk search menu at the lower left corner of the R Markdown editor allows you to move form one chunk to another more easily." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="add-chunks" class="section level2" number="5.9">
-<h2><span class="header-section-number">5.9</span> Add chunks</h2>
+<div id="add-chunks" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Add chunks<a href="r-markdown-reports.html#add-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To add new chunks you can either click on the chunk button on the top right of the R Markdown editor, which looks like a green square with a “C” in it and a plus sign on the corner.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_345.png" title="The button to add new chunks is located on the upper right corner of the R Markdown Editor. It looks like a green square with a C in it. " alt="The button to add new chunks is located on the upper right corner of the R Markdown Editor. It looks like a green square with a C in it. " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_345.png" alt="The button to add new chunks is located on the upper right corner of the R Markdown Editor. It looks like a green square with a C in it. " width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="more-on-running-chunks" class="section level2" number="5.10">
-<h2><span class="header-section-number">5.10</span> More on running chunks</h2>
+<div id="more-on-running-chunks" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> More on running chunks<a href="r-markdown-reports.html#more-on-running-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you want to do anything fancier than running the current or previous chunks there is also a Run menu right next to the new chunk button. If you click on the arrow next to it, it will show you the advanced options. Otherwise it will just run all the chunks (which is similar to knitting but it will not render the report and may use objects that are in the environment).</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_356.png" title="The chunk run menu button is located to the right of the new chunk button. " alt="The chunk run menu button is located to the right of the new chunk button. " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_356.png" alt="The chunk run menu button is located to the right of the new chunk button. " width="100%" style="display: block; margin: auto;" /></p>
 <p>The menu allows you to run all chunks below a specific chunk or run selected lines of code and more.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_339.png" title="The chunk run menu allows you to run all chunks below a chunk.  " alt="The chunk run menu allows you to run all chunks below a chunk.  " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_339.png" alt="The chunk run menu allows you to run all chunks below a chunk.  " width="100%" style="display: block; margin: auto;" /></p>
 <p>The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_367.png" title="The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R." alt="The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_367.png" alt="The arrow next to the add chunk button, will allow you to specify if you want to use a different supported language besides R." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="text-and-headers" class="section level2" number="5.11">
-<h2><span class="header-section-number">5.11</span> Text and headers</h2>
+<div id="text-and-headers" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Text and headers<a href="r-markdown-reports.html#text-and-headers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You will notice that there is text written around the code chunks that you can use to describe what you did in your analysis and why.</p>
 <p>There are a couple of formatting options that can be very useful to know.</p>
 <p>If you want to know more, you can check out this <a href="https://www.markdownguide.org/">guide</a> about Markdown in general. The syntax will be the same for R Markdown files too.</p>
-<div id="headers" class="section level3" number="5.11.1">
-<h3><span class="header-section-number">5.11.1</span> Headers</h3>
+<div id="headers" class="section level3 hasAnchor" number="5.11.1">
+<h3><span class="header-section-number">5.11.1</span> Headers<a href="r-markdown-reports.html#headers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Using hashtags creates headers. One hashtag creates to highest level header, adding more hashtags add subsequent smaller headers. For example text with two <code>##</code> will be smaller than text with one <code>#</code>. The hashtags need to be on the far right of the line and you need a space in between the hashtags and the text to create the header.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_470.png" title="Adding one hashtag creates the top level header. Using additional hashtags creates smaller headers." alt="Adding one hashtag creates the top level header. Using additional hashtags creates smaller headers." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_470.png" alt="Adding one hashtag creates the top level header. Using additional hashtags creates smaller headers." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="bold-and-italics" class="section level3" number="5.11.2">
-<h3><span class="header-section-number">5.11.2</span> Bold and Italics</h3>
+<div id="bold-and-italics" class="section level3 hasAnchor" number="5.11.2">
+<h3><span class="header-section-number">5.11.2</span> Bold and Italics<a href="r-markdown-reports.html#bold-and-italics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Bold text can be created using <code>**</code> around the text.</p>
 <p>Italic text can be created using <code>*</code> around the text.</p>
 <p>To do both you can use <code>***</code> around the text.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_482.png" title="Using two asterisks around text creates bold text. Using one creates italic text. Using three creates text that is both bold and in italic." alt="Using two asterisks around text creates bold text. Using one creates italic text. Using three creates text that is both bold and in italic." width="100%" style="display: block; margin: auto;" /></p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_493.png" title="The Help menu of RStudio has can open a markdown reference guide in the lower right pane under the help tab if you would like to learn more about writing text in R Markdown files." alt="The Help menu of RStudio has can open a markdown reference guide in the lower right pane under the help tab if you would like to learn more about writing text in R Markdown files." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_482.png" alt="Using two asterisks around text creates bold text. Using one creates italic text. Using three creates text that is both bold and in italic." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_493.png" alt="The Help menu of RStudio has can open a markdown reference guide in the lower right pane under the help tab if you would like to learn more about writing text in R Markdown files." width="100%" style="display: block; margin: auto;" /></p>
 <p>The text surrounding our code and the output of our code can be extremely helpful in explaining to others what steps we took in our analysis, why we made certain decisions, the sources for our data and more. All of this information is extremely helpful for reproducibility!</p>
 </div>
 </div>
-<div id="additional-features" class="section level2" number="5.12">
-<h2><span class="header-section-number">5.12</span> Additional Features</h2>
+<div id="additional-features" class="section level2 hasAnchor" number="5.12">
+<h2><span class="header-section-number">5.12</span> Additional Features<a href="r-markdown-reports.html#additional-features" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will cover a several additional features that we have found to be especially useful.</p>
 <p>We also recommend checking out the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown cookbook</a> for even more tricks and tips.</p>
-<div id="aesthetics" class="section level3" number="5.12.1">
-<h3><span class="header-section-number">5.12.1</span> Aesthetics</h3>
+<div id="aesthetics" class="section level3 hasAnchor" number="5.12.1">
+<h3><span class="header-section-number">5.12.1</span> Aesthetics<a href="r-markdown-reports.html#aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our institute or at least makes the report look really polished.</p>
 <p>You can make changes to the aesthetics of the report in very few steps.</p>
 <p>First locate the settings button for the R Markdown editor, which looks like a gear an is located next to the <code>Knit</code> button.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_382.png" title="The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the aesthetics of your rendered report." alt="The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the aesthetics of your rendered report." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_382.png" alt="The R Markdown settings button is located to the right of the knit button. This opens a menu the helps you change the aesthetics of your rendered report." width="100%" style="display: block; margin: auto;" /></p>
 <p>Then scroll down and select “Output Options”. This menu also has nice features if you don’t like the default ways that the chunks preview output. For example, many people prefer to preview code in the console instead.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_463.png" title="Scroll down to the Output Options to open the menu about aesthetics." alt="Scroll down to the Output Options to open the menu about aesthetics." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_463.png" alt="Scroll down to the Output Options to open the menu about aesthetics." width="100%" style="display: block; margin: auto;" /></p>
 <p>This will open a new window that has a dropdown that you can use to apply a theme to the report.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_376.png" title="Use the dropdown menu next to the Apply theme section to change the theme of your R Markdown report." alt="Use the dropdown menu next to the Apply theme section to change the theme of your R Markdown report." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_376.png" alt="Use the dropdown menu next to the Apply theme section to change the theme of your R Markdown report." width="100%" style="display: block; margin: auto;" /></p>
 <p>This will modify the YAML code in your R Markdown file to add a line about the theme.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_393.png" title="Selecting a different theme will modify the YAML code to change the way the report renders." alt="Selecting a different theme will modify the YAML code to change the way the report renders." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_393.png" alt="Selecting a different theme will modify the YAML code to change the way the report renders." width="100%" style="display: block; margin: auto;" /></p>
 <p>When the report is rendered it will have a different look.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_404.png" title="The cerulean theme changes the way the report renders so that the fonts are different colors and more." alt="The cerulean theme changes the way the report renders so that the fonts are different colors and more." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_404.png" alt="The cerulean theme changes the way the report renders so that the fonts are different colors and more." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="report-file-types" class="section level3" number="5.12.2">
-<h3><span class="header-section-number">5.12.2</span> Report File Types</h3>
+<div id="report-file-types" class="section level3 hasAnchor" number="5.12.2">
+<h3><span class="header-section-number">5.12.2</span> Report File Types<a href="r-markdown-reports.html#report-file-types" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can render your report as other file types besides html. This might be useful if a collaborator wants a PDF of your report. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_499.png" title="You can render your report as other file types besides html. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information." alt="You can render your report as other file types besides html. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_499.png" alt="You can render your report as other file types besides html. To do so click on the arrow next to knit button and select a different type. Here you can see that PDF and Word are other options. This will change the YAML code and may add more output information." width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="keyboard-shortcuts-1" class="section level2" number="5.13">
-<h2><span class="header-section-number">5.13</span> Keyboard Shortcuts</h2>
+<div id="keyboard-shortcuts-1" class="section level2 hasAnchor" number="5.13">
+<h2><span class="header-section-number">5.13</span> Keyboard Shortcuts<a href="r-markdown-reports.html#keyboard-shortcuts-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you like to work with keyboard shortcuts instead of pointing and clicking, you might also want to check out this <a href="https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts">link</a>.</p>
-<div id="table-of-contents" class="section level3" number="5.13.1">
-<h3><span class="header-section-number">5.13.1</span> Table of Contents</h3>
+<div id="table-of-contents" class="section level3 hasAnchor" number="5.13.1">
+<h3><span class="header-section-number">5.13.1</span> Table of Contents<a href="r-markdown-reports.html#table-of-contents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sometimes if your report is very long, it can help to add a table of contents.</p>
 <p>This can be done by adding <code>toc: true</code> and <code>toc_float: true</code> to the YAML underneath the <code>html_document:</code> code. The spacing is very important with this! The <code>toc_float: true</code> makes the table of contents on the side as opposed to just the top.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_517.png" title="Modifying the YAML can add a table of contents to the R Markdown file report. Headings can be used to navigate." alt="Modifying the YAML can add a table of contents to the R Markdown file report. Headings can be used to navigate." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_517.png" alt="Modifying the YAML can add a table of contents to the R Markdown file report. Headings can be used to navigate." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="code-folding" class="section level3" number="5.13.2">
-<h3><span class="header-section-number">5.13.2</span> Code Folding</h3>
+<div id="code-folding" class="section level3 hasAnchor" number="5.13.2">
+<h3><span class="header-section-number">5.13.2</span> Code Folding<a href="r-markdown-reports.html#code-folding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Earlier we talked about hiding code but discussed that usually you want to share the code if possible. Code folding is really great option for this issue! It allows you to create a clean report with a button for people to click to see the code within the code chunk that resulted in the various outputs of the report.</p>
 <p>To do this you can add <code>code_folding: 'hide'</code> to cause your code to be “folded”.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_521.png" title="Modifying the YAML can allow for cold folding." alt="Modifying the YAML can allow for cold folding." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_521.png" alt="Modifying the YAML can allow for cold folding." width="100%" style="display: block; margin: auto;" /></p>
 <p>This means that there will be a button that people can click on to see the code (or hide it afterwards).</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_525.png" title="Code folding allows others to click on a code button to show the code, they can then click hide to hide it afterwards." alt="Code folding allows others to click on a code button to show the code, they can then click hide to hide it afterwards." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_525.png" alt="Code folding allows others to click on a code button to show the code, they can then click hide to hide it afterwards." width="100%" style="display: block; margin: auto;" /></p>
 <p>Cold Folding is a great option for reproducibility, because it makes your report easy to read, but also shares your code!</p>
 </div>
-<div id="code-download" class="section level3" number="5.13.3">
-<h3><span class="header-section-number">5.13.3</span> Code Download</h3>
+<div id="code-download" class="section level3 hasAnchor" number="5.13.3">
+<h3><span class="header-section-number">5.13.3</span> Code Download<a href="r-markdown-reports.html#code-download" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can allow others to download your code by adding <code>code_download: true</code>. The code button the top right will allow them to download the R Markdown file.</p>
 <div class="warning">
 <p>Be careful about allowing this if you use code that works with data with PHI. Just make sure that no PHI would be described in the R Markdown file itself as opposed to the rendered report.</p>
 </div>
 </div>
-<div id="automatic-date" class="section level3" number="5.13.4">
-<h3><span class="header-section-number">5.13.4</span> Automatic Date</h3>
-<p>Using <code>date: "2023-04-28"</code> in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.</p>
-<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_506.png" title="Modifying the YAML make it so the date updates to whatever day the report was last rendered" alt="Modifying the YAML make it so the date updates to whatever day the report was last rendered" width="100%" style="display: block; margin: auto;" /></p>
+<div id="automatic-date" class="section level3 hasAnchor" number="5.13.4">
+<h3><span class="header-section-number">5.13.4</span> Automatic Date<a href="r-markdown-reports.html#automatic-date" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Using <code>date: "2024-09-11"</code> in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.</p>
+<p><img src="resources/images/05-rmarkdown_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_506.png" alt="Modifying the YAML make it so the date updates to whatever day the report was last rendered" width="100%" style="display: block; margin: auto;" /></p>
 <p>This trick is great for reproducibility because it ensures that the date on the report is correct for when the report was last rendered. This helps those who read the report to get a sense of how active development is on the project.</p>
 </div>
 </div>
-<div id="conclusion-3" class="section level2" number="5.14">
-<h2><span class="header-section-number">5.14</span> Conclusion</h2>
+<div id="conclusion-3" class="section level2 hasAnchor" number="5.14">
+<h2><span class="header-section-number">5.14</span> Conclusion<a href="r-markdown-reports.html#conclusion-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In summary, R Markdown files can help you to create nice looking reports that help others to understand not only what code you used, but also what the results of your code were.</p>
 <ul>
 <li>Code is written in gray sections called chunks that have play buttons that allow you to preview the code</li>
@@ -606,7 +604,7 @@ Click here for a review on how to create R Markdown files in RStudio.
         </div>
       </div>
 <a href="a-tour-of-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="setting-up-your-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reproducible-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

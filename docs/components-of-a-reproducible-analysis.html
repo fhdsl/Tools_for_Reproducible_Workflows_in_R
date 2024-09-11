@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R</title>
   <meta name="description" content="Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="r-for-reproducibility.html"/>
 <link rel="next" href="a-tour-of-rstudio.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -89,11 +88,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
+code span.at { color: #204a87; } /* Attribute */
 code span.bn { color: #0000cf; } /* BaseN */
 code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
+code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #8f5902; font-style: italic; } /* Comment */
 code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
@@ -102,14 +101,14 @@ code span.dv { color: #0000cf; } /* DecVal */
 code span.er { color: #a40000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
 code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
 code span.ot { color: #8f5902; } /* Other */
 code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
 code span.ss { color: #4e9a06; } /* SpecialString */
 code span.st { color: #4e9a06; } /* String */
 code span.va { color: #000000; } /* Variable */
@@ -117,6 +116,10 @@ code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -252,63 +255,58 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5.14" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#conclusion-3"><i class="fa fa-check"></i><b>5.14</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>6</b> Setting up your project</a></li>
-<li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
+<li class="chapter" data-level="6" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>6</b> Reproducible Code</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>7.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
+<li class="chapter" data-level="6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>6.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>7.1.1</b> Tips for choosing packages to use:</a></li>
+<li class="chapter" data-level="6.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>6.1.1</b> Tips for choosing packages to use:</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>7.2</b> The importance of iterative work</a></li>
-<li class="chapter" data-level="7.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>7.3</b> Aspects of Reproducible code</a></li>
-<li class="chapter" data-level="7.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>7.4</b> Readable</a>
+<li class="chapter" data-level="6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>6.2</b> The importance of iterative work</a></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>6.3</b> Aspects of Reproducible code</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>6.4</b> Readable</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>7.4.1</b> Well-documented</a></li>
-<li class="chapter" data-level="7.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>7.4.2</b> Follows a code style</a></li>
+<li class="chapter" data-level="6.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>6.4.1</b> Well-documented</a></li>
+<li class="chapter" data-level="6.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>6.4.2</b> Follows a code style</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>7.5</b> Efficient</a>
+<li class="chapter" data-level="6.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>6.5</b> Efficient</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>7.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
-<li class="chapter" data-level="7.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>7.5.2</b> Is DRY (don’t repeat yourself)</a></li>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>6.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>6.5.2</b> Is DRY (don’t repeat yourself)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>7.6</b> Consistent</a>
+<li class="chapter" data-level="6.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>6.6</b> Consistent</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>7.6.1</b> Follows conventions</a></li>
-<li class="chapter" data-level="7.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>7.6.2</b> Is organized</a></li>
+<li class="chapter" data-level="6.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>6.6.1</b> Follows conventions</a></li>
+<li class="chapter" data-level="6.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>6.6.2</b> Is organized</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>7.7</b> Conclusion</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>6.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>8</b> Using GitHub in a workflow</a>
+<li class="chapter" data-level="7" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>7</b> Using GitHub in a workflow</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>8.1</b> What is version control</a></li>
-<li class="chapter" data-level="8.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>8.2</b> What’s GitHub?</a></li>
-<li class="chapter" data-level="8.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>8.3</b> GitHub Workflow</a>
+<li class="chapter" data-level="7.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>7.1</b> What is version control</a></li>
+<li class="chapter" data-level="7.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>7.2</b> What’s GitHub?</a></li>
+<li class="chapter" data-level="7.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>7.3</b> GitHub Workflow</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>8.3.1</b> Create your GitHub account</a></li>
-<li class="chapter" data-level="8.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>8.3.2</b> Creating a new repository</a></li>
-<li class="chapter" data-level="8.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>8.3.3</b> Setting up your repository locally</a></li>
-<li class="chapter" data-level="8.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>8.3.4</b> Cloning your repository</a></li>
-<li class="chapter" data-level="8.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>8.3.5</b> Opening a PR</a></li>
-<li class="chapter" data-level="8.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>8.3.6</b> Merging a pull request</a></li>
+<li class="chapter" data-level="7.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>7.3.1</b> Create your GitHub account</a></li>
+<li class="chapter" data-level="7.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>7.3.2</b> Creating a new repository</a></li>
+<li class="chapter" data-level="7.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>7.3.3</b> Setting up your repository locally</a></li>
+<li class="chapter" data-level="7.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>7.3.4</b> Cloning your repository</a></li>
+<li class="chapter" data-level="7.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>7.3.5</b> Opening a PR</a></li>
+<li class="chapter" data-level="7.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>7.3.6</b> Merging a pull request</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>8.4</b> Conclusion</a></li>
+<li class="chapter" data-level="7.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>7.4</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
+<li class="chapter" data-level="8" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>8</b> Software versions</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
-<li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
-<li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
-<li class="chapter" data-level="9.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>9.5</b> Snapshots with <code>renv</code></a></li>
-<li class="chapter" data-level="9.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>9.6</b> Containerization</a></li>
-<li class="chapter" data-level="9.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>9.7</b> Conclusion</a></li>
+<li class="chapter" data-level="8.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>8.2</b> No two computers are the same</a></li>
+<li class="chapter" data-level="8.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>8.3</b> Software and package versions affect results!</a></li>
+<li class="chapter" data-level="8.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>8.4</b> Session Info</a></li>
+<li class="chapter" data-level="8.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>8.5</b> Snapshots with <code>renv</code></a></li>
+<li class="chapter" data-level="8.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>8.6</b> Containerization</a></li>
+<li class="chapter" data-level="8.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>8.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="sharing-data.html"><a href="sharing-data.html"><i class="fa fa-check"></i><b>10</b> Sharing Data</a></li>
-<li class="chapter" data-level="11" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>11</b> Functions</a></li>
-<li class="chapter" data-level="12" data-path="project-maintenance-and-updates.html"><a href="project-maintenance-and-updates.html"><i class="fa fa-check"></i><b>12</b> Project maintenance and updates</a></li>
-<li class="chapter" data-level="13" data-path="collaborations-through-github.html"><a href="collaborations-through-github.html"><i class="fa fa-check"></i><b>13</b> Collaborations through GitHub</a></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
 <p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
@@ -344,72 +342,72 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="components-of-a-reproducible-analysis" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Components of a reproducible analysis</h1>
+<div id="components-of-a-reproducible-analysis" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Components of a reproducible analysis<a href="components-of-a-reproducible-analysis.html#components-of-a-reproducible-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter, we will discuss what components of an analysis make it reproducible.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" title="Major point!! example image" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
-<div id="reproducibility-is-iterative-work" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Reproducibility is iterative work</h2>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<div id="reproducibility-is-iterative-work" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Reproducibility is iterative work<a href="components-of-a-reproducible-analysis.html#reproducibility-is-iterative-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Making an analysis isn’t something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren’t really needed anymore, and don’t become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" title="Reproducibility is on a continuum. This graph shows a two sided arrow with a gradient. On the very left is a ‘not repeatable analysis’ it was ran once. To the right of that is an analysis that ‘re-runs sometimes’. To the right of this, is an analysis that ‘Re-runs reliably in most contexts’.  And all the way to the right is a ‘perfectly reproducible analysis’ that ‘Re-runs in every situation and gets the same result every time’. In red lettering we note that every analysis is started by being run once but no analysis is ‘perfectly reproducible’." alt="Reproducibility is on a continuum. This graph shows a two sided arrow with a gradient. On the very left is a ‘not repeatable analysis’ it was ran once. To the right of that is an analysis that ‘re-runs sometimes’. To the right of this, is an analysis that ‘Re-runs reliably in most contexts’.  And all the way to the right is a ‘perfectly reproducible analysis’ that ‘Re-runs in every situation and gets the same result every time’. In red lettering we note that every analysis is started by being run once but no analysis is ‘perfectly reproducible’." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Reproducibility is on a continuum. This graph shows a two sided arrow with a gradient. On the very left is a ‘not repeatable analysis’ it was ran once. To the right of that is an analysis that ‘re-runs sometimes’. To the right of this, is an analysis that ‘Re-runs reliably in most contexts’.  And all the way to the right is a ‘perfectly reproducible analysis’ that ‘Re-runs in every situation and gets the same result every time’. In red lettering we note that every analysis is started by being run once but no analysis is ‘perfectly reproducible’." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="components-of-reproducibility" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Components of reproducibility</h2>
+<div id="components-of-reproducibility" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Components of reproducibility<a href="components-of-a-reproducible-analysis.html#components-of-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A reproducible analysis is transparent, consistent, and accessible.</p>
 <ul>
 <li><strong>Transparency</strong> refers to the idea that it is well communicated and everything is displayed: data, code, goals, methods, and decisions. There are no secrets in a reproducible analysis/</li>
 <li><strong>Consistency</strong> refers to the idea that the code can be consistently run, but also everything follows a particular system, conventions and design.</li>
 <li><strong>Accessibility</strong> refers to the idea that anyone anywhere should be able to run and/or examine the analysis. No pay walls or expensive software should be required.</li>
 </ul>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21b8e34c516_0_5.png" title="A reproducible analysis is transparent, accessible, and consistent. This is described with a Venn diagram because certain aspects of transparent, accessibility and consistency overlap with each other when it comes to analyses." alt="A reproducible analysis is transparent, accessible, and consistent. This is described with a Venn diagram because certain aspects of transparent, accessibility and consistency overlap with each other when it comes to analyses." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21b8e34c516_0_5.png" alt="A reproducible analysis is transparent, accessible, and consistent. This is described with a Venn diagram because certain aspects of transparent, accessibility and consistency overlap with each other when it comes to analyses." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="transparent" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Transparent</h2>
+<div id="transparent" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Transparent<a href="components-of-a-reproducible-analysis.html#transparent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One essential piece of a reproducible analysis is that the code runs reliably. However, to really make an analysis reproducible, the decisions made in the analysis should also be clearly communicated. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute ideas and suggestions to or borrow methods and strategies for their own analyses.</p>
-<div id="open-source" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Open source</h3>
+<div id="open-source" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Open source<a href="components-of-a-reproducible-analysis.html#open-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Open source means not only making code and data publicly available, but also enabling others to modify or comment on the code. This doesn’t mean that any and all modifying contributions need to be accepted, because some level of standards and quality checks need to be maintained by the owners of the analysis, but just that anyone online could propose a contribution if they wanted to.</p>
 <p>For an analysis to be truly open source, it needs to be easily accessed by others and stored online. Code that can be emailed, for example, is not considered open source.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" title="Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." alt="Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" /></p>
 <p>For reproducibility, keeping your code on <a href="https://github.com/">GitHub</a> is a great open source solution. GitHub is a code hosting platform that allows people to access code and sometimes data. It is commonly used, and has a built in system that allows others to contribute changes in a way that can be methodically reviewed by you (this is called the pull request system and we will talk about it more).</p>
 <div class="dictionary">
 <p><strong>GitHub</strong> - An online platform for sharing and managing code and files in an open source manner</p>
 </div>
 </div>
-<div id="data-is-publicly-available" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> Data is publicly available</h3>
+<div id="data-is-publicly-available" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Data is publicly available<a href="components-of-a-reproducible-analysis.html#data-is-publicly-available" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A transparent analysis has data that is publicly shared so that others can re-run the analysis as you have. Data should be provided in a way that it can be programmatically accessed (downloaded by a script). Data also need to be well-documented in the form of metadata.</p>
 <div class="warning">
 <p>Data sharing is a critical piece for promoting the open sourceness of your analysis, however this often needs to be balanced with privacy if you work with human data or samples. These data will likely contain personal identifiable information (PII) and protected health information (PHI). For more details on this, we encourage you to see this <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
 </div>
 <p>While it’s imperative that you protect human data, that doesn’t mean that your analysis cannot be publicly shared! These are not mutually exclusive goals, but will take a bit of thoughtful planning. In the upcoming chapters we will provide additional ideas and information for how you can conduct an open source analysis while appropriately protecting sensitive data.</p>
 </div>
-<div id="readable-code" class="section level3" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> Readable code</h3>
+<div id="readable-code" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Readable code<a href="components-of-a-reproducible-analysis.html#readable-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Readable code is much more important than clever code. If you are the only one who knows what your code is doing, it will not only be difficult for others to contribute or vet your analysis, but in the future, you will probably not understand what your code is doing either.</p>
 <p><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/writing-durable-code.html">Read this course chapter from the ITCR training network about how to write durable code</a>.</p>
 </div>
-<div id="well-documented" class="section level3" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> Well-documented</h3>
+<div id="well-documented" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Well-documented<a href="components-of-a-reproducible-analysis.html#well-documented" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A well-documented analysis is a reproducible analysis. If analyses didn’t require a lot of decisions and human comprehension than documentation wouldn’t be necessary – but also a lot of data analysts would be out of a job because robots would be able to do it! Analysts and developers often think of documentation as an after-thought, but good documentation should be actively developed along with the code. Arguably, it is more important to have clear documentation than even working code, because if broken code is well-documented, others may be able to help make suggestions for how it can be fixed.</p>
 <p>Good documentation not only describes what happened in an analysis, but why it happened – why did the analyst choose this method or parameter as opposed to others? Was there an additional analysis, literature, or other resource that led us to this conclusion? Documentation should describe not only what is happening, but the thought process that led us here.</p>
 </div>
-<div id="version-controlled" class="section level3" number="3.3.5">
-<h3><span class="header-section-number">3.3.5</span> Version controlled</h3>
+<div id="version-controlled" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Version controlled<a href="components-of-a-reproducible-analysis.html#version-controlled" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A reproducible analysis is a version controlled analysis. Analyses go through many iterations, side quests, and occasional dead ends – and this is okay, it is how data science works! – but if not done properly with version control, this can lead to an unruly code base and a lot of confused team members.
 Version control is a method for tracking changes to files in a systematic manner. One such method of version control is called git and we will talk about how to use git and its online website GitHub, in a future chapter.</p>
 <p>Version control helps maintain the history of your project in a way that will allow you to recover old versions if necessary, or otherwise have documentation on what has happened. It can also be useful for rectifying different versions of a code base between team members.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_370.png" title="Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  " alt="Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_370.png" alt="Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  " width="100%" style="display: block; margin: auto;" /></p>
 <div class="dictionary">
 <p><strong>version control</strong> - A method of tracking and handling files as they are changed over the course of a project</p>
 </div>
 </div>
 </div>
-<div id="consistent" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Consistent</h2>
+<div id="consistent" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Consistent<a href="components-of-a-reproducible-analysis.html#consistent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A reproducible analysis is consistent. It should consistently run and consistently produce the same results. It should also be written in a manner that follows a consistent style and project organization scheme.</p>
-<div id="re-runs-consistently-and-easily" class="section level3" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Re-runs consistently and easily</h3>
+<div id="re-runs-consistently-and-easily" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Re-runs consistently and easily<a href="components-of-a-reproducible-analysis.html#re-runs-consistently-and-easily" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ideally, a reproducible analysis should be able to re-run with one command that is explicitly stated in a README file. This is a file that explains what all the rest of the files are and the point of the project. If an individual has a copy of the analysis project, it should include everything that is needed to re-run that analysis and the number of steps needed to re-run the analysis should be the lowest number possible. The more steps that are needed, the less likely it will be that someone will be able to reproduce the analysis.</p>
 <p>This also generally means that analyses that can be performed through programmatic scripts are more reproducible than those performed by GUI’s (graphic user interfaces).
 GUIs are programs on computers that are used by pointing and clicking buttons whereas command line programs are used by typing in commands. Command line programs generally take scripts that allow you to have each step written in the script which can be easily recalled to re-run the entire analysis.
@@ -419,26 +417,26 @@ Most GUI’s, although sometimes more intuitive to use, are unfortunately less r
 <strong>Command line</strong> - A type of program on a computer that you use by typing in commands or writing scripts that can be run</p>
 </div>
 </div>
-<div id="follows-a-code-style" class="section level3" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> Follows a code style</h3>
+<div id="follows-a-code-style" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Follows a code style<a href="components-of-a-reproducible-analysis.html#follows-a-code-style" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Code style is important because it not only makes code more readable, but it also lends a certain confidence to the reader of the code, that this code has been thought through and perhaps polished more than code that is less consistent in its style.</p>
 </div>
-<div id="have-an-organizational-scheme" class="section level3" number="3.4.3">
-<h3><span class="header-section-number">3.4.3</span> Have an organizational scheme</h3>
+<div id="have-an-organizational-scheme" class="section level3 hasAnchor" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> Have an organizational scheme<a href="components-of-a-reproducible-analysis.html#have-an-organizational-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Project organization is a major component of reproducibility. If you are not able to find your files, then chances are individuals who are attempting to reproduce your analysis also will not be able to understand where to find things. We will discuss in a later chapter strategies for keeping projects organized, while realizing that project organization is an ongoing, dynamic task.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_0.png" title="Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!" alt="Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_0.png" alt="Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="accessible" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Accessible</h2>
+<div id="accessible" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Accessible<a href="components-of-a-reproducible-analysis.html#accessible" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We discussed that we use R because it is open source and free. This makes it conducive for making reproducible analyses. Accessibility is important for reproducibility. This means minimizing the number of hoops others have to jump through to re-run your analysis.</p>
 <p>Accessibility also involves prioritizing democratizing science and enabling as many people as possible to understand what you did for your analyses. We encourage you to realize that science does best when everyone has access to it and that includes code and data analyses! Making your data and code accessible, allows everyone to contribute and learn from your analysis. Note that if you are concerned about being scooped, you can make your code private on GitHub while you are working on it and then make it public once you release a preprint of your results. We will talk more about this later.</p>
 <p>Accessibility means that anyone should be able to access it – whether or not their funding is in ample supply. So be sure to publish in code repositories that do not require membership fees or any other kinds of paywalls. Make an effort to publish in journals that are freely available as well.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" title="Reproducible parrot is sad because an analysis has been published behind a paywall and has used expensive software. Reproducible parrot can not reproduce these results. " alt="Reproducible parrot is sad because an analysis has been published behind a paywall and has used expensive software. Reproducible parrot can not reproduce these results. " width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is sad because an analysis has been published behind a paywall and has used expensive software. Reproducible parrot can not reproduce these results. " width="100%" style="display: block; margin: auto;" /></p>
 <p>Sometimes even if something is accessible in that it is “free” monetarily it doesn’t mean that it is free in the sense of the amount of time it takes to access it. If your code and data does need some sort of controlled access features for privacy and ethical concerns of protecting data, make sure that the paperwork hoops that are put in place are truly there in the spirit of protecting the data and not instead to keep data and code hidden from others.</p>
 </div>
-<div id="conclusion-1" class="section level2" number="3.6">
-<h2><span class="header-section-number">3.6</span> Conclusion</h2>
+<div id="conclusion-1" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Conclusion<a href="components-of-a-reproducible-analysis.html#conclusion-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this chapter, we gave a high level overview of reproducible analyses. We discussed that reproducible analyses are transparent, consistent, and accessible. This means in practical terms, reproducible analyses:</p>
 <ul>
 <li>Are open source</li>

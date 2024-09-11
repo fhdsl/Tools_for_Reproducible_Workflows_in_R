@@ -90,7 +90,7 @@ Code style helps make code readable. Appropriate spacing, punctuation, and gramm
 
 **Basic Example:**
 
-```r
+``` r
 # Bad: Should use <- and have a variable name that is informative
 x = c(1, 4, 5, 10)
 
@@ -117,7 +117,7 @@ Reproducible code is efficient code. Efficiency helps reproducibility in that co
 
 R is not meant to be a fast language. R code can be computationally costly if it's written in the wrong way.
 
-You can identify what parts of your R code are the slowest or otherwise computationally costly by using the [`profvis`](https://rstudio.github.io/profvis/) and [`bench`](https://bench.r-lib.org/) packages.
+You can identify what parts of your R code are the slowest or otherwise computationally costly by using the [`profvis`](https://github.com/r-lib/profvis) and [`bench`](https://bench.r-lib.org/) packages.
 
 One popular example is R loops which can be particularly slow in R. Note that this doesn't mean you shouldn't ever use loops or other items in R, just that you should be aware that some items in R are particularly slower than others.
 
