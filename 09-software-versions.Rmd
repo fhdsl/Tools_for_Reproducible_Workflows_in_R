@@ -121,7 +121,7 @@ If you will be using a container with PHI or PII or other protected information,
 
 We will not cover Docker here but if you are interested in using a containerized approach like Docker, here are additional resources for learning:
 
-- [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/introduction/index.html)
+- [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/)
 - [ITCR Training Network chapters about Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html)
 - [Docker documentation about getting started](https://www.docker.com/get-started/)
 - [How to ensure your Docker usage is HIPAA-Compliant](https://www.atlantic.net/hipaa-compliant-hosting/best-practices-for-creating-a-hipaa-compliant-docker-host/)
