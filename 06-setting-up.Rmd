@@ -11,16 +11,20 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 
 
+## Understand why project organization is key to reproducible analyses
+
 ## Understand general principles of project organization
 
-## Understand why project organization is key to reproducible analyses.
+## Navigate file paths
 
-## Create and use the following tools:
+## Handy R Tools
 
-### RProject
+### here package
+
+### RProj files
 
 ### ProjectTemplate
 
 ### R Markdown files
 
-### Navigate file paths
+### Quarto files
