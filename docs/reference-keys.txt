@@ -65,6 +65,16 @@ code-folding
 code-download
 automatic-date
 conclusion-3
+setting-up-your-project
+understand-why-project-organization-is-key-to-reproducible-analyses
+understand-general-principles-of-project-organization
+navigate-file-paths
+handy-r-tools
+here-package
+rproj-files
+projecttemplate
+r-markdown-files
+quarto-files
 reproducible-code
 reproducibility-means-we-dont-need-to-reinvent-the-wheel
 tips-for-choosing-packages-to-use
