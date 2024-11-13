@@ -64,15 +64,19 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.5      httr_1.4.7       cli_3.6.2        knitr_1.47.3    
-##  [5] rlang_1.1.4      xfun_0.44.4      jsonlite_1.8.8   glue_1.7.0      
-##  [9] openssl_2.1.1    askpass_1.2.0    htmltools_0.5.7  hms_1.1.3       
-## [13] fansi_1.0.6      rmarkdown_2.27.1 evaluate_0.23    tibble_3.2.1    
-## [17] tzdb_0.4.0       fastmap_1.1.1    yaml_2.3.8       lifecycle_1.0.4 
-## [21] bookdown_0.39.1  compiler_4.3.2   ottrpal_1.2.1    fs_1.6.3        
-## [25] pkgconfig_2.0.3  digest_0.6.34    R6_2.5.1         utf8_1.2.4      
-## [29] readr_2.1.5      curl_5.2.0       pillar_1.9.0     magrittr_2.0.3  
-## [33] tools_4.3.2      xml2_1.3.6
+##  [1] jsonlite_1.8.8   dplyr_1.1.4      compiler_4.3.2   promises_1.2.1  
+##  [5] Rcpp_1.0.12      tidyselect_1.2.0 xml2_1.3.6       webshot2_0.1.1  
+##  [9] stringr_1.5.1    snakecase_0.11.1 later_1.3.2      yaml_2.3.8      
+## [13] fastmap_1.1.1    readr_2.1.5      R6_2.5.1         generics_0.1.3  
+## [17] curl_5.2.0       knitr_1.48       tibble_3.2.1     bookdown_0.41   
+## [21] janitor_2.2.0    rprojroot_2.0.4  openssl_2.1.1    lubridate_1.9.3 
+## [25] pillar_1.9.0     tzdb_0.4.0       rlang_1.1.4      websocket_1.4.2 
+## [29] utf8_1.2.4       stringi_1.8.3    xfun_0.48        timechange_0.3.0
+## [33] cli_3.6.2        magrittr_2.0.3   ps_1.7.6         processx_3.8.3  
+## [37] digest_0.6.34    hms_1.1.3        askpass_1.2.0    lifecycle_1.0.4 
+## [41] chromote_0.3.1   vctrs_0.6.5      ottrpal_1.3.0    evaluate_0.23   
+## [45] glue_1.7.0       fansi_1.0.6      rmarkdown_2.25   httr_1.4.7      
+## [49] tools_4.3.2      pkgconfig_2.0.3  htmltools_0.5.7
 ```
 
 Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.
