@@ -74,9 +74,14 @@ NIGMS
 ottrpal
 Pandoc
 PBC
+PII
+ProjectTemplate
 reproducibility
 RStudio
+rstudio
+rmarkdown
 Rmarkdown
+RProj
 Sys
 UE
 UE5
