@@ -38,6 +38,16 @@ the-hidden-pane
 find-errors
 keyboard-shortcuts
 conclusion-2
+setting-up-your-project
+understand-why-project-organization-is-key-to-reproducible-analyses
+understand-general-principles-of-project-organization
+navigate-file-paths
+handy-r-tools
+here-package
+rproj-files
+projecttemplate
+r-markdown-files
+quarto-files
 r-markdown-reports
 reports-support-reproducibility
 getting-started-with-r-markdown
