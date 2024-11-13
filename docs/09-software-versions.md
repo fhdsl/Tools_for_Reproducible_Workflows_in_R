@@ -36,18 +36,18 @@ Generally at the end of your R notebook, you will want to print out your session
 We can run `sessionInfo` in this book (this book was created using R tools).
 
 
-```r
+``` r
 sessionInfo()
 ```
 
 ```
-## R version 4.0.2 (2020-06-22)
+## R version 4.3.2 (2023-10-31)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.5 LTS
+## Running under: Ubuntu 22.04.4 LTS
 ## 
 ## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
-## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -57,18 +57,26 @@ sessionInfo()
 ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
 ## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
+## time zone: Etc/UTC
+## tzcode source: system (glibc)
+## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] knitr_1.33      magrittr_2.0.3  hms_0.5.3       R6_2.4.1       
-##  [5] rlang_1.1.0     fastmap_1.1.1   fansi_0.4.1     stringr_1.4.0  
-##  [9] httr_1.4.2      tools_4.0.2     xfun_0.26       utf8_1.1.4     
-## [13] cli_3.6.1       htmltools_0.5.5 ottrpal_1.0.1   yaml_2.2.1     
-## [17] digest_0.6.25   tibble_3.2.1    lifecycle_1.0.3 bookdown_0.24  
-## [21] readr_1.4.0     vctrs_0.6.1     fs_1.5.0        curl_4.3       
-## [25] glue_1.4.2      evaluate_0.20   rmarkdown_2.10  stringi_1.5.3  
-## [29] compiler_4.0.2  pillar_1.9.0    pkgconfig_2.0.3
+##  [1] jsonlite_1.8.8   dplyr_1.1.4      compiler_4.3.2   promises_1.2.1  
+##  [5] Rcpp_1.0.12      tidyselect_1.2.0 xml2_1.3.6       webshot2_0.1.1  
+##  [9] stringr_1.5.1    snakecase_0.11.1 later_1.3.2      yaml_2.3.8      
+## [13] fastmap_1.1.1    readr_2.1.5      R6_2.5.1         generics_0.1.3  
+## [17] curl_5.2.0       knitr_1.48       tibble_3.2.1     bookdown_0.41   
+## [21] janitor_2.2.0    rprojroot_2.0.4  openssl_2.1.1    lubridate_1.9.3 
+## [25] pillar_1.9.0     tzdb_0.4.0       rlang_1.1.4      websocket_1.4.2 
+## [29] utf8_1.2.4       stringi_1.8.3    xfun_0.48        timechange_0.3.0
+## [33] cli_3.6.2        magrittr_2.0.3   ps_1.7.6         processx_3.8.3  
+## [37] digest_0.6.34    hms_1.1.3        askpass_1.2.0    lifecycle_1.0.4 
+## [41] chromote_0.3.1   vctrs_0.6.5      ottrpal_1.3.0    evaluate_0.23   
+## [45] glue_1.7.0       fansi_1.0.6      rmarkdown_2.25   httr_1.4.7      
+## [49] tools_4.3.2      pkgconfig_2.0.3  htmltools_0.5.7
 ```
 
 Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.
@@ -91,7 +99,7 @@ Printing out session info is an easy way to record your computing environment in
 
 However, you may realize that while session info is useful for recording this information, it doesn't mitigate the frustration of setting up a computing environment in R. Nor does it help us with being able to directly share our computing environments.
 
-It can be incredibly handy for reproducibility purposes to be able to share the R computing environment you used for completing an analysis. This is not only helpful for others who may be interested in reproducing your analysis, but also for future you! If you come back to this analysis and attempt to re-run it, it is likely you've changed your R computing environment over time by installing or removing packages. `renv` will allow you to return to the environment you used at the time that you ran the analysis. 
+It can be incredibly handy for reproducibility purposes to be able to share the R computing environment you used for completing an analysis. This is not only helpful for others who may be interested in reproducing your analysis, but also for future you! If you come back to this analysis and attempt to re-run it, it is likely you've changed your R computing environment over time by installing or removing packages. `renv` will allow you to return to the environment you used at the time that you ran the analysis.
 
 For that, we need a slightly more involved solution of using [`renv`](https://rstudio.github.io/renv/articles/renv.html). `renv` is an R package that allows you to take 'snapshots' of your R computing environment and use those to track, share, and build R environments.
 
@@ -129,7 +137,7 @@ In order to truly reproduce a result with an identical computing environment you
 One of the most popular containerization softwares is Docker. Docker allows you to build your computing environment and share it on its online platform in the form of images that you can download and run. In fact, this book is rendered by a Docker container!
 
 <div class = "warning">
-If you will be using a container with PHI or PII or other protected information, we recommend you take a look at [this resource](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf) to understand best practices for using Docker with sensitive data.
+If you will be using a container with PHI or PII or other protected information, we recommend you take a look at [this resource](https://www.cleardata.com/resources/hipaa-compliant-containers/) to understand best practices for using Docker with sensitive data.
 </div>
 
 <div class = "dictionary">
@@ -139,11 +147,11 @@ If you will be using a container with PHI or PII or other protected information,
 
 We will not cover Docker here but if you are interested in using a containerized approach like Docker, here are additional resources for learning:
 
-- [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/introduction/index.html)
+- [Software Carpentries course on Docker](https://carpentries-incubator.github.io/docker-introduction/)
 - [ITCR Training Network chapters about Docker](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html)
 - [Docker documentation about getting started](https://www.docker.com/get-started/)
 - [How to ensure your Docker usage is HIPAA-Compliant](https://www.atlantic.net/hipaa-compliant-hosting/best-practices-for-creating-a-hipaa-compliant-docker-host/)
-- [HIPAA Compliant Containers](https://www.cleardata.com/wp-content/uploads/2017/07/SET-MKTG-WP-36_HIPAA_Compliant_Containers_05-04-2017.pdf)
+- [HIPAA Compliant Containers](https://www.cleardata.com/resources/hipaa-compliant-containers/)
 - [Singularity is a different container platform that does some encryption](https://docs.sylabs.io/guides/latest/user-guide/) -- this can help if you are using data that needs to be protected.
 
 ## Conclusion
