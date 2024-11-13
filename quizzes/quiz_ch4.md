@@ -31,7 +31,7 @@ B) Writing code that you wish to save
 c) Both A and B
 d) Neither A nor B
 
-What is the purpose of an R Markdown file in RStudio?
+?What is the purpose of an R Markdown file in RStudio?
 
 a) To test code
 b) To write code in the Console
