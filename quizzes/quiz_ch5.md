@@ -18,7 +18,7 @@ m) It can help you and others more easily trace how specific files, data, or plo
 
 C) Consistent, navigable, maintainable
 C) Consistent, reduces errors, maintainable
-o) Consistent, complicated, readible
+o) Consistent, complicated, readable
 o) Inconsistent, navigable, maintainable
 m) Consistent, complicated file structure, maintainable
 m) Inconsistent, error reduction, maintainable
@@ -40,7 +40,7 @@ C) All of the answers
 C) All of the listed tips
 o) Use informative names for files
 o) Keep similar files together in a folder
-m) Include a readme that explains what all the files are
+m) Include a README file that explains what all the files are
 m) number scripts in the order they are run (if more than one needs to be)
 
 {choose-answers: 4}

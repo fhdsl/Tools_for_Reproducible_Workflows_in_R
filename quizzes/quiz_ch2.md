@@ -48,7 +48,7 @@ C) Any of these answers explain why R can be useful for reproducibility
 o) It is free which means pricing is not a barrier to reproducing results with R.
 o) It has an active community who can contribute and review your code.
 m) It has an active developer community who has made lots of handy tools which aid reproducibility. 
-m) It is designed for working with data, particuarly wrangling data in a reproducible way
+m) It is designed for working with data, particularly wrangling data in a reproducible way
 
 
 {/quiz}
