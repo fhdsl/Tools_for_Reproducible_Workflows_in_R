@@ -78,10 +78,11 @@ PII
 ProjectTemplate
 reproducibility
 RStudio
+README
 rstudio
 rmarkdown
 Rmarkdown
-RProj
+Rproj
 Sys
 UE
 UE5

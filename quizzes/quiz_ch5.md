@@ -1,39 +1,56 @@
 
-{quiz, id: rmarkdown, attempts: 10}
+{quiz, id: projects, attempts: 10}
 
-## R Markdown Quiz
+## Reproducible code
 
-? What is an R Markdown file?
+{choose-answers: 4}
+? Why is a well-organized project beneficial for reproducibility?
 
-A) A special filetype that allows you to have your code and code output in the same file
-b) A website where people store and share their code
-c) A special filetype that allows you to mark down what code you want to keep
-d) A special filetype that can only show the output of your code
+C) All of the answers
+C) Any of the answers
+o) It can enable others to understand exactly what files do what
+o) It can actually make your work more efficient in the long term
+m) It can actually enable others to just take your code and run it, even with more complicated file structures
+m) It can help you and others more easily trace how specific files, data, or plots are generated
 
-? Why are R Markdown files good for reproducibility?
-a) They allow you to add descriptions around your code to describe the steps of your process
-B) They allow you to test the output of code to make sure it creates the result you expect 
-c) They allow you to share the code and the output of the code easily with others in one place
-d) All of the above
+{choose-answers: 4}
+? What are the goals for project organizational scheme?
 
-? How do you create a new R Markdown file?
-a) A new R Markdown file is automatically opened when you start RStudio
-b) You right click the code in the console and save it
-C) You click on the File tab to open a new R Markdown file which opens a new pane to write and test code in
-d) You right click on the environment and save it
+C) Consistent, navigable, maintainable
+C) Consistent, reduces errors, maintainable
+o) Consistent, complicated, readable
+o) Inconsistent, navigable, maintainable
+m) Consistent, complicated file structure, maintainable
+m) Inconsistent, error reduction, maintainable
 
+{choose-answers: 4}
+? What is true about project organization?
 
-? Which of the following is NOT how you test the code in an R Markdown file?
-A) You type code directly into the Console and forget to save it
-b) You press the Knit button to test all of the code within the file (and nothing outside of the file!)
-c) You use a keyboard shortcut to select and run lines of code
-d) You can press the run previous chunks button to run the code for all chunks except the current chunk
+C) Typically best to aim for something that is organized but not too difficult to maintain
+C) Best to strive for a schema that is organized but not too challenging to maintain
+o) Best to aim for as complicated as possible
+o) There is only one way that works best
+m) Best to aim for as organized as possible
+m) Best to aim for as easy as possible
 
-? Which of the following is NOT true about R Markdown files?
-a) You can choose to hide your code or the output of the code in the final rendered report
-b) You can render the report into different kinds of file types like html or pdf by altering the YAML code at the top
-c) You can modify the aesthetics of the report
-D) R Markdown files only render the output of your code and never show your actual code 
+{choose-answers: 4}
+? What are some of the suggested organization tips?
 
-?
+C) All of the answers
+C) All of the listed tips
+o) Use informative names for files
+o) Keep similar files together in a folder
+m) Include a README file that explains what all the files are
+m) number scripts in the order they are run (if more than one needs to be)
+
+{choose-answers: 4}
+? Why is the here package useful?
+
+C) All of the listed reasons
+C) All of the answers
+o) When used with an .Rproj file all paths will start from the directory that contains that file
+o) Makes it easier if you copy your files to a new computer, as you don't have to adjust paths
+m) Makes it easier for others to take your files and not have to adapt the paths to use your code
+m) Enables paths relative to the .Rproj file
+
 {/quiz}
