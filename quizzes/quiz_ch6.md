@@ -35,5 +35,4 @@ b) You can render the report into different kinds of file types like html or pdf
 c) You can modify the aesthetics of the report
 D) R Markdown files only render the output of your code and never show your actual code 
 
-?
 {/quiz}

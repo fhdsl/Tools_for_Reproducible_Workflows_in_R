@@ -48,9 +48,9 @@ m) number scripts in the order they are run (if more than one needs to be)
 
 C) All of the listed reasons
 C) All of the answers
-o) when used with an .Rproj file all paths will start from the directory that contains that file
-o) makes it easier if you copy your files to a new computer, as you don't have to adjust paths
-m) makes it easier for others to take your files and not have to adapt the paths to use your code
-m) enables paths relative to the .Rproj file
+o) When used with an .Rproj file all paths will start from the directory that contains that file
+o) Makes it easier if you copy your files to a new computer, as you don't have to adjust paths
+m) Makes it easier for others to take your files and not have to adapt the paths to use your code
+m) Enables paths relative to the .Rproj file
 
 {/quiz}
