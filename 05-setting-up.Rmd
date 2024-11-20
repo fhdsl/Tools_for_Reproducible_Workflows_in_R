@@ -48,6 +48,33 @@ The most important aspects of your project organization scheme is that it:
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_421")
 ```
 
+### READMEs!
+
+READMEs are also a great way to help your collaborators get quickly acquainted with the project.
+
+```{r, fig.align='center', echo = FALSE, fig.alt= "Avi is looking at a set of project files that include a file called a ‘README.md’. Avi says 'I had no idea where to start with this analysis that Ruby sent me to review, but then I saw she included a README and that saved me so much time and effort in getting started!'"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE/edit#slide=id.gf8379bb805_0_11")
+```
+
+READMEs stick out in a project and are generally universal signal for new people to the project to start by READing them. GitHub automatically will preview your file called "README.md" when someone comes to the main page of your repository which further encourages people looking at your project to read the information in your README.
+
+**Information that should be included in a README:**
+
+1) General purpose of the project
+2) Instructions on how to re-run the project
+3) Lists of any software required by the project
+4) Input and output file descriptions.
+5) Descriptions of any additional tools included in the project?
+
+You can take a look at this [template README](https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md) to get your started.
+
+#### More about writing READMEs:
+
+- [How to write a good README file](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+- [How to write an awesome README](https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b)
+
+### Example organization scheme
+
 Getting more specific, here's some ideas of how to organize your project:  
 
 - **Make file names informative** to those who don't have knowledge of the project but avoid using spaces, quotes, or unusual characters in your filenames and folders -- these only serve to make reading in files a nightmare in some programs.
@@ -158,10 +185,32 @@ https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html
 
 http://projecttemplate.net/
 
-### R Markdown files
+### Scientific notebooks (Rmd or qmd)
 
-https://rmarkdown.rstudio.com/articles_intro.html
+The generous use and keeping of notebooks is a useful tool for documentation of the development of an analysis.
 
-### Quarto files
+Data analyses can lead one on a winding trail of decisions and side investigations, but notebooks allow you to narrate your thought process as you travel along these analyses explorations!
 
-https://quarto.org/docs/get-started/hello/rstudio.html
+```{r, fig.align='center', echo = FALSE, fig.alt= "Ruby is looking at her computer that has a lovely notebook with a heatmap! Ruby says ‘Working from this notebook allows me to interactively develop on my data analysis and write down my thoughts about the process all in one place!’"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE/edit#slide=id.gf8f405fdab_0_186")
+```
+
+**Your scientific notebook should include descriptions that describe:**   
+
+#### The purposes of the notebook
+
+What scientific question are you trying to answer? Describe the dataset you are using to try to answer this and why does it help answer this question?
+
+#### The rationales behind your decisions
+
+Describe why a particular code chunk is doing a particular thing -- the more odd the code looks, the greater need for you to describe why you are doing it.
+
+Describe any particular filters or cutoffs you are using and how did you decide on those?
+
+For data wrangling steps, why are you wrangling the data in such a way -- is this because a certain package you are using requires it?
+
+#### Your observations of the results
+
+What do you think about the results? The plots and tables you show in the notebook -- how do they inform your original questions?
+
+There are two major types of notebooks folks use in the R programming language: R Markdown files and Quarto files. In the next section we will discuss these notebooks, how they are the same, how they are different, and how to use them.
