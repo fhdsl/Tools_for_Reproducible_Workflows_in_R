@@ -38,7 +38,7 @@ Posit created Quarto with the idea of streamlining document making and allowing 
 - Does require a lot of extra packages to be installed to do more things with it: `bookdown`, `distill`, etc.
 
 ### Quarto Pros:
-- Built with more compatability for other languages
+- Built with more compatibility for other languages
 - Appears to be more streamlined/centralized and less need for a lot of extra packages to create other types of documents.
 
 ### Quarto Cons:
@@ -95,7 +95,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Rendering R Markdown
 
-For this first chapter we will introduce you to R Markdown files, but note there are many [great and continually new emerging tutorials to introduce to Quarto notebooks](https://quarto.org/docs/guide/). Most of what we discuss about R Markdown files is also applicable to Quarto and you can often just switch the suffix of your file and have *most* of your features and code still work. 
+For this first chapter we will introduce you to R Markdown files, but note there are many [great and continually new emerging tutorials to introduce to Quarto notebooks](https://quarto.org/docs/guide/). Most of what we discuss about R Markdown files is also applicable to Quarto and you can often just switch the suffix of your file and have *most* of your features and code still work.
 
 There is a special `Knit` button that looks like a ball of yarn with a knitting needle at the top of the R Markdown files that helps you create your report. Since R Markdown files by default have some code, we can press this to see what a rendered report might look like before we start writing our own code.
 
