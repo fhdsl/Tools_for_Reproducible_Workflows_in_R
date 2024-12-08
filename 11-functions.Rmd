@@ -8,3 +8,117 @@ ottrpal::set_knitr_image_path()
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_53")
 ```
+
+### Why write a custom function?
+
+There's a lot of reasons writing your own custom functions might be a thing you need to do.
+
+#### Cutting down on repetitive code
+
+We've discussed how DRY code is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
+
+#### More readable code
+
+Custom functions can allow you to organize code into manageable chunks.
+By creating custom functions it can be easier to organize our code in a way thats more readable.
+
+
+### Writing a function
+
+A common way that a custom function might come about is:
+
+1. You've written some initial code that takes some object as input.
+2. You now realize you will need to run this series of code more than twice.
+
+To get started you can follow these steps to make a custom function:
+
+### Starting a new function
+
+Open up a new R script file and copy and paste our basic template we have below.
+Your basic custom function is going to follow this type of structure:
+
+We will walk through how to use this template here.
+
+This top part of the template is the documentation. It's formatted in a way that would
+allow you to incorporate it into a package if you would like.
+
+1. It's likely you might already have some code drafted that has some of the code you need for your function.
+paste this code in the part of this template that says `# Your main code here`.
+
+```
+#' Title here
+#'
+#' @description This is what the function does
+#'
+#' @param arg1 A first argument
+#' @param arg2 A second argument
+#'
+#' @return What is returned
+#' @export
+#'
+#' @examples
+#'
+#' function(arg1, arg2)
+#'
+#'
+function_name <- function(arg1, arg2) {
+
+    # Your main code here
+
+    return(output)
+}
+```
+
+2. First let's write a `@description` field. What is this function's goal.
+3. Next you'll likely want to sculpt your code, carefully thinking about its usage  and what types of options may need to be controlled by those who will use this function.
+
+### Working example
+
+Below is an example of a working example from [this R package development workshop](https://combine-australia.github.io/r-pkg-dev/functions.html).
+```
+
+#' Make shades
+#'
+#' Given a colour make n lighter or darker shades
+#'
+#' @param colour The colour to make shades of
+#' @param n The number of shades to make
+#' @param lighter Whether to make lighter (TRUE) or darker (FALSE) shades
+#'
+#' @return A vector of n colour hex codes
+#' @export
+#'
+#' @examples
+#' # Five lighter shades
+#' make_shades("goldenrod", 5)
+#' # Five darker shades
+#' make_shades("goldenrod", 5, lighter = FALSE)
+
+make_shades <- function(colour, n, lighter = TRUE) {
+    # Convert the colour to RGB
+    colour_rgb <- grDevices::col2rgb(colour)[, 1]
+
+    # Decide if we are heading towards white or black
+    if (lighter) {
+        end <- 255
+    } else {
+        end <- 0
+    }
+
+    # Calculate the red, green and blue for the shades
+    # we calculate one extra point to avoid pure white/black
+    red <- seq(colour_rgb[1], end, length.out = n + 1)[1:n]
+    green <- seq(colour_rgb[2], end, length.out = n + 1)[1:n]
+    blue <- seq(colour_rgb[3], end, length.out = n + 1)[1:n]
+
+    # Convert the RGB values to hex codes
+    shades <- grDevices::rgb(red, green, blue, maxColorValue = 255)
+
+    return(shades)
+}
+```
+
+### More resources on writing functions
+
+- [R for Data Science -- writing functions](https://r4ds.had.co.nz/functions.html)
+- [R Style guide for functions](https://style.tidyverse.org/functions.html)
