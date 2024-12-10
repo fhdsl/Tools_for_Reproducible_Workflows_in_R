@@ -1,6 +1,6 @@
 ---
 title: "Tools for Reproducible Workflows in R"
-date: "November, 2024"
+date: "December, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
