@@ -92,7 +92,7 @@ Getting more specific, here's some ideas of how to organize your project:
 - Make it easy on yourself, **dates aren't necessary**. The computer keeps track of those.
 - **Make a central script that re-runs everything** -- including the creation of the folders! (more on this in a later chapter)
 
-Let's see what these principles might look like put into practice.
+Let's see what these principles might look in practice.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_442")
@@ -121,17 +121,17 @@ project-name/
 
 **What these hypothetical files and folders contain:**
 
-- `run_analysis.sh` - A central script that runs everything again
+- `run_analysis.sh` - A central script that runs everything
 - `00-download-data.sh` - The script that needs to be run first and is called by run_analysis.sh
 - `01-make-heatmap.Rmd` - The script that needs to be run second and is also called by run_analysis.sh
-- `README.md` - The document that has the information that will orient someone to this project, we'll discuss more about how to create a helpful README in [an upcoming chapter](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/documenting-analyses.html#readmes).
+- `README.md` - The document that has the information that will orient someone to this project
 - `plots` - A folder of plots and resulting images
-- `results` - A folder results
-- `raw-data` - Data files as they first arrive and **nothing** has been done to them yet.
-- `processed-data` - Data that has been modified from the raw in some way.
+- `results` - A folder of results
+- `raw-data` - Data files as they first arrive and **nothing** has been done to them yet
+- `processed-data` - Data that has been modified from the raw in some way
 - `util` - A folder of utilities that never needs to be called or touched directly unless troubleshooting something
 
-There are lots of ideas out there for organizational strategies. Key is finding one that fits your team and your project. You can read through some of these articles to think about what kind of organizational strategy might work for you and your team:   
+There are lots of ideas out there for organizational strategies. The key is finding one that fits your team and your project. You can read through some of these articles to think about what kind of organizational strategy might work for you and your team:   
 
 - [Reproducible R example](https://github.com/jhudsl/reproducible-r-example)
 - [Jenny Bryan's organizational strategies](https://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html) [@Bryan2021].
@@ -144,13 +144,13 @@ There are lots of ideas out there for organizational strategies. Key is finding 
 
 ## Navigate file paths
 
-In point and click apps (called Graphics User Interfaces) you navigate to files by clicking on folders. But for R programming and other command line interfaces, we navigate and use files by using `file paths`. `File paths` are series of folders it takes to get to the file, not unlike a street address.
+In point and click apps (called [Graphical User Interfaces (or GUI pronounced like the word gooey)](https://en.wikipedia.org/wiki/Graphical_user_interface) you navigate to files by clicking on folders. But for R programming and other command line interfaces, we navigate and use files by using `file paths`. `File paths` are the series of folders that it takes to get to a file, not unlike a street address.
 
-To make an analogy, if someone asked you directions to a particular building, the directions you give would be tailored based on where this person located. In other words your directions would be relative to their location.
+To make an analogy, if someone asked you directions to a particular building, the directions you would give would be tailored based on where the person asking is located. In other words your directions would be relative to their location.
 
 But file paths can be *relative* or *absolute*.
 
-In the same way, your computer can be given absolute directions to a file - basically the directions with absolute directions or they can be relative to where you are calling the command in the computer.
+Your computer can be given directions relative to where you are calling the command in the computer or they can be absolute directions to a file - basically the full directions to that file, regardless of where you might be already on your computer.  
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_1337")
@@ -167,7 +167,7 @@ The end of a path string may be a file name if you are creating a path to a file
 
 To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the `working directory` aka your "Current Location".  In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes `/`
 
-Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either.
+Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings).  You can use the terminal to work with files using the command line. 
 
 Returning to computer files. In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the `ls` command, a file called `file.txt`.
 
@@ -193,7 +193,7 @@ http://projecttemplate.net/
 
 ### Scientific notebooks (Rmd or qmd)
 
-The generous use and keeping of notebooks is a useful tool for documentation of the development of an analysis.
+Using notebooks can be a very helpful tool for documenting the development of an analysis.
 
 Data analyses can lead one on a winding trail of decisions and side investigations, but notebooks allow you to narrate your thought process as you travel along these analyses explorations!
 
@@ -205,18 +205,25 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1LMurysUhCjZb7DVF
 
 #### The purposes of the notebook
 
-What scientific question are you trying to answer? Describe the dataset you are using to try to answer this and why does it help answer this question?
+It can be helpful to others and your future self to describe:
+
+- The scientific question are you trying to answer
+- The dataset you are using to try to answer this question
+- An explanation for the choice of the dataset to help answer this question
 
 #### The rationales behind your decisions
 
-Describe why a particular code chunk is doing a particular thing -- the more odd the code looks, the greater need for you to describe why you are doing it.
+Describe  major code decisions. For example, why you chose to use specific packages or why you took certain steps in that specific order. This can be very general to very specific, such as why a particular code chunk is doing a particular thing. The  more possible options there were for choices or the more unusual a process that you might have taken, the greater the need to describe why you made certain decisions.
 
-Describe any particular filters or cutoffs you are using and how did you decide on those?
+Describe any particular filters or cutoffs you are using and how did you decided on those.
 
-For data wrangling steps, why are you wrangling the data in such a way -- is this because a certain package you are using requires it?
+For data wrangling steps, describe why you are wrangling the data in such a way. Is this because a certain package you are using requires it?
 
 #### Your observations of the results
 
-What do you think about the results? The plots and tables you show in the notebook -- how do they inform your original questions?
+In this section it is helpful to include:
 
-There are two major types of notebooks folks use in the R programming language: R Markdown files and Quarto files. In the next section we will discuss these notebooks, how they are the same, how they are different, and how to use them.
+- What do you currently think about the results? 
+- What do you think about the plots and tables you show in the notebook -- how do they inform your original questions?
+
+There are two major types of notebooks folks use in the R programming language: R Markdown files and Quarto files. In the next section we will discuss these notebooks, the similarities and differences between these two options, and how to use them.
