@@ -15,10 +15,10 @@ Keeping your files organized is a skill that has a high long-term payoff. As you
 
 @Tayo2019 discusses four particular reasons why it is important to organize your project:
 
-> 1. Organization increases productivity. If a project is well organized, with everything placed in one directory, it makes it easier to avoid wasting time searching for project files such as datasets, codes, output files, and so on.
-> 2. A well-organized project helps you to keep and maintain a record of your ongoing and completed data science projects.
-> 3. Completed data science projects could be used for building future models. If you have to solve a similar problem in the future, you can use the same code with slight modifications.
-> 4. A well-organized project can easily be understood by other data science professionals when shared on platforms such as Github.
+> 1. Organization **increases productivity**. If a project is well organized, with everything placed in one directory, it makes it easier to avoid wasting time searching for project files such as datasets, codes, output files, and so on.
+> 2. A well-organized project helps you to keep and **maintain a record** of your ongoing and completed data science projects.
+> 3. Completed data science projects could be used for **building future models**. If you have to solve a similar problem in the future, you can use the same code with slight modifications.
+> 4. A well-organized project can **easily be understood** by other data science professionals when shared on platforms such as Github.
 
 Organization is yet another aspect of reproducibility that saves you and your colleagues time!
 
@@ -28,13 +28,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## General principles of project organization
 
-Project organization should work for you and not the other way around. Maintainably organized should be the goal. Something that is effective but can be maintained long term. As you can imagine, organizational schemes are not one size fits all.
+Project organization should work for you and not the other way around. The goal should be organization that is maintainable long term.  As you might imagine, the optimal organizational scheme might differ from one individual to another or even one project to another. 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_426")
 ```
 
-There's a lot of ways to keep your files organized, and there's not a "one size fits all" organizational solution [@Shapiro2021]. In this chapter, we will discuss some generalities but as far as specifics we will point you to others who have written about works for them and advise that you use them as inspiration to figure out a strategy that works for you and your team.
+There's a lot of ways to keep your files organized, and there's not a "one size fits all" organizational solution [@Shapiro2021]. In this chapter, we will discuss some generalities; but for specifics, we will point you to others who have written about what works for them. We suggest that you use them as inspiration to figure out a strategy that works for you and your team.
 
 The most important aspects of your project organization scheme is that it:  
 
@@ -56,28 +56,34 @@ READMEs are also a great way to help your collaborators get quickly acquainted w
 ottrpal::include_slide("https://docs.google.com/presentation/d/1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE/edit#slide=id.gf8379bb805_0_11")
 ```
 
-READMEs stick out in a project and are generally universal signal for new people to the project to start by READing them. GitHub automatically will preview your file called "README.md" when someone comes to the main page of your repository which further encourages people looking at your project to read the information in your README.
+READMEs stick out in a project and are generally universal signal for new people to the project to start by READing them. GitHub automatically will preview your file called "README.md" when someone comes to the main page of your repository. This further encourages people looking at your project to read the information in your README.
 
 **Information that should be included in a README:**
 
 1) General purpose of the project
 2) Instructions on how to re-run the project
 3) Lists of any software required by the project
-4) Input and output file descriptions.
-5) Descriptions of any additional tools included in the project?
+4) Input and output file descriptions
+5) Descriptions of any additional tools included in the project
 
 You can take a look at this [template README](https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md) to get your started.
 
 #### More about writing READMEs:
 
-- [How to write a good README file](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-- [How to write an awesome README](https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b)
+- [How to write a good README file by Hillary Nyakundi](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+- [How to write an awesome README by Navendu Pottekkat](https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b)
+
+#### Examples of good READMEs:
+
+- https://github.com/stephaniehicks/qsmooth
+- https://github.com/lcolladotor/derfinder
+- https://github.com/tidyverse/dplyr
 
 ### Example organization scheme
 
 Getting more specific, here's some ideas of how to organize your project:  
 
-- **Make file names informative** to those who don't have knowledge of the project but avoid using spaces, quotes, or unusual characters in your filenames and folders -- these only serve to make reading in files a nightmare in some programs.
+- **Make file names informative** to those who don't have knowledge of the project -- but avoid using spaces, quotes, or unusual characters in your filenames and folders, as these can make reading in files a nightmare with some programs.
 - **Number scripts** in the order that they are run.
 - **Keep like-files together** in their own directory: results tables with other results tables, etc. _Including most importantly keeping raw data separate from processed data or other results!_
 - **Put source scripts and functions in their own directory**. Things that should never need to be called directly by yourself or anyone else.
