@@ -155,7 +155,7 @@ Your computer can be given directions relative to where you are calling the comm
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_1337")
 ```
-So in our above analogy, if you are trying to direct someone to somewhere on Johns Hopkins’ campus with a file path:
+So in our above analogy, if you are trying to direct someone to somewhere on the Johns Hopkins campus with a file path:
 
 An absolute file path would be:
 `/Earth/North America/United States/Maryland/Baltimore/Johns Hopkins University/Street Name/Building number`
