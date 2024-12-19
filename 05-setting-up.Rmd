@@ -65,7 +65,7 @@ READMEs stick out in a project and are generally universal signal for new people
 3) Lists of any software required by the project
 4) Input and output file descriptions
 5) Descriptions of any additional tools included in the project
-
+6) License for how your materials should be used
 You can take a look at this [template README](https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md) to get your started.
 
 #### More about writing READMEs:
@@ -79,6 +79,17 @@ You can take a look at this [template README](https://raw.githubusercontent.com/
 - https://github.com/lcolladotor/derfinder
 - https://github.com/tidyverse/dplyr
 
+#### Licensing
+
+Adding information about a license is not always required, but it can be a good idea. If you put your code on GitHub, then the default copyright laws apply.  According to GitHub:
+
+> "You retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. If you're creating an open source project, we strongly encourage you to include an open source license."
+
+::: dictionary
+Open source software or code means that it is distributed with a license that allows others to reuse or adapt your code for other purposes. This is very helpful to advance science and technology. 
+:::
+
+Check out this great resource on [options for licenses](https://choosealicense.com/) to help you choose which license is right for your project.
 ### Example organization scheme
 
 Getting more specific, here's some ideas of how to organize your project:  
@@ -89,7 +100,7 @@ Getting more specific, here's some ideas of how to organize your project:
 - **Put source scripts and functions in their own directory**. Things that should never need to be called directly by yourself or anyone else.
 - **Put output in its own directories** like `results` and `plots`.
 - **Have a central document (like a README)** that describes the basic information about the analysis and how to re-run it.
-- Make it easy on yourself, **dates aren't necessary**. The computer keeps track of those.
+- Make it easy on yourself, **dates aren't necessary** to track for file updates.  The computer keeps track of when a file was updated.
 - **Make a central script that re-runs everything** -- including the creation of the folders! (more on this in a later chapter)
 
 Let's see what these principles might look in practice.
@@ -152,7 +163,7 @@ But file paths can be *relative* or *absolute*.
 
 Your computer can be given directions relative to where you are calling the command in the computer or they can be absolute directions to a file - basically the full directions to that file, regardless of where you might be already on your computer.  
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "A relative path might be from the local neighborhood to johns hopkins, where as a relative path is analogous to a path that could direct you from further away, so state information would also be included"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_1337")
 ```
 So in our above analogy, if you are trying to direct someone to somewhere on the Johns Hopkins campus with a file path:
@@ -169,9 +180,20 @@ To know your location within a file system is to know exactly what folder you ar
 
 Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings).  You can use the terminal to work with files using the command line. 
 
-Returning to computer files. In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the `ls` command, a file called `file.txt`.
+Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.
 
-Alternatively, you can specify an absolute path. An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash `/` and is special in that it cannot be contained within other folders. In the current file system, the root directory contains a folder called cloud, which contains a folder called project which contains the folder `data_analysis_project`, which has the file.txt file we are looking for.
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt"} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_0")```
+
+
+In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the `ls` command, a file called `file.txt`.
+
+
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files."} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_40")```
+
+
+An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash `/` and is special in that it cannot be contained within other folders. 
 
 ## Handy R Tools
 
