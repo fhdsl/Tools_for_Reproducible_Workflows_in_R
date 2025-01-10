@@ -1,7 +1,7 @@
 
 ##### Checks run at pull request #####
 # Check quiz formatting
-check-quizzes: yes
+check-quizzes: no
 # Check that urls in the content are not broken
 url-checker: yes
 # Render preview of content with changes (Rmd's and md's are checked)
@@ -10,6 +10,10 @@ render-preview: yes
 spell-check: yes
 # Style any R code
 style-code: yes
+# Would you like your markdown files to be checked for formatting
+markdown-linter: yes
+# Would you like a readability report on your markdowns?
+readability-report: yes
 # Test build the docker image if any docker-relevant files have been changed
 docker-test: no
 # Should URLs be tested periodically?
