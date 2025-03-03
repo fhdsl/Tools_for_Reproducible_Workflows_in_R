@@ -290,13 +290,18 @@ Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R
 
 ### ProjectTemplate
 
-If you are interested in doing more advanced project organization and automatic running of code and testing, you could consider using the [`ProjectTemplate` package](http://projecttemplate.net/). 
+If you are interested in doing more **advanced** project organization and automatic running of code and testing, you could consider using the [`ProjectTemplate` package](http://projecttemplate.net/). 
 
 This is not to be confused with R projects, you would still need to create an R project using this package, or you can specify using commands with this package to also create an R project.
 
 However, using `ProjectTemplate` will create a directory structure to help you stay organized.
 
-Running the `create.project()` command, which will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a Readme file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
+Running the `create.project()` command, which will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a README file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The structure of directories or folders that are created using the ProjectTemplate package."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_188")
+```
 
 If you also add a `rstudio.project = TRUE`, this will create a new RStudio project as well.
 
@@ -306,7 +311,7 @@ create.project(rstudio.project = TRUE)
 ```
 
 
-You can use this package to help you create consistent directory structures across projects and to not forget making Readme files. 
+You can use this package to help you create consistent directory structures across projects and to help you not forget making README files. 
 
 You can also customize this structure as well using the [`create.template` function](http://projecttemplate.net/custom_templates.html).
 
