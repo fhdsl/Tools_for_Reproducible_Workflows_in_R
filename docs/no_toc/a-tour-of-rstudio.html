@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 A Tour of RStudio | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 4 A Tour of RStudio | Tools for Reproducible Workflows in R" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 A Tour of RStudio | Tools for Reproducible Workflows in R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 A Tour of RStudio | Tools for Reproducible Workflows in R" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="components-of-a-reproducible-analysis.html"/>
+<link rel="next" href="setting-up-your-project.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://hutchdatascience.org/" target="_blank"><img src="assets/RR25.png" style="width: 80%; padding-left: 34px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.3</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html"><i class="fa fa-check"></i><b>2</b> R for Reproducibility</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#why-r"><i class="fa fa-check"></i><b>2.2</b> Why R</a></li>
+<li class="chapter" data-level="2.3" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#it-is-free-and-open-source"><i class="fa fa-check"></i><b>2.3</b> It is free and open source</a></li>
+<li class="chapter" data-level="2.4" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#the-community"><i class="fa fa-check"></i><b>2.4</b> The community</a></li>
+<li class="chapter" data-level="2.5" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#designed-for-data"><i class="fa fa-check"></i><b>2.5</b> Designed for data</a></li>
+<li class="chapter" data-level="2.6" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#conclusion"><i class="fa fa-check"></i><b>2.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html"><i class="fa fa-check"></i><b>3</b> Components of a reproducible analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#reproducibility-is-iterative-work"><i class="fa fa-check"></i><b>3.1</b> Reproducibility is iterative work</a></li>
+<li class="chapter" data-level="3.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#components-of-reproducibility"><i class="fa fa-check"></i><b>3.2</b> Components of reproducibility</a></li>
+<li class="chapter" data-level="3.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#transparent"><i class="fa fa-check"></i><b>3.3</b> Transparent</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#open-source"><i class="fa fa-check"></i><b>3.3.1</b> Open source</a></li>
+<li class="chapter" data-level="3.3.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#data-is-publicly-available"><i class="fa fa-check"></i><b>3.3.2</b> Data is publicly available</a></li>
+<li class="chapter" data-level="3.3.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#readable-code"><i class="fa fa-check"></i><b>3.3.3</b> Readable code</a></li>
+<li class="chapter" data-level="3.3.4" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#well-documented"><i class="fa fa-check"></i><b>3.3.4</b> Well-documented</a></li>
+<li class="chapter" data-level="3.3.5" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#version-controlled"><i class="fa fa-check"></i><b>3.3.5</b> Version controlled</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#consistent"><i class="fa fa-check"></i><b>3.4</b> Consistent</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#re-runs-consistently-and-easily"><i class="fa fa-check"></i><b>3.4.1</b> Re-runs consistently and easily</a></li>
+<li class="chapter" data-level="3.4.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#follows-a-code-style"><i class="fa fa-check"></i><b>3.4.2</b> Follows a code style</a></li>
+<li class="chapter" data-level="3.4.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#have-an-organizational-scheme"><i class="fa fa-check"></i><b>3.4.3</b> Have an organizational scheme</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#accessible"><i class="fa fa-check"></i><b>3.5</b> Accessible</a></li>
+<li class="chapter" data-level="3.6" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#conclusion-1"><i class="fa fa-check"></i><b>3.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html"><i class="fa fa-check"></i><b>4</b> A Tour of RStudio</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#why-use-rstudio"><i class="fa fa-check"></i><b>4.1</b> Why use RStudio?</a></li>
+<li class="chapter" data-level="4.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>4.2</b> Installing RStudio</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-and-updating-r"><i class="fa fa-check"></i><b>4.2.1</b> Installing and Updating R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-rstudio-1"><i class="fa fa-check"></i><b>4.2.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="4.2.3" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#updating-rstudio"><i class="fa fa-check"></i><b>4.2.3</b> Updating RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#navigating-rstudio"><i class="fa fa-check"></i><b>4.3</b> Navigating RStudio</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#default-layout"><i class="fa fa-check"></i><b>4.3.1</b> Default Layout</a></li>
+<li class="chapter" data-level="4.3.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#the-hidden-pane"><i class="fa fa-check"></i><b>4.3.2</b> The Hidden Pane</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#find-errors"><i class="fa fa-check"></i><b>4.4</b> Find Errors</a></li>
+<li class="chapter" data-level="4.5" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#keyboard-shortcuts"><i class="fa fa-check"></i><b>4.5</b> Keyboard Shortcuts</a></li>
+<li class="chapter" data-level="4.6" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#conclusion-2"><i class="fa fa-check"></i><b>4.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>5</b> Setting up your project</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#understand-why-project-organization-is-key-to-reproducible-analyses"><i class="fa fa-check"></i><b>5.1</b> Understand why project organization is key to reproducible analyses</a></li>
+<li class="chapter" data-level="5.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#general-principles-of-project-organization"><i class="fa fa-check"></i><b>5.2</b> General principles of project organization</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#readmes"><i class="fa fa-check"></i><b>5.2.1</b> READMEs!</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
+<li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#here-package"><i class="fa fa-check"></i><b>5.4.1</b> here package</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#rproj-files"><i class="fa fa-check"></i><b>5.4.2</b> RProj files</a></li>
+<li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
+<li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reproducible-reports.html"><a href="reproducible-reports.html"><i class="fa fa-check"></i><b>6</b> Reproducible Reports</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#notebook-reports-support-reproducibility"><i class="fa fa-check"></i><b>6.1</b> Notebook reports support reproducibility</a></li>
+<li class="chapter" data-level="6.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-or-quarto"><i class="fa fa-check"></i><b>6.2</b> R Markdown or Quarto?</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-pros"><i class="fa fa-check"></i><b>6.2.1</b> R Markdown Pros:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-cons"><i class="fa fa-check"></i><b>6.2.2</b> R Markdown Cons:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-pros"><i class="fa fa-check"></i><b>6.2.3</b> Quarto Pros:</a></li>
+<li class="chapter" data-level="6.2.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-cons"><i class="fa fa-check"></i><b>6.2.4</b> Quarto Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#getting-started-with-notebooks"><i class="fa fa-check"></i><b>6.3</b> Getting Started with notebooks</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#rendering-r-markdown"><i class="fa fa-check"></i><b>6.4</b> Rendering R Markdown</a></li>
+<li class="chapter" data-level="6.5" data-path="reproducible-reports.html"><a href="reproducible-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>6.5</b> Writing code in R Markdown files</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#the-yaml"><i class="fa fa-check"></i><b>6.5.1</b> The YAML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-chunks"><i class="fa fa-check"></i><b>6.5.2</b> Code chunks</a></li>
+<li class="chapter" data-level="6.5.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-chunks"><i class="fa fa-check"></i><b>6.5.3</b> Running chunks</a></li>
+<li class="chapter" data-level="6.5.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>6.5.4</b> Running previous chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="reproducible-reports.html"><a href="reproducible-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>6.6</b> Cleaning the environment</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-reports.html"><a href="reproducible-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>6.7</b> Restarting R Session</a></li>
+<li class="chapter" data-level="6.8" data-path="reproducible-reports.html"><a href="reproducible-reports.html#chunk-setup"><i class="fa fa-check"></i><b>6.8</b> Chunk setup</a></li>
+<li class="chapter" data-level="6.9" data-path="reproducible-reports.html"><a href="reproducible-reports.html#finding-chunks"><i class="fa fa-check"></i><b>6.9</b> Finding chunks</a></li>
+<li class="chapter" data-level="6.10" data-path="reproducible-reports.html"><a href="reproducible-reports.html#add-chunks"><i class="fa fa-check"></i><b>6.10</b> Add chunks</a></li>
+<li class="chapter" data-level="6.11" data-path="reproducible-reports.html"><a href="reproducible-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>6.11</b> More on running chunks</a></li>
+<li class="chapter" data-level="6.12" data-path="reproducible-reports.html"><a href="reproducible-reports.html#text-and-headers"><i class="fa fa-check"></i><b>6.12</b> Text and headers</a>
+<ul>
+<li class="chapter" data-level="6.12.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#headers"><i class="fa fa-check"></i><b>6.12.1</b> Headers</a></li>
+<li class="chapter" data-level="6.12.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>6.12.2</b> Bold and Italics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.13" data-path="reproducible-reports.html"><a href="reproducible-reports.html#additional-features"><i class="fa fa-check"></i><b>6.13</b> Additional Features</a>
+<ul>
+<li class="chapter" data-level="6.13.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#aesthetics"><i class="fa fa-check"></i><b>6.13.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="6.13.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#report-file-types"><i class="fa fa-check"></i><b>6.13.2</b> Report File Types</a></li>
+</ul></li>
+<li class="chapter" data-level="6.14" data-path="reproducible-reports.html"><a href="reproducible-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>6.14</b> Keyboard Shortcuts</a>
+<ul>
+<li class="chapter" data-level="6.14.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#table-of-contents"><i class="fa fa-check"></i><b>6.14.1</b> Table of Contents</a></li>
+<li class="chapter" data-level="6.14.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-folding"><i class="fa fa-check"></i><b>6.14.2</b> Code Folding</a></li>
+<li class="chapter" data-level="6.14.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-download"><i class="fa fa-check"></i><b>6.14.3</b> Code Download</a></li>
+<li class="chapter" data-level="6.14.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#automatic-date"><i class="fa fa-check"></i><b>6.14.4</b> Automatic Date</a></li>
+</ul></li>
+<li class="chapter" data-level="6.15" data-path="reproducible-reports.html"><a href="reproducible-reports.html#conclusion-3"><i class="fa fa-check"></i><b>6.15</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>7.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>7.1.1</b> Tips for choosing packages to use:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>7.2</b> The importance of iterative work</a></li>
+<li class="chapter" data-level="7.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>7.3</b> Aspects of Reproducible code</a></li>
+<li class="chapter" data-level="7.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>7.4</b> Readable</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>7.4.1</b> Well-documented</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>7.4.2</b> Follows a code style</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>7.5</b> Efficient</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>7.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>7.5.2</b> Is DRY (don’t repeat yourself)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>7.6</b> Consistent</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>7.6.1</b> Follows conventions</a></li>
+<li class="chapter" data-level="7.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>7.6.2</b> Is organized</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>7.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>8</b> Using GitHub in a workflow</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>8.1</b> What is version control</a></li>
+<li class="chapter" data-level="8.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>8.2</b> What’s GitHub?</a></li>
+<li class="chapter" data-level="8.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>8.3</b> GitHub Workflow</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>8.3.1</b> Create your GitHub account</a></li>
+<li class="chapter" data-level="8.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>8.3.2</b> Creating a new repository</a></li>
+<li class="chapter" data-level="8.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>8.3.3</b> Setting up your repository locally</a></li>
+<li class="chapter" data-level="8.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>8.3.4</b> Cloning your repository</a></li>
+<li class="chapter" data-level="8.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>8.3.5</b> Opening a PR</a></li>
+<li class="chapter" data-level="8.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>8.3.6</b> Merging a pull request</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>8.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-1"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
+<li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
+<li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
+<li class="chapter" data-level="9.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>9.5</b> Snapshots with <code>renv</code></a></li>
+<li class="chapter" data-level="9.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>9.6</b> Containerization</a></li>
+<li class="chapter" data-level="9.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>9.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<p style="text-align:center;"> <a href=" https://stat.utexas.edu/"> and The University of Texas at Austin </a></p>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/W6Mg4rzuMK6Yk3Am8"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Reproducible Workflows in R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+
+
+
+<div class="hero-image-container">
+  <img class= "hero-image" src="assets/RR25_thin_main_image.png">
+</div>
+<div id="a-tour-of-rstudio" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> A Tour of RStudio<a href="a-tour-of-rstudio.html#a-tour-of-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter we will talk about a very useful R-related tool called RStudio. RStudio is an environment for using R that can be extremely helpful for writing code and making your analyses reproducible.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_0.png" alt="A Tour of RStudio, Learning Objectives are to be able to, Recognize why RStudio is useful, Install RStudio and get started with it, Navigate RStudio" width="100%" style="display: block; margin: auto;" /></p>
+<div id="why-use-rstudio" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Why use RStudio?<a href="a-tour-of-rstudio.html#why-use-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>RStudio is what is called an <strong>integrated development environment (IDE)</strong> for writing code in R (although it also has compatibility for other languages).</p>
+<p>It is designed to make working in R easier in a variety of ways by helping you:</p>
+<ul>
+<li>write code by using suggestions to complete what you have written - currently this is mostly for suggesting package names or functions (which are specific pieces of code that accomplish a particular task, often packages have several functions)</li>
+<li>view the output of your code, this is especially true for creating reports or viewing plots</li>
+<li>find errors in your code</li>
+<li>keep track of any objects that you have assigned in R</li>
+<li>orient yourself in terms of the files on your computer</li>
+<li>track changes in your code and other files over time</li>
+</ul>
+<div class="dictionary">
+<ul>
+<li><strong>IDE</strong> - Integrated Development Environment - a computing environment for writing code, debugging code, and looking at the output of your code</li>
+<li><strong>RStudio</strong> - an IDE designed especially for writing R code</li>
+<li><strong>function</strong> - a specific piece of code that performs a task - packages in R often have several functions</li>
+<li><strong>objects</strong> - objects in R could be anything that you can refer to with some name to recall again such as a data tables, vectors, functions, plots and more.</li>
+</ul>
+</div>
+<p>We will dive deeper into these benefits later once we get started with RStudio, but first we will discuss how to make sure you have it downloaded and installed on your computer.</p>
+</div>
+<div id="installing-rstudio" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Installing RStudio<a href="a-tour-of-rstudio.html#installing-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In case you don’t yet have RStudio on your computer, we will walk you through the process of getting started.</p>
+<div id="installing-and-updating-r" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Installing and Updating R<a href="a-tour-of-rstudio.html#installing-and-updating-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You first need to make sure that you have R. R is not the same as RStudio. R is instead the libraries needed to use R code on your computer and it is needed so that you can use RStudio. It is also a good idea to update the version of R that you are using periodically.</p>
+<details>
+<summary>
+Click here for directions if you have never installed R before on your computer.
+</summary>
+<p>You can install the latest version of R from the R project site located here: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></p>
+<p>From here you can click on the menu option that says CRAN on the far left to start. Recall that CRAN stands for the <strong>Comprehensive R Archive Network</strong>.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_0.png" alt="Once you go to the r project website, you can click on the CRAN button to download the latest version of R" width="100%" style="display: block; margin: auto;" /></p>
+<p>This will take you to a website with a list of what are called <a href="https://cran.r-project.org/mirrors.html">mirrors</a>, which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn’t closest to you, but it can improve download speeds for everyone overall if people use appropriate mirrors.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_11.png" alt="CRAN mirror list" width="100%" style="display: block; margin: auto;" /></p>
+<p>Once you click on one of the mirror links you will be taken to a new page to download R. For example, you could click on the Iowa state University mirror if you are located in the US somewhere.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_19.png" alt="Page to download R for computers with different operating systems, such as Mac or Windows" width="100%" style="display: block; margin: auto;" /></p>
+<p>You would want to click on the appropriate link for your computer. For example, if you have a Windows machine, click the link for Windows.</p>
+<p>This will take you to a new page to select the appropriate link to download R. For Mac users this might be the most recent version of R which will look like R and several numbers afterwards.</p>
+</details>
+<details>
+<summary>
+Click here for instructions on how to update R.
+</summary>
+<p>To update R, if you are using a Mac or Linux computer, you can follow the directions of installing R the first time.</p>
+<p>If you have a Windows computer, you can use the following code to update your version of R within an R session. You can start an R session by typing <code>R</code> into Command Prompt window. If you have not used the Command Prompt window, <a href="https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/">read instructions here</a> about how to find it. After opening your Command Prompt window, copy and paste this code and press enter.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="a-tour-of-rstudio.html#cb1-1" tabindex="-1"></a><span class="co"># Check for the install r package and install if needed</span></span>
+<span id="cb1-2"><a href="a-tour-of-rstudio.html#cb1-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(installr)) {</span>
+<span id="cb1-3"><a href="a-tour-of-rstudio.html#cb1-3" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;installr&quot;</span>);</span>
+<span id="cb1-4"><a href="a-tour-of-rstudio.html#cb1-4" tabindex="-1"></a>  <span class="fu">require</span>(installr) <span class="co">#load installr pakage</span></span>
+<span id="cb1-5"><a href="a-tour-of-rstudio.html#cb1-5" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="a-tour-of-rstudio.html#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="a-tour-of-rstudio.html#cb1-7" tabindex="-1"></a><span class="fu">updateR</span>()<span class="co">#update your version of R</span></span></code></pre></div>
+</details>
+</div>
+<div id="installing-rstudio-1" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Installing RStudio<a href="a-tour-of-rstudio.html#installing-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Next we want to download and install RStudio. You can do so by going to the Posit website at this link: <a href="https://posit.co/" class="uri">https://posit.co/</a>. Note that you can likely accomplish all you need with the completely free option.</p>
+<div class="notice">
+<p>Posit is a software company that used to be called RStudio that develops open-source data science tools and packages. It is a Public Benefit Corporation (PBC) and a Certified B Corporation®, so it is committed to creating software that benefits the public. See <a href="https://posit.co/about/pbc-report/">here</a> for more information.</p>
+</div>
+<details>
+<summary>
+Click here for instructions on how to download and install RStudio.
+</summary>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_30.png" alt="The Posit website for downloading RStudio" width="100%" style="display: block; margin: auto;" />
+Note that the website may look slightly different when you visit it.</p>
+<p>There should be a download button on the upper right corner. This will take you to another page to choose if you want the free or paid version of RStudio. The free version should be enough for most users.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png" alt="The free version of RStudio is likely all you need." width="100%" style="display: block; margin: auto;" /></p>
+<p>Then you need to scroll down to select the appropriate download for your computer based on what kind of computer you have.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png" alt="Select the appropriate link to download RStudio according to the type of computer you have." width="100%" style="display: block; margin: auto;" /></p>
+<p>Note that by the time you read this the versions will likely have changed and there may be slight variations in how the website appears.</p>
+<p>You should then be directed by your computer on how to install RStudio once the download is complete. You may need to go to your downloads first and click on the RStudio file that was downloaded to start this process.</p>
+<p>For Mac users, note that you will need to move the RStudio icon into the icon that looks like the Applications folder.</p>
+<p>Drag and drop RStudio into the Applications folder to install on a Mac</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_58.png" alt="Drag and drop RStudio into the Applications folder to install on a Mac." width="100%" style="display: block; margin: auto;" /></p>
+<p>See<a href="https://jhudatascience.org/intro_to_r/modules/RStudio/RStudio.html#1">here</a> for more information on the process of installing RStudio.</p>
+<p>If you run into trouble, check the following:</p>
+<ul>
+<li>Did you install the correct version of software for your operating system?
+<ul>
+<li>Check that you installed the version right for your type of system, (<code>macOS</code> vs <code>Windows</code> for example)</li>
+<li>Check if maybe you need a different version for the age of your system. First check that your version of R was right - there are multiple versions for different <code>macOS</code> systems for example. You can check the apple icon (top left corner) and “About This Mac” to learn more about the age of your operating system.</li>
+</ul></li>
+</ul>
+<p>If your operating system is older (and you can’t update it), try installing progressively older versions found <a href="https://www.rstudio.com/products/rstudio/older-versions/">here</a> until it works. You will know if it worked if you try to open RStudio and you see an interface without a message about things going poorly. Here you can see an <a href="https://community.rstudio.com/t/rstudio-desktop-crashes-on-startup-with-library-not-loaded/130296">example</a> of this.</p>
+</details>
+</div>
+<div id="updating-rstudio" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Updating RStudio<a href="a-tour-of-rstudio.html#updating-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It is also a good idea to keep RStudio up-to-date. New features become available as the Posit team works on developing RStudio. So if you already have RStudio, you might want to check to see if your version is up-to-date.</p>
+<p>To check for updates you can go to the <code>Help</code> menu at the top of RStudio and then click on <code>Check for Updates</code>.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_50.png" alt="Check for updates for RStudio in the Help menu of RStudio." width="100%" style="display: block; margin: auto;" /></p>
+<p>If you don’t need to update RStudio, when you check with this method RStudio will let you know that you are using the newest version.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_557.png" alt="An example of the popup that shows you that you are using the newest version of RStudio." width="100%" style="display: block; margin: auto;" /></p>
+<p>With recent versions RStudio will also give you a popup to let you know that you could update.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_563.png" alt="Popup indicating that you could update RStudio." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="navigating-rstudio" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Navigating RStudio<a href="a-tour-of-rstudio.html#navigating-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that you hopefully have RStudio running on your machine, we will walk you through some of the major features that can really help you with your data analyses.</p>
+<div id="default-layout" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Default Layout<a href="a-tour-of-rstudio.html#default-layout" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First it is important to be familiar with the layout. When you first open RStudio, you will see 3 panes.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_67.png" alt="When RStudio is first opened you will see 3 panes" width="100%" style="display: block; margin: auto;" /></p>
+<details>
+<summary>
+If your RStudio looks different click here.
+</summary>
+<p>Click on the top menu of your RStudio - click where it says <code>Edit</code> –&gt; <code>Preferences</code> –&gt; <code>Pane Layout</code>.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_0.png" alt="Select Edit and then Preferences to get to the menu about pane layout." width="100%" style="display: block; margin: auto;" /></p>
+<p>The Pane Layout menu enables you to change the layout. The image below shows the default settings. Note that VCS may not appear if you are not using a version control system. More on that to come in later chapters!</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_5.png" alt="The Pane Layout menu allows you to modify the layout of RStudio. This shows the default settings with Source on the top left, Console on the bottom left, Environment, History, Connections, and Build on the top right, and Files, Plots, Packages, Help, VCS (version control) on the bottom right." width="100%" style="display: block; margin: auto;" /></p>
+</details>
+<p>The pane on the left (labeled “Pane 1” in the image) is where we can work on code interactively. There are two tabs here. The Terminal tab and the Console tab. The Terminal tab is for interacting with the computer outside of R. Whereas the Console tab is for interacting with R. We’ll focus on the Console tab for now.</p>
+<p>The Console tab is where we can ‘talk’ to R and interactively work on our code. The code we write here will <strong>not be saved</strong> to a script or file, but instead the code will immediately be performed when we click <code>enter</code> and any resulting output that can be printed will be shown.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_81.png" alt="The pane on the left is where we write and test code." width="100%" style="display: block; margin: auto;" /></p>
+<p>The pane on the top right (labeled “Pane 2” in the image) is where we can see what objects we have created and are actively in memory (meaning they can be used at that time) in what is called the “Environment”.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_95.png" alt="The pane on the upper right is where we see our objects." width="100%" style="display: block; margin: auto;" /></p>
+<p>The pane on the bottom right (labeled “Pane 3” in the image) is where we can find files on computer (the “Files” tab), see plots (the “Plots tab), and get coding help (the”Help tab).</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_109.png" alt="The pane on the lower right is where we see our files, plots, and where we get help." width="100%" style="display: block; margin: auto;" /></p>
+<p>While there are other tabs, don’t worry about those for now. We will go deeper into RStudio as we continue.</p>
+<p>Let’s try some examples to get started.</p>
+<p>As an example, we could type in the code <code>head(iris)</code> into Pane 1 in the Console and press the <code>enter</code> key to see the code execute and preview.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_142.png" alt="In Pane one, in our Console window, we can run code interactively. Here we are running the code head(iris) which prints out a data set about flowers for us to look at. " width="100%" style="display: block; margin: auto;" /></p>
+<p>Now let’s try another example where instead of just printing some data to the screen we assign a data object that will show up in the environment using the <code>&lt;-</code> notation. This is useful in a situation if we want to modify the iris data somehow but want to keep the original version.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_4.png" alt="If you create an object in RStudio, it will show up in the environment pane." width="100%" style="display: block; margin: auto;" /></p>
+<div class="dictionary">
+<ul>
+<li><strong>Console</strong> - The window that allows us to interactively give R code and press enter to run it but <strong>not save</strong> the code.</li>
+<li><strong>Environment</strong> - R’s working memory of objects you have assigned – need to tell R to remember using <code>&lt;-</code></li>
+<li><strong>Assignment</strong> - How we tell R to remember something using the <code>&lt;-</code> characters.</li>
+</ul>
+</div>
+</div>
+<div id="the-hidden-pane" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> The Hidden Pane<a href="a-tour-of-rstudio.html#the-hidden-pane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There is a hidden fourth pane. This is only accessible when we start to make a script or a report with our code. This is where we recommend that you write your code - as this is where we will save our code! If you get used to writing most of your code in the Console, you might forget what code actually worked. Additionally, as we are trying to make our code reproducible, it’s a good idea to start saving it as we write it!</p>
+<p>To open this let’s make what is called an R Markdown file by go to <code>File</code> –&gt; <code>New File</code> –&gt;<code>R Markdown</code> in the upper menu of RStudio.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_127.png" alt="Creating an R Markdown file in RStudio by selecting File, New File, R Markdown." width="100%" style="display: block; margin: auto;" /></p>
+<p>Creating an R Markdown file starts with a pop-up and you can simply click the OK button.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_169.png" alt="Creating an R Markdown file starts with a pop-up and you can simply click the OK button." width="100%" style="display: block; margin: auto;" /></p>
+<p>The new pane will open on the upper left.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_176.png" alt="The new pane will open on the upper left." width="100%" style="display: block; margin: auto;" /></p>
+<p>This pane is where we can write code that we keep in files like scripts or reports (in files like R Markdowns).</p>
+<p>Thus the lower left pane is where we can test out code (although we don’t recommend it), but the top pane is where we can write code that we wish to save (and also test it!). Since it can be easy to forget to save code, we suggest that instead you use a special file type that will allow you to test code that you save. We will discuss that in the next section.</p>
+<p>In order to make our analysis truly reproducible we will need to have <strong>every single step</strong> written down. This is why using the Console is great for testing things, but not so great for actually performing your analysis.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_186.png" alt="The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test." width="100%" style="display: block; margin: auto;" /></p>
+<p>The top pane where we save code is called the Editor. The lower pane for quick tests of code is called the Console.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_198.png" alt="The Editor in the top left, also called source, is where we write code we want to save. The lower left is the Console where we do quick tests of our code." width="100%" style="display: block; margin: auto;" /></p>
+<p>The Editor pane (top left) will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.</p>
+<p>R Markdown files allow you to have the code for your analysis, the output from the analysis (so plots and stats, etc) and your written thoughts and rationale for your analysis all in one place! This makes it a snap to share your analysis with others in a reproducible way!</p>
+<div class="dictionary">
+<ul>
+<li><strong>Console</strong> - for quickly testing code, the code is not saved. This is by default the lower left pane when a file is open in RStudio. Testing of code here does not have some features that testing in an R Markdown file has so we don’t generally recommend it.</li>
+<li><strong>Editor</strong> - for writing code that you wish to save.</li>
+<li><strong>R Markdown files</strong> - files that allow you to save your code that allow for more features than a simple script.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="find-errors" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Find Errors<a href="a-tour-of-rstudio.html#find-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Another nice thing about RStudio, is that it can help you troubleshoot your code.</p>
+<p>It helps to identify common coding mistakes. It will indicate a potential problem by showing a red circle with an “x” in it on the far left of the Editor near the line of code that it thinks is problematic. Note that sometimes errors may occur earlier in your code than where RStudio starts to notice an issue.</p>
+<p>Here is an example of such a case. Here we have an extra parentheses in our code.</p>
+<p><img src="04-rstudio-tour_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g219ee06dc74_531_0.png" alt="An example of RStudio showing a potential coding error. Hovering over the red circle with the x near the line of code that it sees an issue with, will give a message about what might be wrong." width="100%" style="display: block; margin: auto;" /></p>
+<p>Note that just because RStudio thinks your code is free of errors, it does not necessarily mean that your code is correct. RStudio can detect certain syntax issues, but it does not detect all types of errors. However, you can probably see how it could be very helpful!</p>
+</div>
+<div id="keyboard-shortcuts" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Keyboard Shortcuts<a href="a-tour-of-rstudio.html#keyboard-shortcuts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are lots of useful keyboard shortcuts for RStudio that can save you time.</p>
+<p>Check out this <a href="https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts">link</a> if you are interested!</p>
+<p>The most helpful shortcut, is for testing a selection of code in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows &amp; Linux computers or Cmd+Return on Mac computers.</p>
+</div>
+<div id="conclusion-2" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Conclusion<a href="a-tour-of-rstudio.html#conclusion-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In summary…</p>
+<ul>
+<li>RStudio can help you write code in R and work with files on your computer.</li>
+<li>There are 3 main panes when you first open RStudio, to see a fourth you need to create a new file like an R Markdown file.</li>
+<li>When we open a file like an R Markdown file, the top left pane called the Editor is for writing code we wish to save.</li>
+<li>After opening a file, the lower left pane contains the Console which is where we test code.</li>
+<li>R Markdown files are files that create reports of an analysis that can demonstrate more about what you did than a simple script and test to make sure that your code works.</li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="components-of-a-reproducible-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="setting-up-your-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 R for Reproducibility | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 2 R for Reproducibility | Tools for Reproducible Workflows in R" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 R for Reproducibility | Tools for Reproducible Workflows in R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 R for Reproducibility | Tools for Reproducible Workflows in R" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="components-of-a-reproducible-analysis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://hutchdatascience.org/" target="_blank"><img src="assets/RR25.png" style="width: 80%; padding-left: 34px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.3</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html"><i class="fa fa-check"></i><b>2</b> R for Reproducibility</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#why-r"><i class="fa fa-check"></i><b>2.2</b> Why R</a></li>
+<li class="chapter" data-level="2.3" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#it-is-free-and-open-source"><i class="fa fa-check"></i><b>2.3</b> It is free and open source</a></li>
+<li class="chapter" data-level="2.4" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#the-community"><i class="fa fa-check"></i><b>2.4</b> The community</a></li>
+<li class="chapter" data-level="2.5" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#designed-for-data"><i class="fa fa-check"></i><b>2.5</b> Designed for data</a></li>
+<li class="chapter" data-level="2.6" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#conclusion"><i class="fa fa-check"></i><b>2.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html"><i class="fa fa-check"></i><b>3</b> Components of a reproducible analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#reproducibility-is-iterative-work"><i class="fa fa-check"></i><b>3.1</b> Reproducibility is iterative work</a></li>
+<li class="chapter" data-level="3.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#components-of-reproducibility"><i class="fa fa-check"></i><b>3.2</b> Components of reproducibility</a></li>
+<li class="chapter" data-level="3.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#transparent"><i class="fa fa-check"></i><b>3.3</b> Transparent</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#open-source"><i class="fa fa-check"></i><b>3.3.1</b> Open source</a></li>
+<li class="chapter" data-level="3.3.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#data-is-publicly-available"><i class="fa fa-check"></i><b>3.3.2</b> Data is publicly available</a></li>
+<li class="chapter" data-level="3.3.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#readable-code"><i class="fa fa-check"></i><b>3.3.3</b> Readable code</a></li>
+<li class="chapter" data-level="3.3.4" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#well-documented"><i class="fa fa-check"></i><b>3.3.4</b> Well-documented</a></li>
+<li class="chapter" data-level="3.3.5" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#version-controlled"><i class="fa fa-check"></i><b>3.3.5</b> Version controlled</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#consistent"><i class="fa fa-check"></i><b>3.4</b> Consistent</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#re-runs-consistently-and-easily"><i class="fa fa-check"></i><b>3.4.1</b> Re-runs consistently and easily</a></li>
+<li class="chapter" data-level="3.4.2" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#follows-a-code-style"><i class="fa fa-check"></i><b>3.4.2</b> Follows a code style</a></li>
+<li class="chapter" data-level="3.4.3" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#have-an-organizational-scheme"><i class="fa fa-check"></i><b>3.4.3</b> Have an organizational scheme</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#accessible"><i class="fa fa-check"></i><b>3.5</b> Accessible</a></li>
+<li class="chapter" data-level="3.6" data-path="components-of-a-reproducible-analysis.html"><a href="components-of-a-reproducible-analysis.html#conclusion-1"><i class="fa fa-check"></i><b>3.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html"><i class="fa fa-check"></i><b>4</b> A Tour of RStudio</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#why-use-rstudio"><i class="fa fa-check"></i><b>4.1</b> Why use RStudio?</a></li>
+<li class="chapter" data-level="4.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-rstudio"><i class="fa fa-check"></i><b>4.2</b> Installing RStudio</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-and-updating-r"><i class="fa fa-check"></i><b>4.2.1</b> Installing and Updating R</a></li>
+<li class="chapter" data-level="4.2.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#installing-rstudio-1"><i class="fa fa-check"></i><b>4.2.2</b> Installing RStudio</a></li>
+<li class="chapter" data-level="4.2.3" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#updating-rstudio"><i class="fa fa-check"></i><b>4.2.3</b> Updating RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#navigating-rstudio"><i class="fa fa-check"></i><b>4.3</b> Navigating RStudio</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#default-layout"><i class="fa fa-check"></i><b>4.3.1</b> Default Layout</a></li>
+<li class="chapter" data-level="4.3.2" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#the-hidden-pane"><i class="fa fa-check"></i><b>4.3.2</b> The Hidden Pane</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#find-errors"><i class="fa fa-check"></i><b>4.4</b> Find Errors</a></li>
+<li class="chapter" data-level="4.5" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#keyboard-shortcuts"><i class="fa fa-check"></i><b>4.5</b> Keyboard Shortcuts</a></li>
+<li class="chapter" data-level="4.6" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#conclusion-2"><i class="fa fa-check"></i><b>4.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>5</b> Setting up your project</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#understand-why-project-organization-is-key-to-reproducible-analyses"><i class="fa fa-check"></i><b>5.1</b> Understand why project organization is key to reproducible analyses</a></li>
+<li class="chapter" data-level="5.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#general-principles-of-project-organization"><i class="fa fa-check"></i><b>5.2</b> General principles of project organization</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#readmes"><i class="fa fa-check"></i><b>5.2.1</b> READMEs!</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
+<li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#here-package"><i class="fa fa-check"></i><b>5.4.1</b> here package</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#rproj-files"><i class="fa fa-check"></i><b>5.4.2</b> RProj files</a></li>
+<li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
+<li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reproducible-reports.html"><a href="reproducible-reports.html"><i class="fa fa-check"></i><b>6</b> Reproducible Reports</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#notebook-reports-support-reproducibility"><i class="fa fa-check"></i><b>6.1</b> Notebook reports support reproducibility</a></li>
+<li class="chapter" data-level="6.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-or-quarto"><i class="fa fa-check"></i><b>6.2</b> R Markdown or Quarto?</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-pros"><i class="fa fa-check"></i><b>6.2.1</b> R Markdown Pros:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-cons"><i class="fa fa-check"></i><b>6.2.2</b> R Markdown Cons:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-pros"><i class="fa fa-check"></i><b>6.2.3</b> Quarto Pros:</a></li>
+<li class="chapter" data-level="6.2.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-cons"><i class="fa fa-check"></i><b>6.2.4</b> Quarto Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#getting-started-with-notebooks"><i class="fa fa-check"></i><b>6.3</b> Getting Started with notebooks</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#rendering-r-markdown"><i class="fa fa-check"></i><b>6.4</b> Rendering R Markdown</a></li>
+<li class="chapter" data-level="6.5" data-path="reproducible-reports.html"><a href="reproducible-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>6.5</b> Writing code in R Markdown files</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#the-yaml"><i class="fa fa-check"></i><b>6.5.1</b> The YAML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-chunks"><i class="fa fa-check"></i><b>6.5.2</b> Code chunks</a></li>
+<li class="chapter" data-level="6.5.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-chunks"><i class="fa fa-check"></i><b>6.5.3</b> Running chunks</a></li>
+<li class="chapter" data-level="6.5.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>6.5.4</b> Running previous chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="reproducible-reports.html"><a href="reproducible-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>6.6</b> Cleaning the environment</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-reports.html"><a href="reproducible-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>6.7</b> Restarting R Session</a></li>
+<li class="chapter" data-level="6.8" data-path="reproducible-reports.html"><a href="reproducible-reports.html#chunk-setup"><i class="fa fa-check"></i><b>6.8</b> Chunk setup</a></li>
+<li class="chapter" data-level="6.9" data-path="reproducible-reports.html"><a href="reproducible-reports.html#finding-chunks"><i class="fa fa-check"></i><b>6.9</b> Finding chunks</a></li>
+<li class="chapter" data-level="6.10" data-path="reproducible-reports.html"><a href="reproducible-reports.html#add-chunks"><i class="fa fa-check"></i><b>6.10</b> Add chunks</a></li>
+<li class="chapter" data-level="6.11" data-path="reproducible-reports.html"><a href="reproducible-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>6.11</b> More on running chunks</a></li>
+<li class="chapter" data-level="6.12" data-path="reproducible-reports.html"><a href="reproducible-reports.html#text-and-headers"><i class="fa fa-check"></i><b>6.12</b> Text and headers</a>
+<ul>
+<li class="chapter" data-level="6.12.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#headers"><i class="fa fa-check"></i><b>6.12.1</b> Headers</a></li>
+<li class="chapter" data-level="6.12.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>6.12.2</b> Bold and Italics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.13" data-path="reproducible-reports.html"><a href="reproducible-reports.html#additional-features"><i class="fa fa-check"></i><b>6.13</b> Additional Features</a>
+<ul>
+<li class="chapter" data-level="6.13.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#aesthetics"><i class="fa fa-check"></i><b>6.13.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="6.13.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#report-file-types"><i class="fa fa-check"></i><b>6.13.2</b> Report File Types</a></li>
+</ul></li>
+<li class="chapter" data-level="6.14" data-path="reproducible-reports.html"><a href="reproducible-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>6.14</b> Keyboard Shortcuts</a>
+<ul>
+<li class="chapter" data-level="6.14.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#table-of-contents"><i class="fa fa-check"></i><b>6.14.1</b> Table of Contents</a></li>
+<li class="chapter" data-level="6.14.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-folding"><i class="fa fa-check"></i><b>6.14.2</b> Code Folding</a></li>
+<li class="chapter" data-level="6.14.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-download"><i class="fa fa-check"></i><b>6.14.3</b> Code Download</a></li>
+<li class="chapter" data-level="6.14.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#automatic-date"><i class="fa fa-check"></i><b>6.14.4</b> Automatic Date</a></li>
+</ul></li>
+<li class="chapter" data-level="6.15" data-path="reproducible-reports.html"><a href="reproducible-reports.html#conclusion-3"><i class="fa fa-check"></i><b>6.15</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>7.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="reproducible-code.html"><a href="reproducible-code.html#tips-for-choosing-packages-to-use"><i class="fa fa-check"></i><b>7.1.1</b> Tips for choosing packages to use:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="reproducible-code.html"><a href="reproducible-code.html#the-importance-of-iterative-work"><i class="fa fa-check"></i><b>7.2</b> The importance of iterative work</a></li>
+<li class="chapter" data-level="7.3" data-path="reproducible-code.html"><a href="reproducible-code.html#aspects-of-reproducible-code"><i class="fa fa-check"></i><b>7.3</b> Aspects of Reproducible code</a></li>
+<li class="chapter" data-level="7.4" data-path="reproducible-code.html"><a href="reproducible-code.html#readable"><i class="fa fa-check"></i><b>7.4</b> Readable</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="reproducible-code.html"><a href="reproducible-code.html#well-documented-1"><i class="fa fa-check"></i><b>7.4.1</b> Well-documented</a></li>
+<li class="chapter" data-level="7.4.2" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-a-code-style-1"><i class="fa fa-check"></i><b>7.4.2</b> Follows a code style</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="reproducible-code.html"><a href="reproducible-code.html#efficient"><i class="fa fa-check"></i><b>7.5</b> Efficient</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="reproducible-code.html"><a href="reproducible-code.html#doesnt-use-up-more-computational-resources-than-necessary"><i class="fa fa-check"></i><b>7.5.1</b> Doesn’t use up more computational resources than necessary</a></li>
+<li class="chapter" data-level="7.5.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-dry-dont-repeat-yourself"><i class="fa fa-check"></i><b>7.5.2</b> Is DRY (don’t repeat yourself)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="reproducible-code.html"><a href="reproducible-code.html#consistent-1"><i class="fa fa-check"></i><b>7.6</b> Consistent</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="reproducible-code.html"><a href="reproducible-code.html#follows-conventions"><i class="fa fa-check"></i><b>7.6.1</b> Follows conventions</a></li>
+<li class="chapter" data-level="7.6.2" data-path="reproducible-code.html"><a href="reproducible-code.html#is-organized"><i class="fa fa-check"></i><b>7.6.2</b> Is organized</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="reproducible-code.html"><a href="reproducible-code.html#conclusion-4"><i class="fa fa-check"></i><b>7.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html"><i class="fa fa-check"></i><b>8</b> Using GitHub in a workflow</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#what-is-version-control"><i class="fa fa-check"></i><b>8.1</b> What is version control</a></li>
+<li class="chapter" data-level="8.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#whats-github"><i class="fa fa-check"></i><b>8.2</b> What’s GitHub?</a></li>
+<li class="chapter" data-level="8.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#github-workflow"><i class="fa fa-check"></i><b>8.3</b> GitHub Workflow</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#create-your-github-account"><i class="fa fa-check"></i><b>8.3.1</b> Create your GitHub account</a></li>
+<li class="chapter" data-level="8.3.2" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#creating-a-new-repository"><i class="fa fa-check"></i><b>8.3.2</b> Creating a new repository</a></li>
+<li class="chapter" data-level="8.3.3" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#setting-up-your-repository-locally"><i class="fa fa-check"></i><b>8.3.3</b> Setting up your repository locally</a></li>
+<li class="chapter" data-level="8.3.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#cloning-your-repository"><i class="fa fa-check"></i><b>8.3.4</b> Cloning your repository</a></li>
+<li class="chapter" data-level="8.3.5" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#opening-a-pr"><i class="fa fa-check"></i><b>8.3.5</b> Opening a PR</a></li>
+<li class="chapter" data-level="8.3.6" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#merging-a-pull-request"><i class="fa fa-check"></i><b>8.3.6</b> Merging a pull request</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="using-github-in-a-workflow.html"><a href="using-github-in-a-workflow.html#conclusion-5"><i class="fa fa-check"></i><b>8.4</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-1"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
+<li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
+<li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
+<li class="chapter" data-level="9.5" data-path="software-versions.html"><a href="software-versions.html#snapshots-with-renv"><i class="fa fa-check"></i><b>9.5</b> Snapshots with <code>renv</code></a></li>
+<li class="chapter" data-level="9.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>9.6</b> Containerization</a></li>
+<li class="chapter" data-level="9.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>9.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<p style="text-align:center;"> <a href=" https://stat.utexas.edu/"> and The University of Texas at Austin </a></p>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/W6Mg4rzuMK6Yk3Am8"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Reproducible Workflows in R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+
+
+
+<div class="hero-image-container">
+  <img class= "hero-image" src="assets/RR25_thin_main_image.png">
+</div>
+<div id="r-for-reproducibility" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> R for Reproducibility<a href="r-for-reproducibility.html#r-for-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-objectives" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Learning Objectives<a href="r-for-reproducibility.html#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before we begin to jump into additional tools that R can help us with to be work more efficiently and in a more reproducible manner, it is helpful to first discuss why we should consider R in the first place. After completing this section you will be able to:</p>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_0.png" alt="Learning objectives are to be able to: 1.Explain why R can be especially helpful for transparent and reproducibility data analyses, 2. Recognize that R has a very active and supportive community and locate access points to that community 3. Compare R to other similar statistical and data analysis tools and programming languages, 4.Describe the unique benefits of R" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="why-r" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Why R<a href="r-for-reproducibility.html#why-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_9.png" alt="Why R?" width="100%" style="display: block; margin: auto;" /></p>
+<p><a href="https://www.r-project.org/">R</a> is a <a href="https://en.wikipedia.org/wiki/Programming_language">programming language</a> for working with data, performing statistical analyses, and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand <span class="citation">(<a href="references.html#ref-r_2023"><span>“R (Programming Language)”</span> 2023</a>; <a href="references.html#ref-r_project"><span>“R: <span>The</span> <span>R</span> <span>Project</span> for <span>Statistical</span> <span>Computing</span>”</span></a>)</span>. Countless contributors have made R what it is today.</p>
+<p>There are some especially useful aspects about R that make it a great option for creating reproducible data analyses.</p>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_gcf1264c749_0_135.png" alt="Why is R useful for Reproducibility? 1.It is free and open source, 2. The community, 3. It is designed for data wrangling and stats" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="it-is-free-and-open-source" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> It is free and open source<a href="r-for-reproducibility.html#it-is-free-and-open-source" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first is that R is free and <a href="https://opensource.com/resources/what-open-source">open source</a>.</p>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_1_0.png" alt="Cartoon of parrot saying: What!? R is free!! That's awesome!" width="100%" style="display: block; margin: auto;" /></p>
+<p>The term <strong>open source</strong> means that the code is publicly available.
+Thus all of the code involved in creating R is actually publicly available! This enables users to check what code is used in a particular <strong>package</strong> (a set of code that allows you to do various things) so that they can modify or build upon the code if they would like to.</p>
+<p>In fact, many users create their own R <strong>packages</strong> to share their code with others. There are places such as the Comprehensive R Archive Network (<a href="https://cran.r-project.org/">CRAN</a>) and elsewhere that allow users to publish their own packages for others to use.</p>
+<div class="dictionary">
+<ul>
+<li><strong>programming language</strong> - A specified set of notations to tell a computer what to do</li>
+<li><strong>R</strong> - Programming language for working with data to perform statistical analyses and for creating plots and other graphics</li>
+<li><strong>open source</strong> - Code is publicly available</li>
+<li><strong>R package</strong> - A set of code that can be shared between users</li>
+</ul>
+</div>
+<p>Why are these aspects good for reproducibility?</p>
+<ul>
+<li>Since R is free, it is accessible to anyone. Therefore, anyone could run your code if you shared it with them, without them needing to buy software.</li>
+<li>Since R is open source, if you use packages from others, people can determine what underlying code your code used (if you tell them what version you used - more on that later!)</li>
+</ul>
+</div>
+<div id="the-community" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> The community<a href="r-for-reproducibility.html#the-community" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R has a very rich and active community!</p>
+<p>This makes it easier to reach out to others for help, find support, find tutorials, and more.</p>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_6.png" alt="Cartoon of parrot saying: The R community can support me to learn about R" width="100%" style="display: block; margin: auto;" /></p>
+<p>There are several R community groups that are especially helpful:</p>
+<ul>
+<li><a href="https://rladies.org/">R Ladies</a> - a support group that is not just for ladies, but is open to anyone who wants to improve their R skills! There are local chapters in many large cities that often have in-person meetings.</li>
+<li>There are lots of useful resources, such as the <a href="https://r4ds.had.co.nz/">R for Data Science book</a> (written by two developers at Posit (formally called RStudio) which develops lots of core R packages), resources and online courses from the <a href="https://jhudatascience.org/courses.html">Johns Hopkins Data Science Lab</a> including <a href="https://www.opencasestudies.org/">Open Case Studies</a>, resources and workshops from <a href="https://datacarpentry.org/">Data Carpentry</a>, <a href="https://www.dataquest.io/v2/">Dataquest</a>, <a href="https://datatrail-jhu.github.io/DataTrail/">DataTrail</a> and more!</li>
+</ul>
+<p>See this <a href="https://jhudatascience.org/intro_to_r/resources.html">link</a> for more R resources.</p>
+<p>Why is this rich community good for reproducibility?</p>
+<ul>
+<li>Overall your code has a better chance of being more accessible than if it were written in a language that is not open source or that has limited support.</li>
+<li>You can also find support to make sure your code does what you want it to, as well as support to make your code as reproducible as possible.</li>
+</ul>
+</div>
+<div id="designed-for-data" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Designed for data<a href="r-for-reproducibility.html#designed-for-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R is a statistical programming language, meaning it was designed to help you analyze data. It is the main focus of the language. This is one of the major advantages of using R over other programming languages that have more general purposes.</p>
+<p>Because of this many people have designed useful packages that are especially relevant to:</p>
+<ol style="list-style-type: decimal">
+<li>Dealing with messy data in a systematic and reproducible way to get it into a state that is useful for data analysis</li>
+<li>Producing statistical analysis of data</li>
+<li>Creating effective plots of data</li>
+</ol>
+<p>Although other options like <a href="https://www.ibm.com/products/spss-statistics">SPSS</a> and <a href="https://www.sas.com/">SAS</a> (which are not free!) can also be helpful for statistical analysis, R is especially powerful at getting messy data ready to analyze and for creating useful plots to represent patterns in data. Conveniently, R can do all of these steps in a data project and does not require users to switch between different programs to perform these tasks. R also helps create reports that can demonstrate to collaborators and others exactly how analysis was performed, aiding in the transparency of how the data was used from start to finish.</p>
+<p>R can also import data from many different sources that other statistical software can’t handle (including scraping data from websites or <a href="https://www.adobe.com/acrobat/about-adobe-pdf.html">PDFs</a>. This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see <a href="https://www.opencasestudies.org/">Open Case Studies</a> for more guidance on importing many different kinds of data.</p>
+<p><img src="resources/images/02-why-R_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_78.png" alt="I created errors copying my data into Excel and spent hours figuring it out later! I’m glad R can help!" width="100%" style="display: block; margin: auto;" /></p>
+<p>Why are these design features especially helpful for creating reproducible analyses?</p>
+<ol style="list-style-type: decimal">
+<li>It enables users to work with messy data and get it ready for analysis, as opposed to requiring users to use other programs. The <code>tidyverse</code> a suite of very helpful packages has many data wrangling packages that are especially intuitive for others to read and understand your code.</li>
+<li>Users can create effective plots using the same program as for data prep and analysis. The <code>ggplot2</code> package is famous for making really effective and customizable plots.</li>
+<li>It helps create reports that can show the entire data analysis process from importing the data to making plots. <code>R Markdown</code> reports are very helpful for this.</li>
+<li>It is easier to import data closer to the original source, rather than converting files or copy and pasting data, which can result in accidental modifications of the data.</li>
+</ol>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Conclusion<a href="r-for-reproducibility.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In summary, R can be especially useful if you want to make your data analyses more transparent and reproducible for the following reasons:</p>
+<ol style="list-style-type: decimal">
+<li>It is free and open source, meaning that code that you might incorporate in your analyses is accessible to anyone. Secondly, others can use your code without needing to buy software.</li>
+<li>There is a rich R community that can help you make the most out of your code and learn how to write your code in a more reproducible manner.</li>
+<li>R is particularly powerful for preparing data for analysis and for creating visual representations of data. Beyond being free, these unique benefits make R a particularly good statistical tool.</li>
+<li>R is especially designed to analyze data and for the entirety of the process, which makes it great for creating transparent information about how you actually worked with data from start to finish.</li>
+</ol>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="components-of-a-reproducible-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
