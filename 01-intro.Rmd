@@ -27,6 +27,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Curriculum  
 
+This course will cover organization practices, coding practices, tools, and concepts for making your data analyzes more reproducible in R. 
+
+We will cover important topics such as version control to track changes in documents overtime, coding practices to make your code more transparent and to test your code, and methods for sharing your code and data in efficient and clear ways. 
+
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Concepts discussed in the Tools for Reproducible Workflows in R course: Why R is a great tool for reproducibility, major practices involved in reproducibility and methods to organize projects, how to use tools in RStudio to make your work more reproducible, How to make reproducible RMarkdown and Quarto reports, code practices to make your code more transparent, version control with GitHub to track changes overtime and collaborate with others on projects, how to be transparent about software versions, how to share data and code publicly"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_101_33")
 ```
