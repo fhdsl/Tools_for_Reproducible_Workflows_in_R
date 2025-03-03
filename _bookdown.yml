@@ -15,7 +15,7 @@ rmd_files: ["index.Rmd",
             #"10-sharing-data.Rmd",
             #"11-functions.Rmd",
             #"12-project-maintenance.Rmd",
-            #"13-collabs.Rmd",
+            "13-collabs.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
