@@ -1,0 +1,13 @@
+url	chapt_title	img_path
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/index.html	About this Course	resources/chapt_screen_images/index.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/introduction.html	1 Introduction	resources/chapt_screen_images/introduction.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/r-for-reproducibility.html	2 R for Reproducibility	resources/chapt_screen_images/r-for-reproducibility.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/components-of-a-reproducible-analysis.html	3 Components of a reproducible analysis	resources/chapt_screen_images/components-of-a-reproducible-analysis.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/a-tour-of-rstudio.html	4 A Tour of RStudio	resources/chapt_screen_images/a-tour-of-rstudio.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/setting-up-your-project.html	5 Setting up your project	resources/chapt_screen_images/setting-up-your-project.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/reproducible-reports.html	6 Reproducible Reports	resources/chapt_screen_images/reproducible-reports.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/reproducible-code.html	7 Reproducible Code	resources/chapt_screen_images/reproducible-code.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html	8 Using GitHub in a workflow	resources/chapt_screen_images/using-github-in-a-workflow.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/software-versions.html	9 Software versions	resources/chapt_screen_images/software-versions.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/about-the-authors.html	About the Authors	resources/chapt_screen_images/about-the-authors.png
+https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/references.html	10 References	resources/chapt_screen_images/references.png
