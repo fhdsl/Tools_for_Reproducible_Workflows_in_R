@@ -8,3 +8,121 @@ ottrpal::set_knitr_image_path()
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_58")
 ```
+
+## Understand best practices for maintaining projects
+
+Many R projects are not really finished, they are either maintained long term or they deprecate. Many folks have many R projects over time which means keeping all your R projects maintained could easily become a time consuming endeavor!
+
+In order to keep maintenance a priority without it using up all your time, we have a few tips to discuss. These tips will help you ease the burden of maintenance and lead to a healthier R project long term.
+
+Building some of the infrastructure we will describe will take a bit more time upfront, but will save you time long term.
+
+1. Have unit testing with `testthat`
+2. Use continuous deployment / continuous integration (CI/CD) principles
+
+## What is Unit Testing?
+
+One of the most comprehensive methods for making sure your code works is building tests. Unit testing can be really straightforward to build using the [`testthat` package](https://testthat.r-lib.org/). `testhat` works with the `usethis` R package so you can start by installing both of those.
+
+```
+install.packages(c("usethis", "testthat"))
+```
+
+Then you can create your first test:
+
+```
+usethis::use_test("new_test")
+```
+
+This will open up a page that looks like this:
+
+```
+test_that("multiplication works", {
+  expect_equal(2 * 2, 4)
+})
+```
+
+From this chapter:
+
+> - A test file holds one or more test_that() tests.
+> - Each test describes what it’s testing: e.g. “multiplication works”.
+> - Each test has one or more expectations: e.g. expect_equal(2 * 2, 4).
+
+A key to unit testing is having a proper test for *every piece of functionality you have written*.
+
+To read more about the details of testing we [recommend this book chapter](https://r-pkgs.org/testing-basics.html).
+
+You can run all your tests using `devtools::test()` or by setting up handy automation that will run it for you. We will discuss that now!
+
+## What is CI/CD?
+
+At the core of CI/CD is using automation to boost the reproducibility of your work!
+
+Robots are much better at repetitive work. In other words, your human collaborator is great at many things but even your most reliable collaborator will not be as punctual as a robot who is programmed to do the job.
+
+Let's bring this into the terms of a very common story for science. Let's say you are a researcher who submitted a manuscript and a reviewer comes back and asks you to re run the analysis with a minor tweak; perhaps a parameter change.
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_812")
+```
+
+If you developed your analysis without using reproducibility aiding practices and without automation, it is very likely that this seemingly simple task could take a lot of your time and brain power. Because while you don't think anything on your computer changed since you ran this analysis 6 months ago, your computing environment and the software it uses has been changing the entire time!
+
+This kind of simple "this should be easy" situation can easily devolve into a huge rabbit hole -- when you thought this analysis was basically wrapped up.
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_1533")
+```
+
+But, if you had been using the principles of CI/CD and reproducibility you may have a better chance that your analysis should still run reliably. And if it doesn't re-run reliably you will have more runs and set up that you'll be able to pull from to pinpoint where the bug is in your analysis re-run that is keeping it from running.
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_1947")
+```
+
+By having automation keep tabs on your development, you will be less likely to be blind sided by bugs in a situation where you need to re-run your analysis (or adapt it for a new analysis!)
+
+## Continuous integration / Continuous deployment
+
+Before we discuss the concept of Continuous integration / Continuous deployment (often abbreviated CI/CD), let's use an analogy.
+
+
+```{r, fig.alt = "You're a construction manager, should you. Check that your construction plans are good and meet safety and engineering standards as you build it? OR Build the entire building without consulting anyone and only have them check these things after you are done and it's basically a demo job if you want to fix it?", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_374")
+```
+
+Obviously we are getting at here, that generally its a good idea to check work along the way instead of waiting until something is completely finished to test it.
+
+Continuous Integration / Continuous Deployment then is a manner of working that means we will have changes checked as they are being integrated and before the changes are deployed. This allows for continuous monitoring of the project and hopefully early catching of bugs!
+
+Bugs/mistakes are an unavoidable part of software development because software developers and researchers are generally humans and humans make mistakes!
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_537")
+```
+
+Let's assume over the course of developing a project, bugs are introduced at a certain rate.
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_567")
+```
+
+Without using CI/CD you may find yourself trying to fix many bugs at once! This will make the bugs harder to isolate and harder to fix and pinpoint. The amount of time it will take to fix 3 bugs at once may be exponentially higher than if you caught these bugs one at a time. Additionally, the longer amount of time that goes on before you catch a bug, it may be more likely it will get accidentally incorporated into your published results -- this will be a lot more work for you and others to rectify.
+
+However with CI/CD you will likely catch these bugs earlier and have an easier time fixing them before they truly run amock! A good continuous integration / continuous deployment pipeline will help you identify these bugs early and save time and stress!
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_612")
+```
+
+This is not only true for classic "my script won't run" bugs but also "silent" bugs -- bugs where the analysis still ran to completion but perhaps the results were slightly different.
+
+```{r, out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1x0Cnk2Wcsg8HYkmXnXo_0PxmYCxAwzVrUQzb8DUDvTA/edit#slide=id.g286f0c8db1a_0_33")
+```
+
+### Getting started with GitHub Actions
+
+There are lots of ready made GitHub Actions for use with R code. Take a look at the usethis R package library https://usethis.r-lib.org/reference/github_actions.html
+
+Some packages may need some tweaking to get them to work for your project. To learn more about [GitHub Actions we recommend this course](https://hutchdatascience.org/GitHub_Automation_for_Scientists/).
