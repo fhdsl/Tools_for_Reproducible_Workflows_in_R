@@ -275,7 +275,9 @@ library(tidyverse)
 my_data <- read_delim(here("processed-data/project-name-quantile-normalized.tsv"))
 ```
 
-In this code we are loading the `here` package and the `tidyverse` package. We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path suppled from there.
+In this code we are loading the `here` package and the `tidyverse` package (assuming that we have already installed these packages using the  `install.packages()` command. 
+
+We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path suppled from there.
 
 Now if someone were to send all the project files to someone else, they could run this code without any adjustments. 
 
@@ -284,13 +286,30 @@ Now if someone were to send all the project files to someone else, they could ru
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g3179c1a6897_0_10")
 ```
 
-
-
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
 ### ProjectTemplate
 
-http://projecttemplate.net/
+If you are interested in doing more advanced project organization and automatic running of code and testing, you could consider using the [`ProjectTemplate` package](http://projecttemplate.net/). 
+
+This is not to be confused with R projects, you would still need to create an R project using this package, or you can specify using commands with this package to also create an R project.
+
+However, using `ProjectTemplate` will create a directory structure to help you stay organized.
+
+Running the `create.project()` command, which will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a Readme file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
+
+If you also add a `rstudio.project = TRUE`, this will create a new RStudio project as well.
+
+```{r, eval = FALSE}
+library(ProjectTemplate)
+create.project(rstudio.project = TRUE)
+```
+
+
+You can use this package to help you create consistent directory structures across projects and to not forget making Readme files. 
+
+You can also customize this structure as well using the [`create.template` function](http://projecttemplate.net/custom_templates.html).
+
 
 ### Scientific notebooks (Rmd or qmd)
 
