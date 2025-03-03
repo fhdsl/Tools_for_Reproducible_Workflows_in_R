@@ -39,9 +39,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Curriculum
 
-The course will the basics for getting started with configuring your projects for use of tools and practices to make your analyses more reproducible. 
+The course will cover the basics for getting started with configuring your projects for use of tools and practices to make your analyses more reproducible. 
 
-We will also point you to more advanced topics in other resources.
+We will also point to more advanced topics in other resources.
 
 ```{r learning_objectives, fig.align='center', echo = FALSE, fig.alt= "Overall Course Learning Objectives. This course will demonstrate how to: 1. Explain best practices for making analyses more reproducible and transparent, 2. Use special features in RStudio for efficiency and reproducibility, 3. Configure and organize projects for data analysis using the here package and the ProjectTemplate package, 4. Create reproducible reports using RMarkdown and Quarto, 5. Write custom functions for reuse of code, 6.Test functions with the testthat package, 7. Setup and use Git and GitHub to track changes over time.,  8. Share data and code publicly ",  out.width= "100%"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_1")
