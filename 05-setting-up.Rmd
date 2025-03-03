@@ -147,7 +147,6 @@ There are lots of ideas out there for organizational strategies. The key is find
 - [Reproducible R example](https://github.com/jhudsl/reproducible-r-example)
 - [Jenny Bryan's organizational strategies](https://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html) [@Bryan2021].
 - [Danielle Navarro's organizational strategies](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPiBteC2dRn95TX9YefYFyy) @Navarro2021
-- [Jenny Bryan on Project-oriented workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 - [Data Carpentry mini-course about organizing projects](https://datacarpentry.org/organization-genomics/) [@DataCarpentry2021].
 - [Andrew Severin's strategy for organization](https://bioinformaticsworkbook.org/projectManagement/Intro_projectManagement.html#gsc.tab=0) [@Severin2021].
 - [A BioStars thread where many individuals share their own organizational strategies](https://www.biostars.org/p/821/) [@Biostars2021].
@@ -204,7 +203,7 @@ An absolute path starts at the root directory of a file system. The root directo
 
 RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section). 
 
-When you create an R project, which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.RProj` file to your working directory.
+When you create an [R project](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/), which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.RProj` file to your working directory.
 
 ```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_159")
@@ -224,13 +223,9 @@ The `here` package is very useful for helping you set up file paths in a way tha
 
 The reason for her anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who recieves the file to adjust the path for their computer.
 
-The `here` package fixes this problem. Instead you can write a path relative to the Rproj file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the file relative to the other project files.)
+The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the Rproj file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the file relative to the other project files.)
 
-https://here.r-lib.org/
-
-https://www.tidyverse.org/blog/2017/12/workflow-vs-script/
-
-
+Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
 ### ProjectTemplate
 
