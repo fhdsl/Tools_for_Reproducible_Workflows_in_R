@@ -182,20 +182,37 @@ Note that a relative directory may be different between different apps: RStudio 
 
 Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt"} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_0")```
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_0")
+```
 
 
 In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the `ls` command, a file called `file.txt`.
 
 
+```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_40")
+```
 
-
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files."} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_40")```
 
 
 An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash `/` and is special in that it cannot be contained within other folders.
 
 ## Handy R Tools
+
+### RProj files
+
+RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section). 
+
+When you create an R project, which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.RProj` file to your working directory.
+
+```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_159")
+```
+ 
+
+
+https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html
 
 ### `here` package
 
@@ -213,9 +230,7 @@ https://here.r-lib.org/
 
 https://www.tidyverse.org/blog/2017/12/workflow-vs-script/
 
-### RProj files
 
-https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html
 
 ### ProjectTemplate
 
