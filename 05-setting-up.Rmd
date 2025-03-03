@@ -197,9 +197,17 @@ An absolute path starts at the root directory of a file system. The root directo
 
 ## Handy R Tools
 
-### here package
+### `here` package
+
+The `here` package is very useful for helping you set up file paths in a way that can make it easier for others to use your code.
+
+[Jenny Bryan](https://jennybryan.org/about/) who works for RStudio is famous in the R community for having strong feelings about this:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=twsrc%5Etfw">@JennyBryan</a> 😤😠🤯. Instead use projects + here::here() <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/GwxnHePL4n">pic.twitter.com/GwxnHePL4n</a></p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/940021008764846080?ref_src=twsrc%5Etfw">December 11, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+The reason for her anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who recieves the file to adjust the path for their computer.
+
+The `here` package fixes this problem. Instead you can write a path relative to the Rproj file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the file relative to the other project files.)
 
 https://here.r-lib.org/
 
