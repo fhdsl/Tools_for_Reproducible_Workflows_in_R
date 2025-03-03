@@ -71,7 +71,7 @@ You can take a look at this [template README](https://raw.githubusercontent.com/
 #### More about writing READMEs:
 
 - [How to write a good README file by Hillary Nyakundi](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-- [Make a README: because no one can read your mind yet](https://www.makeareadme.com/)
+- [Make a README: because no one can read your mind yet by Danny Guo](https://www.makeareadme.com/)
 
 #### Examples of good READMEs:
 
