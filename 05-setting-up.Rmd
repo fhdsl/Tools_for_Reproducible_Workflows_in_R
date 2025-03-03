@@ -242,9 +242,49 @@ The reason for Jenny's anger is that if you write file that starts with your own
 
 The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the `.Rproj` file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the files relative to the other project file.)
 
-One can implement this like so:
+One can do this by loading files like data using the `here` package with just the relative path from the .`Rproj` file. 
+
+For example, let's say we had our files organized like we did before, but now we have a `.Rproj` file called `myproj.Rproj`.
 
 ```
+project-name/
+├── run_analysis.sh
+├── 00-download-data.sh
+├── 01-make-heatmap.Rmd
+├── myproj.Rproj
+├── README.md
+├── plots/
+│   └── project-name-heatmap.png
+├── results/
+│   └── top_gene_results.tsv
+├── raw-data/
+│   ├── project-name-raw.tsv
+│   └── project-name-metadata.tsv
+├── processed-data/
+│   ├── project-name-quantile-normalized.tsv
+└── util/
+    ├── plotting-functions.R
+    └── data-wrangling-functions.R
+```
+
+If we wanted to use data from our `processed-data` directory in a file to make a plot, then we could use the following code:
+
+```{r, eval = FALSE}
+library(here)
+library(tidyverse)
+my_data <- read_delim(here("processed-data/project-name-quantile-normalized.tsv"))
+```
+
+In this code we are loading the `here` package and the `tidyverse` package. We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path suppled from there.
+
+Now if someone were to send all the project files to someone else, they could run this code without any adjustments. 
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Sharing project files can be much easier if you set up your project with file paths using the here package and create an R project. You can give your entire collection of files to someone else and they can start using your code directly without making changes to paths, as the paths will be relative to your project directory. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g3179c1a6897_0_10")
+```
+
+
 
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
