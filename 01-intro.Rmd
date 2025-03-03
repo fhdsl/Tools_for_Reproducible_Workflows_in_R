@@ -19,9 +19,18 @@ This course will help learners to use tools that will make their data analytic w
 
 This course is intended for people conducting data analyses at the level of a graduate student or higher. The course is designed so that the majority of the material is presented in a high-level manner that should be applicable to researchers working in a broad range of areas. The course is centered around the R programming language, a widely used statistical analysis software package. 
 
+
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "For individuals who: Are new to working in R or RStudio, are familiar with R but want to make their projects more organized, transparent, and reproducible, want to learn about making reproducible reports and want to track changes across projects overtime with GitHub"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_101_14")
+```
+
 ## Curriculum  
 
-The course covers...
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Concepts discussed in the Tools for Reproducible Workflows in R course: Why R is a great tool for reproducibility, major practices involved in reproducibility and methods to organize projects, how to use tools in RStudio to make your work more reproducible, How to make reproducible RMarkdown and Quarto reports, code practices to make your code more transparent, version control with GitHub to track changes overtime and collaborate with others on projects, how to be transparent about software versions, how to share data and code publicly"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_101_33")
+```
+
 
 
 ## Learning Objectives
