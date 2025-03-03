@@ -1,4 +1,4 @@
-# R Markdown Reports
+# Reproducible Reports
 
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
@@ -8,15 +8,15 @@ ottrpal::set_knitr_image_path()
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g20eecbcf66d_84_0")
 ```
 
-## Reports support reproducibility
+## Notebook reports support reproducibility
 
-Using notebooks help you to create supports that can more transparently show what you did for your analysis and it can help you to test that your code works as expected. Scripts allow you to save code, but they do not allow you to have the following additional benefits.
+Using notebooks can help you more transparently show what you did for your analysis.  They can also help you to test that your code works as expected. Scripts allow you to save code, but they do not allow you to have the following additional benefits.
 
-The following are reasons why R Markdown files help reproducibility:
+The following are reasons why notebooks help reproducibility:
 
-- They allow you to show and share your code and the output of your code in one place! (this can be done in several ways depending on what you want)
+- They allow you to show and share your code and the output of your code in one place! (This can be done in several ways depending on what you want.)
 - They allow you to test if your code works outside of what is active in your environment
-- They allow you to test sections and all previous sections of your code out to troubleshoot
+- They allow you to test sections and all previous sections of your code, which can help with troubleshooting
 - They help you understand what might be wrong with your code in smaller sections of code if you have an issue
 
 ## R Markdown or Quarto?
@@ -27,7 +27,7 @@ Both Qmd and Rmd files are both notebooks that have the benefits we've described
 
 R Markdown was the first R programming notebook on the scene, and has a lot of tools devoted to it because it has been around awhile. In 2022, [Posit released the Quarto notebook](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/). So Quarto has a lot of great new features but is still relatively new.
 
-Posit created Quarto with the idea of streamlining document making and allowing for more compatibility with languages that are not R. While R Markdown documents also (sort of) allow for other languages to be run in them, their ability to do this successfully is limited.
+Posit created Quarto with the idea of streamlining document making by allowing for more compatibility with languages beyond R. While R Markdown documents also somewhat allow for other languages, their ability to do this successfully is limited.
 
 ### R Markdown Pros:
 - Time tested, a lot of packages and resources built for it.
@@ -42,8 +42,8 @@ Posit created Quarto with the idea of streamlining document making and allowing 
 - Appears to be more streamlined/centralized and less need for a lot of extra packages to create other types of documents.
 
 ### Quarto Cons:
-- It is still quite new, and the community is still catching up to it. Though it appears to be built with backwards compatibility in mind.
-- Because it so new, there are still features they are continuing to build for it that R Markdown has that it may not just yet. At this point, these are mostly very fringe features, but it could be something an individual user is interested in.
+- It is still quite new, and the community is still catching up to it, although it appears to be built with backwards compatibility in mind.
+- Because it so new, there are still some features that are being developed for Quarto that R Markdown already supports. At this point, these are mostly features that would allow for customization.
 
 ## Getting Started with notebooks
 
@@ -159,7 +159,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to change the author section  where it says `"your name"` in the example if that was not by default want you wanted in your file.
+You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to you can also change the author section  where it says `"your name"` in the example.
 
 ### Code chunks
 
@@ -171,7 +171,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 The notation here means the following:
 
-- The three back ticks `"```"` indicate the barriers of where some code will be in between. This is what we call an R chunk.
+- The three back ticks `"```"` mark the boundaries of where code should be placed. This is what we call a code chunk.
 - The `{r}` indicates that we are going to write the code using R code.
 - Extra information can be added inside the curly bracket `{}` notation to give the chunk a name, in this case it is called `setup`.
 - The `include = FALSE` means that it will not show up in the rendered report.
@@ -227,7 +227,7 @@ You may also notice that there is another button to the left of the play button.
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g229ab7a949e_0_297")
 ```
 
-This is super helpful for reproducibility in terms of making sure that your code isn't working simply because you have something in your environment from code that you tested in the console but did not save.
+This is super helpful for reproducibility in terms of making sure that your code is working properly with all the necessary pieces. Sometimes code just works during an R session  (and not after) simply because it is relying on an object or code currently in our environment that is not saved in our notebook. For example, code that was tested in the console but not saved will not be run the next time we try to knit our R Markdown file.
 
 Issues can happen if you run a code chunk out of order or change the code in a chunk after running it previously. This can make you think that you have all the code that you need saved to obtain the result that you found, when in fact you do not.
 

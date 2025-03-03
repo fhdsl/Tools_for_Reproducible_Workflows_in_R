@@ -44,14 +44,14 @@ m) It helps others to be able to publish conclusions about our data
 m) It exposes personal identifiable information to the public
 
 {choose-answers: 4}
-? Which of the following is correct about this statement - if your data has PHI or PII you cannot make your analysis open source or reproducible.
+? Which of the following is correct about this statement - if your data has protected data that you cannot make your analysis open source or reproducible.
 
 C) These are not mutually exclusive goals! Some thoughtful planning and use of controlled access methods can ensure that all individuals' data are well protected!
 C) You can protect data and not share it, but share the code in a careful manner that does not expose details about the data.
 o) You can make your analysis reproducible but not open source
 o) You can make your analysis open source but not reproducible
 m) There are no methods that will allow you to share your methods and data in a safe way.
-m) Sharing your code is always unsafe when it comes to PHI or PII
+m) Sharing your code is always unsafe when it comes to protected data
 
 
 {/quiz}

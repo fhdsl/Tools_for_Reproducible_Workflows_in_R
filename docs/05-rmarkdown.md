@@ -349,7 +349,7 @@ Be careful about allowing this if you use code that works with data with PHI. Ju
 
 ### Automatic Date
 
-Using `date: "2023-04-28"` in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.
+Using `date: "2024-09-11"` in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.
 
 ![](resources/images/05-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_506.png){width=100%}
 
