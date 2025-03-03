@@ -28,7 +28,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## General principles of project organization
 
-Project organization should work for you and not the other way around. The goal should be organization that is maintainable long term.  As you might imagine, the optimal organizational scheme might differ from one individual to another or even one project to another. 
+Project organization should work for you and not the other way around. The goal should be organization that is maintainable long term.  As you might imagine, the optimal organizational scheme might differ from one individual to another or even one project to another.
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g2fea8805c08_0_426")
@@ -70,8 +70,8 @@ You can take a look at this [template README](https://raw.githubusercontent.com/
 
 #### More about writing READMEs:
 
-- [How to write a good README file by Hillary Nyakundi](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 - [How to write an awesome README by Navendu Pottekkat](https://towardsdatascience.com/how-to-write-an-awesome-readme-68bf4be91f8b)
+- [Make a README: because no one can read your mind yet](https://www.makeareadme.com/)
 
 #### Examples of good READMEs:
 
@@ -86,7 +86,7 @@ Adding information about a license is not always required, but it can be a good 
 > "You retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. If you're creating an open source project, we strongly encourage you to include an open source license."
 
 ::: dictionary
-Open source software or code means that it is distributed with a license that allows others to reuse or adapt your code for other purposes. This is very helpful to advance science and technology. 
+Open source software or code means that it is distributed with a license that allows others to reuse or adapt your code for other purposes. This is very helpful to advance science and technology.
 :::
 
 Check out this great resource on [options for licenses](https://choosealicense.com/) to help you choose which license is right for your project.
@@ -178,7 +178,7 @@ The end of a path string may be a file name if you are creating a path to a file
 
 To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the `working directory` aka your "Current Location".  In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes `/`
 
-Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings).  You can use the terminal to work with files using the command line. 
+Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings).  You can use the terminal to work with files using the command line.
 
 Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.
 
@@ -193,7 +193,7 @@ In your Terminal you can see your working directory at the top of the Terminal w
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files."} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_40")```
 
 
-An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash `/` and is special in that it cannot be contained within other folders. 
+An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash `/` and is special in that it cannot be contained within other folders.
 
 ## Handy R Tools
 
@@ -245,7 +245,7 @@ For data wrangling steps, describe why you are wrangling the data in such a way.
 
 In this section it is helpful to include:
 
-- What do you currently think about the results? 
+- What do you currently think about the results?
 - What do you think about the plots and tables you show in the notebook -- how do they inform your original questions?
 
 There are two major types of notebooks folks use in the R programming language: R Markdown files and Quarto files. In the next section we will discuss these notebooks, the similarities and differences between these two options, and how to use them.
