@@ -199,19 +199,36 @@ An absolute path starts at the root directory of a file system. The root directo
 
 ## Handy R Tools
 
-### RProj files
+### R Project files
 
-RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section). 
+RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section), called R projects. 
 
-When you create an [R project](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/), which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.RProj` file to your working directory.
+When you create an [R project](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects), which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.Rproj` file to your working directory.
 
 ```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_159")
 ```
  
+ This .`Rproj` file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, "Open prpject..." option), a few things will happe:
+ 
+ 1) We will load the files we were last working on in the editor pane
+ 2) Our current directory will shift to the directory containing the `.Rproj` file
+ 3) Settings for how we have set up RStudio will be restored
+
+This can also make it really nice to switch from working on one project to another. You can click on the upper right button that has the R project icon in RStudio to switch to other recent projects. 
+
+```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The upper right of RStudio will show a project button to enable you to switch from one project to another."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_167")
+```
 
 
-https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html
+It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the .Rproj file for the project that you currently have open, if you happen to navigate away from that directory. 
+
+```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The project directory button in the file pane will allow you to quickly go back to the directory with the .Rproj file, even if you have navigated far away. ."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_175")
+```
+
+
 
 ### `here` package
 
@@ -221,9 +238,13 @@ The `here` package is very useful for helping you set up file paths in a way tha
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=twsrc%5Etfw">@JennyBryan</a> 😤😠🤯. Instead use projects + here::here() <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/GwxnHePL4n">pic.twitter.com/GwxnHePL4n</a></p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/940021008764846080?ref_src=twsrc%5Etfw">December 11, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-The reason for her anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who recieves the file to adjust the path for their computer.
+The reason for Jenny's anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who receives the file to adjust the path for their computer.
 
-The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the Rproj file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the file relative to the other project files.)
+The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the `.Rproj` file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the files relative to the other project file.)
+
+One can implement this like so:
+
+```
 
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
