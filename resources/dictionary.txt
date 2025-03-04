@@ -15,6 +15,7 @@ Ctrl
 declutter
 github
 gitignore
+Guo
 filetype
 functionalize
 Hadley
