@@ -228,8 +228,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
 <li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#here-package"><i class="fa fa-check"></i><b>5.4.1</b> here package</a></li>
-<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#rproj-files"><i class="fa fa-check"></i><b>5.4.2</b> RProj files</a></li>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#r-project-files"><i class="fa fa-check"></i><b>5.4.1</b> R Project files</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#the-here-package"><i class="fa fa-check"></i><b>5.4.2</b> The <code>here</code> package</a></li>
 <li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
 <li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
 </ul></li>
@@ -457,14 +457,14 @@ div.csl-indent {
 <h3><span class="header-section-number">7.4.2</span> Follows a code style<a href="reproducible-code.html#follows-a-code-style-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Code style helps make code readable. Appropriate spacing, punctuation, and grammar are not always essential for getting a message across, but it can certainly b3 dis-tRaCTIng to readers if conventions aren’t followed.</p>
 <p><strong>Basic Example:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="reproducible-code.html#cb3-1" tabindex="-1"></a><span class="co"># Bad: Should use &lt;- and have a variable name that is informative</span></span>
-<span id="cb3-2"><a href="reproducible-code.html#cb3-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span>
-<span id="cb3-3"><a href="reproducible-code.html#cb3-3" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="reproducible-code.html#cb3-4" tabindex="-1"></a><span class="co"># Bad: Irregular spacing is distracting</span></span>
-<span id="cb3-5"><a href="reproducible-code.html#cb3-5" tabindex="-1"></a>numbers<span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
-<span id="cb3-6"><a href="reproducible-code.html#cb3-6" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="reproducible-code.html#cb3-7" tabindex="-1"></a><span class="co"># Good!</span></span>
-<span id="cb3-8"><a href="reproducible-code.html#cb3-8" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="reproducible-code.html#cb6-1" tabindex="-1"></a><span class="co"># Bad: Should use &lt;- and have a variable name that is informative</span></span>
+<span id="cb6-2"><a href="reproducible-code.html#cb6-2" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb6-3"><a href="reproducible-code.html#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="reproducible-code.html#cb6-4" tabindex="-1"></a><span class="co"># Bad: Irregular spacing is distracting</span></span>
+<span id="cb6-5"><a href="reproducible-code.html#cb6-5" tabindex="-1"></a>numbers<span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
+<span id="cb6-6"><a href="reproducible-code.html#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="reproducible-code.html#cb6-7" tabindex="-1"></a><span class="co"># Good!</span></span>
+<span id="cb6-8"><a href="reproducible-code.html#cb6-8" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div>
 <p>Here’s some style guides you can use:</p>
 <ul>
 <li><a href="https://google.github.io/styleguide/Rguide.html">Google’s R Style Guide</a></li>

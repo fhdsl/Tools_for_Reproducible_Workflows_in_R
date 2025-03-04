@@ -47,8 +47,8 @@ examples-of-good-readmes
 licensing
 navigate-file-paths
 handy-r-tools
-here-package
-rproj-files
+r-project-files
+the-here-package
 projecttemplate
 scientific-notebooks-rmd-or-qmd
 the-purposes-of-the-notebook
