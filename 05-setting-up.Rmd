@@ -209,7 +209,7 @@ When you create an [R project](https://support.posit.co/hc/en-us/articles/200526
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_159")
 ```
  
- This .`Rproj` file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, "Open prpject..." option), a few things will happe:
+ This .`Rproj` file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, "Open project..." option), a few things will happen:
  
  1) We will load the files we were last working on in the editor pane
  2) Our current directory will shift to the directory containing the `.Rproj` file
@@ -277,7 +277,7 @@ my_data <- read_delim(here("processed-data/project-name-quantile-normalized.tsv"
 
 In this code we are loading the `here` package and the `tidyverse` package (assuming that we have already installed these packages using the  `install.packages()` command. 
 
-We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path suppled from there.
+We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path supplied from there.
 
 Now if someone were to send all the project files to someone else, they could run this code without any adjustments. 
 
