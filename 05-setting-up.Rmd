@@ -175,7 +175,7 @@ Whereas if the person was already in Baltimore, a relative file path would be:
 
 The end of a path string may be a file name if you are creating a path to a file. If you are creating a path to a folder, the path string will end with the destination folder.
 
-To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the `working directory` aka your "Current Location".  In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes `/`
+To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the `working directory` aka your "Current Location".  In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes `/`.
 
 Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the `Console` and `Terminal` tabs, you will have to pay attention to what your `working directory` is. This is also different from the `Files` pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings).  You can use the terminal to work with files using the command line.
 
@@ -230,7 +230,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 
 
-### `here` package
+### The `here` package
 
 The `here` package is very useful for helping you set up file paths in a way that can make it easier for others to use your code.
 
@@ -240,9 +240,9 @@ The `here` package is very useful for helping you set up file paths in a way tha
 
 The reason for Jenny's anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who receives the file to adjust the path for their computer.
 
-The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the `.Rproj` file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the files relative to the other project file.)
+The [`here` package](https://here.r-lib.org/) fixes this problem. Instead you can write a path relative to the `.Rproj` file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don't move the files around without updating the code.)
 
-One can do this by loading files like data using the `here` package with just the relative path from the .`Rproj` file. 
+One can do then use the `here` package to load data with just the relative path from the .`Rproj` file. 
 
 For example, let's say we had our files organized like we did before, but now we have a `.Rproj` file called `myproj.Rproj`.
 
@@ -267,7 +267,7 @@ project-name/
     └── data-wrangling-functions.R
 ```
 
-If we wanted to use data from our `processed-data` directory in a file to make a plot, then we could use the following code:
+If we wanted to use data from the `project-name-quantile-normalized.tsv` file in our `processed-data` directory to make a plot, then we could use the following code:
 
 ```{r, eval = FALSE}
 library(here)
@@ -275,11 +275,11 @@ library(tidyverse)
 my_data <- read_delim(here("processed-data/project-name-quantile-normalized.tsv"))
 ```
 
-In this code we are loading the `here` package and the `tidyverse` package (assuming that we have already installed these packages using the  `install.packages()` command. 
+In this code we are loading the `here` package and the `tidyverse` package (assuming that we have already installed these packages using the  `install.packages()` command). 
 
-We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file and then use the path supplied from there.
+We then import data from the file called `project-name-quantile-normalized.tsv` inside of the `processed-data` directory using the path of this data file relative to the `.Rproj` file. This is because the `here` function tells RStudio to start looking in the directory with the `.Rproj` file.
 
-Now if someone were to send all the project files to someone else, they could run this code without any adjustments. 
+Now if someone were to send all the project files to someone else, they could run this code without any adjustments! 
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Sharing project files can be much easier if you set up your project with file paths using the here package and create an R project. You can give your entire collection of files to someone else and they can start using your code directly without making changes to paths, as the paths will be relative to your project directory. "}
@@ -287,6 +287,8 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
+
+Also checkout this [course which talks about RStudio projects and the `here` package](https://jhudatascience.org/tidyversecourse/intro.html#rstudio-projects).[@jhu_rstudio_projects].
 
 ### ProjectTemplate
 
@@ -296,7 +298,7 @@ This is not to be confused with R projects, you would still need to create an R 
 
 However, using `ProjectTemplate` will create a directory structure to help you stay organized.
 
-Running the `create.project()` command, which will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a README file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
+Running the `create.project()` command in the console of RStudio will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a README file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
 
 
 ```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The structure of directories or folders that are created using the ProjectTemplate package."}
@@ -311,7 +313,7 @@ create.project(rstudio.project = TRUE)
 ```
 
 
-You can use this package to help you create consistent directory structures across projects and to help you not forget making README files. 
+You can use this package to help you create consistent directory structures across projects and to help you not forget to make README files. 
 
 You can also customize this structure as well using the [`create.template` function](http://projecttemplate.net/custom_templates.html).
 
