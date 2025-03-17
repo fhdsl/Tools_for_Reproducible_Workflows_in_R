@@ -228,8 +228,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
 <li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#here-package"><i class="fa fa-check"></i><b>5.4.1</b> here package</a></li>
-<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#rproj-files"><i class="fa fa-check"></i><b>5.4.2</b> RProj files</a></li>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#r-project-files"><i class="fa fa-check"></i><b>5.4.1</b> R Project files</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#the-here-package"><i class="fa fa-check"></i><b>5.4.2</b> The <code>here</code> package</a></li>
 <li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
 <li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
 </ul></li>
@@ -490,7 +490,6 @@ You can take a look at this <a href="https://raw.githubusercontent.com/jhudsl/Re
 <li><a href="https://github.com/jhudsl/reproducible-r-example">Reproducible R example</a></li>
 <li><a href="https://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html">Jenny Bryan’s organizational strategies</a> <span class="citation">(<a href="#ref-Bryan2021"><strong>Bryan2021?</strong></a>)</span>.</li>
 <li><a href="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPiBteC2dRn95TX9YefYFyy">Danielle Navarro’s organizational strategies</a> <span class="citation">(<a href="#ref-Navarro2021"><strong>Navarro2021?</strong></a>)</span></li>
-<li><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Jenny Bryan on Project-oriented workflows</a><span class="citation">(<a href="#ref-Bryan2017"><strong>Bryan2017?</strong></a>)</span>.</li>
 <li><a href="https://datacarpentry.org/organization-genomics/">Data Carpentry mini-course about organizing projects</a> <span class="citation">(<a href="#ref-DataCarpentry2021"><strong>DataCarpentry2021?</strong></a>)</span>.</li>
 <li><a href="https://bioinformaticsworkbook.org/projectManagement/Intro_projectManagement.html#gsc.tab=0">Andrew Severin’s strategy for organization</a> <span class="citation">(<a href="#ref-Severin2021"><strong>Severin2021?</strong></a>)</span>.</li>
 <li><a href="https://www.biostars.org/p/821/">A BioStars thread where many individuals share their own organizational strategies</a> <span class="citation">(<a href="#ref-Biostars2021"><strong>Biostars2021?</strong></a>)</span>.</li>
@@ -512,18 +511,36 @@ So in our above analogy, if you are trying to direct someone to somewhere on the
 <p>Whereas if the person was already in Baltimore, a relative file path would be:
 <code>Johns Hopkins University/Street Name/Building number</code></p>
 <p>The end of a path string may be a file name if you are creating a path to a file. If you are creating a path to a folder, the path string will end with the destination folder.</p>
-<p>To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the <code>working directory</code> aka your “Current Location”. In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes <code>/</code></p>
+<p>To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the <code>working directory</code> aka your “Current Location”. In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes <code>/</code>.</p>
 <p>Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the <code>Console</code> and <code>Terminal</code> tabs, you will have to pay attention to what your <code>working directory</code> is. This is also different from the <code>Files</code> pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings). You can use the terminal to work with files using the command line.</p>
 <p>Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.</p>
-<p><code>{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt"} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_0")</code></p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_0.png" alt="Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt" width="100%" style="display: block; margin: auto;" /></p>
 <p>In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the <code>ls</code> command, a file called <code>file.txt</code>.</p>
-<p><code>{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files."} ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g31fc7298e99_0_40")</code></p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_40.png" alt="We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files." width="100%" style="display: block; margin: auto;" /></p>
 <p>An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash <code>/</code> and is special in that it cannot be contained within other folders.</p>
 </div>
 <div id="handy-r-tools" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Handy R Tools<a href="setting-up-your-project.html#handy-r-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="here-package" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> here package<a href="setting-up-your-project.html#here-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="r-project-files" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> R Project files<a href="setting-up-your-project.html#r-project-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section), called R projects.</p>
+<p>When you create an <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">R project</a>, which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a <code>.Rproj</code> file to your working directory.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_159.png" alt="Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project." width="100%" style="display: block; margin: auto;" /></p>
+<p>This .<code>Rproj</code> file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, “Open project…” option), a few things will happen:</p>
+<ol style="list-style-type: decimal">
+<li>We will load the files we were last working on in the editor pane</li>
+<li>Our current directory will shift to the directory containing the <code>.Rproj</code> file</li>
+<li>Settings for how we have set up RStudio will be restored</li>
+</ol>
+<p>This can also make it really nice to switch from working on one project to another. You can click on the upper right button that has the R project icon in RStudio to switch to other recent projects.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_167.png" alt="The upper right of RStudio will show a project button to enable you to switch from one project to another." width="100%" style="display: block; margin: auto;" /></p>
+<p>It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the <code>.Rproj</code> file for the project that you currently have open, if you happen to navigate away from that directory.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_175.png" alt="The project directory button in the file pane will allow you to quickly go back to the directory with the .Rproj file, even if you have navigated far away. ." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-here-package" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> The <code>here</code> package<a href="setting-up-your-project.html#the-here-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>here</code> package is very useful for helping you set up file paths in a way that can make it easier for others to use your code.</p>
+<p><a href="https://jennybryan.org/about/">Jenny Bryan</a> who works for RStudio is famous in the R community for having strong feelings about this:</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
 The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=twsrc%5Etfw"><span class="citation">(<a href="#ref-JennyBryan"><strong>JennyBryan?</strong></a>)</span></a> 😤😠🤯. Instead use projects + here::here() <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/GwxnHePL4n">pic.twitter.com/GwxnHePL4n</a>
@@ -531,16 +548,51 @@ The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=tw
 — Hadley Wickham (<span class="citation">(<a href="#ref-hadleywickham"><strong>hadleywickham?</strong></a>)</span>) <a href="https://twitter.com/hadleywickham/status/940021008764846080?ref_src=twsrc%5Etfw">December 11, 2017</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p><a href="https://here.r-lib.org/" class="uri">https://here.r-lib.org/</a></p>
-<p><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/" class="uri">https://www.tidyverse.org/blog/2017/12/workflow-vs-script/</a></p>
-</div>
-<div id="rproj-files" class="section level3 hasAnchor" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> RProj files<a href="setting-up-your-project.html#rproj-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html" class="uri">https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html</a></p>
+<p>The reason for Jenny’s anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who receives the file to adjust the path for their computer.</p>
+<p>The <a href="https://here.r-lib.org/"><code>here</code> package</a> fixes this problem. Instead you can write a path relative to the <code>.Rproj</code> file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don’t move the files around without updating the code.)</p>
+<p>One can do then use the <code>here</code> package to load data with just the relative path from the .<code>Rproj</code> file.</p>
+<p>For example, let’s say we had our files organized like we did before, but now we have a <code>.Rproj</code> file called <code>myproj.Rproj</code>.</p>
+<pre><code>project-name/
+├── run_analysis.sh
+├── 00-download-data.sh
+├── 01-make-heatmap.Rmd
+├── myproj.Rproj
+├── README.md
+├── plots/
+│   └── project-name-heatmap.png
+├── results/
+│   └── top_gene_results.tsv
+├── raw-data/
+│   ├── project-name-raw.tsv
+│   └── project-name-metadata.tsv
+├── processed-data/
+│   ├── project-name-quantile-normalized.tsv
+└── util/
+    ├── plotting-functions.R
+    └── data-wrangling-functions.R</code></pre>
+<p>If we wanted to use data from the <code>project-name-quantile-normalized.tsv</code> file in our <code>processed-data</code> directory to make a plot, then we could use the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="setting-up-your-project.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb4-2"><a href="setting-up-your-project.html#cb4-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-3"><a href="setting-up-your-project.html#cb4-3" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="fu">here</span>(<span class="st">&quot;processed-data/project-name-quantile-normalized.tsv&quot;</span>))</span></code></pre></div>
+<p>In this code we are loading the <code>here</code> package and the <code>tidyverse</code> package (assuming that we have already installed these packages using the <code>install.packages()</code> command).</p>
+<p>We then import data from the file called <code>project-name-quantile-normalized.tsv</code> inside of the <code>processed-data</code> directory using the path of this data file relative to the <code>.Rproj</code> file. This is because the <code>here</code> function tells RStudio to start looking in the directory with the <code>.Rproj</code> file.</p>
+<p>Now if someone were to send all the project files to someone else, they could run this code without any adjustments!</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g3179c1a6897_0_10.png" alt="Sharing project files can be much easier if you set up your project with file paths using the here package and create an R project. You can give your entire collection of files to someone else and they can start using your code directly without making changes to paths, as the paths will be relative to your project directory. " width="100%" style="display: block; margin: auto;" /></p>
+<p>Checkout more of <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Jenny’s thoughts on organizing files, paths, and projects in R</a><span class="citation">(<a href="#ref-Bryan2017"><strong>Bryan2017?</strong></a>)</span>.</p>
+<p>Also checkout this <a href="https://jhudatascience.org/tidyversecourse/intro.html#rstudio-projects">course which talks about RStudio projects and the <code>here</code> package</a><span class="citation">(<a href="references.html#ref-jhu_rstudio_projects">Carrie Wright n.d.</a>)</span>.</p>
 </div>
 <div id="projecttemplate" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> ProjectTemplate<a href="setting-up-your-project.html#projecttemplate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="http://projecttemplate.net/" class="uri">http://projecttemplate.net/</a></p>
+<p>If you are interested in doing more <strong>advanced</strong> project organization and automatic running of code and testing, you could consider using the <a href="http://projecttemplate.net/"><code>ProjectTemplate</code> package</a>.</p>
+<p>This is not to be confused with R projects, you would still need to create an R project using this package, or you can specify using commands with this package to also create an R project.</p>
+<p>However, using <code>ProjectTemplate</code> will create a directory structure to help you stay organized.</p>
+<p>Running the <code>create.project()</code> command in the console of RStudio will create a new directory called <code>new_project</code> with many subdirectories such as <code>data</code> and <code>graphs</code>, and it will create a README file. You can read more about <a href="http://projecttemplate.net/architecture.html">the file structure that it creates</a>.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_188.png" alt="The structure of directories or folders that are created using the ProjectTemplate package." width="100%" style="display: block; margin: auto;" /></p>
+<p>If you also add a <code>rstudio.project = TRUE</code>, this will create a new RStudio project as well.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="setting-up-your-project.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(ProjectTemplate)</span>
+<span id="cb5-2"><a href="setting-up-your-project.html#cb5-2" tabindex="-1"></a><span class="fu">create.project</span>(<span class="at">rstudio.project =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>You can use this package to help you create consistent directory structures across projects and to help you not forget to make README files.</p>
+<p>You can also customize this structure as well using the <a href="http://projecttemplate.net/custom_templates.html"><code>create.template</code> function</a>.</p>
 </div>
 <div id="scientific-notebooks-rmd-or-qmd" class="section level3 hasAnchor" number="5.4.4">
 <h3><span class="header-section-number">5.4.4</span> Scientific notebooks (Rmd or qmd)<a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
