@@ -29,7 +29,7 @@
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="a-tour-of-rstudio.html"/>
-<link rel="next" href="r-markdown-reports.html"/>
+<link rel="next" href="reproducible-reports.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -167,12 +167,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
-<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#learning-objectives"><i class="fa fa-check"></i><b>1.4</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.3</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html"><i class="fa fa-check"></i><b>2</b> R for Reproducibility</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="2.2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#why-r"><i class="fa fa-check"></i><b>2.2</b> Why R</a></li>
 <li class="chapter" data-level="2.3" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#it-is-free-and-open-source"><i class="fa fa-check"></i><b>2.3</b> It is free and open source</a></li>
 <li class="chapter" data-level="2.4" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#the-community"><i class="fa fa-check"></i><b>2.4</b> The community</a></li>
@@ -221,53 +221,62 @@ div.csl-indent {
 <li class="chapter" data-level="5" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>5</b> Setting up your project</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#understand-why-project-organization-is-key-to-reproducible-analyses"><i class="fa fa-check"></i><b>5.1</b> Understand why project organization is key to reproducible analyses</a></li>
-<li class="chapter" data-level="5.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#understand-general-principles-of-project-organization"><i class="fa fa-check"></i><b>5.2</b> Understand general principles of project organization</a></li>
+<li class="chapter" data-level="5.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#general-principles-of-project-organization"><i class="fa fa-check"></i><b>5.2</b> General principles of project organization</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#readmes"><i class="fa fa-check"></i><b>5.2.1</b> READMEs!</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
 <li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#here-package"><i class="fa fa-check"></i><b>5.4.1</b> here package</a></li>
-<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#rproj-files"><i class="fa fa-check"></i><b>5.4.2</b> RProj files</a></li>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#r-project-files"><i class="fa fa-check"></i><b>5.4.1</b> R Project files</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#the-here-package"><i class="fa fa-check"></i><b>5.4.2</b> The <code>here</code> package</a></li>
 <li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
-<li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#r-markdown-files"><i class="fa fa-check"></i><b>5.4.4</b> R Markdown files</a></li>
-<li class="chapter" data-level="5.4.5" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#quarto-files"><i class="fa fa-check"></i><b>5.4.5</b> Quarto files</a></li>
+<li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html"><i class="fa fa-check"></i><b>6</b> R Markdown Reports</a>
+<li class="chapter" data-level="6" data-path="reproducible-reports.html"><a href="reproducible-reports.html"><i class="fa fa-check"></i><b>6</b> Reproducible Reports</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#reports-support-reproducibility"><i class="fa fa-check"></i><b>6.1</b> Reports support reproducibility</a></li>
-<li class="chapter" data-level="6.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>6.2</b> Getting Started with R Markdown</a></li>
-<li class="chapter" data-level="6.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#rendering-r-markdown-files"><i class="fa fa-check"></i><b>6.3</b> Rendering R Markdown files</a></li>
-<li class="chapter" data-level="6.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>6.4</b> Writing code in R Markdown files</a>
+<li class="chapter" data-level="6.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#notebook-reports-support-reproducibility"><i class="fa fa-check"></i><b>6.1</b> Notebook reports support reproducibility</a></li>
+<li class="chapter" data-level="6.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-or-quarto"><i class="fa fa-check"></i><b>6.2</b> R Markdown or Quarto?</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#the-yaml"><i class="fa fa-check"></i><b>6.4.1</b> The YAML</a></li>
-<li class="chapter" data-level="6.4.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-chunks"><i class="fa fa-check"></i><b>6.4.2</b> Code chunks</a></li>
-<li class="chapter" data-level="6.4.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#running-chunks"><i class="fa fa-check"></i><b>6.4.3</b> Running chunks</a></li>
-<li class="chapter" data-level="6.4.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>6.4.4</b> Running previous chunks</a></li>
+<li class="chapter" data-level="6.2.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-pros"><i class="fa fa-check"></i><b>6.2.1</b> R Markdown Pros:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-cons"><i class="fa fa-check"></i><b>6.2.2</b> R Markdown Cons:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-pros"><i class="fa fa-check"></i><b>6.2.3</b> Quarto Pros:</a></li>
+<li class="chapter" data-level="6.2.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-cons"><i class="fa fa-check"></i><b>6.2.4</b> Quarto Cons:</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>6.5</b> Cleaning the environment</a></li>
-<li class="chapter" data-level="6.6" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>6.6</b> Restarting R Session</a></li>
-<li class="chapter" data-level="6.7" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#chunk-setup"><i class="fa fa-check"></i><b>6.7</b> Chunk setup</a></li>
-<li class="chapter" data-level="6.8" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#finding-chunks"><i class="fa fa-check"></i><b>6.8</b> Finding chunks</a></li>
-<li class="chapter" data-level="6.9" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#add-chunks"><i class="fa fa-check"></i><b>6.9</b> Add chunks</a></li>
-<li class="chapter" data-level="6.10" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>6.10</b> More on running chunks</a></li>
-<li class="chapter" data-level="6.11" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#text-and-headers"><i class="fa fa-check"></i><b>6.11</b> Text and headers</a>
+<li class="chapter" data-level="6.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#getting-started-with-notebooks"><i class="fa fa-check"></i><b>6.3</b> Getting Started with notebooks</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#rendering-r-markdown"><i class="fa fa-check"></i><b>6.4</b> Rendering R Markdown</a></li>
+<li class="chapter" data-level="6.5" data-path="reproducible-reports.html"><a href="reproducible-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>6.5</b> Writing code in R Markdown files</a>
 <ul>
-<li class="chapter" data-level="6.11.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#headers"><i class="fa fa-check"></i><b>6.11.1</b> Headers</a></li>
-<li class="chapter" data-level="6.11.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>6.11.2</b> Bold and Italics</a></li>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#the-yaml"><i class="fa fa-check"></i><b>6.5.1</b> The YAML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-chunks"><i class="fa fa-check"></i><b>6.5.2</b> Code chunks</a></li>
+<li class="chapter" data-level="6.5.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-chunks"><i class="fa fa-check"></i><b>6.5.3</b> Running chunks</a></li>
+<li class="chapter" data-level="6.5.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>6.5.4</b> Running previous chunks</a></li>
 </ul></li>
-<li class="chapter" data-level="6.12" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#additional-features"><i class="fa fa-check"></i><b>6.12</b> Additional Features</a>
+<li class="chapter" data-level="6.6" data-path="reproducible-reports.html"><a href="reproducible-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>6.6</b> Cleaning the environment</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-reports.html"><a href="reproducible-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>6.7</b> Restarting R Session</a></li>
+<li class="chapter" data-level="6.8" data-path="reproducible-reports.html"><a href="reproducible-reports.html#chunk-setup"><i class="fa fa-check"></i><b>6.8</b> Chunk setup</a></li>
+<li class="chapter" data-level="6.9" data-path="reproducible-reports.html"><a href="reproducible-reports.html#finding-chunks"><i class="fa fa-check"></i><b>6.9</b> Finding chunks</a></li>
+<li class="chapter" data-level="6.10" data-path="reproducible-reports.html"><a href="reproducible-reports.html#add-chunks"><i class="fa fa-check"></i><b>6.10</b> Add chunks</a></li>
+<li class="chapter" data-level="6.11" data-path="reproducible-reports.html"><a href="reproducible-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>6.11</b> More on running chunks</a></li>
+<li class="chapter" data-level="6.12" data-path="reproducible-reports.html"><a href="reproducible-reports.html#text-and-headers"><i class="fa fa-check"></i><b>6.12</b> Text and headers</a>
 <ul>
-<li class="chapter" data-level="6.12.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#aesthetics"><i class="fa fa-check"></i><b>6.12.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="6.12.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#report-file-types"><i class="fa fa-check"></i><b>6.12.2</b> Report File Types</a></li>
+<li class="chapter" data-level="6.12.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#headers"><i class="fa fa-check"></i><b>6.12.1</b> Headers</a></li>
+<li class="chapter" data-level="6.12.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>6.12.2</b> Bold and Italics</a></li>
 </ul></li>
-<li class="chapter" data-level="6.13" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>6.13</b> Keyboard Shortcuts</a>
+<li class="chapter" data-level="6.13" data-path="reproducible-reports.html"><a href="reproducible-reports.html#additional-features"><i class="fa fa-check"></i><b>6.13</b> Additional Features</a>
 <ul>
-<li class="chapter" data-level="6.13.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#table-of-contents"><i class="fa fa-check"></i><b>6.13.1</b> Table of Contents</a></li>
-<li class="chapter" data-level="6.13.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-folding"><i class="fa fa-check"></i><b>6.13.2</b> Code Folding</a></li>
-<li class="chapter" data-level="6.13.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-download"><i class="fa fa-check"></i><b>6.13.3</b> Code Download</a></li>
-<li class="chapter" data-level="6.13.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#automatic-date"><i class="fa fa-check"></i><b>6.13.4</b> Automatic Date</a></li>
+<li class="chapter" data-level="6.13.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#aesthetics"><i class="fa fa-check"></i><b>6.13.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="6.13.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#report-file-types"><i class="fa fa-check"></i><b>6.13.2</b> Report File Types</a></li>
 </ul></li>
-<li class="chapter" data-level="6.14" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#conclusion-3"><i class="fa fa-check"></i><b>6.14</b> Conclusion</a></li>
+<li class="chapter" data-level="6.14" data-path="reproducible-reports.html"><a href="reproducible-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>6.14</b> Keyboard Shortcuts</a>
+<ul>
+<li class="chapter" data-level="6.14.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#table-of-contents"><i class="fa fa-check"></i><b>6.14.1</b> Table of Contents</a></li>
+<li class="chapter" data-level="6.14.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-folding"><i class="fa fa-check"></i><b>6.14.2</b> Code Folding</a></li>
+<li class="chapter" data-level="6.14.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-download"><i class="fa fa-check"></i><b>6.14.3</b> Code Download</a></li>
+<li class="chapter" data-level="6.14.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#automatic-date"><i class="fa fa-check"></i><b>6.14.4</b> Automatic Date</a></li>
+</ul></li>
+<li class="chapter" data-level="6.15" data-path="reproducible-reports.html"><a href="reproducible-reports.html#conclusion-3"><i class="fa fa-check"></i><b>6.15</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
 <ul>
@@ -311,7 +320,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-1"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
 <li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
 <li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
@@ -361,23 +370,177 @@ div.csl-indent {
 <p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_13.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
 <div id="understand-why-project-organization-is-key-to-reproducible-analyses" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Understand why project organization is key to reproducible analyses<a href="setting-up-your-project.html#understand-why-project-organization-is-key-to-reproducible-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Keeping your files organized is a skill that has a high long-term payoff. As you are in the thick of an analysis, you may underestimate how many files and terms you have floating around. But a short time later, you may return to your files and realize your organization was not as clear as you hoped.</p>
+<p><span class="citation">(<a href="#ref-Tayo2019"><strong>Tayo2019?</strong></a>)</span> discusses four particular reasons why it is important to organize your project:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Organization <strong>increases productivity</strong>. If a project is well organized, with everything placed in one directory, it makes it easier to avoid wasting time searching for project files such as datasets, codes, output files, and so on.</li>
+<li>A well-organized project helps you to keep and <strong>maintain a record</strong> of your ongoing and completed data science projects.</li>
+<li>Completed data science projects could be used for <strong>building future models</strong>. If you have to solve a similar problem in the future, you can use the same code with slight modifications.</li>
+<li>A well-organized project can <strong>easily be understood</strong> by other data science professionals when shared on platforms such as Github.</li>
+</ol>
+</blockquote>
+<p>Organization is yet another aspect of reproducibility that saves you and your colleagues time!</p>
 <p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1121.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="understand-general-principles-of-project-organization" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Understand general principles of project organization<a href="setting-up-your-project.html#understand-general-principles-of-project-organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_421.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<div id="general-principles-of-project-organization" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> General principles of project organization<a href="setting-up-your-project.html#general-principles-of-project-organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Project organization should work for you and not the other way around. The goal should be organization that is maintainable long term. As you might imagine, the optimal organizational scheme might differ from one individual to another or even one project to another.</p>
 <p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_426.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<p>There’s a lot of ways to keep your files organized, and there’s not a “one size fits all” organizational solution <span class="citation">(<a href="#ref-Shapiro2021"><strong>Shapiro2021?</strong></a>)</span>. In this chapter, we will discuss some generalities; but for specifics, we will point you to others who have written about what works for them. We suggest that you use them as inspiration to figure out a strategy that works for you and your team.</p>
+<p>The most important aspects of your project organization scheme is that it:</p>
+<ul>
+<li>Is <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">project-oriented</a> <span class="citation">(<a href="#ref-Bryan2017"><strong>Bryan2017?</strong></a>)</span>.<br />
+</li>
+<li>Follows consistent patterns <span class="citation">(<a href="#ref-Shapiro2021"><strong>Shapiro2021?</strong></a>)</span>.<br />
+</li>
+<li>Is easy for you and others to find the files you need quickly <span class="citation">(<a href="#ref-Shapiro2021"><strong>Shapiro2021?</strong></a>)</span>.<br />
+</li>
+<li>Minimizes the likelihood for errors (like writing over files accidentally) <span class="citation">(<a href="#ref-Shapiro2021"><strong>Shapiro2021?</strong></a>)</span>.<br />
+</li>
+<li>Is something maintainable <span class="citation">(<a href="#ref-Shapiro2021"><strong>Shapiro2021?</strong></a>)</span>!</li>
+</ul>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_421.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<div id="readmes" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> READMEs!<a href="setting-up-your-project.html#readmes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>READMEs are also a great way to help your collaborators get quickly acquainted with the project.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8379bb805_0_11.png" alt="Avi is looking at a set of project files that include a file called a ‘README.md’. Avi says 'I had no idea where to start with this analysis that Ruby sent me to review, but then I saw she included a README and that saved me so much time and effort in getting started!'" width="1250" style="display: block; margin: auto;" /></p>
+<p>READMEs stick out in a project and are generally universal signal for new people to the project to start by READing them. GitHub automatically will preview your file called “README.md” when someone comes to the main page of your repository. This further encourages people looking at your project to read the information in your README.</p>
+<p><strong>Information that should be included in a README:</strong></p>
+<ol style="list-style-type: decimal">
+<li>General purpose of the project</li>
+<li>Instructions on how to re-run the project</li>
+<li>Lists of any software required by the project</li>
+<li>Input and output file descriptions</li>
+<li>Descriptions of any additional tools included in the project</li>
+<li>License for how your materials should be used
+You can take a look at this <a href="https://raw.githubusercontent.com/jhudsl/Reproducibility_in_Cancer_Informatics/main/resources/README-template.md">template README</a> to get your started.</li>
+</ol>
+<div id="more-about-writing-readmes" class="section level4 hasAnchor" number="5.2.1.1">
+<h4><span class="header-section-number">5.2.1.1</span> More about writing READMEs:<a href="setting-up-your-project.html#more-about-writing-readmes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/">How to write a good README file by Hillary Nyakundi</a></li>
+<li><a href="https://www.makeareadme.com/">Make a README: because no one can read your mind yet by Danny Guo</a></li>
+</ul>
+</div>
+<div id="examples-of-good-readmes" class="section level4 hasAnchor" number="5.2.1.2">
+<h4><span class="header-section-number">5.2.1.2</span> Examples of good READMEs:<a href="setting-up-your-project.html#examples-of-good-readmes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><a href="https://github.com/stephaniehicks/qsmooth" class="uri">https://github.com/stephaniehicks/qsmooth</a></li>
+<li><a href="https://github.com/lcolladotor/derfinder" class="uri">https://github.com/lcolladotor/derfinder</a></li>
+<li><a href="https://github.com/tidyverse/dplyr" class="uri">https://github.com/tidyverse/dplyr</a></li>
+</ul>
+</div>
+<div id="licensing" class="section level4 hasAnchor" number="5.2.1.3">
+<h4><span class="header-section-number">5.2.1.3</span> Licensing<a href="setting-up-your-project.html#licensing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Adding information about a license is not always required, but it can be a good idea. If you put your code on GitHub, then the default copyright laws apply. According to GitHub:</p>
+<blockquote>
+<p>“You retain all rights to your source code and no one may reproduce, distribute, or create derivative works from your work. If you’re creating an open source project, we strongly encourage you to include an open source license.”</p>
+</blockquote>
+<div class="dictionary">
+<p>Open source software or code means that it is distributed with a license that allows others to reuse or adapt your code for other purposes. This is very helpful to advance science and technology.</p>
+</div>
+<p>Check out this great resource on <a href="https://choosealicense.com/">options for licenses</a> to help you choose which license is right for your project.
+### Example organization scheme</p>
+<p>Getting more specific, here’s some ideas of how to organize your project:</p>
+<ul>
+<li><strong>Make file names informative</strong> to those who don’t have knowledge of the project – but avoid using spaces, quotes, or unusual characters in your filenames and folders, as these can make reading in files a nightmare with some programs.</li>
+<li><strong>Number scripts</strong> in the order that they are run.</li>
+<li><strong>Keep like-files together</strong> in their own directory: results tables with other results tables, etc. <em>Including most importantly keeping raw data separate from processed data or other results!</em></li>
+<li><strong>Put source scripts and functions in their own directory</strong>. Things that should never need to be called directly by yourself or anyone else.</li>
+<li><strong>Put output in its own directories</strong> like <code>results</code> and <code>plots</code>.</li>
+<li><strong>Have a central document (like a README)</strong> that describes the basic information about the analysis and how to re-run it.</li>
+<li>Make it easy on yourself, <strong>dates aren’t necessary</strong> to track for file updates. The computer keeps track of when a file was updated.</li>
+<li><strong>Make a central script that re-runs everything</strong> – including the creation of the folders! (more on this in a later chapter)</li>
+</ul>
+<p>Let’s see what these principles might look in practice.</p>
 <p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_442.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
-<p><a href="https://github.com/jhudsl/reproducible-r-example" class="uri">https://github.com/jhudsl/reproducible-r-example</a></p>
+<p>Here’s an example of what this might look like:</p>
+<pre><code>project-name/
+├── run_analysis.sh
+├── 00-download-data.sh
+├── 01-make-heatmap.Rmd
+├── README.md
+├── plots/
+│   └── project-name-heatmap.png
+├── results/
+│   └── top_gene_results.tsv
+├── raw-data/
+│   ├── project-name-raw.tsv
+│   └── project-name-metadata.tsv
+├── processed-data/
+│   ├── project-name-quantile-normalized.tsv
+└── util/
+    ├── plotting-functions.R
+    └── data-wrangling-functions.R</code></pre>
+<p><strong>What these hypothetical files and folders contain:</strong></p>
+<ul>
+<li><code>run_analysis.sh</code> - A central script that runs everything</li>
+<li><code>00-download-data.sh</code> - The script that needs to be run first and is called by run_analysis.sh</li>
+<li><code>01-make-heatmap.Rmd</code> - The script that needs to be run second and is also called by run_analysis.sh</li>
+<li><code>README.md</code> - The document that has the information that will orient someone to this project</li>
+<li><code>plots</code> - A folder of plots and resulting images</li>
+<li><code>results</code> - A folder of results</li>
+<li><code>raw-data</code> - Data files as they first arrive and <strong>nothing</strong> has been done to them yet</li>
+<li><code>processed-data</code> - Data that has been modified from the raw in some way</li>
+<li><code>util</code> - A folder of utilities that never needs to be called or touched directly unless troubleshooting something</li>
+</ul>
+<p>There are lots of ideas out there for organizational strategies. The key is finding one that fits your team and your project. You can read through some of these articles to think about what kind of organizational strategy might work for you and your team:</p>
+<ul>
+<li><a href="https://github.com/jhudsl/reproducible-r-example">Reproducible R example</a></li>
+<li><a href="https://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html">Jenny Bryan’s organizational strategies</a> <span class="citation">(<a href="#ref-Bryan2021"><strong>Bryan2021?</strong></a>)</span>.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPiBteC2dRn95TX9YefYFyy">Danielle Navarro’s organizational strategies</a> <span class="citation">(<a href="#ref-Navarro2021"><strong>Navarro2021?</strong></a>)</span></li>
+<li><a href="https://datacarpentry.org/organization-genomics/">Data Carpentry mini-course about organizing projects</a> <span class="citation">(<a href="#ref-DataCarpentry2021"><strong>DataCarpentry2021?</strong></a>)</span>.</li>
+<li><a href="https://bioinformaticsworkbook.org/projectManagement/Intro_projectManagement.html#gsc.tab=0">Andrew Severin’s strategy for organization</a> <span class="citation">(<a href="#ref-Severin2021"><strong>Severin2021?</strong></a>)</span>.</li>
+<li><a href="https://www.biostars.org/p/821/">A BioStars thread where many individuals share their own organizational strategies</a> <span class="citation">(<a href="#ref-Biostars2021"><strong>Biostars2021?</strong></a>)</span>.</li>
+<li><a href="https://bioinformatics-core-shared-training.github.io/shell-genomics/07-organization/index.html">Data Carpentry course chapter about getting organized</a> <span class="citation">(<a href="#ref-DataCarpentry2019"><strong>DataCarpentry2019?</strong></a>)</span>.</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="navigate-file-paths" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Navigate file paths<a href="setting-up-your-project.html#navigate-file-paths" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1337.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<p>In point and click apps (called <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">Graphical User Interfaces (or GUI pronounced like the word gooey)</a> you navigate to files by clicking on folders. But for R programming and other command line interfaces, we navigate and use files by using <code>file paths</code>. <code>File paths</code> are the series of folders that it takes to get to a file, not unlike a street address.</p>
+<p>To make an analogy, if someone asked you directions to a particular building, the directions you would give would be tailored based on where the person asking is located. In other words your directions would be relative to their location.</p>
+<p>But file paths can be <em>relative</em> or <em>absolute</em>.</p>
+<p>Your computer can be given directions relative to where you are calling the command in the computer or they can be absolute directions to a file - basically the full directions to that file, regardless of where you might be already on your computer.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1337.png" alt="A relative path might be from the local neighborhood to johns hopkins, where as a relative path is analogous to a path that could direct you from further away, so state information would also be included" width="100%" style="display: block; margin: auto;" />
+So in our above analogy, if you are trying to direct someone to somewhere on the Johns Hopkins campus with a file path:</p>
+<p>An absolute file path would be:
+<code>/Earth/North America/United States/Maryland/Baltimore/Johns Hopkins University/Street Name/Building number</code></p>
+<p>Whereas if the person was already in Baltimore, a relative file path would be:
+<code>Johns Hopkins University/Street Name/Building number</code></p>
+<p>The end of a path string may be a file name if you are creating a path to a file. If you are creating a path to a folder, the path string will end with the destination folder.</p>
+<p>To know your location within a file system is to know exactly what folder you are in right now. The folder that you are in right now is called the <code>working directory</code> aka your “Current Location”. In the above analogy a person being located in Baltimore would be their working directory. In a path, folder names are separated by forward slashes <code>/</code>.</p>
+<p>Note that a relative directory may be different between different apps: RStudio versus Terminal versus something else. So you if you switch between the <code>Console</code> and <code>Terminal</code> tabs, you will have to pay attention to what your <code>working directory</code> is. This is also different from the <code>Files</code> pane which has no bearing on your working directory either. The terminal tab is located in the Console pane in RStudio, which is usually the lower left pane (with default settings). You can use the terminal to work with files using the command line.</p>
+<p>Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_0.png" alt="Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt" width="100%" style="display: block; margin: auto;" /></p>
+<p>In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the <code>ls</code> command, a file called <code>file.txt</code>.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_40.png" alt="We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files." width="100%" style="display: block; margin: auto;" /></p>
+<p>An absolute path starts at the root directory of a file system. The root directory does not have a name like other folders do. It is specified with a single forward slash <code>/</code> and is special in that it cannot be contained within other folders.</p>
 </div>
 <div id="handy-r-tools" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Handy R Tools<a href="setting-up-your-project.html#handy-r-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="here-package" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> here package<a href="setting-up-your-project.html#here-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="r-project-files" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> R Project files<a href="setting-up-your-project.html#r-project-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RStudio comes with a nifty feature for organizing your files and making file paths easier for collaborating (more on that in the next section), called R projects.</p>
+<p>When you create an <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">R project</a>, which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a <code>.Rproj</code> file to your working directory.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_159.png" alt="Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project." width="100%" style="display: block; margin: auto;" /></p>
+<p>This .<code>Rproj</code> file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, “Open project…” option), a few things will happen:</p>
+<ol style="list-style-type: decimal">
+<li>We will load the files we were last working on in the editor pane</li>
+<li>Our current directory will shift to the directory containing the <code>.Rproj</code> file</li>
+<li>Settings for how we have set up RStudio will be restored</li>
+</ol>
+<p>This can also make it really nice to switch from working on one project to another. You can click on the upper right button that has the R project icon in RStudio to switch to other recent projects.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_167.png" alt="The upper right of RStudio will show a project button to enable you to switch from one project to another." width="100%" style="display: block; margin: auto;" /></p>
+<p>It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the <code>.Rproj</code> file for the project that you currently have open, if you happen to navigate away from that directory.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_175.png" alt="The project directory button in the file pane will allow you to quickly go back to the directory with the .Rproj file, even if you have navigated far away. ." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-here-package" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> The <code>here</code> package<a href="setting-up-your-project.html#the-here-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>here</code> package is very useful for helping you set up file paths in a way that can make it easier for others to use your code.</p>
+<p><a href="https://jennybryan.org/about/">Jenny Bryan</a> who works for RStudio is famous in the R community for having strong feelings about this:</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
 The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=twsrc%5Etfw"><span class="citation">(<a href="#ref-JennyBryan"><strong>JennyBryan?</strong></a>)</span></a> 😤😠🤯. Instead use projects + here::here() <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/GwxnHePL4n">pic.twitter.com/GwxnHePL4n</a>
@@ -385,25 +548,83 @@ The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=tw
 — Hadley Wickham (<span class="citation">(<a href="#ref-hadleywickham"><strong>hadleywickham?</strong></a>)</span>) <a href="https://twitter.com/hadleywickham/status/940021008764846080?ref_src=twsrc%5Etfw">December 11, 2017</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p><a href="https://here.r-lib.org/" class="uri">https://here.r-lib.org/</a></p>
-<p><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/" class="uri">https://www.tidyverse.org/blog/2017/12/workflow-vs-script/</a></p>
-</div>
-<div id="rproj-files" class="section level3 hasAnchor" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> RProj files<a href="setting-up-your-project.html#rproj-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html" class="uri">https://bookdown.org/ndphillips/YaRrr/projects-in-rstudio.html</a></p>
+<p>The reason for Jenny’s anger is that if you write file that starts with your own personal path on your computer, that requires that anyone else who receives the file to adjust the path for their computer.</p>
+<p>The <a href="https://here.r-lib.org/"><code>here</code> package</a> fixes this problem. Instead you can write a path relative to the <code>.Rproj</code> file. Then if you send your project files to someone, the paths will work for them too! (This is as long as they don’t move the files around without updating the code.)</p>
+<p>One can do then use the <code>here</code> package to load data with just the relative path from the .<code>Rproj</code> file.</p>
+<p>For example, let’s say we had our files organized like we did before, but now we have a <code>.Rproj</code> file called <code>myproj.Rproj</code>.</p>
+<pre><code>project-name/
+├── run_analysis.sh
+├── 00-download-data.sh
+├── 01-make-heatmap.Rmd
+├── myproj.Rproj
+├── README.md
+├── plots/
+│   └── project-name-heatmap.png
+├── results/
+│   └── top_gene_results.tsv
+├── raw-data/
+│   ├── project-name-raw.tsv
+│   └── project-name-metadata.tsv
+├── processed-data/
+│   ├── project-name-quantile-normalized.tsv
+└── util/
+    ├── plotting-functions.R
+    └── data-wrangling-functions.R</code></pre>
+<p>If we wanted to use data from the <code>project-name-quantile-normalized.tsv</code> file in our <code>processed-data</code> directory to make a plot, then we could use the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="setting-up-your-project.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb4-2"><a href="setting-up-your-project.html#cb4-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-3"><a href="setting-up-your-project.html#cb4-3" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="fu">here</span>(<span class="st">&quot;processed-data/project-name-quantile-normalized.tsv&quot;</span>))</span></code></pre></div>
+<p>In this code we are loading the <code>here</code> package and the <code>tidyverse</code> package (assuming that we have already installed these packages using the <code>install.packages()</code> command).</p>
+<p>We then import data from the file called <code>project-name-quantile-normalized.tsv</code> inside of the <code>processed-data</code> directory using the path of this data file relative to the <code>.Rproj</code> file. This is because the <code>here</code> function tells RStudio to start looking in the directory with the <code>.Rproj</code> file.</p>
+<p>Now if someone were to send all the project files to someone else, they could run this code without any adjustments!</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g3179c1a6897_0_10.png" alt="Sharing project files can be much easier if you set up your project with file paths using the here package and create an R project. You can give your entire collection of files to someone else and they can start using your code directly without making changes to paths, as the paths will be relative to your project directory. " width="100%" style="display: block; margin: auto;" /></p>
+<p>Checkout more of <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Jenny’s thoughts on organizing files, paths, and projects in R</a><span class="citation">(<a href="#ref-Bryan2017"><strong>Bryan2017?</strong></a>)</span>.</p>
+<p>Also checkout this <a href="https://jhudatascience.org/tidyversecourse/intro.html#rstudio-projects">course which talks about RStudio projects and the <code>here</code> package</a><span class="citation">(<a href="references.html#ref-jhu_rstudio_projects">Carrie Wright n.d.</a>)</span>.</p>
 </div>
 <div id="projecttemplate" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> ProjectTemplate<a href="setting-up-your-project.html#projecttemplate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="http://projecttemplate.net/" class="uri">http://projecttemplate.net/</a></p>
+<p>If you are interested in doing more <strong>advanced</strong> project organization and automatic running of code and testing, you could consider using the <a href="http://projecttemplate.net/"><code>ProjectTemplate</code> package</a>.</p>
+<p>This is not to be confused with R projects, you would still need to create an R project using this package, or you can specify using commands with this package to also create an R project.</p>
+<p>However, using <code>ProjectTemplate</code> will create a directory structure to help you stay organized.</p>
+<p>Running the <code>create.project()</code> command in the console of RStudio will create a new directory called <code>new_project</code> with many subdirectories such as <code>data</code> and <code>graphs</code>, and it will create a README file. You can read more about <a href="http://projecttemplate.net/architecture.html">the file structure that it creates</a>.</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_188.png" alt="The structure of directories or folders that are created using the ProjectTemplate package." width="100%" style="display: block; margin: auto;" /></p>
+<p>If you also add a <code>rstudio.project = TRUE</code>, this will create a new RStudio project as well.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="setting-up-your-project.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(ProjectTemplate)</span>
+<span id="cb5-2"><a href="setting-up-your-project.html#cb5-2" tabindex="-1"></a><span class="fu">create.project</span>(<span class="at">rstudio.project =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>You can use this package to help you create consistent directory structures across projects and to help you not forget to make README files.</p>
+<p>You can also customize this structure as well using the <a href="http://projecttemplate.net/custom_templates.html"><code>create.template</code> function</a>.</p>
 </div>
-<div id="r-markdown-files" class="section level3 hasAnchor" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> R Markdown files<a href="setting-up-your-project.html#r-markdown-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://rmarkdown.rstudio.com/articles_intro.html" class="uri">https://rmarkdown.rstudio.com/articles_intro.html</a></p>
+<div id="scientific-notebooks-rmd-or-qmd" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Scientific notebooks (Rmd or qmd)<a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Using notebooks can be a very helpful tool for documenting the development of an analysis.</p>
+<p>Data analyses can lead one on a winding trail of decisions and side investigations, but notebooks allow you to narrate your thought process as you travel along these analyses explorations!</p>
+<p><img src="resources/images/05-setting-up_files/figure-html/1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8f405fdab_0_186.png" alt="Ruby is looking at her computer that has a lovely notebook with a heatmap! Ruby says ‘Working from this notebook allows me to interactively develop on my data analysis and write down my thoughts about the process all in one place!’" width="1250" style="display: block; margin: auto;" /></p>
+<p><strong>Your scientific notebook should include descriptions that describe:</strong></p>
+<div id="the-purposes-of-the-notebook" class="section level4 hasAnchor" number="5.4.4.1">
+<h4><span class="header-section-number">5.4.4.1</span> The purposes of the notebook<a href="setting-up-your-project.html#the-purposes-of-the-notebook" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>It can be helpful to others and your future self to describe:</p>
+<ul>
+<li>The scientific question are you trying to answer</li>
+<li>The dataset you are using to try to answer this question</li>
+<li>An explanation for the choice of the dataset to help answer this question</li>
+</ul>
 </div>
-<div id="quarto-files" class="section level3 hasAnchor" number="5.4.5">
-<h3><span class="header-section-number">5.4.5</span> Quarto files<a href="setting-up-your-project.html#quarto-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://quarto.org/docs/get-started/hello/rstudio.html" class="uri">https://quarto.org/docs/get-started/hello/rstudio.html</a></p>
+<div id="the-rationales-behind-your-decisions" class="section level4 hasAnchor" number="5.4.4.2">
+<h4><span class="header-section-number">5.4.4.2</span> The rationales behind your decisions<a href="setting-up-your-project.html#the-rationales-behind-your-decisions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Describe major code decisions. For example, why you chose to use specific packages or why you took certain steps in that specific order. This can be very general to very specific, such as why a particular code chunk is doing a particular thing. The more possible options there were for choices or the more unusual a process that you might have taken, the greater the need to describe why you made certain decisions.</p>
+<p>Describe any particular filters or cutoffs you are using and how did you decided on those.</p>
+<p>For data wrangling steps, describe why you are wrangling the data in such a way. Is this because a certain package you are using requires it?</p>
+</div>
+<div id="your-observations-of-the-results" class="section level4 hasAnchor" number="5.4.4.3">
+<h4><span class="header-section-number">5.4.4.3</span> Your observations of the results<a href="setting-up-your-project.html#your-observations-of-the-results" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this section it is helpful to include:</p>
+<ul>
+<li>What do you currently think about the results?</li>
+<li>What do you think about the plots and tables you show in the notebook – how do they inform your original questions?</li>
+</ul>
+<p>There are two major types of notebooks folks use in the R programming language: R Markdown files and Quarto files. In the next section we will discuss these notebooks, the similarities and differences between these two options, and how to use them.</p>
 
+</div>
 </div>
 </div>
 </div>
@@ -421,7 +642,7 @@ The only two things that make <a href="https://twitter.com/JennyBryan?ref_src=tw
         </div>
       </div>
 <a href="a-tour-of-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-markdown-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reproducible-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
