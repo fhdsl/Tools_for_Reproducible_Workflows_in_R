@@ -9,7 +9,7 @@ ottrpal::set_knitr_image_path()
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_53")
 ```
 
-### Why write a custom function?
+### Recognize when to write a custom function
 
 There's a lot of reasons writing your own custom functions might be a thing you need to do.
 
@@ -30,11 +30,11 @@ A common way that a custom function might come about is:
 1. You've written some initial code that takes some object as input.
 2. You now realize you will need to run this series of code more than twice.
 
-To get started you can follow these steps to make a custom function:
 
-### Starting a new function
+#### Starting a new function
+To get started with writing a new function, you can follow these steps to make a custom function:
 
-Open up a new R script file and copy and paste our basic template we have below.
+1. Open up a new R script file to copy and paste our basic template we have below.
 Your basic custom function is going to follow this type of structure:
 
 We will walk through how to use this template here.
@@ -42,8 +42,7 @@ We will walk through how to use this template here.
 This top part of the template is the documentation. It's formatted in a way that would
 allow you to incorporate it into a package if you would like.
 
-1. It's likely you might already have some code drafted that has some of the code you need for your function.
-paste this code in the part of this template that says `# Your main code here`.
+2. It's likely you might already have some code drafted that has some of the code you need for your function. Paste this code in the part of this template that says `# Your main code here`.
 
 ```
 #' Title here
@@ -69,8 +68,8 @@ function_name <- function(arg1, arg2) {
 }
 ```
 
-2. First let's write a `@description` field. What is this function's goal.
-3. Next you'll likely want to sculpt your code, carefully thinking about its usage  and what types of options may need to be controlled by those who will use this function.
+3.  Let's write a `@description` field. Describe the goal of the function.
+4. Next you'll likely want to sculpt your code, carefully thinking about its usage  and what types of options may need to be controlled by those who will use this function.
 
 ### Working example
 
