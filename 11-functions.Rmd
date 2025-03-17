@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', fig.alt = "Learning objectives are to be able to: Recognize when it is appropriate to make a custom function to aid in the reproducibility of an analysis. Create functions that are reproducible and useable by others. What aspects of a function make them useable by others. Well documented. Follow a style. Properly engineered" out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', fig.alt = "Learning objectives are to be able to: Recognize when it is appropriate to make a custom function to aid in the reproducibility of an analysis. Create functions that are reproducible and useable by others. What aspects of a function make them useable by others. Well documented. Follow a style. Properly engineered", out.width="100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_53")
 ```
 
@@ -16,6 +16,11 @@ There's a lot of reasons writing your own custom functions might be a thing you 
 #### Cutting down on repetitive code
 
 We've discussed how DRY code is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
+
+```{r, fig.align='center', fig.alt = "The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen.
+", out.width="100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g341450bc187_100_5")
+```
 
 #### More readable code
 
@@ -32,6 +37,7 @@ A common way that a custom function might come about is:
 
 
 #### Starting a new function
+
 To get started with writing a new function, you can follow these steps to make a custom function:
 
 1. Open up a new R script file to copy and paste our basic template we have below.
