@@ -1,7 +1,16 @@
+Broman
+CyVerse
+FigShare
+funders
+googlesheets
+GoogleSheets
+useable
+YYYY
+Zenodo
 Maintainably
 Hopkins
 BioStars
-READing	
+READing
 Qmd
 qmd
 Rmd
