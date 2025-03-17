@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', fig.alt = "Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons clear metadata and what aspects of metadata aid in reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed", out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_63")
 ```
 
@@ -85,7 +85,7 @@ To make your data truly shared, you need to take the time to make sure it is wel
 There are two files you should make sure to include to help describe and organize your data project:
 
 - [A main README file](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/documenting-analyses.html#readmes) that orients others to what is included in your data.
-- A central download script that downloads the data in a way that is ready for re-analysis.
+- A central download script that downloads the data in a way that is ready for re-analysis. [See an example here](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/download-data.sh).
 - A metadata file that describes what data are included, how they are connected.
 
 ### Use consistent and clear names
@@ -115,7 +115,6 @@ There are so many little details that go into your data and projects. Those deta
 For more details on how to make data and code reproducible tips, see our [Intro to Reproducibility](https://www.itcrtraining.org/courses#h.ugabyqq1bigx) course.
 
 ## Why metadata is important
-
 
 Metadata are critically important descriptive information about your data.
 
