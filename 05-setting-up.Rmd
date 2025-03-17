@@ -288,7 +288,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
-Also checkout this [course which talks about RStudio projects and the `here` package](https://jhudatascience.org/tidyversecourse/intro.html#rstudio-projects).[@jhu_rstudio_projects].
+Also checkout this [course which talks about RStudio projects and the `here` package](https://jhudatascience.org/tidyversecourse/intro.html#rstudio-projects)[@jhu_rstudio_projects].
 
 ### ProjectTemplate
 
