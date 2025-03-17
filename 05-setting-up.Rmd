@@ -222,7 +222,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 ```
 
 
-It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the .Rproj file for the project that you currently have open, if you happen to navigate away from that directory. 
+It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the `.Rproj` file for the project that you currently have open, if you happen to navigate away from that directory. 
 
 ```{r, , fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The project directory button in the file pane will allow you to quickly go back to the directory with the .Rproj file, even if you have navigated far away. ."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33c01fedb5a_0_175")
