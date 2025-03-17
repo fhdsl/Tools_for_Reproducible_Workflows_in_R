@@ -4,6 +4,8 @@
 
 This is the GitHub repository for the Tools for Reproducible Workflows course. This course explores a variety of tools that can assist with reproducible data analysis from a broad range of fields. This course was funded as part of a series of courses in the [Training Module for Reproducible Data Science Research project](https://reporter.nih.gov/search/k_pXzn8wfUeEvaWpnzIToA/project-details/10663171).
 
+Except where otherwise indicated, the contents of this course are available for use under the Creative Commons Attribution 4.0 license. You are free to adapt and share the work, but you must give appropriate credit, provide a link to the license, and indicate if changes were made. Sample attribution: Tools for Reproducible Workflows in R by [Fred Hutchinson Data Science Lab](https://hutchdatascience.org/) and [University of Texas, Austin](https://stat.utexas.edu/) (CC-BY 4.0). You can download the illustrations by clicking [here](https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit?usp=sharing).
+
 ## Learning Objectives
 
 This course will demonstrate how to:
