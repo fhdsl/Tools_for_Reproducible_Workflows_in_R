@@ -84,7 +84,7 @@ Keep in mind that although you may understand the ins and outs of your dataset a
 To make your data truly shared, you need to take the time to make sure it is well-organized and well-described!
 There are two files you should make sure to include to help describe and organize your data project:
 
-- [A main README file](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/documenting-analyses.html#readmes) that orients others to what is included in your data.
+- [A main README file](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/setting-up-your-project.html#readmes) that orients others to what is included in your data.
 - A central download script that downloads the data in a way that is ready for re-analysis. [See an example here](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/download-data.sh).
 - A metadata file that describes what data are included, and how the data files (if more than one) are connected.
 
