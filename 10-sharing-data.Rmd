@@ -5,16 +5,16 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', fig.alt = "Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons clear metadata and what aspects of metadata aid in reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed", out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', fig.alt = "Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons why clear metadata enhances reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed", out.width="100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_63")
 ```
 
 
 ## Data sharing is important!
 
-Sharing data is critical for optimizing the advancement of scientific understanding. Now that labs all over the world are producing massive amounts of data, there are many discoveries that can be made by just using this existing data.
+Sharing data is critical for optimizing the advancement of scientific understanding. Now that labs all over the world are producing massive amounts of data, there are many discoveries that can be made by just using existing data.
 
-There's so many excellent reasons to put your data in a repository whether or not a journal requires it:  
+There are so many excellent reasons to put your data in a repository whether or not a journal requires it:  
 
 **Sharing your data...**  
 
@@ -40,30 +40,30 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Benefits of data sharing
 
-In addition to these benefits to yourself, data sharing has other far reaching benefits. It can help support faster advances in science and medicine, by reducing the need to collect new data, which reduces costs, time and effort, including the effort and burden that is required to collect data on or from patients.
+In addition to these benefits to yourself, data sharing has other far reaching benefits. It can help support faster advances in science and medicine, by reducing the need to collect new data, which reduces costs, time and effort, including the effort and burden placed on patients or research participants for data collection.
 
 It also helps support researchers at institutes that do not have as many resources to collect data.
 
-Ultimately it can also therefore help patients benefit from research faster, as faster advances can be made through more efficient research.
+Ultimately it can therefore help patients benefit from research faster, as faster advances can be made through more efficient research.
 
 ```{r, fig.align='center', echo = FALSE, fig.alt= "Data Sharing can also help with costs related to collecting data, reduces the time and effort to collect new data, including the burden on patients, it allows research to be more efficient, the same data can be used for multiple studies, which is especially helpful if combining different kinds of data and researchers don't necessarily have to ability to collect each kind of data, it supports researchers at insitutions that have less resources, and it helps patients get the benefits of research faster.’", out.width="100%"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_201_766")
 ```
 
+See [this description of additional reasons why sharing data is helpful for scientific advancement](https://hutchdatascience.org/NIH_Data_Sharing/why-this-new-dms-policy.html). 
 ## Data repositories
 
-The best way to share your data is by putting it somewhere that others can download it (and it can be kept private when necessary). There's many repositories out there that handle this for you.
+The best way to share your data is by putting it somewhere that others can download it (and it can be kept private when necessary). There are many repositories out there that handle this for you. We recommend checking out our course on the [NIH data sharing policy](https://hutchdatascience.org/NIH_Data_Sharing/data-management-and-storage.html) which describes many important resources for finding appropriate repositories for different types of data. These tools can even be helpful for research that is not related to health.
 
-The repository you choose for sharing data will be highly dependent on the field you work in and the data type that you work with.
+The repository you choose for sharing data will be highly dependent on the field you work in and the data type that you work with. Do your best to try to understand what the standard practice is for your field.
 
-Below are some of the standard repositories for data you should consider.
 
-**For a longer list of repositories, we also advise consulting this Guide on data repositories](https://www.nature.com/sdata/policies/repositories) published by Nature.**
+**For a longer list of repositories, we also advise consulting this [guide on data repositories](https://www.nature.com/sdata/policies/repositories) published by Nature.**
 
 ### Repositories for journal articles
 
-For manuscripts or large datasets that are of atypical format, using one of these repositories is a good idea.
-The journal you submit to may have a recommendation of one over another. If not, you might end up having a preference.
+If your data doesn't fit a standard recommended repository, such as [GEO](https://www.ncbi.nlm.nih.gov/geo/) for genomic data for example, large datasets can be shared using one of the following repositories.
+Note that some journals or funding agencies may have specific requirements.
 
 - [CyVerse Data Commons Repository](https://cyverse.org/data-commons)
 - [Data Dryad](https://datadryad.org/stash)
@@ -73,25 +73,25 @@ The journal you submit to may have a recommendation of one over another. If not,
 
 ### Small datasets
 
-Data sets that are small or have an atypical format can be published as supplementary files as a part of a manuscript.
+Datasets that are small and don't have a standardized repository, can be published as supplementary files as a part of a manuscript.
 
 ## Data Submission tips
 
-Uploading a dataset to a data repository is a great step toward sharing your data! But, the dataset uploaded is unclear and unusable it might as well not been uploaded in the first place.
+Uploading a dataset to a data repository is a great step toward sharing your data! But, if the dataset uploaded is unclear and unusable it might as well not been uploaded in the first place.
 
-Keep in mind that although you may understand the ins and outs of your dataset and project, its likely that others who look at your data will not understand your notation.
+Keep in mind that although you may understand the ins and outs of your dataset and project, it is likely that others who look at your data may not.
 
 To make your data truly shared, you need to take the time to make sure it is well-organized and well-described!
 There are two files you should make sure to include to help describe and organize your data project:
 
 - [A main README file](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/documenting-analyses.html#readmes) that orients others to what is included in your data.
 - A central download script that downloads the data in a way that is ready for re-analysis. [See an example here](https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/download-data.sh).
-- A metadata file that describes what data are included, how they are connected.
+- A metadata file that describes what data are included, and how the data files (if more than one) are connected.
 
 ### Use consistent and clear names
 
 - Make sure that sample and data IDs used are consistent across the project - make sure to include a metadata file that describes your samples in a way that is clear to those who might not have any prior knowledge of the project.
-- Sample and data IDs should keep with standard formatting otherwise known in the field.
+- Sample and data IDs should be consistent with any standardized formatting used in the field.
 - Features names should avoid using genomic coordinates as these may change with new genome versions.
 
 ### Make your project reproducible
@@ -105,12 +105,12 @@ Reproducible projects are able to be re-run by others to obtain the same results
 - The software versions used to obtain the results are made clear by documentation or providing a [Docker](https://www.docker.com/) container (more advanced option).
 - The code and data are well described and organized with a system that is consistent.
 
-Check out our [introductory](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html) and [advanced](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html) courses about reproducibility for more information.
+Check out our [introductory reproducibility course](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html), [advanced reproducibility course](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html), and [our course on containers](https://hutchdatascience.org/Containers_for_Scientists/) for more information.
 
 ### Have someone else review your code and data!
 
-The best way to find out if your data are useable by others is to have someone else look it over!
-There are so many little details that go into your data and projects. Those details can easily lead to typos and errors upon data submission and also can lead to confusion when others (or your future self) are attempting to use that data.The best way to test if your data project is usable is to have someone else (who has not prepared the data) is able to make sense of it.
+The best way to find out if your data are useable by others is to have someone else look over your code and data!
+There are so many little details that go into your data and projects. Those details can easily lead to typos and errors upon data submission that can cause confusion when others (or your future self) are attempting to use that data. The best way to test if your data project is usable is to have someone else (who has not prepared the data) try to make sense of it.
 
 For more details on how to make data and code reproducible tips, see our [Intro to Reproducibility](https://www.itcrtraining.org/courses#h.ugabyqq1bigx) course.
 
@@ -120,7 +120,7 @@ Metadata are critically important descriptive information about your data.
 
 **Without metadata, the data themselves are useless or at best vastly limited.**
 
-Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.
+Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your dataset.
 
 ```{r, fig.alt = "Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_201_1083")
@@ -140,22 +140,22 @@ Where do these metadata come from? The notes and experimental design from anyone
 
 Some examples of how to make your data crystal clear:
 - Look out for typos and spelling errors!
-- Don't use acronyms unless you need to and then if you do need to make sure to explain what the acronym means.
-- Don't add extraneous information -- perhaps items that are relevant to your lab internally but not meaningful to people outside of your lab. Either explain the significance of such information or leave it out.
+- Don't use acronyms unless necessary. If necessary,  make sure to explain what the acronym means.
+- Don't add extraneous information. For example, perhaps items that are relevant to your lab internally, but not meaningful to people outside of your lab. Either explain the significance of such information or leave it out. It is however, good to keep a record of such information for your lab elsewhere.
 
 - Make your [data tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html#:~:text=Tidy%20data%20is%20a%20standard,Every%20row%20is%20an%20observation.).
-> Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:
+> Tidy data is a standard way of mapping the meaning of a dataset to its structure.  In tidy data:
 > - Every column is a variable.
 > - Every row is an observation.
 > - Every cell is a single value.
 
 #### Goal B: Avoid introducing errors into your metadata in the future!
 
-Toward these two goals, [this excellent article](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) by Broman & Woo discusses metadata design rules. We will very briefly cover the major points here but highly suggest you read the original article.
+To help avoid future metadata errors, check out [this excellent article discussing metadata design](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) by Broman & Woo. We will very briefly cover the major points here but highly suggest you read the original article.
 
 1. _Be Consistent_ - Whatever labels and systems you choose, use it universally. This not only means in your metadata spreadsheet but also anywhere you are discussing your metadata variables.
 
-2. _Choose good names for things_ - avoid spaces, special characters, or within the lab jargon.
+2. _Choose good names for things_ - avoid spaces, special characters, or unusual and undescribed jargon.
 
 3. _Write Dates as YYYY-MM-DD_ - this is a global standard and less likely to be messed up by Microsoft Excel.
 
@@ -165,12 +165,12 @@ Toward these two goals, [this excellent article](https://www.tandfonline.com/doi
 
 6. _Make it a Rectangle_ - This is the easiest way to read data, for a computer and a human. Have your samples be the rows and variables be columns.
 
-7. _Create a Data Dictionary_ - Have somewhere that you describe what your metadata mean in detailed paragraphs.
+7. _Create a Data Dictionary_ - Have a document where you describe what your metadata means in detailed paragraphs.
 
 8. _No Calculations in the Raw Data Files_ - To avoid mishaps, you should always keep a clean, original, raw version of your metadata that you do not add extra calculations or notes to.
 
-9. _Do Not Use Font Color or Highlighting as Data_ - This only adds to confusion to others if they don't understand your color coding scheme. Instead create a new variable for anything you might be tempted to color code.
+9. _Do Not Use Font Color or Highlighting as Data_ - This only adds to confusion to others if they don't understand your color coding scheme. In addition not all data software and programming languages can interpret color. Instead create a new variable for anything you might be tempted to color code.
 
-10. _Make Backups_ - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places. We recommend keeping writing your metadata in something like GoogleSheets because it is both free and also saved online so that it is safe from computer crashes.
+10. _Make Backups_ - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places. If your data does not contain private information, we recommend writing your metadata in something like GoogleSheets because it is both free and also saved online so that it is safe from computer crashes. Check out this [description of strategies for data for keeping data resilient](https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-security.html#data-resiliency) in case you use a server or a cloud option to store your data.
 
-11. _Use Data Validation to Avoid Errors_ - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.
+11. _Use Data Validation to Avoid Errors_ - set data types and have unit tests check whether data types are what you expect for a given variable. In an upcoming chapter we will discuss how to set up tests like this using [`testthat` R package](https://testthat.r-lib.org/). 
