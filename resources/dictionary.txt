@@ -7,6 +7,15 @@ Guo
 key’
 reframed
 RProj
+Broman
+CyVerse
+FigShare
+funders
+googlesheets
+GoogleSheets
+useable
+YYYY
+Zenodo
 Maintainably
 Hopkins
 BioStars
@@ -24,6 +33,7 @@ Ctrl
 declutter
 github
 gitignore
+Guo
 filetype
 functionalize
 Hadley
