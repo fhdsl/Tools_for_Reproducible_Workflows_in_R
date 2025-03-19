@@ -5,9 +5,52 @@
 ottrpal::set_knitr_image_path()
 ```
 
-```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Major point!! example image"}
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Learning objectives are to be able to: Use collaborations and code review to boost reproducibility. Polish code with code review through GitHub pull requests. Manage tasks of a project using GitHub Issues. Communicate with collaborators clearly on GitHub"}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g21a84b32106_0_68")
 ```
+
+## Components of collaborating on GitHub
+
+As noted previously, GitHub is not only great for sharing and version control but it is also great for collaborating!
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g341dc8b716d_0_6")
+```
+
+This collaboration can be done through the use of issues and pull requests!
+
+```{r, fig.align='center', out.width="100%", echo = FALSE, fig.alt= "The GitHub collaboration workflow starts with the creation of an issue. Someone identified a problem or needed feature for the project and they can take note of this by creating an issue. This issue will be addressed by changes in a pull request which will reference this issue. "}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g341dc8b716d_0_0")
+```
+### Step 1. An problem identified/issue created
+
+[GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are where we can note, plan, and discuss work for a project. It might first be filed by one person but then used to further describe a problem or feature request. Once the issue is scoped and defined enough it can be assigned to someone who can work on it
+
+### Step 2. Proposing a solution
+
+Creating a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) is proposing a solution that addresses the original issue. The author of the pull request creates a new branch with the necessary changes to address the issue. The pull request description should reference the original issue so we know what it is addressing and explain how the work addresses it.
+
+### Step 3. Reviewer looks at proposed solution
+
+Now the reviewer is given a chance to look at the proposed solution and approve and otherwise improve it in collaboration with the original author.
+
+### Step 4. Refined solution is deployed
+
+Once both the author and the reviewer agree the work is ready its merged and deployed to main! Yay! Time to celebrate.
+
+Now the process can be repeated for a next issue!
+
+## Issues should tell us:
+- What the problem is - including examples or screenshots to demonstrate the problem.
+- What solution(s) could address the problem?
+- Who might be assigned to addressing this problem?
+- Potentially what timeline or urgency the problem has.
+
+## Pull Requests should tell us:
+- What issue is the work addressing?
+- How is it addressing the issue?
+- What pitfalls exist?
+- What should be looked at and reviewed carefully.
 
 ## Engaging in Code Review - as an author
 
@@ -55,7 +98,6 @@ What would you like your reviewer to do with this pull request? Stating this exp
 - Are you still in the early stages and looking for a bigger picture review? Let them know that before they waste their time digging into the code line-by-line.
 - Are you in the later stages and looking for detailed nit-picky review?
 - Are you looking for feedback on the results or methods?
-
 
 ### Points out questionable areas that need extra attention
 
