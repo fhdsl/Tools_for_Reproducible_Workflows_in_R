@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 10 Sharing Data | Tools for Reproducible Workflows in R</title>
   <meta name="description" content="Chapter 10 Sharing Data | Tools for Reproducible Workflows in R" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 10 Sharing Data | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -30,8 +29,7 @@
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="software-versions.html"/>
-<link rel="next" href="functions.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<link rel="next" href="about-the-authors.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -89,11 +88,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
+code span.at { color: #204a87; } /* Attribute */
 code span.bn { color: #0000cf; } /* BaseN */
 code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
+code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #8f5902; font-style: italic; } /* Comment */
 code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
@@ -102,14 +101,14 @@ code span.dv { color: #0000cf; } /* DecVal */
 code span.er { color: #a40000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
 code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
 code span.ot { color: #8f5902; } /* Other */
 code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
 code span.ss { color: #4e9a06; } /* SpecialString */
 code span.st { color: #4e9a06; } /* String */
 code span.va { color: #000000; } /* Variable */
@@ -117,6 +116,10 @@ code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -164,12 +167,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.2</b> Target Audience</a></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.3</b> Curriculum</a></li>
-<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#learning-objectives"><i class="fa fa-check"></i><b>1.4</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.3</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html"><i class="fa fa-check"></i><b>2</b> R for Reproducibility</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.1" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="2.2" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#why-r"><i class="fa fa-check"></i><b>2.2</b> Why R</a></li>
 <li class="chapter" data-level="2.3" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#it-is-free-and-open-source"><i class="fa fa-check"></i><b>2.3</b> It is free and open source</a></li>
 <li class="chapter" data-level="2.4" data-path="r-for-reproducibility.html"><a href="r-for-reproducibility.html#the-community"><i class="fa fa-check"></i><b>2.4</b> The community</a></li>
@@ -215,44 +218,66 @@ div.csl-indent {
 <li class="chapter" data-level="4.5" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#keyboard-shortcuts"><i class="fa fa-check"></i><b>4.5</b> Keyboard Shortcuts</a></li>
 <li class="chapter" data-level="4.6" data-path="a-tour-of-rstudio.html"><a href="a-tour-of-rstudio.html#conclusion-2"><i class="fa fa-check"></i><b>4.6</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html"><i class="fa fa-check"></i><b>5</b> R Markdown Reports</a>
+<li class="chapter" data-level="5" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>5</b> Setting up your project</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#reports-support-reproducibility"><i class="fa fa-check"></i><b>5.1</b> Reports support reproducibility</a></li>
-<li class="chapter" data-level="5.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#getting-started-with-r-markdown"><i class="fa fa-check"></i><b>5.2</b> Getting Started with R Markdown</a></li>
-<li class="chapter" data-level="5.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#rendering-r-markdown-files"><i class="fa fa-check"></i><b>5.3</b> Rendering R Markdown files</a></li>
-<li class="chapter" data-level="5.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>5.4</b> Writing code in R Markdown files</a>
+<li class="chapter" data-level="5.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#understand-why-project-organization-is-key-to-reproducible-analyses"><i class="fa fa-check"></i><b>5.1</b> Understand why project organization is key to reproducible analyses</a></li>
+<li class="chapter" data-level="5.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#general-principles-of-project-organization"><i class="fa fa-check"></i><b>5.2</b> General principles of project organization</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#the-yaml"><i class="fa fa-check"></i><b>5.4.1</b> The YAML</a></li>
-<li class="chapter" data-level="5.4.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-chunks"><i class="fa fa-check"></i><b>5.4.2</b> Code chunks</a></li>
-<li class="chapter" data-level="5.4.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#running-chunks"><i class="fa fa-check"></i><b>5.4.3</b> Running chunks</a></li>
-<li class="chapter" data-level="5.4.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>5.4.4</b> Running previous chunks</a></li>
+<li class="chapter" data-level="5.2.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#readmes"><i class="fa fa-check"></i><b>5.2.1</b> READMEs!</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>5.5</b> Cleaning the environment</a></li>
-<li class="chapter" data-level="5.6" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>5.6</b> Restarting R Session</a></li>
-<li class="chapter" data-level="5.7" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#chunk-setup"><i class="fa fa-check"></i><b>5.7</b> Chunk setup</a></li>
-<li class="chapter" data-level="5.8" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#finding-chunks"><i class="fa fa-check"></i><b>5.8</b> Finding chunks</a></li>
-<li class="chapter" data-level="5.9" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#add-chunks"><i class="fa fa-check"></i><b>5.9</b> Add chunks</a></li>
-<li class="chapter" data-level="5.10" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>5.10</b> More on running chunks</a></li>
-<li class="chapter" data-level="5.11" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#text-and-headers"><i class="fa fa-check"></i><b>5.11</b> Text and headers</a>
+<li class="chapter" data-level="5.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#navigate-file-paths"><i class="fa fa-check"></i><b>5.3</b> Navigate file paths</a></li>
+<li class="chapter" data-level="5.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#handy-r-tools"><i class="fa fa-check"></i><b>5.4</b> Handy R Tools</a>
 <ul>
-<li class="chapter" data-level="5.11.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#headers"><i class="fa fa-check"></i><b>5.11.1</b> Headers</a></li>
-<li class="chapter" data-level="5.11.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>5.11.2</b> Bold and Italics</a></li>
+<li class="chapter" data-level="5.4.1" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#r-project-files"><i class="fa fa-check"></i><b>5.4.1</b> R Project files</a></li>
+<li class="chapter" data-level="5.4.2" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#the-here-package"><i class="fa fa-check"></i><b>5.4.2</b> The <code>here</code> package</a></li>
+<li class="chapter" data-level="5.4.3" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#projecttemplate"><i class="fa fa-check"></i><b>5.4.3</b> ProjectTemplate</a></li>
+<li class="chapter" data-level="5.4.4" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html#scientific-notebooks-rmd-or-qmd"><i class="fa fa-check"></i><b>5.4.4</b> Scientific notebooks (Rmd or qmd)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.12" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#additional-features"><i class="fa fa-check"></i><b>5.12</b> Additional Features</a>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reproducible-reports.html"><a href="reproducible-reports.html"><i class="fa fa-check"></i><b>6</b> Reproducible Reports</a>
 <ul>
-<li class="chapter" data-level="5.12.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#aesthetics"><i class="fa fa-check"></i><b>5.12.1</b> Aesthetics</a></li>
-<li class="chapter" data-level="5.12.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#report-file-types"><i class="fa fa-check"></i><b>5.12.2</b> Report File Types</a></li>
-</ul></li>
-<li class="chapter" data-level="5.13" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>5.13</b> Keyboard Shortcuts</a>
+<li class="chapter" data-level="6.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#notebook-reports-support-reproducibility"><i class="fa fa-check"></i><b>6.1</b> Notebook reports support reproducibility</a></li>
+<li class="chapter" data-level="6.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-or-quarto"><i class="fa fa-check"></i><b>6.2</b> R Markdown or Quarto?</a>
 <ul>
-<li class="chapter" data-level="5.13.1" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#table-of-contents"><i class="fa fa-check"></i><b>5.13.1</b> Table of Contents</a></li>
-<li class="chapter" data-level="5.13.2" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-folding"><i class="fa fa-check"></i><b>5.13.2</b> Code Folding</a></li>
-<li class="chapter" data-level="5.13.3" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#code-download"><i class="fa fa-check"></i><b>5.13.3</b> Code Download</a></li>
-<li class="chapter" data-level="5.13.4" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#automatic-date"><i class="fa fa-check"></i><b>5.13.4</b> Automatic Date</a></li>
+<li class="chapter" data-level="6.2.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-pros"><i class="fa fa-check"></i><b>6.2.1</b> R Markdown Pros:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#r-markdown-cons"><i class="fa fa-check"></i><b>6.2.2</b> R Markdown Cons:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-pros"><i class="fa fa-check"></i><b>6.2.3</b> Quarto Pros:</a></li>
+<li class="chapter" data-level="6.2.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#quarto-cons"><i class="fa fa-check"></i><b>6.2.4</b> Quarto Cons:</a></li>
 </ul></li>
-<li class="chapter" data-level="5.14" data-path="r-markdown-reports.html"><a href="r-markdown-reports.html#conclusion-3"><i class="fa fa-check"></i><b>5.14</b> Conclusion</a></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#getting-started-with-notebooks"><i class="fa fa-check"></i><b>6.3</b> Getting Started with notebooks</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#rendering-r-markdown"><i class="fa fa-check"></i><b>6.4</b> Rendering R Markdown</a></li>
+<li class="chapter" data-level="6.5" data-path="reproducible-reports.html"><a href="reproducible-reports.html#writing-code-in-r-markdown-files"><i class="fa fa-check"></i><b>6.5</b> Writing code in R Markdown files</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#the-yaml"><i class="fa fa-check"></i><b>6.5.1</b> The YAML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-chunks"><i class="fa fa-check"></i><b>6.5.2</b> Code chunks</a></li>
+<li class="chapter" data-level="6.5.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-chunks"><i class="fa fa-check"></i><b>6.5.3</b> Running chunks</a></li>
+<li class="chapter" data-level="6.5.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#running-previous-chunks"><i class="fa fa-check"></i><b>6.5.4</b> Running previous chunks</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="setting-up-your-project.html"><a href="setting-up-your-project.html"><i class="fa fa-check"></i><b>6</b> Setting up your project</a></li>
+<li class="chapter" data-level="6.6" data-path="reproducible-reports.html"><a href="reproducible-reports.html#cleaning-the-environment"><i class="fa fa-check"></i><b>6.6</b> Cleaning the environment</a></li>
+<li class="chapter" data-level="6.7" data-path="reproducible-reports.html"><a href="reproducible-reports.html#restarting-r-session"><i class="fa fa-check"></i><b>6.7</b> Restarting R Session</a></li>
+<li class="chapter" data-level="6.8" data-path="reproducible-reports.html"><a href="reproducible-reports.html#chunk-setup"><i class="fa fa-check"></i><b>6.8</b> Chunk setup</a></li>
+<li class="chapter" data-level="6.9" data-path="reproducible-reports.html"><a href="reproducible-reports.html#finding-chunks"><i class="fa fa-check"></i><b>6.9</b> Finding chunks</a></li>
+<li class="chapter" data-level="6.10" data-path="reproducible-reports.html"><a href="reproducible-reports.html#add-chunks"><i class="fa fa-check"></i><b>6.10</b> Add chunks</a></li>
+<li class="chapter" data-level="6.11" data-path="reproducible-reports.html"><a href="reproducible-reports.html#more-on-running-chunks"><i class="fa fa-check"></i><b>6.11</b> More on running chunks</a></li>
+<li class="chapter" data-level="6.12" data-path="reproducible-reports.html"><a href="reproducible-reports.html#text-and-headers"><i class="fa fa-check"></i><b>6.12</b> Text and headers</a>
+<ul>
+<li class="chapter" data-level="6.12.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#headers"><i class="fa fa-check"></i><b>6.12.1</b> Headers</a></li>
+<li class="chapter" data-level="6.12.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#bold-and-italics"><i class="fa fa-check"></i><b>6.12.2</b> Bold and Italics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.13" data-path="reproducible-reports.html"><a href="reproducible-reports.html#additional-features"><i class="fa fa-check"></i><b>6.13</b> Additional Features</a>
+<ul>
+<li class="chapter" data-level="6.13.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#aesthetics"><i class="fa fa-check"></i><b>6.13.1</b> Aesthetics</a></li>
+<li class="chapter" data-level="6.13.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#report-file-types"><i class="fa fa-check"></i><b>6.13.2</b> Report File Types</a></li>
+</ul></li>
+<li class="chapter" data-level="6.14" data-path="reproducible-reports.html"><a href="reproducible-reports.html#keyboard-shortcuts-1"><i class="fa fa-check"></i><b>6.14</b> Keyboard Shortcuts</a>
+<ul>
+<li class="chapter" data-level="6.14.1" data-path="reproducible-reports.html"><a href="reproducible-reports.html#table-of-contents"><i class="fa fa-check"></i><b>6.14.1</b> Table of Contents</a></li>
+<li class="chapter" data-level="6.14.2" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-folding"><i class="fa fa-check"></i><b>6.14.2</b> Code Folding</a></li>
+<li class="chapter" data-level="6.14.3" data-path="reproducible-reports.html"><a href="reproducible-reports.html#code-download"><i class="fa fa-check"></i><b>6.14.3</b> Code Download</a></li>
+<li class="chapter" data-level="6.14.4" data-path="reproducible-reports.html"><a href="reproducible-reports.html#automatic-date"><i class="fa fa-check"></i><b>6.14.4</b> Automatic Date</a></li>
+</ul></li>
+<li class="chapter" data-level="6.15" data-path="reproducible-reports.html"><a href="reproducible-reports.html#conclusion-3"><i class="fa fa-check"></i><b>6.15</b> Conclusion</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="reproducible-code.html"><a href="reproducible-code.html"><i class="fa fa-check"></i><b>7</b> Reproducible Code</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="reproducible-code.html"><a href="reproducible-code.html#reproducibility-means-we-dont-need-to-reinvent-the-wheel"><i class="fa fa-check"></i><b>7.1</b> Reproducibility means we don’t need to reinvent the wheel!</a>
@@ -295,7 +320,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="software-versions.html"><a href="software-versions.html"><i class="fa fa-check"></i><b>9</b> Software versions</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-2"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.1" data-path="software-versions.html"><a href="software-versions.html#learning-objectives-1"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="9.2" data-path="software-versions.html"><a href="software-versions.html#no-two-computers-are-the-same"><i class="fa fa-check"></i><b>9.2</b> No two computers are the same</a></li>
 <li class="chapter" data-level="9.3" data-path="software-versions.html"><a href="software-versions.html#software-and-package-versions-affect-results"><i class="fa fa-check"></i><b>9.3</b> Software and package versions affect results!</a></li>
 <li class="chapter" data-level="9.4" data-path="software-versions.html"><a href="software-versions.html#session-info"><i class="fa fa-check"></i><b>9.4</b> Session Info</a></li>
@@ -303,12 +328,28 @@ div.csl-indent {
 <li class="chapter" data-level="9.6" data-path="software-versions.html"><a href="software-versions.html#containerization"><i class="fa fa-check"></i><b>9.6</b> Containerization</a></li>
 <li class="chapter" data-level="9.7" data-path="software-versions.html"><a href="software-versions.html#conclusion-6"><i class="fa fa-check"></i><b>9.7</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="sharing-data.html"><a href="sharing-data.html"><i class="fa fa-check"></i><b>10</b> Sharing Data</a></li>
-<li class="chapter" data-level="11" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>11</b> Functions</a></li>
-<li class="chapter" data-level="12" data-path="project-maintenance-and-updates.html"><a href="project-maintenance-and-updates.html"><i class="fa fa-check"></i><b>12</b> Project maintenance and updates</a></li>
-<li class="chapter" data-level="13" data-path="collaborations-through-github.html"><a href="collaborations-through-github.html"><i class="fa fa-check"></i><b>13</b> Collaborations through GitHub</a></li>
+<li class="chapter" data-level="10" data-path="sharing-data.html"><a href="sharing-data.html"><i class="fa fa-check"></i><b>10</b> Sharing Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="sharing-data.html"><a href="sharing-data.html#data-sharing-is-important"><i class="fa fa-check"></i><b>10.1</b> Data sharing is important!</a></li>
+<li class="chapter" data-level="10.2" data-path="sharing-data.html"><a href="sharing-data.html#benefits-of-data-sharing"><i class="fa fa-check"></i><b>10.2</b> Benefits of data sharing</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="sharing-data.html"><a href="sharing-data.html#repositories-for-journal-articles"><i class="fa fa-check"></i><b>10.2.1</b> Repositories for journal articles</a></li>
+<li class="chapter" data-level="10.2.2" data-path="sharing-data.html"><a href="sharing-data.html#small-datasets"><i class="fa fa-check"></i><b>10.2.2</b> Small datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="sharing-data.html"><a href="sharing-data.html#data-submission-tips"><i class="fa fa-check"></i><b>10.3</b> Data Submission tips</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="sharing-data.html"><a href="sharing-data.html#use-consistent-and-clear-names"><i class="fa fa-check"></i><b>10.3.1</b> Use consistent and clear names</a></li>
+<li class="chapter" data-level="10.3.2" data-path="sharing-data.html"><a href="sharing-data.html#make-your-project-reproducible"><i class="fa fa-check"></i><b>10.3.2</b> Make your project reproducible</a></li>
+<li class="chapter" data-level="10.3.3" data-path="sharing-data.html"><a href="sharing-data.html#have-someone-else-review-your-code-and-data"><i class="fa fa-check"></i><b>10.3.3</b> Have someone else review your code and data!</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="sharing-data.html"><a href="sharing-data.html#why-metadata-is-important"><i class="fa fa-check"></i><b>10.4</b> Why metadata is important</a></li>
+<li class="chapter" data-level="10.5" data-path="sharing-data.html"><a href="sharing-data.html#how-to-create-metadata"><i class="fa fa-check"></i><b>10.5</b> How to create metadata?</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="sharing-data.html"><a href="sharing-data.html#the-goals-in-creating-your-metadata"><i class="fa fa-check"></i><b>10.5.1</b> The goals in creating your metadata:</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
-<li class="chapter" data-level="14" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>14</b> References</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
 <p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
@@ -344,10 +385,145 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="sharing-data" class="section level1" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Sharing Data</h1>
-<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_63.png" title="Major point!! example image" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
+<div id="sharing-data" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Sharing Data<a href="sharing-data.html#sharing-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_63.png" alt="Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons why clear metadata enhances reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed" width="100%" style="display: block; margin: auto;" /></p>
+<div id="data-sharing-is-important" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Data sharing is important!<a href="sharing-data.html#data-sharing-is-important" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sharing data is critical for optimizing the advancement of scientific understanding. Now that labs all over the world are producing massive amounts of data, there are many discoveries that can be made by just using existing data.</p>
+<p>There are so many excellent reasons to put your data in a repository whether or not a journal requires it:</p>
+<p><strong>Sharing your data…</strong></p>
+<ol style="list-style-type: decimal">
+<li>Makes your project more transparent and thus more likely to be trusted and cited. In fact one study found that articles with links to the data used (in a repository) were cited more than articles without such information or other forms of data sharing <span class="citation">(<a href="#ref-colavizza_citation_2020"><strong>colavizza_citation_2020?</strong></a>)</span>.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_144.png" alt="Another researcher is downloading the data from a repository and says ‘These insights are so exciting! I can’t wait to look into this data even more!’" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Helps your relieve your own workload so your email inbox isn’t loaded by requests you probably don’t have time to respond to.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_335.png" alt="Ruby is reading a journal article with data and code she is interested in. The journal article says ‘Code and data are available upon request by email’. Ruby sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Allows others to gain even more insights from your data which shows funders that your data will be used to its maximum potential.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_529.png" alt="Ruby has uploaded her data to a repository and now its being used by many other researchers. Ruby says to her funders, represented as a bank, ‘The data you funded is getting so much mileage!’" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>It also provides more opportunities for others to replicate your results, which could help advance not only your career, but our understanding of science and medicine.</li>
+</ol>
+</div>
+<div id="benefits-of-data-sharing" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Benefits of data sharing<a href="sharing-data.html#benefits-of-data-sharing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In addition to these benefits to yourself, data sharing has other far reaching benefits. It can help support faster advances in science and medicine, by reducing the need to collect new data, which reduces costs, time and effort, including the effort and burden placed on patients or research participants for data collection.</p>
+<p>It also helps support researchers at institutes that do not have as many resources to collect data.</p>
+<p>Ultimately it can therefore help patients benefit from research faster, as faster advances can be made through more efficient research.</p>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_766.png" alt="Data Sharing can also help with costs related to collecting data, reduces the time and effort to collect new data, including the burden on patients, it allows research to be more efficient, the same data can be used for multiple studies, which is especially helpful if combining different kinds of data and researchers don't necessarily have to ability to collect each kind of data, it supports researchers at insitutions that have less resources, and it helps patients get the benefits of research faster.’" width="100%" style="display: block; margin: auto;" /></p>
+<p>See <a href="https://hutchdatascience.org/NIH_Data_Sharing/why-this-new-dms-policy.html">this description of additional reasons why sharing data is helpful for scientific advancement</a>.
+## Data repositories</p>
+<p>The best way to share your data is by putting it somewhere that others can download it (and it can be kept private when necessary). There are many repositories out there that handle this for you. We recommend checking out our course on the <a href="https://hutchdatascience.org/NIH_Data_Sharing/data-management-and-storage.html">NIH data sharing policy</a> which describes many important resources for finding appropriate repositories for different types of data. These tools can even be helpful for research that is not related to health.</p>
+<p>The repository you choose for sharing data will be highly dependent on the field you work in and the data type that you work with. Do your best to try to understand what the standard practice is for your field.</p>
+<p><strong>For a longer list of repositories, we also advise consulting this <a href="https://www.nature.com/sdata/policies/repositories">guide on data repositories</a> published by Nature.</strong></p>
+<div id="repositories-for-journal-articles" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Repositories for journal articles<a href="sharing-data.html#repositories-for-journal-articles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If your data doesn’t fit a standard recommended repository, such as <a href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a> for genomic data for example, large datasets can be shared using one of the following repositories.
+Note that some journals or funding agencies may have specific requirements.</p>
+<ul>
+<li><a href="https://cyverse.org/data-commons">CyVerse Data Commons Repository</a></li>
+<li><a href="https://datadryad.org/stash">Data Dryad</a></li>
+<li><a href="https://help.figshare.com/article/how-to-upload-and-publish-your-data">FigShare</a></li>
+<li><a href="https://help.zenodo.org/">Zenodo</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+</ul>
+</div>
+<div id="small-datasets" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Small datasets<a href="sharing-data.html#small-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Datasets that are small and don’t have a standardized repository, can be published as supplementary files as a part of a manuscript.</p>
+</div>
+</div>
+<div id="data-submission-tips" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Data Submission tips<a href="sharing-data.html#data-submission-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Uploading a dataset to a data repository is a great step toward sharing your data! But, if the dataset uploaded is unclear and unusable it might as well not been uploaded in the first place.</p>
+<p>Keep in mind that although you may understand the ins and outs of your dataset and project, it is likely that others who look at your data may not.</p>
+<p>To make your data truly shared, you need to take the time to make sure it is well-organized and well-described!
+There are two files you should make sure to include to help describe and organize your data project:</p>
+<ul>
+<li><a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/setting-up-your-project.html#readmes">A main README file</a> that orients others to what is included in your data.</li>
+<li>A central download script that downloads the data in a way that is ready for re-analysis. <a href="https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/download-data.sh">See an example here</a>.</li>
+<li>A metadata file that describes what data are included, and how the data files (if more than one) are connected.</li>
+</ul>
+<div id="use-consistent-and-clear-names" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Use consistent and clear names<a href="sharing-data.html#use-consistent-and-clear-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Make sure that sample and data IDs used are consistent across the project - make sure to include a metadata file that describes your samples in a way that is clear to those who might not have any prior knowledge of the project.</li>
+<li>Sample and data IDs should be consistent with any standardized formatting used in the field.</li>
+<li>Features names should avoid using genomic coordinates as these may change with new genome versions.</li>
+</ul>
+</div>
+<div id="make-your-project-reproducible" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Make your project reproducible<a href="sharing-data.html#make-your-project-reproducible" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reproducible projects are able to be re-run by others to obtain the same results.</p>
+<p><strong>The main requirements for a reproducible project are:</strong></p>
+<ul>
+<li>The data can be freely obtained from a repository (this maybe summarized data for the purposes of data privacy).</li>
+<li>The code can be freely obtained from <a href="https://github.com/">GitHub</a> (or another similar repository).</li>
+<li>The software versions used to obtain the results are made clear by documentation or providing a <a href="https://www.docker.com/">Docker</a> container (more advanced option).</li>
+<li>The code and data are well described and organized with a system that is consistent.</li>
+</ul>
+<p>Check out our <a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html">introductory reproducibility course</a>, <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html">advanced reproducibility course</a>, and <a href="https://hutchdatascience.org/Containers_for_Scientists/">our course on containers</a> for more information.</p>
+</div>
+<div id="have-someone-else-review-your-code-and-data" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Have someone else review your code and data!<a href="sharing-data.html#have-someone-else-review-your-code-and-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The best way to find out if your data are useable by others is to have someone else look over your code and data!
+There are so many little details that go into your data and projects. Those details can easily lead to typos and errors upon data submission that can cause confusion when others (or your future self) are attempting to use that data. The best way to test if your data project is usable is to have someone else (who has not prepared the data) try to make sense of it.</p>
+<p>For more details on how to make data and code reproducible tips, see our <a href="https://www.itcrtraining.org/courses#h.ugabyqq1bigx">Intro to Reproducibility</a> course.</p>
+</div>
+</div>
+<div id="why-metadata-is-important" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Why metadata is important<a href="sharing-data.html#why-metadata-is-important" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metadata are critically important descriptive information about your data.</p>
+<p><strong>Without metadata, the data themselves are useless or at best vastly limited.</strong></p>
+<p>Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your dataset.</p>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_1083.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
+<div class="warning">
+<p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
+</div>
+</div>
+<div id="how-to-create-metadata" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> How to create metadata?<a href="sharing-data.html#how-to-create-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Where do these metadata come from? The notes and experimental design from anyone who played a part in collecting or processing the data and its original samples. If this includes you (meaning you have collected data and need to create metadata) let’s discuss how metadata can be made in the most useful and reproducible manner.</p>
+<div id="the-goals-in-creating-your-metadata" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> The goals in creating your metadata:<a href="sharing-data.html#the-goals-in-creating-your-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="section level4 hasAnchor" number="10.5.1.1">
+<h4><span class="header-section-number">10.5.1.1</span> Goal A: Make it <em>crystal clear</em> and <em>easily readable</em> by both humans and computers!<a href="sharing-data.html#goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Some examples of how to make your data crystal clear:
+- Look out for typos and spelling errors!
+- Don’t use acronyms unless necessary. If necessary, make sure to explain what the acronym means.
+- Don’t add extraneous information. For example, perhaps items that are relevant to your lab internally, but not meaningful to people outside of your lab. Either explain the significance of such information or leave it out. It is however, good to keep a record of such information for your lab elsewhere.</p>
+<ul>
+<li>Make your <a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html#:~:text=Tidy%20data%20is%20a%20standard,Every%20row%20is%20an%20observation.">data tidy</a>.
+&gt; Tidy data is a standard way of mapping the meaning of a dataset to its structure. In tidy data:
+&gt; - Every column is a variable.
+&gt; - Every row is an observation.
+&gt; - Every cell is a single value.</li>
+</ul>
+</div>
+<div id="goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="section level4 hasAnchor" number="10.5.1.2">
+<h4><span class="header-section-number">10.5.1.2</span> Goal B: Avoid introducing errors into your metadata in the future!<a href="sharing-data.html#goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To help avoid future metadata errors, check out <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">this excellent article discussing metadata design</a> by Broman &amp; Woo. We will very briefly cover the major points here but highly suggest you read the original article.</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Be Consistent</em> - Whatever labels and systems you choose, use it universally. This not only means in your metadata spreadsheet but also anywhere you are discussing your metadata variables.</p></li>
+<li><p><em>Choose good names for things</em> - avoid spaces, special characters, or unusual and undescribed jargon.</p></li>
+<li><p><em>Write Dates as YYYY-MM-DD</em> - this is a global standard and less likely to be messed up by Microsoft Excel.</p></li>
+<li><p><em>No Empty Cells</em> - If a particular field is not applicable to a sample, you can put <code>NA</code> but empty cells can lead to formatting errors or just general confusion.</p></li>
+<li><p><em>Put Just One Thing in a Cell</em> - resist the urge to combine variables into one, you have no limit on the number of metadata variables you can make!</p></li>
+<li><p><em>Make it a Rectangle</em> - This is the easiest way to read data, for a computer and a human. Have your samples be the rows and variables be columns.</p></li>
+<li><p><em>Create a Data Dictionary</em> - Have a document where you describe what your metadata means in detailed paragraphs.</p></li>
+<li><p><em>No Calculations in the Raw Data Files</em> - To avoid mishaps, you should always keep a clean, original, raw version of your metadata that you do not add extra calculations or notes to.</p></li>
+<li><p><em>Do Not Use Font Color or Highlighting as Data</em> - This only adds to confusion to others if they don’t understand your color coding scheme. In addition not all data software and programming languages can interpret color. Instead create a new variable for anything you might be tempted to color code.</p></li>
+<li><p><em>Make Backups</em> - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places. If your data does not contain private information, we recommend writing your metadata in something like GoogleSheets because it is both free and also saved online so that it is safe from computer crashes. Check out this <a href="https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-security.html#data-resiliency">description of strategies for data for keeping data resilient</a> in case you use a server or a cloud option to store your data.</p></li>
+<li><p><em>Use Data Validation to Avoid Errors</em> - set data types and have unit tests check whether data types are what you expect for a given variable. In an upcoming chapter we will discuss how to set up tests like this using <a href="https://testthat.r-lib.org/"><code>testthat</code> R package</a>.</p></li>
+</ol>
 
+</div>
+</div>
+</div>
 </div>
 <hr>
 <center> 
@@ -363,7 +539,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="software-versions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
