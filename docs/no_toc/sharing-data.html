@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R</title>
-  <meta name="description" content="Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R" />
+  <title>Chapter 10 Sharing Data | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 10 Sharing Data | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R" />
+  <meta property="og:title" content="Chapter 10 Sharing Data | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Components of a reproducible analysis | Tools for Reproducible Workflows in R" />
+  <meta name="twitter:title" content="Chapter 10 Sharing Data | Tools for Reproducible Workflows in R" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="r-for-reproducibility.html"/>
-<link rel="next" href="a-tour-of-rstudio.html"/>
+<link rel="prev" href="software-versions.html"/>
+<link rel="next" href="about-the-authors.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -385,113 +385,144 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="components-of-a-reproducible-analysis" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Components of a reproducible analysis<a href="components-of-a-reproducible-analysis.html#components-of-a-reproducible-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter, we will discuss what components of an analysis make it reproducible.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" /></p>
-<div id="reproducibility-is-iterative-work" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Reproducibility is iterative work<a href="components-of-a-reproducible-analysis.html#reproducibility-is-iterative-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Making an analysis isn’t something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren’t really needed anymore, and don’t become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Reproducibility is on a continuum. This graph shows a two sided arrow with a gradient. On the very left is a ‘not repeatable analysis’ it was ran once. To the right of that is an analysis that ‘re-runs sometimes’. To the right of this, is an analysis that ‘Re-runs reliably in most contexts’.  And all the way to the right is a ‘perfectly reproducible analysis’ that ‘Re-runs in every situation and gets the same result every time’. In red lettering we note that every analysis is started by being run once but no analysis is ‘perfectly reproducible’." width="100%" style="display: block; margin: auto;" /></p>
+<div id="sharing-data" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Sharing Data<a href="sharing-data.html#sharing-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_63.png" alt="Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons why clear metadata enhances reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed" width="100%" style="display: block; margin: auto;" /></p>
+<div id="data-sharing-is-important" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Data sharing is important!<a href="sharing-data.html#data-sharing-is-important" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sharing data is critical for optimizing the advancement of scientific understanding. Now that labs all over the world are producing massive amounts of data, there are many discoveries that can be made by just using existing data.</p>
+<p>There are so many excellent reasons to put your data in a repository whether or not a journal requires it:</p>
+<p><strong>Sharing your data…</strong></p>
+<ol style="list-style-type: decimal">
+<li>Makes your project more transparent and thus more likely to be trusted and cited. In fact one study found that articles with links to the data used (in a repository) were cited more than articles without such information or other forms of data sharing <span class="citation">(<a href="#ref-colavizza_citation_2020"><strong>colavizza_citation_2020?</strong></a>)</span>.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_144.png" alt="Another researcher is downloading the data from a repository and says ‘These insights are so exciting! I can’t wait to look into this data even more!’" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Helps your relieve your own workload so your email inbox isn’t loaded by requests you probably don’t have time to respond to.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_335.png" alt="Ruby is reading a journal article with data and code she is interested in. The journal article says ‘Code and data are available upon request by email’. Ruby sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Allows others to gain even more insights from your data which shows funders that your data will be used to its maximum potential.</li>
+</ol>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_529.png" alt="Ruby has uploaded her data to a repository and now its being used by many other researchers. Ruby says to her funders, represented as a bank, ‘The data you funded is getting so much mileage!’" width="100%" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>It also provides more opportunities for others to replicate your results, which could help advance not only your career, but our understanding of science and medicine.</li>
+</ol>
 </div>
-<div id="components-of-reproducibility" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Components of reproducibility<a href="components-of-a-reproducible-analysis.html#components-of-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A reproducible analysis is transparent, consistent, and accessible.</p>
+<div id="benefits-of-data-sharing" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Benefits of data sharing<a href="sharing-data.html#benefits-of-data-sharing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In addition to these benefits to yourself, data sharing has other far reaching benefits. It can help support faster advances in science and medicine, by reducing the need to collect new data, which reduces costs, time and effort, including the effort and burden placed on patients or research participants for data collection.</p>
+<p>It also helps support researchers at institutes that do not have as many resources to collect data.</p>
+<p>Ultimately it can therefore help patients benefit from research faster, as faster advances can be made through more efficient research.</p>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_766.png" alt="Data Sharing can also help with costs related to collecting data, reduces the time and effort to collect new data, including the burden on patients, it allows research to be more efficient, the same data can be used for multiple studies, which is especially helpful if combining different kinds of data and researchers don't necessarily have to ability to collect each kind of data, it supports researchers at insitutions that have less resources, and it helps patients get the benefits of research faster.’" width="100%" style="display: block; margin: auto;" /></p>
+<p>See <a href="https://hutchdatascience.org/NIH_Data_Sharing/why-this-new-dms-policy.html">this description of additional reasons why sharing data is helpful for scientific advancement</a>.
+## Data repositories</p>
+<p>The best way to share your data is by putting it somewhere that others can download it (and it can be kept private when necessary). There are many repositories out there that handle this for you. We recommend checking out our course on the <a href="https://hutchdatascience.org/NIH_Data_Sharing/data-management-and-storage.html">NIH data sharing policy</a> which describes many important resources for finding appropriate repositories for different types of data. These tools can even be helpful for research that is not related to health.</p>
+<p>The repository you choose for sharing data will be highly dependent on the field you work in and the data type that you work with. Do your best to try to understand what the standard practice is for your field.</p>
+<p><strong>For a longer list of repositories, we also advise consulting this <a href="https://www.nature.com/sdata/policies/repositories">guide on data repositories</a> published by Nature.</strong></p>
+<div id="repositories-for-journal-articles" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Repositories for journal articles<a href="sharing-data.html#repositories-for-journal-articles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If your data doesn’t fit a standard recommended repository, such as <a href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a> for genomic data for example, large datasets can be shared using one of the following repositories.
+Note that some journals or funding agencies may have specific requirements.</p>
 <ul>
-<li><strong>Transparency</strong> refers to the idea that it is well communicated and everything is displayed: data, code, goals, methods, and decisions. There are no secrets in a reproducible analysis/</li>
-<li><strong>Consistency</strong> refers to the idea that the code can be consistently run, but also everything follows a particular system, conventions and design.</li>
-<li><strong>Accessibility</strong> refers to the idea that anyone anywhere should be able to run and/or examine the analysis. No pay walls or expensive software should be required.</li>
+<li><a href="https://cyverse.org/data-commons">CyVerse Data Commons Repository</a></li>
+<li><a href="https://datadryad.org/stash">Data Dryad</a></li>
+<li><a href="https://help.figshare.com/article/how-to-upload-and-publish-your-data">FigShare</a></li>
+<li><a href="https://help.zenodo.org/">Zenodo</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
 </ul>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21b8e34c516_0_5.png" alt="A reproducible analysis is transparent, accessible, and consistent. This is described with a Venn diagram because certain aspects of transparent, accessibility and consistency overlap with each other when it comes to analyses." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="transparent" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Transparent<a href="components-of-a-reproducible-analysis.html#transparent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>One essential piece of a reproducible analysis is that the code runs reliably. However, to really make an analysis reproducible, the decisions made in the analysis should also be clearly communicated. A transparent analysis is not only well communicated, but also shared publicly in a way that others can comment and contribute ideas and suggestions to or borrow methods and strategies for their own analyses.</p>
-<div id="open-source" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Open source<a href="components-of-a-reproducible-analysis.html#open-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Open source means not only making code and data publicly available, but also enabling others to modify or comment on the code. This doesn’t mean that any and all modifying contributions need to be accepted, because some level of standards and quality checks need to be maintained by the owners of the analysis, but just that anyone online could propose a contribution if they wanted to.</p>
-<p>For an analysis to be truly open source, it needs to be easily accessed by others and stored online. Code that can be emailed, for example, is not considered open source.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" /></p>
-<p>For reproducibility, keeping your code on <a href="https://github.com/">GitHub</a> is a great open source solution. GitHub is a code hosting platform that allows people to access code and sometimes data. It is commonly used, and has a built in system that allows others to contribute changes in a way that can be methodically reviewed by you (this is called the pull request system and we will talk about it more).</p>
-<div class="dictionary">
-<p><strong>GitHub</strong> - An online platform for sharing and managing code and files in an open source manner</p>
+<div id="small-datasets" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Small datasets<a href="sharing-data.html#small-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Datasets that are small and don’t have a standardized repository, can be published as supplementary files as a part of a manuscript.</p>
 </div>
 </div>
-<div id="data-is-publicly-available" class="section level3 hasAnchor" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> Data is publicly available<a href="components-of-a-reproducible-analysis.html#data-is-publicly-available" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A transparent analysis has data that is publicly shared so that others can re-run the analysis as you have. Data should be provided in a way that it can be programmatically accessed (downloaded by a script). Data also need to be well-documented in the form of metadata.</p>
+<div id="data-submission-tips" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Data Submission tips<a href="sharing-data.html#data-submission-tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Uploading a dataset to a data repository is a great step toward sharing your data! But, if the dataset uploaded is unclear and unusable it might as well not been uploaded in the first place.</p>
+<p>Keep in mind that although you may understand the ins and outs of your dataset and project, it is likely that others who look at your data may not.</p>
+<p>To make your data truly shared, you need to take the time to make sure it is well-organized and well-described!
+There are two files you should make sure to include to help describe and organize your data project:</p>
+<ul>
+<li><a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/setting-up-your-project.html#readmes">A main README file</a> that orients others to what is included in your data.</li>
+<li>A central download script that downloads the data in a way that is ready for re-analysis. <a href="https://github.com/AlexsLemonade/OpenPBTA-analysis/blob/master/download-data.sh">See an example here</a>.</li>
+<li>A metadata file that describes what data are included, and how the data files (if more than one) are connected.</li>
+</ul>
+<div id="use-consistent-and-clear-names" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Use consistent and clear names<a href="sharing-data.html#use-consistent-and-clear-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Make sure that sample and data IDs used are consistent across the project - make sure to include a metadata file that describes your samples in a way that is clear to those who might not have any prior knowledge of the project.</li>
+<li>Sample and data IDs should be consistent with any standardized formatting used in the field.</li>
+<li>Features names should avoid using genomic coordinates as these may change with new genome versions.</li>
+</ul>
+</div>
+<div id="make-your-project-reproducible" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Make your project reproducible<a href="sharing-data.html#make-your-project-reproducible" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reproducible projects are able to be re-run by others to obtain the same results.</p>
+<p><strong>The main requirements for a reproducible project are:</strong></p>
+<ul>
+<li>The data can be freely obtained from a repository (this maybe summarized data for the purposes of data privacy).</li>
+<li>The code can be freely obtained from <a href="https://github.com/">GitHub</a> (or another similar repository).</li>
+<li>The software versions used to obtain the results are made clear by documentation or providing a <a href="https://www.docker.com/">Docker</a> container (more advanced option).</li>
+<li>The code and data are well described and organized with a system that is consistent.</li>
+</ul>
+<p>Check out our <a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html">introductory reproducibility course</a>, <a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html">advanced reproducibility course</a>, and <a href="https://hutchdatascience.org/Containers_for_Scientists/">our course on containers</a> for more information.</p>
+</div>
+<div id="have-someone-else-review-your-code-and-data" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Have someone else review your code and data!<a href="sharing-data.html#have-someone-else-review-your-code-and-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The best way to find out if your data are useable by others is to have someone else look over your code and data!
+There are so many little details that go into your data and projects. Those details can easily lead to typos and errors upon data submission that can cause confusion when others (or your future self) are attempting to use that data. The best way to test if your data project is usable is to have someone else (who has not prepared the data) try to make sense of it.</p>
+<p>For more details on how to make data and code reproducible tips, see our <a href="https://www.itcrtraining.org/courses#h.ugabyqq1bigx">Intro to Reproducibility</a> course.</p>
+</div>
+</div>
+<div id="why-metadata-is-important" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Why metadata is important<a href="sharing-data.html#why-metadata-is-important" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Metadata are critically important descriptive information about your data.</p>
+<p><strong>Without metadata, the data themselves are useless or at best vastly limited.</strong></p>
+<p>Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your dataset.</p>
+<p><img src="resources/images/10-sharing-data_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_1083.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
 <div class="warning">
-<p>Data sharing is a critical piece for promoting the open sourceness of your analysis, however this often needs to be balanced with privacy if you work with human data or samples. These data will likely contain personal identifiable information (PII) and protected health information (PHI). For more details on this, we encourage you to see this <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
-</div>
-<p>While it’s imperative that you protect human data, that doesn’t mean that your analysis cannot be publicly shared! These are not mutually exclusive goals, but will take a bit of thoughtful planning. In the upcoming chapters we will provide additional ideas and information for how you can conduct an open source analysis while appropriately protecting sensitive data.</p>
-</div>
-<div id="readable-code" class="section level3 hasAnchor" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> Readable code<a href="components-of-a-reproducible-analysis.html#readable-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Readable code is much more important than clever code. If you are the only one who knows what your code is doing, it will not only be difficult for others to contribute or vet your analysis, but in the future, you will probably not understand what your code is doing either.</p>
-<p><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/writing-durable-code.html">Read this course chapter from the ITCR training network about how to write durable code</a>.</p>
-</div>
-<div id="well-documented" class="section level3 hasAnchor" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> Well-documented<a href="components-of-a-reproducible-analysis.html#well-documented" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A well-documented analysis is a reproducible analysis. If analyses didn’t require a lot of decisions and human comprehension than documentation wouldn’t be necessary – but also a lot of data analysts would be out of a job because robots would be able to do it! Analysts and developers often think of documentation as an after-thought, but good documentation should be actively developed along with the code. Arguably, it is more important to have clear documentation than even working code, because if broken code is well-documented, others may be able to help make suggestions for how it can be fixed.</p>
-<p>Good documentation not only describes what happened in an analysis, but why it happened – why did the analyst choose this method or parameter as opposed to others? Was there an additional analysis, literature, or other resource that led us to this conclusion? Documentation should describe not only what is happening, but the thought process that led us here.</p>
-</div>
-<div id="version-controlled" class="section level3 hasAnchor" number="3.3.5">
-<h3><span class="header-section-number">3.3.5</span> Version controlled<a href="components-of-a-reproducible-analysis.html#version-controlled" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A reproducible analysis is a version controlled analysis. Analyses go through many iterations, side quests, and occasional dead ends – and this is okay, it is how data science works! – but if not done properly with version control, this can lead to an unruly code base and a lot of confused team members.
-Version control is a method for tracking changes to files in a systematic manner. One such method of version control is called git and we will talk about how to use git and its online website GitHub, in a future chapter.</p>
-<p>Version control helps maintain the history of your project in a way that will allow you to recover old versions if necessary, or otherwise have documentation on what has happened. It can also be useful for rectifying different versions of a code base between team members.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_370.png" alt="Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  " width="100%" style="display: block; margin: auto;" /></p>
-<div class="dictionary">
-<p><strong>version control</strong> - A method of tracking and handling files as they are changed over the course of a project</p>
+<p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
 </div>
 </div>
-</div>
-<div id="consistent" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Consistent<a href="components-of-a-reproducible-analysis.html#consistent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A reproducible analysis is consistent. It should consistently run and consistently produce the same results. It should also be written in a manner that follows a consistent style and project organization scheme.</p>
-<div id="re-runs-consistently-and-easily" class="section level3 hasAnchor" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Re-runs consistently and easily<a href="components-of-a-reproducible-analysis.html#re-runs-consistently-and-easily" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Ideally, a reproducible analysis should be able to re-run with one command that is explicitly stated in a README file. This is a file that explains what all the rest of the files are and the point of the project. If an individual has a copy of the analysis project, it should include everything that is needed to re-run that analysis and the number of steps needed to re-run the analysis should be the lowest number possible. The more steps that are needed, the less likely it will be that someone will be able to reproduce the analysis.</p>
-<p>This also generally means that analyses that can be performed through programmatic scripts are more reproducible than those performed by GUI’s (graphic user interfaces).
-GUIs are programs on computers that are used by pointing and clicking buttons whereas command line programs are used by typing in commands. Command line programs generally take scripts that allow you to have each step written in the script which can be easily recalled to re-run the entire analysis.
-Most GUI’s, although sometimes more intuitive to use, are unfortunately less reproducible because they require more manual steps by clicking various buttons.</p>
-<div class="dictionary">
-<p><strong>GUI (graphic user interface)</strong> - A type of program on a computer that you use by pointing and clicking with a mouse
-<strong>Command line</strong> - A type of program on a computer that you use by typing in commands or writing scripts that can be run</p>
-</div>
-</div>
-<div id="follows-a-code-style" class="section level3 hasAnchor" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> Follows a code style<a href="components-of-a-reproducible-analysis.html#follows-a-code-style" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Code style is important because it not only makes code more readable, but it also lends a certain confidence to the reader of the code, that this code has been thought through and perhaps polished more than code that is less consistent in its style.</p>
-</div>
-<div id="have-an-organizational-scheme" class="section level3 hasAnchor" number="3.4.3">
-<h3><span class="header-section-number">3.4.3</span> Have an organizational scheme<a href="components-of-a-reproducible-analysis.html#have-an-organizational-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Project organization is a major component of reproducibility. If you are not able to find your files, then chances are individuals who are attempting to reproduce your analysis also will not be able to understand where to find things. We will discuss in a later chapter strategies for keeping projects organized, while realizing that project organization is an ongoing, dynamic task.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_0.png" alt="Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="accessible" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Accessible<a href="components-of-a-reproducible-analysis.html#accessible" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We discussed that we use R because it is open source and free. This makes it conducive for making reproducible analyses. Accessibility is important for reproducibility. This means minimizing the number of hoops others have to jump through to re-run your analysis.</p>
-<p>Accessibility also involves prioritizing democratizing science and enabling as many people as possible to understand what you did for your analyses. We encourage you to realize that science does best when everyone has access to it and that includes code and data analyses! Making your data and code accessible, allows everyone to contribute and learn from your analysis. Note that if you are concerned about being scooped, you can make your code private on GitHub while you are working on it and then make it public once you release a preprint of your results. We will talk more about this later.</p>
-<p>Accessibility means that anyone should be able to access it – whether or not their funding is in ample supply. So be sure to publish in code repositories that do not require membership fees or any other kinds of paywalls. Make an effort to publish in journals that are freely available as well.</p>
-<p><img src="resources/images/03-components_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is sad because an analysis has been published behind a paywall and has used expensive software. Reproducible parrot can not reproduce these results. " width="100%" style="display: block; margin: auto;" /></p>
-<p>Sometimes even if something is accessible in that it is “free” monetarily it doesn’t mean that it is free in the sense of the amount of time it takes to access it. If your code and data does need some sort of controlled access features for privacy and ethical concerns of protecting data, make sure that the paperwork hoops that are put in place are truly there in the spirit of protecting the data and not instead to keep data and code hidden from others.</p>
-</div>
-<div id="conclusion-1" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> Conclusion<a href="components-of-a-reproducible-analysis.html#conclusion-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this chapter, we gave a high level overview of reproducible analyses. We discussed that reproducible analyses are transparent, consistent, and accessible. This means in practical terms, reproducible analyses:</p>
+<div id="how-to-create-metadata" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> How to create metadata?<a href="sharing-data.html#how-to-create-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Where do these metadata come from? The notes and experimental design from anyone who played a part in collecting or processing the data and its original samples. If this includes you (meaning you have collected data and need to create metadata) let’s discuss how metadata can be made in the most useful and reproducible manner.</p>
+<div id="the-goals-in-creating-your-metadata" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> The goals in creating your metadata:<a href="sharing-data.html#the-goals-in-creating-your-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="section level4 hasAnchor" number="10.5.1.1">
+<h4><span class="header-section-number">10.5.1.1</span> Goal A: Make it <em>crystal clear</em> and <em>easily readable</em> by both humans and computers!<a href="sharing-data.html#goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Some examples of how to make your data crystal clear:
+- Look out for typos and spelling errors!
+- Don’t use acronyms unless necessary. If necessary, make sure to explain what the acronym means.
+- Don’t add extraneous information. For example, perhaps items that are relevant to your lab internally, but not meaningful to people outside of your lab. Either explain the significance of such information or leave it out. It is however, good to keep a record of such information for your lab elsewhere.</p>
 <ul>
-<li>Are open source</li>
-<li>Have data that is publicly available (when appropriate)</li>
-<li>Have readable code</li>
-<li>Are well-documented</li>
-<li>Re-run easily</li>
-<li>Have an organizational scheme</li>
-<li>Follow a code style</li>
-<li>Do not have paywalls or other barriers (except for ethical or data privacy reasons)</li>
+<li>Make your <a href="https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html#:~:text=Tidy%20data%20is%20a%20standard,Every%20row%20is%20an%20observation.">data tidy</a>.
+&gt; Tidy data is a standard way of mapping the meaning of a dataset to its structure. In tidy data:
+&gt; - Every column is a variable.
+&gt; - Every row is an observation.
+&gt; - Every cell is a single value.</li>
 </ul>
+</div>
+<div id="goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="section level4 hasAnchor" number="10.5.1.2">
+<h4><span class="header-section-number">10.5.1.2</span> Goal B: Avoid introducing errors into your metadata in the future!<a href="sharing-data.html#goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To help avoid future metadata errors, check out <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">this excellent article discussing metadata design</a> by Broman &amp; Woo. We will very briefly cover the major points here but highly suggest you read the original article.</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Be Consistent</em> - Whatever labels and systems you choose, use it universally. This not only means in your metadata spreadsheet but also anywhere you are discussing your metadata variables.</p></li>
+<li><p><em>Choose good names for things</em> - avoid spaces, special characters, or unusual and undescribed jargon.</p></li>
+<li><p><em>Write Dates as YYYY-MM-DD</em> - this is a global standard and less likely to be messed up by Microsoft Excel.</p></li>
+<li><p><em>No Empty Cells</em> - If a particular field is not applicable to a sample, you can put <code>NA</code> but empty cells can lead to formatting errors or just general confusion.</p></li>
+<li><p><em>Put Just One Thing in a Cell</em> - resist the urge to combine variables into one, you have no limit on the number of metadata variables you can make!</p></li>
+<li><p><em>Make it a Rectangle</em> - This is the easiest way to read data, for a computer and a human. Have your samples be the rows and variables be columns.</p></li>
+<li><p><em>Create a Data Dictionary</em> - Have a document where you describe what your metadata means in detailed paragraphs.</p></li>
+<li><p><em>No Calculations in the Raw Data Files</em> - To avoid mishaps, you should always keep a clean, original, raw version of your metadata that you do not add extra calculations or notes to.</p></li>
+<li><p><em>Do Not Use Font Color or Highlighting as Data</em> - This only adds to confusion to others if they don’t understand your color coding scheme. In addition not all data software and programming languages can interpret color. Instead create a new variable for anything you might be tempted to color code.</p></li>
+<li><p><em>Make Backups</em> - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places. If your data does not contain private information, we recommend writing your metadata in something like GoogleSheets because it is both free and also saved online so that it is safe from computer crashes. Check out this <a href="https://hutchdatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-security.html#data-resiliency">description of strategies for data for keeping data resilient</a> in case you use a server or a cloud option to store your data.</p></li>
+<li><p><em>Use Data Validation to Avoid Errors</em> - set data types and have unit tests check whether data types are what you expect for a given variable. In an upcoming chapter we will discuss how to set up tests like this using <a href="https://testthat.r-lib.org/"><code>testthat</code> R package</a>.</p></li>
+</ol>
 
+</div>
+</div>
 </div>
 </div>
 <hr>
@@ -507,8 +538,8 @@ Most GUI’s, although sometimes more intuitive to use, are unfortunately less r
           </div>
         </div>
       </div>
-<a href="r-for-reproducibility.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="a-tour-of-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="software-versions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
