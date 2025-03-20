@@ -17,6 +17,9 @@ There's a lot of reasons writing your own custom functions might be a thing you 
 
 We've discussed how DRY code is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
 
+:::dictionary
+The word dry in DRY code stands for Do Not Repeat. The idea is that avoiding repeated sections can make it easier to maintain or troubleshoot. If you have an error from something that is repeated, it can be hard to pinpoint exactly where the error is occurring and why!
+:::
 ```{r, fig.align='center', fig.alt = "The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen.", out.width="100%", echo = FALSE}
 ", out.width="100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g341450bc187_100_5")
