@@ -123,6 +123,15 @@ session-info
 snapshots-with-renv
 containerization
 conclusion-6
+functions
+recognize-when-to-write-a-custom-function
+cutting-down-on-repetitive-code
+more-readable-code
+writing-a-function
+starting-a-new-function
+working-example
+using-your-custom-functions
+more-resources-on-writing-functions
 sharing-data
 data-sharing-is-important
 benefits-of-data-sharing
