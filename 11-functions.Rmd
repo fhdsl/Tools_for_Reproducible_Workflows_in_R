@@ -15,7 +15,7 @@ There's a lot of reasons writing your own custom functions might be a thing you 
 
 #### Cutting down on repetitive code
 
-We've discussed how DRY code is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
+We've discussed how [DRY code](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/reproducible-code.html#is-dry-dont-repeat-yourself) is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
 
 ```{r, fig.align='center', fig.alt = "The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen.", out.width="100%", echo = FALSE}
 ", out.width="100%", echo = FALSE}
@@ -119,7 +119,17 @@ make_shades <- function(colour, n, lighter = TRUE) {
 }
 ```
 
+#### Using your custom functions
+
+Now that you've created your custom functions there are a few ways you can load it in so it can be used by other notebooks and scripts. Depending on the situation you'll want to pick either `source`ing the script or creating an `R package`.
+
+- `source()` - This is most straightforward option. You can put this at the top of your notebook or script. It just involves you pointing to the script that holds your custom functions: `source(file/path/here.R)`. This is good for if you are going to reuse these custom functions mostly within one project. But may not be ideal if
+- `an R package` If you will be using your custom functions in multiple projects you might not want to use a script because it may result in you having to make unwieldy file paths or copies of that script, neither of which are ideal for long term maintenance. Instead you may consider creating an R package for this custom function and any related ones you may make. Take a look at this resource for [how to get started making a package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
+
+Depending on your project you can use these strategies to create custom functions and overall DRY code and reproducible work!
+
 ### More resources on writing functions
 
+- [Making your first R package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
 - [R for Data Science -- writing functions](https://r4ds.had.co.nz/functions.html)
 - [R Style guide for functions](https://style.tidyverse.org/functions.html)
