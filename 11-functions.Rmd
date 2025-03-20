@@ -21,7 +21,6 @@ We've discussed how [DRY code](https://hutchdatascience.org/Tools_for_Reproducib
 The word dry in DRY code stands for Do Not Repeat. The idea is that avoiding repeated sections can make it easier to maintain or troubleshoot. If you have an error from something that is repeated, it can be hard to pinpoint exactly where the error is occurring and why!
 :::
 ```{r, fig.align='center', fig.alt = "The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen.", out.width="100%", echo = FALSE}
-", out.width="100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g341450bc187_100_5")
 ```
 
