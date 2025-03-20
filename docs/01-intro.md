@@ -3,7 +3,7 @@
 
 # Introduction
 
-In this course we will explore a variety of tools that can assist with data analysis from a broad range of fields. The tools we will cover may take some time to get used to, but the payoff will be immeasurable. Not only are these skills valuable for career advancement, they will also make your work-life easier. The tools will enhance your ability to reproduce your work across similar projects, stay organized, collaborate with others effectively, and more.
+In this course, we will explore a variety of tools that can assist with reproducible data analysis from a broad range of fields. The tools we will cover may take some time to get used to, but the payoff will be immeasurable. Not only are these skills valuable for career advancement, they will also make your work-life easier. The tools will enhance your ability to reproduce your work across similar projects, stay organized, collaborate with others effectively, and more. This course was funded as part of a series of courses in the [Training Module for Reproducible Data Science Research project](https://reporter.nih.gov/search/k_pXzn8wfUeEvaWpnzIToA/project-details/10663171).
 
   
 ## Motivation
@@ -17,27 +17,27 @@ This course will help learners to use tools that will make their data analytic w
 
 This course is intended for people conducting data analyses at the level of a graduate student or higher. The course is designed so that the majority of the material is presented in a high-level manner that should be applicable to researchers working in a broad range of areas. The course is centered around the R programming language, a widely used statistical analysis software package. 
 
-## Curriculum  
-
-The course covers...
 
 
-## Learning Objectives
+![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_14.png){width=100%}
 
-- Implement basic project organization tools:
-- R Studio tips and tricks for efficiency
-- R Markdown to create reports
-   - Setup and configure RStudio/RStudio projects for data analysis (`here` package and file structure/paths)
-   - Install and configure `ProjectTemplate` package for formalizing and automating workflows
-- Apply the `pointblank` package for validation of tabular data 
-- Write functions and package them
-- Apply the `testthat` package for building software unit tests
-- Setup and use Git repositories for version control of code 
-- Interface with GitHub to share Git repositories for collaboration; execute GitHub-based workflows 
-  - Pull Requests
-  - Code review
-  - Issues
-  - Discussions
+## Topics covered: 
+
+This course will cover organization practices, coding practices, tools, and concepts for making your data analyzes more reproducible in R. 
+
+We will cover important topics such as version control to track changes in documents over time, coding practices to make your code more transparent and to test your code, and methods for sharing your code and data in efficient and clear ways. 
+
+![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_33.png){width=100%}
+
+
+
+## Curriculum
+
+The course will cover the basics for getting started with configuring your projects for use of tools and practices to make your analyses more reproducible. 
+
+We will also point to more advanced topics in other resources.
+
+![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_1.png){width=100%}
   
 References will include @gillespie_efficient_2021, @riederer_column_2020, @timbers_data_nodate.
 
