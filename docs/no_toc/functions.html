@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Tools for Reproducible Workflows in R</title>
-  <meta name="description" content="Page not found | Tools for Reproducible Workflows in R" />
+  <title>Chapter 10 Functions | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 10 Functions | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Tools for Reproducible Workflows in R" />
+  <meta property="og:title" content="Chapter 10 Functions | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Tools for Reproducible Workflows in R" />
+  <meta name="twitter:title" content="Chapter 10 Functions | Tools for Reproducible Workflows in R" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-
-
+<link rel="prev" href="software-versions.html"/>
+<link rel="next" href="sharing-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -392,11 +392,131 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="functions" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Functions<a href="functions.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/11-functions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_53.png" alt="Learning objectives are to be able to: Recognize when it is appropriate to make a custom function to aid in the reproducibility of an analysis. Use a template to create functions that are reproducible and useable by others. Discuss what aspects of a function make them useable by others. Well documented. Follow a style. Properly engineered" width="100%" style="display: block; margin: auto;" /></p>
+<div id="recognize-when-to-write-a-custom-function" class="section level3 hasAnchor" number="10.0.1">
+<h3><span class="header-section-number">10.0.1</span> Recognize when to write a custom function<a href="functions.html#recognize-when-to-write-a-custom-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There’s a lot of reasons writing your own custom functions might be a thing you need to do. Here we will discuss two of the major reasons.</p>
+<div id="cutting-down-on-repetitive-code" class="section level4 hasAnchor" number="10.0.1.1">
+<h4><span class="header-section-number">10.0.1.1</span> Cutting down on repetitive code<a href="functions.html#cutting-down-on-repetitive-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We’ve discussed how <a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/reproducible-code.html#is-dry-dont-repeat-yourself">DRY code</a> is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.</p>
+<div class="dictionary">
+<p>The word dry in DRY code stands for Do Not Repeat. The idea is that avoiding repeated sections can make it easier to maintain or troubleshoot. If you have an error from something that is repeated, it can be hard to pinpoint exactly where the error is occurring and why!</p>
+</div>
+<p><img src="resources/images/11-functions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341450bc187_100_5.png" alt="The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen." width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="more-readable-code" class="section level4 hasAnchor" number="10.0.1.2">
+<h4><span class="header-section-number">10.0.1.2</span> More readable code<a href="functions.html#more-readable-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Custom functions can allow you to organize code into manageable chunks.
+By creating custom functions it can be easier to organize our code in a way thats more readable.</p>
+</div>
+</div>
+<div id="writing-a-function" class="section level3 hasAnchor" number="10.0.2">
+<h3><span class="header-section-number">10.0.2</span> Writing a function<a href="functions.html#writing-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A common way that a custom function might come about is:</p>
+<ol style="list-style-type: decimal">
+<li>You’ve written some initial code that takes some object as input.</li>
+<li>You now realize you will need to run this series of code more than twice.</li>
+</ol>
+<div id="starting-a-new-function" class="section level4 hasAnchor" number="10.0.2.1">
+<h4><span class="header-section-number">10.0.2.1</span> Starting a new function<a href="functions.html#starting-a-new-function" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To get started with writing a new function, you can follow these steps to make a custom function:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new R script file to copy and paste our basic template we have below.</li>
+</ol>
+<pre><code>#&#39; Title here
+#&#39;
+#&#39; @description This is what the function does
+#&#39;
+#&#39; @param arg1 A first argument
+#&#39; @param arg2 A second argument
+#&#39;
+#&#39; @return What is returned
+#&#39; @export
+#&#39;
+#&#39; @examples
+#&#39;
+#&#39; function(arg1, arg2)
+#&#39;
+#&#39;
+function_name &lt;- function(arg1, arg2) {
+
+    # Your main code here
+
+    return(output)
+}</code></pre>
+<p>Your basic custom function is going to follow this type of structure.</p>
+<p>This top part of the template is the documentation. It’s formatted in a way that would allow you to incorporate it into a package later if desired.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>It’s likely you might already have some code drafted that has some of the code you need for your function. Paste this code in the part of this template that says <code># Your main code here</code>.</li>
+<li>Next, fill out the <code>@description</code> field by replacing “This is what the function does”. Describe the goal of the function.</li>
+<li>Next you’ll likely want to sculpt your code, carefully thinking about its usage and what types of options may need to be controlled by those who will use this function. This may require some adjustments to arguments and default values.</li>
+</ol>
+</div>
+</div>
+<div id="working-example" class="section level3 hasAnchor" number="10.0.3">
+<h3><span class="header-section-number">10.0.3</span> Working example<a href="functions.html#working-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Below is an example of a working example from <a href="https://combine-australia.github.io/r-pkg-dev/functions.html">this R package development workshop</a>.</p>
+<pre><code>
+#&#39; Make shades
+#&#39;
+#&#39; Given a colour make n lighter or darker shades
+#&#39;
+#&#39; @param colour The colour to make shades of
+#&#39; @param n The number of shades to make
+#&#39; @param lighter Whether to make lighter (TRUE) or darker (FALSE) shades
+#&#39;
+#&#39; @return A vector of n colour hex codes
+#&#39; @export
+#&#39;
+#&#39; @examples
+#&#39; # Five lighter shades
+#&#39; make_shades(&quot;goldenrod&quot;, 5)
+#&#39; # Five darker shades
+#&#39; make_shades(&quot;goldenrod&quot;, 5, lighter = FALSE)
+
+make_shades &lt;- function(colour, n, lighter = TRUE) {
+    # Convert the colour to RGB
+    colour_rgb &lt;- grDevices::col2rgb(colour)[, 1]
+
+    # Decide if we are heading towards white or black
+    if (lighter) {
+        end &lt;- 255
+    } else {
+        end &lt;- 0
+    }
+
+    # Calculate the red, green and blue for the shades
+    # we calculate one extra point to avoid pure white/black
+    red &lt;- seq(colour_rgb[1], end, length.out = n + 1)[1:n]
+    green &lt;- seq(colour_rgb[2], end, length.out = n + 1)[1:n]
+    blue &lt;- seq(colour_rgb[3], end, length.out = n + 1)[1:n]
+
+    # Convert the RGB values to hex codes
+    shades &lt;- grDevices::rgb(red, green, blue, maxColorValue = 255)
+
+    return(shades)
+}</code></pre>
+<div id="using-your-custom-functions" class="section level4 hasAnchor" number="10.0.3.1">
+<h4><span class="header-section-number">10.0.3.1</span> Using your custom functions<a href="functions.html#using-your-custom-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now that you’ve created your custom functions there are a few ways you can load it in so it can be used by other notebooks and scripts. Depending on the situation you’ll want to pick either <code>source</code>ing the script or creating an <code>R package</code>.</p>
+<ul>
+<li><code>source()</code> - This is most straightforward option. It just involves you pointing to the script that holds your custom functions: <code>source(file/path/file_with_functions.R)</code> at the top of your notebook or script. This is good if you are going to reuse these custom functions mostly within one project. This may not be ideal if you want to reuse your functions across different projects.</li>
+<li><code>an R package</code> If you will be using your custom functions in multiple projects you might not want to use a script because it may result in you having to make unwieldy file paths or copies of that script, neither of which are ideal for long term maintenance. Instead you may consider creating an R package for one or more custom functions. Take a look at this resource for <a href="https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html">how to get started making a package</a>.</li>
+</ul>
+<p>Depending on your project you can use these strategies to create custom functions and overall DRY code and reproducible work!</p>
+</div>
+</div>
+<div id="more-resources-on-writing-functions" class="section level3 hasAnchor" number="10.0.4">
+<h3><span class="header-section-number">10.0.4</span> More resources on writing functions<a href="functions.html#more-resources-on-writing-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html">Making your first R package</a>.</li>
+<li><a href="https://r4ds.had.co.nz/functions.html">R for Data Science – writing functions</a></li>
+<li><a href="https://style.tidyverse.org/functions.html">R Style guide for functions</a></li>
+</ul>
+
+</div>
 </div>
 <hr>
 <center> 
@@ -411,8 +531,8 @@ the table of contents to find the page you are looking for.</p>
           </div>
         </div>
       </div>
-
-
+<a href="software-versions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sharing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
