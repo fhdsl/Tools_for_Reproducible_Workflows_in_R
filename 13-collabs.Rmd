@@ -97,6 +97,10 @@ Tell a short story to explain what lead to you making these changes including at
 :::notice
 You can type the world "resolves" and then include the issue number with a `#` and it will close the issue when you merge the pull request
 :::
+
+:::notice
+You can type the world "resolves" and then include the issue number with a `#` and it will close the issue when you merge the pull request
+:::
 ### Includes an explicit request for what kind of feedback is needed
 
 What would you like your reviewer to do with this pull request? Stating this explicitly can save both of you time in this code review process.
