@@ -125,8 +125,8 @@ make_shades <- function(colour, n, lighter = TRUE) {
 
 Now that you've created your custom functions there are a few ways you can load it in so it can be used by other notebooks and scripts. Depending on the situation you'll want to pick either `source`ing the script or creating an `R package`.
 
-- `source()` - This is most straightforward option. You can put this at the top of your notebook or script. It just involves you pointing to the script that holds your custom functions: `source(file/path/here.R)`. This is good for if you are going to reuse these custom functions mostly within one project. But may not be ideal if
-- `an R package` If you will be using your custom functions in multiple projects you might not want to use a script because it may result in you having to make unwieldy file paths or copies of that script, neither of which are ideal for long term maintenance. Instead you may consider creating an R package for this custom function and any related ones you may make. Take a look at this resource for [how to get started making a package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
+- `source()` - This is most straightforward option. It just involves you pointing to the script that holds your custom functions: `source(file/path/file_with_functions.R)`   at the top of your notebook or script. This is good if you are going to reuse these custom functions mostly within one project. This may not be ideal if you want to reuse your functions across different projects. 
+- `an R package` If you will be using your custom functions in multiple projects you might not want to use a script because it may result in you having to make unwieldy file paths or copies of that script, neither of which are ideal for long term maintenance. Instead you may consider creating an R package for one or more custom functions. Take a look at this resource for [how to get started making a package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
 
 Depending on your project you can use these strategies to create custom functions and overall DRY code and reproducible work!
 
