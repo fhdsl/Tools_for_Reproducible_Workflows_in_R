@@ -1,0 +1,131 @@
+
+# Functions
+
+
+
+<img src="resources/images/11-functions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_53.png" alt="Learning objectives are to be able to: Recognize when it is appropriate to make a custom function to aid in the reproducibility of an analysis. Use a template to create functions that are reproducible and useable by others. Discuss what aspects of a function make them useable by others. Well documented. Follow a style. Properly engineered" width="100%" style="display: block; margin: auto;" />
+
+### Recognize when to write a custom function
+
+There's a lot of reasons writing your own custom functions might be a thing you need to do. Here we will discuss two of the major reasons.
+
+#### Cutting down on repetitive code
+
+We've discussed how [DRY code](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/reproducible-code.html#is-dry-dont-repeat-yourself) is easier to maintain and understand! It is easier to fix code in one place as opposed to three or more places. A general guideline is that if you need two use a same chunk of code more than twice you probably should invest the time to make a custom function for it.
+
+:::dictionary
+The word dry in DRY code stands for Do Not Repeat. The idea is that avoiding repeated sections can make it easier to maintain or troubleshoot. If you have an error from something that is repeated, it can be hard to pinpoint exactly where the error is occurring and why!
+:::
+<img src="resources/images/11-functions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341450bc187_100_5.png" alt="The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen." width="100%" style="display: block; margin: auto;" />
+
+#### More readable code
+
+Custom functions can allow you to organize code into manageable chunks.
+By creating custom functions it can be easier to organize our code in a way thats more readable.
+
+
+### Writing a function
+
+A common way that a custom function might come about is:
+
+1. You've written some initial code that takes some object as input.
+2. You now realize you will need to run this series of code more than twice.
+
+
+#### Starting a new function
+
+To get started with writing a new function, you can follow these steps to make a custom function:
+
+1. Open up a new R script file to copy and paste our basic template we have below.
+```
+#' Title here
+#'
+#' @description This is what the function does
+#'
+#' @param arg1 A first argument
+#' @param arg2 A second argument
+#'
+#' @return What is returned
+#' @export
+#'
+#' @examples
+#'
+#' function(arg1, arg2)
+#'
+#'
+function_name <- function(arg1, arg2) {
+
+    # Your main code here
+
+    return(output)
+}
+```
+Your basic custom function is going to follow this type of structure.
+
+
+This top part of the template is the documentation. It's formatted in a way that would allow you to incorporate it into a package later if desired.
+
+2. It's likely you might already have some code drafted that has some of the code you need for your function. Paste this code in the part of this template that says `# Your main code here`.
+3. Next, fill out the `@description` field by replacing "This is what the function does". Describe the goal of the function.
+4. Next you'll likely want to sculpt your code, carefully thinking about its usage  and what types of options may need to be controlled by those who will use this function. This may require some adjustments to arguments and default values.
+
+### Working example
+
+Below is an example of a working example from [this R package development workshop](https://combine-australia.github.io/r-pkg-dev/functions.html).
+```
+
+#' Make shades
+#'
+#' Given a colour make n lighter or darker shades
+#'
+#' @param colour The colour to make shades of
+#' @param n The number of shades to make
+#' @param lighter Whether to make lighter (TRUE) or darker (FALSE) shades
+#'
+#' @return A vector of n colour hex codes
+#' @export
+#'
+#' @examples
+#' # Five lighter shades
+#' make_shades("goldenrod", 5)
+#' # Five darker shades
+#' make_shades("goldenrod", 5, lighter = FALSE)
+
+make_shades <- function(colour, n, lighter = TRUE) {
+    # Convert the colour to RGB
+    colour_rgb <- grDevices::col2rgb(colour)[, 1]
+
+    # Decide if we are heading towards white or black
+    if (lighter) {
+        end <- 255
+    } else {
+        end <- 0
+    }
+
+    # Calculate the red, green and blue for the shades
+    # we calculate one extra point to avoid pure white/black
+    red <- seq(colour_rgb[1], end, length.out = n + 1)[1:n]
+    green <- seq(colour_rgb[2], end, length.out = n + 1)[1:n]
+    blue <- seq(colour_rgb[3], end, length.out = n + 1)[1:n]
+
+    # Convert the RGB values to hex codes
+    shades <- grDevices::rgb(red, green, blue, maxColorValue = 255)
+
+    return(shades)
+}
+```
+
+#### Using your custom functions
+
+Now that you've created your custom functions there are a few ways you can load it in so it can be used by other notebooks and scripts. Depending on the situation you'll want to pick either `source`ing the script or creating an `R package`.
+
+- `source()` - This is most straightforward option. It just involves you pointing to the script that holds your custom functions: `source(file/path/file_with_functions.R)`   at the top of your notebook or script. This is good if you are going to reuse these custom functions mostly within one project. This may not be ideal if you want to reuse your functions across different projects. 
+- `an R package` If you will be using your custom functions in multiple projects you might not want to use a script because it may result in you having to make unwieldy file paths or copies of that script, neither of which are ideal for long term maintenance. Instead you may consider creating an R package for one or more custom functions. Take a look at this resource for [how to get started making a package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
+
+Depending on your project you can use these strategies to create custom functions and overall DRY code and reproducible work!
+
+### More resources on writing functions
+
+- [Making your first R package](https://tinyheero.github.io/jekyll/update/2015/07/26/making-your-first-R-package.html).
+- [R for Data Science -- writing functions](https://r4ds.had.co.nz/functions.html)
+- [R Style guide for functions](https://style.tidyverse.org/functions.html)

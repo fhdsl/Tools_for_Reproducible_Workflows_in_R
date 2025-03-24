@@ -1,23 +1,47 @@
-# R Markdown Reports
+# Reproducible Reports
 
 
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20eecbcf66d_84_0.png){width=100%}
 
-## Reports support reproducibility
+## Notebook reports support reproducibility
 
-Using R Markdown files helps you to create supports that can more transparently show what you did for your analysis and it can help you to test that your code works as expected. Scripts allow you to save code, but they do not allow you to have the following additional benefits. 
+Using notebooks can help you more transparently show what you did for your analysis.  They can also help you to test that your code works as expected. Scripts allow you to save code, but they do not allow you to have the following additional benefits.
 
-The following are reasons why R Markdown files help reproducibility:
+The following are reasons why notebooks help reproducibility:
 
-- They allow you to show and share your code and the output of your code in one place! (this can be done in several ways depending on what you want)
+- They allow you to show and share your code and the output of your code in one place! (This can be done in several ways depending on what you want.)
 - They allow you to test if your code works outside of what is active in your environment
-- They allow you to test sections and all previous sections of your code out to troubleshoot 
+- They allow you to test sections and all previous sections of your code, which can help with troubleshooting
 - They help you understand what might be wrong with your code in smaller sections of code if you have an issue
 
-## Getting Started with R Markdown
+## R Markdown or Quarto?
 
-OK, so now we know how to make a new R Markdown file from the previous section.
+Both R Markdown and Quarto are types of notebooks that have similar functions. R Markdown files end with the suffix `.Rmd` while quarto files end with `.qmd`.
+
+Both Qmd and Rmd files are both notebooks that have the benefits we've described above. They allow you to document using the markdown language. Plus, because they are so similar you can often just change the suffix of your file and convert between these file types (results may vary depending on the content of the file).
+
+R Markdown was the first R programming notebook on the scene, and has a lot of tools devoted to it because it has been around awhile. In 2022, [Posit released the Quarto notebook](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/). So Quarto has a lot of great new features but is still relatively new.
+
+Posit created Quarto with the idea of streamlining document making by allowing for more compatibility with languages beyond R. While R Markdown documents also somewhat allow for other languages, their ability to do this successfully is limited.
+
+### R Markdown Pros:
+- Time tested, a lot of packages and resources built for it.
+- Fundamentally an R notebook and is built around that.
+
+### R Markdown Cons:
+- Does not always do well running other languages (like Python).
+- Does require a lot of extra packages to be installed to do more things with it: `bookdown`, `distill`, etc.
+
+### Quarto Pros:
+- Built with more compatibility for other languages
+- Appears to be more streamlined/centralized and less need for a lot of extra packages to create other types of documents.
+
+### Quarto Cons:
+- It is still quite new, and the community is still catching up to it, although it appears to be built with backwards compatibility in mind.
+- Because it so new, there are still some features that are being developed for Quarto that R Markdown already supports. At this point, these are mostly features that would allow for customization.
+
+## Getting Started with notebooks
 
 <details><summary> Click here for a review on how to create R Markdown files in RStudio. </summary>
 
@@ -36,7 +60,7 @@ The new pane will open on the upper left.
 
 This pane is where we can write code to save in our R Markdown report.
 
-Thus the lower left pane is where we can test out code (although we do not generally recommend it), but the top pane is where we can write code that we wish to save. 
+Thus the lower left pane is where we can test out code (although we do not generally recommend it), but the top pane is where we can write code that we wish to save.
 
 Note that you can also test selected code (or a current line) in an R Markdown file using a keyboard shortcut of Ctrl+Enter on Windows & Linux computers or Cmd+Return on Mac computers.
 
@@ -53,16 +77,18 @@ Once open the file your RStudio should look something like this:
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_0.png){width=100%}
 
-## Rendering R Markdown files
+## Rendering R Markdown
+
+For this first chapter we will introduce you to R Markdown files, but note there are many [great and continually new emerging tutorials to introduce to Quarto notebooks](https://quarto.org/docs/guide/). Most of what we discuss about R Markdown files is also applicable to Quarto and you can often just switch the suffix of your file and have *most* of your features and code still work.
 
 There is a special `Knit` button that looks like a ball of yarn with a knitting needle at the top of the R Markdown files that helps you create your report. Since R Markdown files by default have some code, we can press this to see what a rendered report might look like before we start writing our own code.
 
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_16.png){width=100%}
- 
+
 You will likely be prompted to give the file a name after you press the Knit button and to confirm where you want to save the rendered version.
 
-You will then see in a second or two (after some information is printed on the Render tab in the lower left pane) a screen pop up with the rendered version of the report. 
+You will then see in a second or two (after some information is printed on the Render tab in the lower left pane) a screen pop up with the rendered version of the report.
 
 This will look something like this:
 
@@ -78,7 +104,7 @@ Hopefully you can already start to appreciate how useful it can be to send peopl
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_39.png){width=100%}
 
-It's important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on **only the code written in the R Markdown file**. It can't use code that was tested in the Console or run interactively in the R Markdown file (more on that soon). 
+It's important to note that when we knit an R Markdown file, it will test our code as if we have an empty environment and it will rely on **only the code written in the R Markdown file**. It can't use code that was tested in the Console or run interactively in the R Markdown file (more on that soon).
 
 This process really helps with reproducibility because it helps us make sure that all the instructions needed (loading packages, assigning objects, etc) are within the code that we saved in the R Markdown file.
 
@@ -92,7 +118,7 @@ Now let's discuss how to start writing code in such a file.
 
 At the top of an R Markdown file you will see some special code that is called [YAML](https://en.wikipedia.org/wiki/YAML) code. It is commonly used to configure programming projects. It does the same for our R Markdown reports. A major difference between R and YAML is that spacing really matters for YAML.
 
-What do we mean by configure? Configuration in programming generally refers to setting things up. 
+What do we mean by configure? Configuration in programming generally refers to setting things up.
 
 <div class = "dictionary">
 
@@ -107,7 +133,7 @@ Here we can see what the top of an R Markdown file looks like after we first ope
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_8.png){width=100%}
 
 
-You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to change the author section  where it says `"your name"` in the example if that was not by default want you wanted in your file. 
+You can modify the `"Untitled"` text after `title:` to specify the title of your report. If you want to you can also change the author section  where it says `"your name"` in the example.
 
 ### Code chunks
 
@@ -117,13 +143,13 @@ Next as we scroll down, we will see gray section with some notation which is cal
 
 The notation here means the following:
 
-- The three back ticks `"```"` indicate the barriers of where some code will be in between. This is what we call an R chunk. 
+- The three back ticks `"```"` mark the boundaries of where code should be placed. This is what we call a code chunk.
 - The `{r}` indicates that we are going to write the code using R code.
 - Extra information can be added inside the curly bracket `{}` notation to give the chunk a name, in this case it is called `setup`.
 - The `include = FALSE` means that it will not show up in the rendered report.
 
 
-This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should show up with `echo = TRUE` in the report. You don't need to worry too much about any of this now, just recognize that this is a chunk of code. 
+This first chunk tells the document how additional chunks should show up in the rendered report by default. Here it says that code should show up with `echo = TRUE` in the report. You don't need to worry too much about any of this now, just recognize that this is a chunk of code.
 
 As we scroll past some text within the R Markdown file, we will see another chunk.
 
@@ -156,7 +182,7 @@ This is similar to testing our code in the console, in that if we assign an obje
 </div>
 
 
-Writing our code in chunks (as opposed to one long script) can help with reproducibility, as we can better determine where possible changes may have occurred and how that influenced the results in a step-wise fashion, instead of just one final output. 
+Writing our code in chunks (as opposed to one long script) can help with reproducibility, as we can better determine where possible changes may have occurred and how that influenced the results in a step-wise fashion, instead of just one final output.
 
 
 ### Running previous chunks
@@ -165,7 +191,7 @@ You may also notice that there is another button to the left of the play button.
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_297.png){width=100%}
 
-This is super helpful for reproducibility in terms of making sure that your code isn't working simply because you have something in your environment from code that you tested in the console but did not save. 
+This is super helpful for reproducibility in terms of making sure that your code is working properly with all the necessary pieces. Sometimes code just works during an R session  (and not after) simply because it is relying on an object or code currently in our environment that is not saved in our notebook. For example, code that was tested in the console but not saved will not be run the next time we try to knit our R Markdown file.
 
 Issues can happen if you run a code chunk out of order or change the code in a chunk after running it previously. This can make you think that you have all the code that you need saved to obtain the result that you found, when in fact you do not.
 
@@ -173,7 +199,7 @@ Therefore we recommend cleaning the environment (which we will describe in the n
 
 ## Cleaning the environment
 
-We suggest cleaning out your environment somewhat regularly when you are interactively testing your R Markdown file using chunks. To do so, you can press the button that looks like a broom in the upper right pane. 
+We suggest cleaning out your environment somewhat regularly when you are interactively testing your R Markdown file using chunks. To do so, you can press the button that looks like a broom in the upper right pane.
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_305.png){width=100%}
 
@@ -181,14 +207,14 @@ The ultimate test though is to press the `Knit` button and make sure you have al
 
 ## Restarting R Session
 
-To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file to make sure that anything you loaded during your previous session (but didn't save in your code) wasn't allowing your code to run successfully. 
+To really test your code, every once in a while, we suggest restarting your R Session and trying to Knit your R Markdown file to make sure that anything you loaded during your previous session (but didn't save in your code) wasn't allowing your code to run successfully.
 
-To do so, you can click on the `Session` tab of the upper menu of RStudio and click `Restart R`. 
+To do so, you can click on the `Session` tab of the upper menu of RStudio and click `Restart R`.
 
 
 ## Chunk setup
 
-You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is in every new R Markdown file (when you first open one) is hidden. This is because it sets up how all the other chunks work (by default) and it isn't really important for the analysis. Recall that we hide the code and any output, using `include = FALSE`. If we just want to hide one or the other we can use different specifications. 
+You may find that sometimes you want to hide the code in a report, or hide the output. This can be for a variety of reasons. For example, the first chunk that is in every new R Markdown file (when you first open one) is hidden. This is because it sets up how all the other chunks work (by default) and it isn't really important for the analysis. Recall that we hide the code and any output, using `include = FALSE`. If we just want to hide one or the other we can use different specifications.
 
 The easiest way to do this is to click on the little gear symbol for the R chunk you wish to modify.
 
@@ -202,11 +228,11 @@ This will open a menu about how that chunk should be set up. The dropdown menu c
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_326.png){width=100%}
 
 
-For reproducibility purposes, we generally suggest that you share the code, however, sometimes reports can get very difficult to read if you have all the code shown. So there are times where you might focus on a particular part of an analysis. We will also describe a nifty trick to allow readers of your report to see the code if they want to, but have it hidden most of the time. 
+For reproducibility purposes, we generally suggest that you share the code, however, sometimes reports can get very difficult to read if you have all the code shown. So there are times where you might focus on a particular part of an analysis. We will also describe a nifty trick to allow readers of your report to see the code if they want to, but have it hidden most of the time.
 
 ## Finding chunks
 
-If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you don't, you can more easily move around from one chunk to another using a special menu button created just for this! 
+If your R Markdown file gets really long, it can be difficult to scroll to find the chunk you want to modify. If you name your chunks, or even if you don't, you can more easily move around from one chunk to another using a special menu button created just for this!
 
 There is a very small menu at the bottom of the R Markdown file editor that helps you move around. It will look slightly different depending on what your chunks are named, but will have a gold hashtag button.
 
@@ -215,7 +241,7 @@ There is a very small menu at the bottom of the R Markdown file editor that help
 
 ## Add chunks
 
-To add new chunks you can either click on the chunk button on the top right of the R Markdown editor, which looks like a green square with a "C" in it and a plus sign on the corner. 
+To add new chunks you can either click on the chunk button on the top right of the R Markdown editor, which looks like a green square with a "C" in it and a plus sign on the corner.
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_345.png){width=100%}
 
@@ -236,9 +262,9 @@ The arrow next to the add chunk button, will allow you to specify if you want to
 
 ## Text and headers
 
-You will notice that there is text written around the code chunks that you can use to describe what you did in your analysis and why. 
+You will notice that there is text written around the code chunks that you can use to describe what you did in your analysis and why.
 
-There are a couple of formatting options that can be very useful to know. 
+There are a couple of formatting options that can be very useful to know.
 
 If you want to know more, you can check out this [guide](https://www.markdownguide.org/) about Markdown in general. The syntax will be the same for R Markdown files too.
 
@@ -251,9 +277,9 @@ Using hashtags creates headers. One hashtag creates to highest level header, add
 
 ### Bold and Italics
 
-Bold text can be created using `**` around the text. 
+Bold text can be created using `**` around the text.
 
-Italic text can be created using `*` around the text. 
+Italic text can be created using `*` around the text.
 
 To do both you can use `***` around the text.
 
@@ -273,9 +299,9 @@ We also recommend checking out the [R Markdown cookbook](https://bookdown.org/yi
 
 ### Aesthetics
 
-Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our institute or at least makes the report look really polished. 
+Sometimes we might want to make our reports look a little nicer, perhaps we want to add branding that matches that of our institute or at least makes the report look really polished.
 
-You can make changes to the aesthetics of the report in very few steps. 
+You can make changes to the aesthetics of the report in very few steps.
 
 First locate the settings button for the R Markdown editor, which looks like a gear an is located next to the `Knit` button.
 
@@ -285,7 +311,7 @@ Then scroll down and select "Output Options". This menu also has nice features i
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_463.png){width=100%}
 
-This will open a new window that has a dropdown that you can use to apply a theme to the report. 
+This will open a new window that has a dropdown that you can use to apply a theme to the report.
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_376.png){width=100%}
 
@@ -313,7 +339,7 @@ If you like to work with keyboard shortcuts instead of pointing and clicking, yo
 
 ### Table of Contents
 
-Sometimes if your report is very long, it can help to add a table of contents. 
+Sometimes if your report is very long, it can help to add a table of contents.
 
 This can be done by adding `toc: true` and `toc_float: true` to the YAML underneath the `html_document:` code. The spacing is very important with this! The `toc_float: true` makes the table of contents on the side as opposed to just the top.
 
@@ -322,13 +348,13 @@ This can be done by adding `toc: true` and `toc_float: true` to the YAML underne
 
 ### Code Folding
 
-Earlier we talked about hiding code but discussed that usually you want to share the code if possible. Code folding is really great option for this issue! It allows you to create a clean report with a button for people to click to see the code within the code chunk that resulted in the various outputs of the report. 
+Earlier we talked about hiding code but discussed that usually you want to share the code if possible. Code folding is really great option for this issue! It allows you to create a clean report with a button for people to click to see the code within the code chunk that resulted in the various outputs of the report.
 
 To do this you can add  `code_folding: 'hide'` to cause your code to be "folded".
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_521.png){width=100%}
 
-This means that there will be a button that people can click on to see the code (or hide it afterwards). 
+This means that there will be a button that people can click on to see the code (or hide it afterwards).
 
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_525.png){width=100%}
@@ -349,16 +375,16 @@ Be careful about allowing this if you use code that works with data with PHI. Ju
 
 ### Automatic Date
 
-Using `date: "2024-11-13"` in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.
+Using `date: "2025-03-24"` in the YAML will keep the date up-to-date as you write more code. It will display the date that the report was last rendered.
 
 ![](resources/images/06-rmarkdown_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_506.png){width=100%}
 
 
-This trick is great for reproducibility because it ensures that the date on the report is correct for when the report was last rendered. This helps those who read the report to get a sense of how active development is on the project. 
+This trick is great for reproducibility because it ensures that the date on the report is correct for when the report was last rendered. This helps those who read the report to get a sense of how active development is on the project.
 
 ## Conclusion
 
-In summary, R Markdown files can help you to create nice looking reports that help others to understand not only what code you used, but also what the results of your code were. 
+In summary, R Markdown files can help you to create nice looking reports that help others to understand not only what code you used, but also what the results of your code were.
 
  - Code is written in gray sections called chunks that have play buttons that allow you to preview the code
  - The Knit button allows you to render the full report and test that all of the needed code is in the file
@@ -371,4 +397,3 @@ In summary, R Markdown files can help you to create nice looking reports that he
  - hashtags are used to create headers, the fewer the hashtags the larger the header
  - Asterisk around text creates bold or italic font
  - There are additional features to make your R Markdown report showcase your code and the output of your code in more readable ways, including adding a table of contents or folding code, so that readers can click to see the code that created a particular output. This is a really great option for reproducibility because it creates easy to read reports but also shares your code!
-
