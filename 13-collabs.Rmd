@@ -37,6 +37,7 @@ Now the reviewer is given a chance to look at the proposed solution and approve 
 ### Step 4. Refined solution is deployed
 
 Once both the author and the reviewer agree the work is ready, the changes can  be merged and [deployed to the main branch](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html#whats-github)! Yay! Time to celebrate.
+
 :::dictionary
 The main branch is the ground truth branch where the final product of the code is created from. Development branches on the other hand, propose changes that can be added to the main branch. 
 :::
