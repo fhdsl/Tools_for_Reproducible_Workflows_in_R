@@ -41,6 +41,7 @@ Once both the author and the reviewer agree the work is ready, the changes can  
 :::dictionary
 The main branch is the ground truth branch where the final product of the code is created from. Development branches on the other hand, propose changes that can be added to the main branch. 
 :::
+
 Now the process can be repeated for the next issue!
 
 ## Issues should tell us:
