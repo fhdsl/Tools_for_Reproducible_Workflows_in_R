@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Software versions | Tools for Reproducible Workflows in R</title>
-  <meta name="description" content="Chapter 9 Software versions | Tools for Reproducible Workflows in R" />
+  <title>Chapter 12 Collaborations through GitHub | Tools for Reproducible Workflows in R</title>
+  <meta name="description" content="Chapter 12 Collaborations through GitHub | Tools for Reproducible Workflows in R" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Software versions | Tools for Reproducible Workflows in R" />
+  <meta property="og:title" content="Chapter 12 Collaborations through GitHub | Tools for Reproducible Workflows in R" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Software versions | Tools for Reproducible Workflows in R" />
+  <meta name="twitter:title" content="Chapter 12 Collaborations through GitHub | Tools for Reproducible Workflows in R" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="using-github-in-a-workflow.html"/>
-<link rel="next" href="functions.html"/>
+<link rel="prev" href="sharing-data.html"/>
+<link rel="next" href="about-the-authors.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -420,156 +420,221 @@ div.csl-indent {
 <div class="hero-image-container">
   <img class= "hero-image" src="assets/RR25_thin_main_image.png">
 </div>
-<div id="software-versions" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Software versions<a href="software-versions.html#software-versions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="learning-objectives-1" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Learning Objectives<a href="software-versions.html#learning-objectives-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_43.png" alt="In this software versions chapter our learning objectives are to be able to: Recognize that software versions influence data analysis results and reproducibility. Record packages used for an analysis. Use renv to make an R environment shareable to collaborators. Recognize containerization as a method to share your entire computing environment with others." width="100%" style="display: block; margin: auto;" /></p>
-<p>As we discussed, reproducibility is on a continuum, meaning that it can range from being impossible to very easy to reproduce any given results. Some results can be effectively impossible to reproduce if there are too many barriers and set up needed to re-run the analysis. One of the most common barriers is the computing environment used run the analysis.</p>
+<div id="collaborations-through-github" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Collaborations through GitHub<a href="collaborations-through-github.html#collaborations-through-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_68.png" alt="Learning objectives are to be able to: Use collaborations and code review to boost reproducibility. Polish code with code review through GitHub pull requests. Manage tasks of a project using GitHub Issues. Communicate with collaborators clearly on GitHub" width="100%" style="display: block; margin: auto;" /></p>
+<div id="components-of-collaborating-on-github" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Components of collaborating on GitHub<a href="collaborations-through-github.html#components-of-collaborating-on-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As noted previously, GitHub is not only great for sharing and version control but, it is also great for collaborating!</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_6.png" alt="Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy." width="100%" style="display: block; margin: auto;" /></p>
+<p>This collaboration can be done through the use of issues and pull requests!</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_0.png" alt="The GitHub collaboration workflow starts with the creation of an issue. Someone identified a problem or needed aspect for the project and they can take note of this by creating an issue. This issue will be addressed by changes in a pull request which will reference this issue. " width="100%" style="display: block; margin: auto;" />
+### Step 1. A problem identified/issue created</p>
+<p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">GitHub issues</a> are where we can note, plan, and discuss work for a project. It might first be filed by one person but then used for further discussion between multiple people to define a problem or new request. Once the issue is scoped and defined enough it can be assigned to someone to work on it.</p>
+<div id="step-2.-proposing-a-solution" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">12.1.1</span> Step 2. Proposing a solution<a href="collaborations-through-github.html#step-2.-proposing-a-solution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Creating a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> is proposing a solution that addresses the original issue. The author of the pull request creates a new branch with the necessary changes to address the issue. The pull request description should reference the original issue to explain what problem or request the work is addressing. It should also explain how the work addresses it. Finally, a reviewer can be requested for feedback.</p>
+</div>
+<div id="step-3.-reviewer-looks-at-proposed-solution" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">12.1.2</span> Step 3. Reviewer looks at proposed solution<a href="collaborations-through-github.html#step-3.-reviewer-looks-at-proposed-solution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now the reviewer is given a chance to look at the proposed solution and approve and or otherwise improve it in collaboration with the original author.</p>
+</div>
+<div id="step-4.-refined-solution-is-deployed" class="section level3 hasAnchor" number="12.1.3">
+<h3><span class="header-section-number">12.1.3</span> Step 4. Refined solution is deployed<a href="collaborations-through-github.html#step-4.-refined-solution-is-deployed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once both the author and the reviewer agree the work is ready, the changes can be merged and <a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html#whats-github">deployed to the main branch</a>! Yay! Time to celebrate.</p>
 <div class="dictionary">
-<p><strong>computing environment</strong> - All the relevant pieces of software and their dependencies that were used on a computer at the time that an analysis or other project was run</p>
+<p>The main branch is the ground truth branch where the final product of the code is created from. Development branches on the other hand, propose changes that can be added to the main branch.</p>
+</div>
+<p>Now the process can be repeated for the next issue!</p>
 </div>
 </div>
-<div id="no-two-computers-are-the-same" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> No two computers are the same<a href="software-versions.html#no-two-computers-are-the-same" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A computing environment not only consists of the direct software that we use to analyze data, but all of the other software that our main pieces of software require to install and run properly.</p>
-<p>As we use our computers daily for work, we are constantly installing, updating, and removing software packages. Sometimes our computers do this automatically without us knowing. These software packages interact with and depend on each other, meaning it can be quite frustrating to try update even a single piece of software if it exists in a tangled mess of software dependencies. Computer scientists sometimes call this “<a href="https://en.wikipedia.org/wiki/Dependency_hell">dependency hell</a>”.</p>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_50.png" alt="Reproducible parrot is frustrated by their computer and says ‘I’m trying to reproduce Polly’s results but there’s 14 packages that I need to install that I can’t seem to get all the R packages dependencies resolved!’" width="100%" style="display: block; margin: auto;" /></p>
-<p>As developers and maintainers of software continue to make updates and fixes to the software, the developers and maintainers of other interdependent software are doing similarly, meaning that software dependencies and the computing environments are not only a complicated mess at times, but also a moving target!</p>
-</div>
-<div id="software-and-package-versions-affect-results" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Software and package versions affect results!<a href="software-versions.html#software-and-package-versions-affect-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Sometimes if we have generally the same software installed for reproducing an analysis, we may feel that that is “close enough”. And given all the other technical aspects of reproducibility, it can be easy to overlook what versions of software packages we are using. However, controlling for software versions is critical for creating reproducible analyses. Software versions can directly affect not only whether an analysis will be able to run, but the results of the analysis <span class="citation">(<a href="references.html#ref-BeaulieuJones2017">Beaulieu-Jones and Greene 2017</a>)</span>.</p>
-</div>
-<div id="session-info" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> Session Info<a href="software-versions.html#session-info" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Perhaps the easiest way to begin to address computing environment variability is to record what the computing environment looks like at the time an analysis is run. In R, this is a fairly straightforward task.</p>
-<p>Generally at the end of your R notebook, you will want to print out your session info. You can do this by running the function <code>sessionInfo()</code> or the tidyverse version of this function from the devtools package, <code>devtools::session_info()</code>.</p>
-<p>We can run <code>sessionInfo</code> in this book (this book was created using R tools).</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="software-versions.html#cb22-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
-<pre><code>## R version 4.3.2 (2023-10-31)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 22.04.4 LTS
-## 
-## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-## LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
-## 
-## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-## 
-## time zone: Etc/UTC
-## tzcode source: system (glibc)
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] sass_0.4.8       utf8_1.2.4       generics_0.1.3   xml2_1.3.6      
-##  [5] stringi_1.8.3    hms_1.1.3        digest_0.6.34    magrittr_2.0.3  
-##  [9] evaluate_0.23    timechange_0.3.0 bookdown_0.41    fastmap_1.1.1   
-## [13] rprojroot_2.0.4  jsonlite_1.8.8   processx_3.8.3   chromote_0.3.1  
-## [17] ps_1.7.6         promises_1.2.1   httr_1.4.7       fansi_1.0.6     
-## [21] ottrpal_1.3.0    jquerylib_0.1.4  cli_3.6.2        rlang_1.1.4     
-## [25] cachem_1.0.8     yaml_2.3.8       tools_4.3.2      tzdb_0.4.0      
-## [29] dplyr_1.1.4      curl_5.2.0       vctrs_0.6.5      R6_2.5.1        
-## [33] lifecycle_1.0.4  lubridate_1.9.3  snakecase_0.11.1 stringr_1.5.1   
-## [37] janitor_2.2.0    pkgconfig_2.0.3  pillar_1.9.0     bslib_0.6.1     
-## [41] later_1.3.2      glue_1.7.0       Rcpp_1.0.12      highr_0.11      
-## [45] xfun_0.48        tibble_3.2.1     tidyselect_1.2.0 knitr_1.48      
-## [49] htmltools_0.5.7  websocket_1.4.2  rmarkdown_2.25   webshot2_0.1.1  
-## [53] readr_2.1.5      compiler_4.3.2   askpass_1.2.0    openssl_2.1.1</code></pre>
-<p>Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.
-This print out may seem like a lot of nonsense at first, but it gives us some useful information in a pinch!</p>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1030.png" alt="Reproducible parrot is confused because their results are different after they have re-run their analysis. The parrot says: ‘Hmm… why am I getting a different result this time? Good thing I can check the session info to see if package versions might have caused this change!’" width="100%" style="display: block; margin: auto;" /></p>
-<p>If we take a look at two different session info printouts, we can begin to spot the differences. These differences may give us clues into why an analysis ran differently.</p>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1333.png" alt="Two session info printouts are show side by side. Highlighted we can see that they have different R versions: 4.0.2 vs 4.0.5. They also have different operating systems. The packages they have attached is rmarkdown but they also have different rmarkdown package versions!  If there are  discrepancies in re-runs of the analysis, the session info printout gives a record which may have clues to why that might be! This can give items to look into for determining why the results didn’t reproduce as expected." width="100%" style="display: block; margin: auto;" /></p>
-<p>Printing out session info is an easy way to record your computing environment in hopes of increasing the reproducibility of your analysis!</p>
-<div class="dictionary">
-<p><strong>session info</strong> - A printout in R that displays information about the software and packages that were being used at the time the <code>sessionInfo()</code> or <code>devtools::session_info()</code> functions were run.</p>
-</div>
-</div>
-<div id="snapshots-with-renv" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Snapshots with <code>renv</code><a href="software-versions.html#snapshots-with-renv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>However, you may realize that while session info is useful for recording this information, it doesn’t mitigate the frustration of setting up a computing environment in R. Nor does it help us with being able to directly share our computing environments.</p>
-<p>It can be incredibly handy for reproducibility purposes to be able to share the R computing environment you used for completing an analysis. This is not only helpful for others who may be interested in reproducing your analysis, but also for future you! If you come back to this analysis and attempt to re-run it, it is likely you’ve changed your R computing environment over time by installing or removing packages. <code>renv</code> will allow you to return to the environment you used at the time that you ran the analysis.</p>
-<p>For that, we need a slightly more involved solution of using <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a>. <code>renv</code> is an R package that allows you to take ‘snapshots’ of your R computing environment and use those to track, share, and build R environments.</p>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1492.png" alt="In general, package managers work by capturing a snapshot of the environment and when that environment snapshot is shared, it attempt to rebuild it. In this example we show one computing environment, and using a package manager, we can take  snapshot of it. That snapshot can be shared to another computer which can be used to attempt to build the computing environment on this computer. This will help address some differences in package versions between two individual’s computers. " width="100%" style="display: block; margin: auto;" /></p>
-<p>The <code>renv</code> workflow looks like this (as described by their documentation):</p>
-<blockquote>
-<ol style="list-style-type: decimal">
-<li>Call <code>renv::init()</code> to initialize a new project-local environment with a private R library</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2" style="list-style-type: decimal">
-<li>Work in the project as normal, installing and removing new R packages as they are needed in the project</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3" style="list-style-type: decimal">
-<li>Call <code>renv::snapshot()</code> to save the state of the project library to the lockfile (called renv.lock)</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="4" style="list-style-type: decimal">
-<li>Continue working on your project, installing and updating R packages as needed</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="5" style="list-style-type: decimal">
-<li>Call <code>renv::snapshot()</code> again to save the state of your project library if your attempts to update R packages were successful, or call <code>renv::restore()</code> to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems</li>
-</ol>
-</blockquote>
-<p>To make this shareable to others, you will need to do two things:</p>
-<ol style="list-style-type: decimal">
-<li>Be sure to commit and push the <code>renv.lock</code> file to your GitHub repository for your project.</li>
-<li>Be sure to describe that your project uses <code>renv</code> in the README of this project (commit and push this to your GitHub repository also).</li>
-</ol>
-<p><img src="resources/images/09-software-versions_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_163.png" alt="The renv workflow begins with intializing an environment with renv::init(). Then you install or remove packages and otherwise work in R as normal. When you are ready to update the renv snapshot, you run renv::snapshot(). You can now share this environment snapshot on GitHub or wherever. The environment can be restored using renv::restore()" width="100%" style="display: block; margin: auto;" /></p>
-<p>The limitations of this method, <a href="https://rstudio.github.io/renv/articles/renv.html#caveats">as noted by the <code>renv</code> authors</a>, is that it really only tracks packages in R and cannot help track or enforce items that may affect the computing environment outside of R. So while it will aid in the reproducibility of your analysis, it will not cover everything.</p>
-<div class="dictionary">
-<p><strong>renv</strong> - An R package that helps you to share and record your R specific computing environment</p>
-</div>
-</div>
-<div id="containerization" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> Containerization<a href="software-versions.html#containerization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In order to truly reproduce a result with an identical computing environment you would need to use a containerized approach. To containerize a computing environment is to truly create an environment that is shippable to others. A container is analogous to a virtual machine. A computer runs a computing environment inside of it that is separate from the rest of the computer (hence why its called a container).</p>
-<p>One of the most popular containerization softwares is Docker. Docker allows you to build your computing environment and share it on its online platform in the form of images that you can download and run. In fact, this book is rendered by a Docker container!</p>
-<div class="warning">
-<p>If you will be using a container with PHI or PII or other protected information, we recommend you take a look at <a href="https://www.cleardata.com/resources/hipaa-compliant-containers/">this resource</a> to understand best practices for using Docker with sensitive data.</p>
-</div>
-<div class="dictionary">
+<div id="issues-should-tell-us" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Issues should tell us:<a href="collaborations-through-github.html#issues-should-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><strong>container</strong> - A method for running software in a way that is shareable and Reproducible</li>
-<li><strong>Docker</strong> - A popular platform for containers</li>
+<li>What the problem is - including examples or screenshots to demonstrate the problem.</li>
+<li>What solution(s) could address the problem?</li>
+<li>Who might be assigned to addressing this problem?</li>
+<li>Potentially what timeline or urgency the problem has.</li>
 </ul>
 </div>
-<p>We will not cover Docker here but if you are interested in using a containerized approach like Docker, here are additional resources for learning:</p>
+<div id="pull-requests-should-tell-us" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Pull Requests should tell us:<a href="collaborations-through-github.html#pull-requests-should-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><a href="https://carpentries-incubator.github.io/docker-introduction/">Software Carpentries course on Docker</a></li>
-<li><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/launching-a-docker-image.html">ITCR Training Network chapters about Docker</a></li>
-<li><a href="https://www.docker.com/get-started/">Docker documentation about getting started</a></li>
-<li><a href="https://www.atlantic.net/hipaa-compliant-hosting/best-practices-for-creating-a-hipaa-compliant-docker-host/">How to ensure your Docker usage is HIPAA-Compliant</a></li>
-<li><a href="https://www.cleardata.com/resources/hipaa-compliant-containers/">HIPAA Compliant Containers</a></li>
-<li><a href="https://docs.sylabs.io/guides/latest/user-guide/">Singularity is a different container platform that does some encryption</a> – this can help if you are using data that needs to be protected.</li>
+<li>What issue is the work addressing?</li>
+<li>How is it addressing the issue?</li>
+<li>What pitfalls exist?</li>
+<li>What should be looked at and reviewed carefully.</li>
 </ul>
 </div>
-<div id="conclusion-6" class="section level2 hasAnchor" number="9.7">
-<h2><span class="header-section-number">9.7</span> Conclusion<a href="software-versions.html#conclusion-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In summary:</p>
+<div id="engaging-in-code-review---as-an-author" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Engaging in Code Review - as an author<a href="collaborations-through-github.html#engaging-in-code-review---as-an-author" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The only way to know if your analysis is truly reproducible is to send it to someone else to reproduce! That sentiment is at the heart of code review.</p>
+<p><span class="citation">(<a href="#ref-Parker2017"><strong>Parker2017?</strong></a>)</span> describes code review:</p>
+<blockquote>
+<p>Code review will not guarantee an accurate analysis, but it’s one of the most reliable ways of establishing one that is more accurate than before.</p>
+</blockquote>
+<p>Not only does code review help boost the accuracy and reproducibility of the analysis, it also helps everyone involved in the process learn something new!</p>
+<p>An effective code review atmosphere is something that individuals and their team have to <em>commit</em> to (pun intended). Effective code review brings so many benefits not only to your project quality but also to your communication skills through fostering a learning atmosphere!</p>
+<p>In this chapter we will discuss the two sides of code review. Code review ideally includes at least two people: the author of the pull request and the reviewer of the pull request. Depending on your job context, we realize that sometimes authors have to become their own reviewers. This might happen if your team is small or the authors are the only people with a particular skill set.</p>
+</div>
+<div id="author-responsibilities-in-code-review" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Author responsibilities in code review<a href="collaborations-through-github.html#author-responsibilities-in-code-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The code review process begins with the creation of a pull request (which we practiced in the <a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html#opening-a-pr">previous chapter</a>). Successful and efficient code review is born out of quality communication, which is a skill set on its own. You can set your reviewers (and yourself) up for success by knowing what basic information can help get the code review conversation going.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2369.png" alt="Ruby has filed a very large pull request with a very short PR description:  I updated the project and added new files. She then requested Avi to review this PR. This leaves Avi with very little information to go on and he is very confused. Avi comments: Ummm… I’m a bit confused. Can you explain the context of these changes? This is a lot for me to try to follow.  I’m also unsure what kind of feedback you are looking for. " width="100%" /></p>
+<p>Even if you end up reviewing your own code, writing the following information out is still very helpful and highly recommended. It can help you spot problems you might not have otherwise seen and generally help you document your code better for future you!</p>
+</div>
+<div id="characteristics-of-great-pull-requests-and-issues" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Characteristics of great pull requests and issues<a href="collaborations-through-github.html#characteristics-of-great-pull-requests-and-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="theres-plenty-of-context" class="section level3 hasAnchor" number="12.6.1">
+<h3><span class="header-section-number">12.6.1</span> There’s plenty of context!<a href="collaborations-through-github.html#theres-plenty-of-context" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What’s the story behind the changes you are proposing? Sometimes when we are in the thick of a project we can make the mistake of assuming everyone knows what we know. This can unfortunately leave a huge burden on your reviewer to try to understand what you are doing.</p>
+<p>Before sending off a review request, re-read your PR description and think about the perspective of your reviewer. Err on the side that they have no idea what is happening on the project (because sometimes this is the case!)</p>
+<p>Tell a short story to explain what lead to you making these changes including attempting to answer these questions:</p>
 <ul>
-<li>Software versions affect the reproducibility of an analysis.</li>
-<li>Printing out session info is a great way to record software versions.</li>
-<li><code>renv</code> is an R package that allows you to share your R specific computing environment.</li>
-<li>Containerization softwares like Docker allow you to more completely share a replicate computing environment.</li>
+<li>What is the problem that these changes will solve?</li>
+<li>Do you have any URLs, relevant issues, or files you can share?</li>
+<li>What inspired you to take this approach – are there other things you tried?</li>
+<li>Are there other pull requests related to this change?</li>
+</ul>
+<div class="notice">
+<p>You can type the world “resolves” and then include the issue number with a <code>#</code> and it will close the issue when you merge the pull request</p>
+</div>
+<div class="notice">
+<p>You can type the world “resolves” and then include the issue number with a <code>#</code> and it will close the issue when you merge the pull request</p>
+</div>
+</div>
+<div id="includes-an-explicit-request-for-what-kind-of-feedback-is-needed" class="section level3 hasAnchor" number="12.6.2">
+<h3><span class="header-section-number">12.6.2</span> Includes an explicit request for what kind of feedback is needed<a href="collaborations-through-github.html#includes-an-explicit-request-for-what-kind-of-feedback-is-needed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What would you like your reviewer to do with this pull request? Stating this explicitly can save both of you time in this code review process.</p>
+<ul>
+<li>Are you still in the early stages and looking for a bigger picture review? Let them know that before they waste their time digging into the code line-by-line.</li>
+<li>Are you in the later stages and looking for a detailed nit-picky review?</li>
+<li>Are you looking for feedback on the results or methods?</li>
+</ul>
+</div>
+<div id="points-out-questionable-areas-that-need-extra-attention" class="section level3 hasAnchor" number="12.6.3">
+<h3><span class="header-section-number">12.6.3</span> Points out questionable areas that need extra attention<a href="collaborations-through-github.html#points-out-questionable-areas-that-need-extra-attention" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Are there specific areas of the code you are having trouble with or are unsure about? Send a link to the <a href="https://stackoverflow.com/questions/23821235/how-to-link-to-specific-line-number-on-github">specific lines in GitHub</a> you are asking about. Are there results that are surprising, confusing, or <a href="https://github.com/jennybc/code-smells-and-feels#code-smells-and-feels">smell wrong</a>?</p>
+<p>Be sure to detail what you have dug into and tried at this point for any problematic points. This can help the reviewer to avoid suggesting potential solutions that the author has already tried.</p>
+</div>
+<div id="are-relatively-small-and-focused" class="section level3 hasAnchor" number="12.6.4">
+<h3><span class="header-section-number">12.6.4</span> Are relatively small and focused<a href="collaborations-through-github.html#are-relatively-small-and-focused" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Try to make sure your pull requests aren’t too long! Code reviewing fatigue is very real. If you send a reviewer thousands of lines of code to review it will be very overwhelming to review or understand.</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+10 lines of code = 10 issues.<br><br>500 lines of code = "looks fine."<br><br>Code reviews.
+</p>
+— I Am Devloper (<span class="citation">(<a href="#ref-iamdevloper"><strong>iamdevloper?</strong></a>)</span>) <a href="https://twitter.com/iamdevloper/status/397664295875805184?ref_src=twsrc%5Etfw">November 5, 2013</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Alternatively, when you create a new branch try to set a very intentional (and relatively small) goal you would like to achieve with your upcoming pull request. Keeping your pull requests small and focused on one task at a time will not only help your reviewers but also will help yourself feel more accomplished and organized.</p>
+<p>Also recall that incremental changes are good! Perhaps you do have a very large restructuring of your repository you are trying to accomplish, but finding smaller reasonable sets of changes (which would each have their own pull requests) to reach that goal incrementally can help keep things more manageable. This can also be very valuable if you decide that you want to go back to a previous version. It can be easier to tell when a change was introduced if you have smaller pull requests.</p>
+<div class="notice">
+<p>If you have changes that might be interdependent, you can make a pull request based on another existing pull request, using something called <a href="https://blog.logrocket.com/using-stacked-pull-requests-in-github/">stacked pull requests in GitHub</a>.</p>
+</div>
+</div>
+<div id="dont-ask-a-reviewer-to-dig-through-dirty-code" class="section level3 hasAnchor" number="12.6.5">
+<h3><span class="header-section-number">12.6.5</span> Don’t ask a reviewer to dig through dirty code<a href="collaborations-through-github.html#dont-ask-a-reviewer-to-dig-through-dirty-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Determining when a pull request is fully cooked and ready for review is a skill in itself. Pull requests that haven’t had enough time to be polished can put an unnecessarily large burden on the reviewer. On the other hand, pull requests that have been hashed and rehashed in a silo might have benefitted from big picture feedback at an earlier stage of the code. This balance is something that you and your team can figure out in time using lots of communication!</p>
+<p>This being said, the first reviewer of your code should always be yourself! Take time to review your own changes by clicking on the <code>Files Changed</code> tab and going over that section carefully.</p>
+<ul>
+<li>Are all the changes included that you were expecting?</li>
+<li>Are there any changes you didn’t expect that are showing up? These can be symptomatic of a deeper problem. Definitely dig into anything that is not what you expected.</li>
+<li>Set aside your changes and return them in a few hours, or the next day. Looking at your changes with fresh eyes may also allow you to find things you didn’t notice before.</li>
+</ul>
+<p>Additional tip, if you don’t want others to look at your pull request yet because you are still working on reviewing it, you can change it to <a href="https://github.blog/2019-02-14-introducing-draft-pull-requests/">a draft pull request</a> so no one reviews it before you are ready. This can also be a handy tactic to use if you just want to ask for big picture feedback from someone but want to make it clear that the pull request is not anywhere near ready for merging to main.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2555.png" alt="Ruby has filed a much smaller pull request with a better PR description: Background: In this previous PR we updated the heatmap-script.R file. But now the documentation in the README is out of date. This PR aims to update the README accordingly. Approach: I updated the README with information on the new arguments we added. This also required me to update the Usage section and recommendations there. Feedback needed: Can you look at the Usage section and try running the command and steps described there? I am concerned that this section is not clear enough but I am not sure how to add clarity. Please let me know if you have suggestions on this point.  She has then requested Avi to review this PR.  Avi responds back: Ruby this is great! I was able to dig into this and give you feedback at the places you asked. Let me know what you think of my ideas and comments! This code review situation has been very productive!" width="100%" /></p>
+</div>
+<div id="pull-request-templates" class="section level3 hasAnchor" number="12.6.6">
+<h3><span class="header-section-number">12.6.6</span> Pull Request Templates<a href="collaborations-through-github.html#pull-request-templates" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Add a <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">pull request template</a> to your repository! This will help initiate consistent and clear communication around the pull requests in your repository.</p>
+<p>Pull request templates are a way to give yourself and other contributors prompts when starting a new pull request. See below for an example. The comments between <code>&lt;!--</code> and <code>--&gt;</code> are html comments that will not show up so you don’t need to delete them if you don’t want to. On the right side, it shows how this template looks when it’s rendered. You can see this at any time by clicking <code>Preview</code> – this is true in other places in GitHub.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_gfa97af8537_0_0.png" alt="Pull request templates are a way to give yourself and other contributors prompts when starting a new pull request. For example, upon creating a pull request, this text will automatically appear in the text box for your pull request template. Now this helps you and others fill out the pull request more like a form and respond to the prompts. On the right side, it shows how this template looks when it's rendered. You can see this at any time by clicking Preview. " width="100%" /></p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png" alt="Great pull requests. Provide plenty of context. Have an explicit request for what kind of feedback is needed. Point out questionable areas. Are relatively small and focused. Don't ask a reviewer for help too soon" width="100%" /></p>
+</div>
+<div id="preparing-for-the-return-of-your-review" class="section level3 hasAnchor" number="12.6.7">
+<h3><span class="header-section-number">12.6.7</span> Preparing for the return of your review<a href="collaborations-through-github.html#preparing-for-the-return-of-your-review" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As you wait for your reviewer to get back to you, it can be helpful to remind yourself what the purpose of code review is to get yourself in a positive mindset. You’ve given your reviewer information to help them help you and now is the time to wait.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png" alt="Main goals of a pull request author Set up your reviewer for success by erring toward overcommunicating Interpret reviews positively! Determine solutions collaboratively." width="100%" /></p>
+<p>First of all, you should pat yourself on the back for engaging in code review. It does require more time and sometimes that can feel scary with looming deadlines, but kudos for being able to prioritize your commitment to creating increasingly more reproducible analyses! Furthermore, it can ultimately save you time over more extensive projects by keeping everyone up-to-date!</p>
+<p>Remember that you are not your code and mistakes are all a part of the process! Putting your project out there can feel a tad vulnerable. You may have felt the impulse to keep your code’s problems buried under a rug, but you pushed past that and are making your analyses transparent! Remember that hidden problems don’t get solved, but known problems are opportunities for reaching an even better end result!</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2625.png" alt="Remember that you are not your code and mistakes are all a part of the process! The cartoon shows you with exclamation point and equal sign with a fake bit of code to illustrate you are not your code." width="100%" /></p>
+<p>When you receive a review back remember that you and the reviewer are on the same team and both want the best end result feasible for this project! They may suggest ideas that you love and can’t wait to implement. They also might suggest ideas you don’t agree with. Do your best to take all their comments as positive learning opportunities and look for ways to compromise and determine solutions collaboratively.</p>
+</div>
+</div>
+<div id="engaging-in-code-review---as-a-reviewer" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> Engaging in Code Review - as a reviewer<a href="collaborations-through-github.html#engaging-in-code-review---as-a-reviewer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When reviewing a pull request, you take on responsibility to ensure that the pull request is getting the project to a better state than before.</p>
+<p>There are three aspects to reviewing we will focus on:</p>
+<ol style="list-style-type: decimal">
+<li>Identify areas in the code and documentation that are opportunities for improvement.</li>
+<li>Communicate your questions and concerns effectively and in a way that creates a positive atmosphere.</li>
+<li>Determine solutions collaboratively in a way that allows for learning as well as a long-term improved product.</li>
+</ol>
+<div id="what-to-look-for" class="section level3 hasAnchor" number="12.7.1">
+<h3><span class="header-section-number">12.7.1</span> What to look for!<a href="collaborations-through-github.html#what-to-look-for" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Depending on the goals of the project, and pull request there can be a lot to keep an eye out for. There are <a href="https://github.com/joho/awesome-code-review#articles">many articles out there about what to look for in a code review</a>.</p>
+<p><em>Here’s some general points:</em></p>
+<ul>
+<li>Does the analysis answer the question it’s asking? Are the methods it uses to do so appropriate?</li>
+<li>Is the code clear and readable? Does it contain a healthy amount of comments and documentation for individuals not familiar with the project to understand generally what is going on?</li>
+<li>Is the code efficient with computational resources? (Are there areas that are a bit too greedy with memory usage?)</li>
+<li>Does the code stick to the style and conventions of this project?</li>
+<li>Are there alternate scenarios where the current strategy might fail? (depending on the likelihood, this may be an instance for a new issue and another pull request).</li>
+</ul>
+</div>
+<div id="how-to-communicate-it" class="section level3 hasAnchor" number="12.7.2">
+<h3><span class="header-section-number">12.7.2</span> How to communicate it<a href="collaborations-through-github.html#how-to-communicate-it" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The pull request may be the author’s precious bundle. Try to be empathetic to the learning process! You are both working on this project together – assume you both want the best out of this project. If something seems wrong, work together to find a solution, don’t ever waste time on placing blame.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2647.png" alt="Remember the author of the pull request has been putting time and effort into this! This cartoon shows a stick person cradling a computer with code on it with lots of hearts and love swirling around. The pull request may be the author’s precious bundle. Try to be empathetic to the learning process!" width="100%" /></p>
+<p>Remember that everything sounds harsher when you don’t have in-person cues! In this example, Avi may be stating factual things, but without his pleasant and reassuring disposition, it can feel super harsh.</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2653.png" alt="Ruby requested a code review from Avi who has responded: This code needs work. Don’t use the formattR package it’s inefficient and takes forever to run. You didn’t style the last chunk of code. This feels very harsh to Ruby who has a single tear." width="100%" /></p>
+<p>If Avi had reframed his comments, they might be more effective in this collaboration. <span class="citation">(<a href="#ref-Babatunde2018"><strong>Babatunde2018?</strong></a>)</span> suggests framing <a href="https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7">review comments in three ways to help communication: questions, suggestions, and appreciations</a>.</p>
+<div id="questions" class="section level4 hasAnchor" number="12.7.2.1">
+<h4><span class="header-section-number">12.7.2.1</span> Questions<a href="collaborations-through-github.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>For example:</em></p>
+<blockquote>
+<p>What happens if this doesn’t get saved? Does it throw an exception or fail silently?</p>
+</blockquote>
+<p>The key is to be specific with the questions. Mention exact file names. Put comments on the line you are referring to. Explain what you think is happening and ask them to explain if that is correct.</p>
+</div>
+<div id="suggestions" class="section level4 hasAnchor" number="12.7.2.2">
+<h4><span class="header-section-number">12.7.2.2</span> Suggestions<a href="collaborations-through-github.html#suggestions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>For example:</em></p>
+<blockquote>
+<p>I suggest you use an ArrayHelper getValue method here because of its error handling capability instead of accessing the value directly
+You could even go further by giving an example:
+$a = $b[‘key’]; would raise an error if key is not set but <span class="math inline">\(a = ArrayHelper::getValue(\)</span>b, ‘key’); would return a null value if key is not set.</p>
+</blockquote>
+<p>Giving suggestions and explaining not only how to implement them but why they might be preferred in this scenario is a great learning process both for the author and yourself.</p>
+</div>
+<div id="appreciations" class="section level4 hasAnchor" number="12.7.2.3">
+<h4><span class="header-section-number">12.7.2.3</span> Appreciations<a href="collaborations-through-github.html#appreciations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Start every review comment with appreciation for the hard work completed! This goes a long way for creating a positive atmosphere.</p>
+<p><em>For example:</em></p>
+<blockquote>
+<p>Nice Job! Alice. I suggest we create an interface for this service so other substitute services can implement the interface as well, this would enable us change to a different service with very minimal efforts when the need arises. What do you think?</p>
+</blockquote>
+<p>Let’s see how Avi’s message could have been reworked to give a more effective review:</p>
+<p><img src="resources/images/13-collabs_files/figure-html/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2679.png" alt="Ruby has requested a review from Avi but alternatively, Avi has framed his review in a more effective manner, giving context, examples, and creating a much more positive collaboration. Avi’s review says: Ruby, thanks for all this work! This is a great start! I have a few questions so we can further polish this code. Is your usage of the formattR package because of the weird formatting of the data.tsv file? Perhaps we can brainstorm another approach to this that would allow us to get rid of this package requirement. I think that in your last chunk you may have forgotten to style the code according to the conventions for this repository. Perhaps we can discuss how we introduce something to help all authors of this repository adhere to the conventions. This may be an instance we can use automation or a checklist to help. Ruby happily accepts this review and the collaboration will create a better product." width="100%" /></p>
+<p>This interaction reminds us that effective code review is steeped in empathy from both sides. Authors need to appreciate the time and effort the reviewer is spending to help them; while reviewers need to be sensitive to the amount of effort put in by the author already.</p>
+</div>
+<div id="recommended-reading-about-code-review" class="section level4 hasAnchor" number="12.7.2.4">
+<h4><span class="header-section-number">12.7.2.4</span> Recommended reading about code review<a href="collaborations-through-github.html#recommended-reading-about-code-review" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><a href="https://www.atlassian.com/agile/software-development/code-reviews">Why code reviews matter (and actually save time!)</a> by <span class="citation">(<a href="#ref-Radigan2021"><strong>Radigan2021?</strong></a>)</span>.</li>
+<li><a href="https://www.pullrequest.com/blog/writing-a-great-pull-request-description/">Pull request descriptions</a> by <span class="citation">(<a href="#ref-Banuelos2020"><strong>Banuelos2020?</strong></a>)</span>.</li>
+<li><a href="https://www.freecodecamp.org/news/a-zen-manifesto-for-effective-code-reviews-e30b5c95204a/">A zen manifesto for effective code reviews</a> by <span class="citation">(<a href="#ref-Fabre2019"><strong>Fabre2019?</strong></a>)</span>.</li>
+<li><a href="https://smartbear.com/en/learn/code-review/best-practices-for-peer-code-review/">Best practices for Code Review</a> by <span class="citation">(<a href="#ref-Smartbear2021"><strong>Smartbear2021?</strong></a>)</span>.</li>
+<li><a href="https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7">Comments during Code Reviews</a> by <span class="citation">(<a href="#ref-Babatunde2018"><strong>Babatunde2018?</strong></a>)</span></li>
+<li><a href="https://slack.engineering/on-empathy-pull-requests/">On Empathy and Pull Requests</a> by <span class="citation">(<a href="#ref-Hirpa2016"><strong>Hirpa2016?</strong></a>)</span>.</li>
+<li><a href="https://phauer.com/2018/code-review-guidelines/">Code Review Guidelines for Humans</a> by <span class="citation">(<a href="#ref-Hauer2018"><strong>Hauer2018?</strong></a>)</span>.</li>
+<li><a href="https://quickbirdstudios.com/blog/code-review-best-practices-guidelines/">Your Code Sucks! – Code Review Best Practices</a> by <span class="citation">(<a href="#ref-Hildebr2020"><strong>Hildebr2020?</strong></a>)</span>.</li>
+<li>An even longer list of <a href="https://github.com/joho/awesome-code-review">readings about code review</a></li>
 </ul>
 
+</div>
+</div>
 </div>
 </div>
 <hr>
@@ -585,8 +650,8 @@ This print out may seem like a lot of nonsense at first, but it gives us some us
           </div>
         </div>
       </div>
-<a href="using-github-in-a-workflow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sharing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
