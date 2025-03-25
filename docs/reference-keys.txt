@@ -146,6 +146,12 @@ how-to-create-metadata
 the-goals-in-creating-your-metadata
 goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers
 goal-b-avoid-introducing-errors-into-your-metadata-in-the-future
+project-maintenance-and-updates
+understand-best-practices-for-maintaining-projects
+what-is-unit-testing
+what-is-continuous-integration-continuous-deployment-cicd
+ci-cd-benefits
+getting-started-with-github-actions
 collaborations-through-github
 components-of-collaborating-on-github
 step-2.-proposing-a-solution
