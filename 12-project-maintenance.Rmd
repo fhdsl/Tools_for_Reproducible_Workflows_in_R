@@ -37,7 +37,7 @@ To create tests for this function we can create a new file for it. We can do thi
 usethis::use_test("make_shades")
 ```
 
-This will open up a page that looks like this. This is the template test that shows up when you make a new test.
+This will open up a page that looks like this. This is the template test that shows up when you make a new test. It will have an explanation of how one might test `2*2`.
 
 ```
 test_that("multiplication works", {
@@ -85,7 +85,7 @@ test_that("make_shades tests", {
   expect_type(real_colors, "matrix")
 })
 ```
-This is just a few examples, you could continue building tests for this function!
+These are just a few examples; you could continue building tests for this function!
 
 To read more about the details of testing we [recommend this book chapter](https://r-pkgs.org/testing-basics.html).
 
