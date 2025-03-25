@@ -28,13 +28,16 @@ One of the most comprehensive methods for making sure your code works is buildin
 install.packages(c("usethis", "testthat"))
 ```
 
-Then you can create your first test:
+In a previous chapter we talked about making custom functions and ended up showing an example called `make_shades()`.
+
+
+To create tests for this function we can create a new file for it. We can do this by calling `use_test` and ideally we will call it something that relates to what function is being tested there.
 
 ```
-usethis::use_test("new_test")
+usethis::use_test("make_shades")
 ```
 
-This will open up a page that looks like this:
+This will open up a page that looks like this. This is the template test that shows up when you make a new test.
 
 ```
 test_that("multiplication works", {
@@ -49,6 +52,40 @@ From this chapter:
 > - Each test has one or more expectations: e.g. expect_equal(2 * 2, 4).
 
 A key to unit testing is having a proper test for *every piece of functionality you have written*.
+
+This may include creating tests that cover:
+
+- Ensuring that all the possible argument options work as expected
+- Ensuring the potential outputs are the types of objects as expected
+- Ensuring the outputs can work in any associated functions in a workflow
+
+For our `make_shades` function we had the arguments `colour`, `n`, `lighter`. So we ideally would make tests that cover all the possible options for these arguments.
+
+Here's an annotated example for what a start to tests could look like for `make_shades()`.
+
+```
+test_that("make_shades tests", {
+
+  # Running the function with varying arguments to make sure they work
+  # If errors are thrown this test will fail
+  colors_lighter <- make_shades("goldenrod", 5, lighter = TRUE)
+  colors_darker <- make_shades("goldenrod", 5, lighter = FALSE)
+
+  # We expect if lighter = TRUE or FALSE should change the output
+  expect_false(all.equal(colors_lighter, colors_darker))
+
+  # We expect output to be a vector
+  expect_type(colors, "vector")
+
+  # This function works only on colors so if we were worried colors
+  # would not be returned we could check this
+  real_colors <- col2rgb(colors)
+
+  # The type of returned should be a matrix too
+  expect_type(real_colors, "matrix")
+})
+```
+This is just a few examples, you could continue building tests for this function!
 
 To read more about the details of testing we [recommend this book chapter](https://r-pkgs.org/testing-basics.html).
 
