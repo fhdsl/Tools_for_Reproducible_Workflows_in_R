@@ -113,6 +113,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 But, if you had been using the principles of CI/CD and reproducibility you may have a better chance that your analysis should still run reliably. If it doesn't rerun reliably, you will have more previous runs and setups to pull from to help you pinpoint where the bug in your analysis rerun is coming from.
 
+:::dictionary
+CI/CD is a software practice, now also used by science that automates the process of building, testing, and releasing analyses and code.  CI/CD practices are often implemented by automation 'pipelines'. 
+:::
+
 ```{r, out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_1947")
 ```
@@ -159,6 +163,12 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1x0Cnk2Wcsg8HYkmX
 ```
 
 ### Getting started with GitHub Actions
+
+GitHub Action is one such program that can automate your CI/CD pipelines. Others are TravisCI and CircleCI. 
+
+:::dictionary
+A GitHub-based automation service that allows you to implement CI/CD pipelines.
+::: 
 
 There are lots of ready made GitHub Actions for use with R code and to help you automate various tasks, such as running the code for an analysis periodically with new data. Take a look at the [`usethis` R package library]( [https://usethis.r-lib.org/reference/github_actions.html) for more ways to automate your work in R.
 
