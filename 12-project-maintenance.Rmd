@@ -28,7 +28,7 @@ One of the most comprehensive methods for making sure your code works is buildin
 install.packages(c("usethis", "testthat"))
 ```
 
-In a previous chapter we talked about making custom functions and ended up showing an example called `make_shades()`.
+In a previous chapter we talked about making [custom functions](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/functions.html) and ended up showing an example called `make_shades()`.
 
 
 To create tests for this function we can create a new file for it. We can do this by calling `use_test` and ideally we will call it something that relates to what function is being tested there.
@@ -45,7 +45,7 @@ test_that("multiplication works", {
 })
 ```
 
-From this chapter:
+Testing tips:
 
 > - A test file holds one or more test_that() tests.
 > - Each test describes what it’s testing: e.g. “multiplication works”.
