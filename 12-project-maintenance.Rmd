@@ -11,11 +11,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_
 
 ## Understand best practices for maintaining projects
 
-Many R projects are not really finished, they are either maintained long term or they deprecate. Many folks have many R projects over time which means keeping all your R projects maintained could easily become a time consuming endeavor!
+Many R projects are either maintained long term or they deprecate. Many folks have many R projects over time which means keeping all your R projects maintained could easily become a time consuming endeavor!
 
 In order to keep maintenance a priority without it using up all your time, we have a few tips to discuss. These tips will help you ease the burden of maintenance and lead to a healthier R project long term.
 
-Building some of the infrastructure we will describe will take a bit more time upfront, but will save you time long term.
+Building some of the following infrastructure will take a bit more time upfront, but will save you time overall:
 
 1. Have unit testing with `testthat`
 2. Use continuous deployment / continuous integration (CI/CD) principles
@@ -54,19 +54,19 @@ To read more about the details of testing we [recommend this book chapter](https
 
 You can run all your tests using `devtools::test()` or by setting up handy automation that will run it for you. We will discuss that now!
 
-## What is CI/CD?
+## What is Continuous integration / Continuous deployment (CI/CD)?
 
 At the core of CI/CD is using automation to boost the reproducibility of your work!
 
 Robots are much better at repetitive work. In other words, your human collaborator is great at many things but even your most reliable collaborator will not be as punctual as a robot who is programmed to do the job.
 
-Let's bring this into the terms of a very common story for science. Let's say you are a researcher who submitted a manuscript and a reviewer comes back and asks you to re run the analysis with a minor tweak; perhaps a parameter change.
+Let's bring this into the terms of a very common story for science. Let's say you are a researcher who submitted a manuscript and a reviewer comes back and asks you to rerun the analysis with a minor tweak; perhaps a parameter change.
 
 ```{r, out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_812")
 ```
 
-If you developed your analysis without using reproducibility aiding practices and without automation, it is very likely that this seemingly simple task could take a lot of your time and brain power. Because while you don't think anything on your computer changed since you ran this analysis 6 months ago, your computing environment and the software it uses has been changing the entire time!
+If you developed your analysis without using reproducibility aiding practices and without automation, it is very likely that this seemingly simple task could take a lot of your time and brain power. While you might not think anything on your computer changed since you ran this analysis 6 months ago, your computing environment and the software it uses has been changing the entire time!
 
 This kind of simple "this should be easy" situation can easily devolve into a huge rabbit hole -- when you thought this analysis was basically wrapped up.
 
@@ -74,15 +74,15 @@ This kind of simple "this should be easy" situation can easily devolve into a hu
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_1533")
 ```
 
-But, if you had been using the principles of CI/CD and reproducibility you may have a better chance that your analysis should still run reliably. And if it doesn't re-run reliably you will have more runs and set up that you'll be able to pull from to pinpoint where the bug is in your analysis re-run that is keeping it from running.
+But, if you had been using the principles of CI/CD and reproducibility you may have a better chance that your analysis should still run reliably. If it doesn't rerun reliably, you will have more previous runs and setups to pull from to help you pinpoint where the bug in your analysis rerun is coming from.
 
 ```{r, out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_1947")
 ```
 
-By having automation keep tabs on your development, you will be less likely to be blind sided by bugs in a situation where you need to re-run your analysis (or adapt it for a new analysis!)
+By having automation keep tabs on your development, you will be less likely to be blindsided by bugs in situations where you need to rerun your analysis (or adapt it for a new analysis!)
 
-## Continuous integration / Continuous deployment
+## CI / CD Benefits
 
 Before we discuss the concept of Continuous integration / Continuous deployment (often abbreviated CI/CD), let's use an analogy.
 
@@ -91,9 +91,9 @@ Before we discuss the concept of Continuous integration / Continuous deployment 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_374")
 ```
 
-Obviously we are getting at here, that generally its a good idea to check work along the way instead of waiting until something is completely finished to test it.
+Obviously what we are getting at here is that generally it is a good idea to check work along the way, instead of waiting until something is completely finished to test it.
 
-Continuous Integration / Continuous Deployment then is a manner of working that means we will have changes checked as they are being integrated and before the changes are deployed. This allows for continuous monitoring of the project and hopefully early catching of bugs!
+CI / CD then is a manner of working that means we will have changes checked as they are being integrated and before the changes are deployed. This allows for continuous monitoring of the project and hopefully earlier catching of bugs!
 
 Bugs/mistakes are an unavoidable part of software development because software developers and researchers are generally humans and humans make mistakes!
 
@@ -107,9 +107,9 @@ Let's assume over the course of developing a project, bugs are introduced at a c
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_567")
 ```
 
-Without using CI/CD you may find yourself trying to fix many bugs at once! This will make the bugs harder to isolate and harder to fix and pinpoint. The amount of time it will take to fix 3 bugs at once may be exponentially higher than if you caught these bugs one at a time. Additionally, the longer amount of time that goes on before you catch a bug, it may be more likely it will get accidentally incorporated into your published results -- this will be a lot more work for you and others to rectify.
+Without using CI/CD you may find yourself trying to fix many bugs at once! This will make the bugs harder to isolate and harder to fix. The amount of time it will take to fix 3 bugs at once may be exponentially higher than if you caught these bugs one at a time. Additionally, the longer amount of time that goes on before you catch a bug, it may be more likely it will get accidentally incorporated into your published results -- this will be a lot more work for you and others to rectify.
 
-However with CI/CD you will likely catch these bugs earlier and have an easier time fixing them before they truly run amock! A good continuous integration / continuous deployment pipeline will help you identify these bugs early and save time and stress!
+However with CI/CD you will likely catch these bugs earlier and have an easier time fixing them before they truly run amock! A good CI/CD pipeline will help you identify these bugs early and save time and stress!
 
 ```{r, out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA/edit#slide=id.g33bf0789107_300_612")
@@ -123,6 +123,6 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1x0Cnk2Wcsg8HYkmX
 
 ### Getting started with GitHub Actions
 
-There are lots of ready made GitHub Actions for use with R code. Take a look at the usethis R package library https://usethis.r-lib.org/reference/github_actions.html
+There are lots of ready made GitHub Actions for use with R code and to help you automate various tasks, such as running the code for an analysis periodically with new data. Take a look at the [`usethis` R package library]( [https://usethis.r-lib.org/reference/github_actions.html) for more ways to automate your work in R.
 
 Some packages may need some tweaking to get them to work for your project. To learn more about [GitHub Actions we recommend this course](https://hutchdatascience.org/GitHub_Automation_for_Scientists/).
