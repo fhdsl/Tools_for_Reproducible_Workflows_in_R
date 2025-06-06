@@ -8,24 +8,24 @@
 
 Before we begin to jump into additional tools that R can help us with to be work more efficiently and in a more reproducible manner, it is helpful to first discuss why we should consider R in the first place. After completing this section you will be able to:
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_0.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_0.png" alt="Learning objectives are to be able to: 1.Explain why R can be especially helpful for transparent and reproducibility data analyses, 2. Recognize that R has a very active and supportive community and locate access points to that community 3. Compare R to other similar statistical and data analysis tools and programming languages, 4.Describe the unique benefits of R" width="100%" style="display: block; margin: auto;" />
 
 
 ## Why R
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_9.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_9.png" alt="Why R?" width="100%" style="display: block; margin: auto;" />
 
 [R](https://www.r-project.org/) is a [programming language](https://en.wikipedia.org/wiki/Programming_language) for working with data, performing statistical analyses, and for creating plots and graphics that was developed in 1991 by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand [@r_2023; @r_project]. Countless contributors have made R what it is today.
 
 There are some especially useful aspects about R that make it a great option for creating reproducible data analyses.
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_gcf1264c749_0_135.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_gcf1264c749_0_135.png" alt="Why is R useful for Reproducibility? 1.It is free and open source, 2. The community, 3. It is designed for data wrangling and stats" width="100%" style="display: block; margin: auto;" />
 
 ## It is free and open source
 
 The first is that R is free and [open source](https://opensource.com/resources/what-open-source).
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_1_0.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_1_0.png" alt="Cartoon of parrot saying: What!? R is free!! That's awesome!" width="100%" style="display: block; margin: auto;" />
 
 
 The term **open source** means that the code is publicly available.
@@ -52,7 +52,7 @@ R has a very rich and active community!
 
 This makes it easier to reach out to others for help, find support, find tutorials, and more.
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_6.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_6.png" alt="Cartoon of parrot saying: The R community can support me to learn about R" width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -82,7 +82,7 @@ Although other options like [SPSS](https://www.ibm.com/products/spss-statistics)
 
 R can also import data from many different sources that other statistical software can't handle (including scraping data from websites or [PDFs](https://www.adobe.com/acrobat/about-adobe-pdf.html). This allows users much more flexibility to use data as close to the source as possible. This can enable users to stop copy and pasting data and reduce the risk of human error. If you are interested, see [Open Case Studies](https://www.opencasestudies.org/) for more guidance on importing many different kinds of data.
 
-![](resources/images/02-why-R_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_78.png){width=100%}
+<img src="resources/images/02-why-R_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21c5ab757ec_0_78.png" alt="I created errors copying my data into Excel and spent hours figuring it out later! I’m glad R can help!" width="100%" style="display: block; margin: auto;" />
 
 
 Why are these design features especially helpful for creating reproducible analyses?

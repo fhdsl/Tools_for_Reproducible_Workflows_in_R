@@ -3,7 +3,7 @@
 
 
 
-![](resources/images/07-code_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_0.png){width=100%}
+<img src="resources/images/07-code_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_0.png" alt="Learning Objectives are to be able to: Find and utilize packages and their functions. Recognize aspects of reproducible code: Readable, Efficient, and Consistent. Work on code in a way that iteratively encourages the reproducibility of your project" width="100%" style="display: block; margin: auto;" />
 
 ## Reproducibility means we don't need to reinvent the wheel!
 
@@ -25,13 +25,13 @@ We've mentioned previously that reproducibility is iterative work. This way of w
 
 ## Aspects of Reproducible code
 
-![](resources/images/07-code_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_6.png){width=100%}
+<img src="resources/images/07-code_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g221fb1e0594_0_6.png" alt="Reproducible code is: Readable meaning it is well-documented, uses well-known functions when appropriate, and follows a code style. Efficient meaning it doesn’t use up more computational resources than necessary and follows the advice of DRY (don’t repeat yourself). Consistent meaning it follows conventions and is organized" width="100%" style="display: block; margin: auto;" />
 
 ## Readable
 
 Reproducible code is readable code. In order for other people to use your code, they will need to be able to understand it. Because of that, code being readable is more important than code being innovative or clever.
 
-![](resources/images/07-code_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_120.png){width=100%}
+<img src="resources/images/07-code_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_120.png" alt="Reproducible parrot is looking at their computer and says ‘It’s so easy for me to understand what is going on with this code because it is so readable and follows a style!’" width="100%" style="display: block; margin: auto;" />
 
 ### Well-documented
 
@@ -46,7 +46,7 @@ These bits of documentation are not only helpful for others reading your project
 
 READMEs are a universal signal to people looking at the project that they should READ this file to get a rundown on the project.
 
-![](resources/images/07-code_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_260.png){width=100%}
+<img src="resources/images/07-code_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed8021e09_2_260.png" alt="Reproducible Parrot is looking at a set of project files that include a file called a ‘README.md’. The parrot says ‘I was so confused on where to start with this project but the README really brought me up to speed!" width="100%" style="display: block; margin: auto;" />
 
 READMEs should include:
 

@@ -4,7 +4,7 @@
 In this chapter we will talk about a very useful R-related tool called RStudio. RStudio is an environment for using R that can be extremely helpful for writing code and making your analyses reproducible.
 
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_0.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_0.png" alt="A Tour of RStudio, Learning Objectives are to be able to, Recognize why RStudio is useful, Install RStudio and get started with it, Navigate RStudio" width="100%" style="display: block; margin: auto;" />
 
 ## Why use RStudio?
 
@@ -45,16 +45,16 @@ You can install the latest version of R from the R project site located here: ht
 
 From here you can click on the menu option that says CRAN on the far left to start. Recall that CRAN stands for the **Comprehensive R Archive Network**.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_0.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_0.png" alt="Once you go to the r project website, you can click on the CRAN button to download the latest version of R" width="100%" style="display: block; margin: auto;" />
 
 This will take you to a website with a list of what are called [mirrors](https://cran.r-project.org/mirrors.html), which are locations that have the same exact copy of R but are dispersed geographically mostly to improve download speeds for users. Nothing bad will happen if you click on a mirror that isn't closest to you, but it can improve download speeds for everyone overall if people use appropriate mirrors.
 
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_11.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_11.png" alt="CRAN mirror list" width="100%" style="display: block; margin: auto;" />
 
 Once you click on one of the mirror links you will be taken to a new page to download R. For example, you could click on the Iowa state University mirror if you are located in the US somewhere.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_19.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_19.png" alt="Page to download R for computers with different operating systems, such as Mac or Windows" width="100%" style="display: block; margin: auto;" />
 
 You would want to click on the appropriate link for your computer. For example, if you have a Windows machine, click the link for Windows.
 
@@ -93,16 +93,16 @@ Posit is a software company that used to be called RStudio that develops open-so
 
 <details><summary> Click here for instructions on how to download and install RStudio. </summary>
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_30.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_30.png" alt="The Posit website for downloading RStudio" width="100%" style="display: block; margin: auto;" />
 Note that the website may look slightly different when you visit it.
 
 There should be a download button on the upper right corner. This will take you to another page to choose if you want the free or paid version of RStudio. The free version should be enough for most users.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png" alt="The free version of RStudio is likely all you need." width="100%" style="display: block; margin: auto;" />
 
 Then you need to scroll down to select the appropriate download for your computer based on what kind of computer you have.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_37.png" alt="Select the appropriate link to download RStudio according to the type of computer you have." width="100%" style="display: block; margin: auto;" />
 
 Note that by the time you read this the versions will likely have changed and there may be slight variations in how the website appears.
 
@@ -113,7 +113,7 @@ For Mac users, note that you will need to move the RStudio icon into the icon th
 
 Drag and drop RStudio into the Applications folder to install on a Mac
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_58.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_58.png" alt="Drag and drop RStudio into the Applications folder to install on a Mac." width="100%" style="display: block; margin: auto;" />
 
 See[here](https://jhudatascience.org/intro_to_r/modules/RStudio/RStudio.html#1) for more information on the process of installing RStudio.
 
@@ -133,16 +133,16 @@ It is also a good idea to keep RStudio up-to-date. New features become available
 
 To check for updates you can go to the `Help` menu at the top of RStudio and then click on `Check for Updates`.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_50.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_50.png" alt="Check for updates for RStudio in the Help menu of RStudio." width="100%" style="display: block; margin: auto;" />
 
 
 If you don’t need to update RStudio, when you check with this method RStudio will let you know that you are using the newest version.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_557.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_557.png" alt="An example of the popup that shows you that you are using the newest version of RStudio." width="100%" style="display: block; margin: auto;" />
 
 With recent versions RStudio will also give you a popup to let you know that you could update.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_563.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g229ab7a949e_0_563.png" alt="Popup indicating that you could update RStudio." width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -154,17 +154,17 @@ Now that you hopefully have RStudio running on your machine, we will walk you th
 
 First it is important to be familiar with the layout. When you first open RStudio, you will see 3 panes.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_67.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_67.png" alt="When RStudio is first opened you will see 3 panes" width="100%" style="display: block; margin: auto;" />
 
 <details><summary>If your RStudio looks different click here.</summary>
 
 Click on the top menu of your RStudio - click where it says `Edit` --> `Preferences` --> `Pane Layout`.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_0.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_0.png" alt="Select Edit and then Preferences to get to the menu about pane layout." width="100%" style="display: block; margin: auto;" />
 
 The Pane Layout menu enables you to change the layout. The image below shows the default settings. Note that VCS may not appear if you are not using a version control system. More on that to come in later chapters!
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_5.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g22370a5f292_430_5.png" alt="The Pane Layout menu allows you to modify the layout of RStudio. This shows the default settings with Source on the top left, Console on the bottom left, Environment, History, Connections, and Build on the top right, and Files, Plots, Packages, Help, VCS (version control) on the bottom right." width="100%" style="display: block; margin: auto;" />
 
 </details>
 
@@ -173,16 +173,16 @@ The pane on the left (labeled "Pane 1" in the image) is where we can work on cod
 
 The Console tab is where we can 'talk' to R and interactively work on our code. The code we write here will **not be saved** to a script or file, but instead the code will immediately be performed when we click `enter` and any resulting output that can be printed will be shown.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_81.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_81.png" alt="The pane on the left is where we write and test code." width="100%" style="display: block; margin: auto;" />
 
 The pane on the top right (labeled "Pane 2" in the image) is where we can see what objects we have created and are actively in memory (meaning they can be used at that time) in what is called the "Environment".
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_95.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_95.png" alt="The pane on the upper right is where we see our objects." width="100%" style="display: block; margin: auto;" />
 
 
 The pane on the bottom right (labeled "Pane 3" in the image) is where we can find files on computer (the "Files" tab), see plots (the "Plots tab), and get coding help (the "Help tab).
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_109.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_109.png" alt="The pane on the lower right is where we see our files, plots, and where we get help." width="100%" style="display: block; margin: auto;" />
 
 
 While there are other tabs, don't worry about those for now. We will go deeper into RStudio as we continue.
@@ -192,11 +192,11 @@ Let's try some examples to get started.
 
 As an example, we could type in the code `head(iris)` into Pane 1 in the Console and press the `enter` key to see the code execute and preview.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_142.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_142.png" alt="In Pane one, in our Console window, we can run code interactively. Here we are running the code head(iris) which prints out a data set about flowers for us to look at. " width="100%" style="display: block; margin: auto;" />
 
 Now let's try another example where instead of just printing some data to the screen we assign a data object that will show up in the environment using the `<-` notation. This is useful in a situation if we want to modify the iris data somehow but want to keep the original version.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_4.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g1fa1583c827_0_4.png" alt="If you create an object in RStudio, it will show up in the environment pane." width="100%" style="display: block; margin: auto;" />
 
 
 <div class = "dictionary">
@@ -211,16 +211,16 @@ There is a hidden fourth pane. This is only accessible when we start to make a s
 
 To open this let's make what is called an R Markdown file by go to `File` --> `New File` -->`R Markdown` in the upper menu of RStudio.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_127.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_127.png" alt="Creating an R Markdown file in RStudio by selecting File, New File, R Markdown." width="100%" style="display: block; margin: auto;" />
 
 Creating an R Markdown file starts with a pop-up and you can simply click the OK button.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_169.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_169.png" alt="Creating an R Markdown file starts with a pop-up and you can simply click the OK button." width="100%" style="display: block; margin: auto;" />
 
 The new pane will open on the upper left.
 
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_176.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_176.png" alt="The new pane will open on the upper left." width="100%" style="display: block; margin: auto;" />
 
 This pane is where we can write code that we keep in files like scripts or reports (in files like R Markdowns).
 
@@ -228,11 +228,11 @@ Thus the lower left pane is where we can test out code (although we don't recomm
 
 In order to make our analysis truly reproducible we will need to have **every single step** written down. This is why using the Console is great for testing things, but not so great for actually performing your analysis.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_186.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_186.png" alt="The new pane will open on the upper left and is for writing code we want to save, while the bottom pane is for writing code we want to test." width="100%" style="display: block; margin: auto;" />
 
 The top pane where we save code is called the Editor. The lower pane for quick tests of code is called the Console.
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_198.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g20ed7630a13_1_198.png" alt="The Editor in the top left, also called source, is where we write code we want to save. The lower left is the Console where we do quick tests of our code." width="100%" style="display: block; margin: auto;" />
 
 The Editor pane (top left) will be the pane that we look at most of the time as we create reports that demonstrate exactly how we did our analyses. We will discuss more about R Markdown files in the next section.
 
@@ -256,7 +256,7 @@ It helps to identify common coding mistakes. It will indicate a potential proble
 Here is an example of such a case. Here we have an extra parentheses in our code.
 
 
-![](04-rstudio-tour_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g219ee06dc74_531_0.png){width=100%}
+<img src="04-rstudio-tour_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g219ee06dc74_531_0.png" alt="An example of RStudio showing a potential coding error. Hovering over the red circle with the x near the line of code that it sees an issue with, will give a message about what might be wrong." width="100%" style="display: block; margin: auto;" />
 
 Note that just because RStudio thinks your code is free of errors, it does not necessarily mean that your code is correct. RStudio can detect certain syntax issues, but it does not detect all types of errors. However, you can probably see how it could be very helpful!
 

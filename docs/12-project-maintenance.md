@@ -3,7 +3,7 @@
 
 
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_58.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_58.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 ## Understand best practices for maintaining projects
 
@@ -95,13 +95,13 @@ Robots are much better at repetitive work. In other words, your human collaborat
 
 Let's bring this into the terms of a very common story for science. Let's say you are a researcher who submitted a manuscript and a reviewer comes back and asks you to rerun the analysis with a minor tweak; perhaps a parameter change.
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_812.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_812.png" width="100%" />
 
 If you developed your analysis without using reproducibility aiding practices and without automation, it is very likely that this seemingly simple task could take a lot of your time and brain power. While you might not think anything on your computer changed since you ran this analysis 6 months ago, your computing environment and the software it uses has been changing the entire time!
 
 This kind of simple "this should be easy" situation can easily devolve into a huge rabbit hole -- when you thought this analysis was basically wrapped up.
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_1533.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_1533.png" width="100%" />
 
 But, if you had been using the principles of CI/CD and reproducibility you may have a better chance that your analysis should still run reliably. If it doesn't rerun reliably, you will have more previous runs and setups to pull from to help you pinpoint where the bug in your analysis rerun is coming from.
 
@@ -109,7 +109,7 @@ But, if you had been using the principles of CI/CD and reproducibility you may h
 Continuous Integration/Continuous Deployment (CI/CD) is a software practice, now also used by science that automates the process of building, testing, and releasing analyses and code.  CI/CD practices are often implemented by automation 'pipelines'. 
 :::
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_1947.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_1947.png" width="100%" />
 
 By having automation keep tabs on your development, you will be less likely to be blindsided by bugs in situations where you need to rerun your analysis (or adapt it for a new analysis!)
 
@@ -118,7 +118,7 @@ By having automation keep tabs on your development, you will be less likely to b
 Before we discuss the concept of Continuous integration / Continuous deployment (often abbreviated CI/CD), let's use an analogy.
 
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_374.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_374.png" alt="You're a construction manager, should you. Check that your construction plans are good and meet safety and engineering standards as you build it? OR Build the entire building without consulting anyone and only have them check these things after you are done and it's basically a demo job if you want to fix it?" width="100%" />
 
 Obviously what we are getting at here is that generally it is a good idea to check work along the way, instead of waiting until something is completely finished to test it.
 
@@ -126,21 +126,21 @@ CI / CD then is a manner of working that means we will have changes checked as t
 
 Bugs/mistakes are an unavoidable part of software development because software developers and researchers are generally humans and humans make mistakes!
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_537.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_537.png" width="100%" />
 
 Let's assume over the course of developing a project, bugs are introduced at a certain rate.
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_567.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_567.png" width="100%" />
 
 Without using CI/CD you may find yourself trying to fix many bugs at once! This will make the bugs harder to isolate and harder to fix. The amount of time it will take to fix 3 bugs at once may be exponentially higher than if you caught these bugs one at a time. Additionally, the longer amount of time that goes on before you catch a bug, it may be more likely it will get accidentally incorporated into your published results -- this will be a lot more work for you and others to rectify.
 
 However with CI/CD you will likely catch these bugs earlier and have an easier time fixing them before they truly run amock! A good CI/CD pipeline will help you identify these bugs early and save time and stress!
 
-![](resources/images/12-project-maintenance_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_612.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_612.png" width="100%" />
 
 This is not only true for classic "my script won't run" bugs but also "silent" bugs -- bugs where the analysis still ran to completion but perhaps the results were slightly different.
 
-![](resources/images/12-project-maintenance_files/figure-docx//1x0Cnk2Wcsg8HYkmXnXo_0PxmYCxAwzVrUQzb8DUDvTA_g286f0c8db1a_0_33.png){width=100%}
+<img src="resources/images/12-project-maintenance_files/figure-html//1x0Cnk2Wcsg8HYkmXnXo_0PxmYCxAwzVrUQzb8DUDvTA_g286f0c8db1a_0_33.png" width="100%" />
 
 ### Getting started with GitHub Actions
 

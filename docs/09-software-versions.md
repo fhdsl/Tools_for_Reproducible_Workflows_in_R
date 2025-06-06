@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_43.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_43.png" alt="In this software versions chapter our learning objectives are to be able to: Recognize that software versions influence data analysis results and reproducibility. Record packages used for an analysis. Use renv to make an R environment shareable to collaborators. Recognize containerization as a method to share your entire computing environment with others." width="100%" style="display: block; margin: auto;" />
 
 As we discussed, reproducibility is on a continuum, meaning that it can range from being impossible to very easy to reproduce any given results. Some results can be effectively impossible to reproduce if there are too many barriers and set up needed to re-run the analysis. One of the most common barriers is the computing environment used run the analysis.
 
@@ -19,7 +19,7 @@ A computing environment not only consists of the direct software that we use to 
 
 As we use our computers daily for work, we are constantly installing, updating, and removing software packages. Sometimes our computers do this automatically without us knowing. These software packages interact with and depend on each other, meaning it can be quite frustrating to try update even a single piece of software if it exists in a tangled mess of software dependencies. Computer scientists sometimes call this "[dependency hell](https://en.wikipedia.org/wiki/Dependency_hell)".
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_50.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_50.png" alt="Reproducible parrot is frustrated by their computer and says ‘I’m trying to reproduce Polly’s results but there’s 14 packages that I need to install that I can’t seem to get all the R packages dependencies resolved!’" width="100%" style="display: block; margin: auto;" />
 
 As developers and maintainers of software continue to make updates and fixes to the software, the developers and maintainers of other interdependent software are doing similarly, meaning that software dependencies and the computing environments are not only a complicated mess at times, but also a moving target!
 
@@ -64,30 +64,31 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] jsonlite_1.8.8   dplyr_1.1.4      compiler_4.3.2   promises_1.2.1  
-##  [5] Rcpp_1.0.12      tidyselect_1.2.0 xml2_1.3.6       webshot2_0.1.1  
-##  [9] stringr_1.5.1    snakecase_0.11.1 later_1.3.2      yaml_2.3.8      
-## [13] fastmap_1.1.1    readr_2.1.5      R6_2.5.1         generics_0.1.3  
-## [17] curl_5.2.0       knitr_1.48       tibble_3.2.1     bookdown_0.41   
-## [21] janitor_2.2.0    rprojroot_2.0.4  openssl_2.1.1    lubridate_1.9.3 
-## [25] pillar_1.9.0     tzdb_0.4.0       rlang_1.1.4      websocket_1.4.2 
-## [29] utf8_1.2.4       stringi_1.8.3    xfun_0.48        timechange_0.3.0
-## [33] cli_3.6.2        magrittr_2.0.3   ps_1.7.6         processx_3.8.3  
-## [37] digest_0.6.34    hms_1.1.3        askpass_1.2.0    lifecycle_1.0.4 
-## [41] chromote_0.3.1   vctrs_0.6.5      ottrpal_1.3.0    evaluate_0.23   
-## [45] glue_1.7.0       fansi_1.0.6      rmarkdown_2.25   httr_1.4.7      
-## [49] tools_4.3.2      pkgconfig_2.0.3  htmltools_0.5.7
+##  [1] sass_0.4.8       utf8_1.2.4       generics_0.1.3   xml2_1.3.6      
+##  [5] stringi_1.8.3    hms_1.1.3        digest_0.6.34    magrittr_2.0.3  
+##  [9] evaluate_0.23    timechange_0.3.0 bookdown_0.41    fastmap_1.1.1   
+## [13] rprojroot_2.0.4  jsonlite_1.8.8   processx_3.8.3   chromote_0.3.1  
+## [17] ps_1.7.6         promises_1.2.1   httr_1.4.7       fansi_1.0.6     
+## [21] ottrpal_1.3.0    jquerylib_0.1.4  cli_3.6.2        rlang_1.1.4     
+## [25] cachem_1.0.8     yaml_2.3.8       tools_4.3.2      tzdb_0.4.0      
+## [29] dplyr_1.1.4      curl_5.2.0       vctrs_0.6.5      R6_2.5.1        
+## [33] lifecycle_1.0.4  lubridate_1.9.3  snakecase_0.11.1 stringr_1.5.1   
+## [37] janitor_2.2.0    pkgconfig_2.0.3  pillar_1.9.0     bslib_0.6.1     
+## [41] later_1.3.2      glue_1.7.0       Rcpp_1.0.12      highr_0.11      
+## [45] xfun_0.48        tibble_3.2.1     tidyselect_1.2.0 knitr_1.48      
+## [49] htmltools_0.5.7  websocket_1.4.2  rmarkdown_2.25   webshot2_0.1.1  
+## [53] readr_2.1.5      compiler_4.3.2   askpass_1.2.0    openssl_2.1.1
 ```
 
 Now we have recorded what some key aspects of our computing environment looked like at the time that this book was rendered last.
 This print out may seem like a lot of nonsense at first, but it gives us some useful information in a pinch!
 
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1030.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1030.png" alt="Reproducible parrot is confused because their results are different after they have re-run their analysis. The parrot says: ‘Hmm… why am I getting a different result this time? Good thing I can check the session info to see if package versions might have caused this change!’" width="100%" style="display: block; margin: auto;" />
 
 If we take a look at two different session info printouts, we can begin to spot the differences. These differences may give us clues into why an analysis ran differently.
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1333.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1333.png" alt="Two session info printouts are show side by side. Highlighted we can see that they have different R versions: 4.0.2 vs 4.0.5. They also have different operating systems. The packages they have attached is rmarkdown but they also have different rmarkdown package versions!  If there are  discrepancies in re-runs of the analysis, the session info printout gives a record which may have clues to why that might be! This can give items to look into for determining why the results didn’t reproduce as expected." width="100%" style="display: block; margin: auto;" />
 
 Printing out session info is an easy way to record your computing environment in hopes of increasing the reproducibility of your analysis!
 
@@ -103,7 +104,7 @@ It can be incredibly handy for reproducibility purposes to be able to share the 
 
 For that, we need a slightly more involved solution of using [`renv`](https://rstudio.github.io/renv/articles/renv.html). `renv` is an R package that allows you to take 'snapshots' of your R computing environment and use those to track, share, and build R environments.
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1492.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_1492.png" alt="In general, package managers work by capturing a snapshot of the environment and when that environment snapshot is shared, it attempt to rebuild it. In this example we show one computing environment, and using a package manager, we can take  snapshot of it. That snapshot can be shared to another computer which can be used to attempt to build the computing environment on this computer. This will help address some differences in package versions between two individual’s computers. " width="100%" style="display: block; margin: auto;" />
 
 The `renv` workflow looks like this (as described by their documentation):
 
@@ -122,7 +123,7 @@ To make this shareable to others, you will need to do two things:
 1. Be sure to commit and push the `renv.lock` file to your GitHub repository for your project.
 2. Be sure to describe that your project uses `renv` in the README of this project (commit and push this to your GitHub repository also).
 
-![](resources/images/09-software-versions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_163.png){width=100%}
+<img src="resources/images/09-software-versions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21dfe2f76f9_90_163.png" alt="The renv workflow begins with intializing an environment with renv::init(). Then you install or remove packages and otherwise work in R as normal. When you are ready to update the renv snapshot, you run renv::snapshot(). You can now share this environment snapshot on GitHub or wherever. The environment can be restored using renv::restore()" width="100%" style="display: block; margin: auto;" />
 
 The limitations of this method, [as noted by the `renv` authors](https://rstudio.github.io/renv/articles/renv.html#caveats), is that it really only tracks packages in R and cannot help track or enforce items that may affect the computing environment outside of R. So while it will aid in the reproducibility of your analysis, it will not cover everything.
 

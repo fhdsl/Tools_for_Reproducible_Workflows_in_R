@@ -3,14 +3,14 @@
 
 
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_33.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_33.png" alt="Using GitHub in a workflow Learning objectives are to be able to: Understand why version control aids in reproducibility, Be able to navigate GitHub, Use git and GitHub through RStudio, Understand the GitHub terminology, Understand the benefits of the pull request model, Make a pull request " width="100%" style="display: block; margin: auto;" />
 
 ## What is version control
 
 Version control is system that allows you to track your files over time as you work on them.
 Whether you've written a lot of code or written other documents, you've likely encountered the need for version control. As this comic from Piled Higher and Deeper describes, files can go through a lot of edits and revisions (this is true of code too)! And it doesn't take long for it to be difficult or even impossible to track the various revisions of even one file, let alone the dozens or hundreds of files that may be a part of a data science project.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_0.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_0.png" alt="The comic from Piled Higher and Deeper PhdComics.com is titled FINAL.doc. The student takes a paper to the professor who edits it and now calls it FINAL_rev2.doc. After another round of revisions, its now called FINAL_rev6.COMMENTS.doc, and then FINAL_rev.8.comments5.CORRECTIONS.doc, then FINAL_rev18.comments7.corrections9.MORE.30.doc, then FINAL_rev.22.comments49.corrections.10#%WHYDIDICOMETOGRADSCHOOL????.doc" width="100%" style="display: block; margin: auto;" />
 
 This problem is what Git, a version control system, can address. It is a system that allows you to track your files, keep a history of them, and otherwise handle changes through the history of your project.
 
@@ -26,29 +26,29 @@ Git is most commonly used is in conjunction with an online platform called GitHu
 
 GitHub aids reproducibility by being online in a way that easily makes code shareable to others in a version controlled way. GitHub allows anyone at anytime to take a look at and obtain your code.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_415.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_415.png" alt="Reproducible parrot has shared their analysis on GitHub allowing their fellow parrot friend to observe and learn from the code and results! Reproducible parrot’s friend says ‘This analysis is great and really helps inform the field! Glad it was shared on GitHub!’" width="100%" style="display: block; margin: auto;" />
 
 Because code on GitHub is version controlled, it allows you to track your code and project files as you and others continue to work on them. This can be really useful for documenting not only the changes to your analysis, but the rationale and communications that led to those changes.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_488.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_488.png" alt="Reproducible parrot is confused and says ‘I don’t remember why I wrote this analysis this way. Good thing GitHub has my well documented analysis tracked. ‘ The parrot’s computer shows code and an hourglass with a GitHub symbol over it." width="100%" style="display: block; margin: auto;" />
 
 GitHub and Git also allow you to take the side journeys that often pop up with data science projects, but in a way that allows you to ensure that the main files stay safe as you experiment.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_459.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_459.png" alt="Reproducible parrot says ‘I’m interested in writing some code to experiment with something in the data, but I’m not sure if I’ll be keep this or not. Good thing version control allows me to track this in a way that doesn’t interfere with my main, polished analysis!’ On the side of the image shows a branching off of the main code base that says ‘test analysis’ This test analysis can be later merged with the main analysis if needed or it can be kept tracked but not added to the main analysis." width="100%" style="display: block; margin: auto;" />
 
 GitHub is also handy for collaborating with others on your code, not only because it is online, but the version controlled nature of it allows you and any team members to work on the same files simultaneously without fear that the changes will be impossible to merge together. Git and GitHub have systems to do just this.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_503.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_503.png" alt="Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy." width="100%" style="display: block; margin: auto;" />
 
 ## GitHub Workflow
 
 Git can feel overwhelming to a lot of folks and it has a really deep and complicated system. However, truthfully for most instances you will only need the same few commands in the same series of steps which we will cover here.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_7.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2282797b55b_0_7.png" alt="This comic from xkcd illustrates that git is often seen as very complicated. The one stick figure says ‘This is git, it tracks collaborative work on projects through a beautiful ditstributed graphic theory tree model’ The other stick figure says ‘cool how do we use it’? The first stick figure says ‘No idea. Just memorize these shell commands and type them to sync up. If you get errors, save your work elsewhere, delete the project and download a fresh copy.’" width="100%" style="display: block; margin: auto;" />
 
 One reason that Git and GitHub can feel overwhelming to folks is that there are a number of terms that are used to describe the different commands. We will walk through the typical workflow steps, and define these terms as we use them.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_5.png){width=100%}
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201bd406763_37_5.png" alt="There are so many git terms it can be difficult to keep track of them all! A computer with the GitHub cat symbol has question marks above it with the terms: pull, add, clone, branch, remote, commit, and push around it. " width="100%" style="display: block; margin: auto;" />
 
 ### Create your GitHub account
 
@@ -80,7 +80,7 @@ In order to be able to access everything in your GitHub repository from RStudio 
 
 1. In your RStudio interface, make sure that you are in the `Console` tab.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_3.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_3.png" alt="Go to the Console tab" width="480" style="display: block; margin: auto;" />
 
 2. Now use the command below to install the package `usethis`. Copy and paste it in the Console window and click Enter on your keyboard. This package will help us manage our GitHub credentials from RStudio more easily.
 
@@ -112,7 +112,7 @@ Underneath the `Select scopes` section **you don't need to do anything**. The `u
 
 Scroll all the way down on this page and click `Generate Token`. You've created your first PAT! **Do not close this window**, keep it handy for now. Note that in the image below we blocked out our PAT, but yours will show a jumble of letters and numbers
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_81.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_81.png" alt="After running the usethis::create_github_token() a window from GitHub should open up. Click Generate Toekn button and keep this window handy. Then click the copy symbol (two squares). " width="480" style="display: block; margin: auto;" />
 
 5. Return back to your RStudio while keeping your PAT handy.
 In the `Console` window, run this command:
@@ -124,7 +124,7 @@ gitcreds::gitcreds_set()
 It will ask you to `? Enter password or token`. Copy your PAT and paste it into the command window and press Enter.
 
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_158.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec69c_0_158.png" alt="Paste PAT in the Console window after running gitcreds::gitcreds_set()" width="480" style="display: block; margin: auto;" />
 
 After you enter your PAT here you should get a message like:
 ```
@@ -227,7 +227,7 @@ This will also open up a new RStudio window. Now you are ready to get to work!
 
 A pull request (sometimes abbreviated PR) is a way of being able to review changes before you incorporate them into your main, more polished product. It is a highly effective system for doing code review and otherwise communicating about your data analysis to increase its reproducibility.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_88.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_88.png" alt="A direct changes set up: Doesn’t allow for others to easily review and give feedback. Is more likely to lead to mistakes being published and disrupting course experience. Rationale of the changes made are less likely to be clear. Is quicker in the short-term. A pull request model: Encourages collaboration and feedback. Adds an extra safety net so mistakes are less likely to be published and disrupt course experience. Encourages more clear documentation and tracking about the changes being made. Requires more time and effort to do it right; but this generally has long-term payoffs!" width="480" style="display: block; margin: auto;" />
 
 Pull requests are based on copies of the project repository that are called `branches`.
 When we do work on a project we will want to do it somewhere that is separate from our main set of code. Branches are yet another copy of the code that is used for developing purposes.
@@ -263,12 +263,12 @@ In RStudio, if we go to the `Git` tab (typically located in the lower right pane
 
 To do this, we first need to check the box(es) next to the files we'd like to commit then we click the commit button.
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_150.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_150.png" alt="To commit a file change, first go to the Git tab. Then you should see the file that you change listed. In this case we see that we changed the README.md file and it has a blue M next to it to signify that it has been modified. Next we should check the box for the file changes we’d like to add. Next we click Commit in order to add these changes." width="480" style="display: block; margin: auto;" />
 
 After clicking the commit button, a new window will pop up that shows us the changes we are committing. Sections in green are new additions or modifications. Sections in red are the old sections that got changed or removed. In this window, we will need to add a commit message. Again, we should try to write something informative about what we were doing to these files we are committing. Then after we've written this commit message, we need to click `Commit` in this window.
 
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_164.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_164.png" alt="After you click ‘Commit’ a new window should pop up. Green lines indicate added bits while red indicate things that were deleted. We’ll write an informative commit message about the changes we are adding and then click ‘Commit’ again. " width="480" style="display: block; margin: auto;" />
 
 Now our files are on our branch!
 
@@ -286,7 +286,7 @@ pr_push()
 
 This should open a new window on GitHub that will look like this:
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_177.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_177.png" alt="On the new window that opens upon using pr_push(), you can click Create pull request to create your pull request. " width="480" style="display: block; margin: auto;" />
 
 It will also print out some messages like this:
 ```
@@ -304,7 +304,7 @@ You should include information like:
 3) What work is left to be done?
 4) What help could you use from others? Is there something in particular you would like to be looked at? Is there something not yet added that should be added?
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_184.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_184.png" alt="On this page, you should leave a description of what changes you are making with this pull request. Try to be as informative and to the point as possible. It’s particularly important to describe the background of the changes you are making as well as what work is left to be done and what you could use other’s help with." width="480" style="display: block; margin: auto;" />
 
 Now if you continue to work with your files, you can go through the same steps of:
 
@@ -347,4 +347,4 @@ We also discussed in this chapter how version control and GitHub are great tools
 
 To summarize, the Github workflow process looks like this:
 
-![](resources/images/08-github-workflow_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_335.png)
+<img src="resources/images/08-github-workflow_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2288a8ec77f_0_335.png" alt="Create a repository on GitHub. Clone that project to your computer - create_from_github('username/repository_name'). Make a new branch with pr_init(“branch_name). Edit code and files as you normally would. Commit the file changes by checking file boxes and clicking commit. Push the changes so they are online - pr_push(). Fill in the description of your pull request. Discuss pull request and repeat 4 - 6 steps as needed. Merge the changes! " width="480" style="display: block; margin: auto;" />

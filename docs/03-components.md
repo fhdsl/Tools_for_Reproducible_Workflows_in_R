@@ -5,13 +5,13 @@
 
 In this chapter, we will discuss what components of an analysis make it reproducible.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 ## Reproducibility is iterative work
 
 Making an analysis isn't something that happens on the first try. Working on a project iteratively and continuing to improve the reproducibility of it is the best approach. In this manner, we can view reproducibility on a continuum. Some projects are just run once but aren't really needed anymore, and don't become very polished or reproducible. But as we continue to work on a project and polish its reproducible components, it continues to be more perfected. However, because of the moving nature of some reproducibility components, no project is really perfectly reproducible in every context throughout time.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_23.png" alt="Reproducibility is on a continuum. This graph shows a two sided arrow with a gradient. On the very left is a ‘not repeatable analysis’ it was ran once. To the right of that is an analysis that ‘re-runs sometimes’. To the right of this, is an analysis that ‘Re-runs reliably in most contexts’.  And all the way to the right is a ‘perfectly reproducible analysis’ that ‘Re-runs in every situation and gets the same result every time’. In red lettering we note that every analysis is started by being run once but no analysis is ‘perfectly reproducible’." width="100%" style="display: block; margin: auto;" />
 
 ## Components of reproducibility
 
@@ -21,7 +21,7 @@ A reproducible analysis is transparent, consistent, and accessible.
 - **Consistency** refers to the idea that the code can be consistently run, but also everything follows a particular system, conventions and design.
 - **Accessibility** refers to the idea that anyone anywhere should be able to run and/or examine the analysis. No pay walls or expensive software should be required.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21b8e34c516_0_5.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21b8e34c516_0_5.png" alt="A reproducible analysis is transparent, accessible, and consistent. This is described with a Venn diagram because certain aspects of transparent, accessibility and consistency overlap with each other when it comes to analyses." width="100%" style="display: block; margin: auto;" />
 
 ## Transparent
 
@@ -33,7 +33,7 @@ Open source means not only making code and data publicly available, but also ena
 
 For an analysis to be truly open source, it needs to be easily accessed by others and stored online. Code that can be emailed, for example, is not considered open source.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is reading a journal article with data and code they are interested in. The journal article says ‘Code and data are available upon request by email’. The parrot sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" />
 
 For reproducibility, keeping your code on [GitHub](https://github.com/) is a great open source solution. GitHub is a code hosting platform that allows people to access code and sometimes data. It is commonly used, and has a built in system that allows others to contribute changes in a way that can be methodically reviewed by you (this is called the pull request system and we will talk about it more).
 
@@ -70,7 +70,7 @@ Version control is a method for tracking changes to files in a systematic manner
 
 Version control helps maintain the history of your project in a way that will allow you to recover old versions if necessary, or otherwise have documentation on what has happened. It can also be useful for rectifying different versions of a code base between team members.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_370.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_370.png" alt="Reproducible parrot is looking at their computer with a lot of folders with different variations on similar names. The parrot asks themselves: Which is the most recent version? I wish this project had been version controlled!  " width="100%" style="display: block; margin: auto;" />
 
 <div class = "dictionary">
 **version control** - A method of tracking and handling files as they are changed over the course of a project
@@ -101,7 +101,7 @@ Code style is important because it not only makes code more readable, but it als
 
 Project organization is a major component of reproducibility. If you are not able to find your files, then chances are individuals who are attempting to reproduce your analysis also will not be able to understand where to find things. We will discuss in a later chapter strategies for keeping projects organized, while realizing that project organization is an ongoing, dynamic task.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_0.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g201b2cf6e8c_34_0.png" alt="Reproducible parrot is so happy that the analysis is well documented and organized. Parrot says This analysis is so well documented and organized! I can reproduce these analyses so easily!" width="100%" style="display: block; margin: auto;" />
 
 ## Accessible
 
@@ -111,7 +111,7 @@ Accessibility also involves prioritizing democratizing science and enabling as m
 
 Accessibility means that anyone should be able to access it -- whether or not their funding is in ample supply. So be sure to publish in  code repositories that do not require membership fees or any other kinds of paywalls. Make an effort to publish in journals that are freely available as well.
 
-![](resources/images/03-components_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png){width=100%}
+<img src="resources/images/03-components_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2006b5a2e6b_0_448.png" alt="Reproducible parrot is sad because an analysis has been published behind a paywall and has used expensive software. Reproducible parrot can not reproduce these results. " width="100%" style="display: block; margin: auto;" />
 
 Sometimes even if something is accessible in that it is "free" monetarily it doesn't mean that it is free in the sense of the amount of time it takes to access it. If your code and data does need some sort of controlled access features for privacy and ethical concerns of protecting data, make sure that the paperwork hoops that are put in place are truly there in the spirit of protecting the data and not instead to keep data and code hidden from others.
 

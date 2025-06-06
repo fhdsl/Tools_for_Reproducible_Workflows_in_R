@@ -3,7 +3,7 @@
 
 
 
-![](resources/images/11-functions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_53.png){width=100%}
+<img src="resources/images/11-functions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_53.png" alt="Learning objectives are to be able to: Recognize when it is appropriate to make a custom function to aid in the reproducibility of an analysis. Use a template to create functions that are reproducible and useable by others. Discuss what aspects of a function make them useable by others. Well documented. Follow a style. Properly engineered" width="100%" style="display: block; margin: auto;" />
 
 ### Recognize when to write a custom function
 
@@ -16,7 +16,7 @@ We've discussed how [DRY code](https://hutchdatascience.org/Tools_for_Reproducib
 :::dictionary
 The word dry in DRY code stands for Do Not Repeat. The idea is that avoiding repeated sections can make it easier to maintain or troubleshoot. If you have an error from something that is repeated, it can be hard to pinpoint exactly where the error is occurring and why!
 :::
-![](resources/images/11-functions_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341450bc187_100_5.png){width=100%}
+<img src="resources/images/11-functions_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341450bc187_100_5.png" alt="The parrot is saying 'I’m using this code chunk three times. Updating this might get hairy… Good time to make a custom function!' The computer has three identical chunks of code on the screen." width="100%" style="display: block; margin: auto;" />
 
 #### More readable code
 

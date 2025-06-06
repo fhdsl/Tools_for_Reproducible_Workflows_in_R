@@ -3,7 +3,7 @@
 
 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_13.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_13.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 ## Understand why project organization is key to reproducible analyses
 
@@ -18,13 +18,13 @@ Keeping your files organized is a skill that has a high long-term payoff. As you
 
 Organization is yet another aspect of reproducibility that saves you and your colleagues time!
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1121.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1121.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 ## General principles of project organization
 
 Project organization should work for you and not the other way around. The goal should be organization that is maintainable long term.  As you might imagine, the optimal organizational scheme might differ from one individual to another or even one project to another.
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_426.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_426.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 There's a lot of ways to keep your files organized, and there's not a "one size fits all" organizational solution [@Shapiro2021]. In this chapter, we will discuss some generalities; but for specifics, we will point you to others who have written about what works for them. We suggest that you use them as inspiration to figure out a strategy that works for you and your team.
 
@@ -36,13 +36,13 @@ The most important aspects of your project organization scheme is that it:
 - Minimizes the likelihood for errors (like writing over files accidentally) [@Shapiro2021].  
 - Is something maintainable [@Shapiro2021]!
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_421.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_421.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 ### READMEs!
 
 READMEs are also a great way to help your collaborators get quickly acquainted with the project.
 
-![](resources/images/05-setting-up_files/figure-docx//1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8379bb805_0_11.png)
+<img src="resources/images/05-setting-up_files/figure-html//1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8379bb805_0_11.png" alt="Avi is looking at a set of project files that include a file called a ‘README.md’. Avi says 'I had no idea where to start with this analysis that Ruby sent me to review, but then I saw she included a README and that saved me so much time and effort in getting started!'" width="1250" style="display: block; margin: auto;" />
 
 READMEs stick out in a project and are generally universal signal for new people to the project to start by READing them. GitHub automatically will preview your file called "README.md" when someone comes to the main page of your repository. This further encourages people looking at your project to read the information in your README.
 
@@ -93,7 +93,7 @@ Getting more specific, here's some ideas of how to organize your project:
 
 Let's see what these principles might look in practice.
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_442.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_442.png" alt="Major point!! example image" width="100%" style="display: block; margin: auto;" />
 
 Here's an example of what this might look like:
 ```
@@ -148,7 +148,7 @@ But file paths can be *relative* or *absolute*.
 
 Your computer can be given directions relative to where you are calling the command in the computer or they can be absolute directions to a file - basically the full directions to that file, regardless of where you might be already on your computer.  
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1337.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g2fea8805c08_0_1337.png" alt="A relative path might be from the local neighborhood to johns hopkins, where as a relative path is analogous to a path that could direct you from further away, so state information would also be included" width="100%" style="display: block; margin: auto;" />
 So in our above analogy, if you are trying to direct someone to somewhere on the Johns Hopkins campus with a file path:
 
 An absolute file path would be:
@@ -165,13 +165,13 @@ Note that a relative directory may be different between different apps: RStudio 
 
 Returning to computer files, we can have relative or absolute paths based on where we are on the computer. If we are looking for a file in a directory that is on the desktop, then we can have a path from the desktop that is shorter than the absolute path which would identify where the file is overall.
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_0.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_0.png" alt="Relative path on a computer might be from the desktop to a file in a directory called work and would simply be work/file.txt, while an absolute path would be the full path to the directory you might want to work with such as Users/reproducibilityparrot/desktop/work/file.txt" width="100%" style="display: block; margin: auto;" />
 
 
 In your Terminal you can see your working directory at the top of the Terminal window or at the beginning of the terminal prompt. Knowing this, this can tell you how you need to change the command you are entering. Let’s say you want to list, using the `ls` command, a file called `file.txt`.
 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_40.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g31fc7298e99_0_40.png" alt="We can use the terminal tab to see our files or the files pane tab. We can list files in the Terminal tab with the command ls. We can also navigate around within the file pane to see files." width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -185,7 +185,7 @@ RStudio comes with a nifty feature for organizing your files and making file pat
 
 When you create an [R project](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects), which can be made by clicking on the button in the upper left corner of R Studio that looks like a blue cube with the R logo inside of it, you add a `.Rproj` file to your working directory.
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_159.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_159.png" alt="Image showing the R project button which is in the upper left corner one button to the right. You can also use the file tab and click on new project." width="100%" style="display: block; margin: auto;" />
  
  This .`Rproj` file not only helps us later with file paths, but it also saves settings so that our work can be more efficient. Each time we open the project, (by clicking on the project file or using RStudio file tab, "Open project..." option), a few things will happen:
  
@@ -195,12 +195,12 @@ When you create an [R project](https://support.posit.co/hc/en-us/articles/200526
 
 This can also make it really nice to switch from working on one project to another. You can click on the upper right button that has the R project icon in RStudio to switch to other recent projects. 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_167.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_167.png" alt="The upper right of RStudio will show a project button to enable you to switch from one project to another." width="100%" style="display: block; margin: auto;" />
 
 
 It also makes it much easier to navigate your files more efficiently. There is a project directory button in the file pane that allows you to quickly return to the directory with the `.Rproj` file for the project that you currently have open, if you happen to navigate away from that directory. 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_175.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_175.png" alt="The project directory button in the file pane will allow you to quickly go back to the directory with the .Rproj file, even if you have navigated far away. ." width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -257,7 +257,7 @@ We then import data from the file called `project-name-quantile-normalized.tsv` 
 Now if someone were to send all the project files to someone else, they could run this code without any adjustments! 
 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g3179c1a6897_0_10.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g3179c1a6897_0_10.png" alt="Sharing project files can be much easier if you set up your project with file paths using the here package and create an R project. You can give your entire collection of files to someone else and they can start using your code directly without making changes to paths, as the paths will be relative to your project directory. " width="100%" style="display: block; margin: auto;" />
 
 Checkout more of [Jenny's thoughts on organizing files, paths, and projects in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)[@Bryan2017].
 
@@ -274,7 +274,7 @@ However, using `ProjectTemplate` will create a directory structure to help you s
 Running the `create.project()` command in the console of RStudio will create a new directory called `new_project` with many subdirectories such as `data` and `graphs`, and it will create a README file. You can read more about [the file structure that it creates](http://projecttemplate.net/architecture.html).
 
 
-![](resources/images/05-setting-up_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_188.png){width=100%}
+<img src="resources/images/05-setting-up_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_188.png" alt="The structure of directories or folders that are created using the ProjectTemplate package." width="100%" style="display: block; margin: auto;" />
 
 If you also add a `rstudio.project = TRUE`, this will create a new RStudio project as well.
 
@@ -296,7 +296,7 @@ Using notebooks can be a very helpful tool for documenting the development of an
 
 Data analyses can lead one on a winding trail of decisions and side investigations, but notebooks allow you to narrate your thought process as you travel along these analyses explorations!
 
-![](resources/images/05-setting-up_files/figure-docx//1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8f405fdab_0_186.png)
+<img src="resources/images/05-setting-up_files/figure-html//1LMurysUhCjZb7DVF6KS9QmJ5NBjwWVjRn40MS9f2noE_gf8f405fdab_0_186.png" alt="Ruby is looking at her computer that has a lovely notebook with a heatmap! Ruby says ‘Working from this notebook allows me to interactively develop on my data analysis and write down my thoughts about the process all in one place!’" width="1250" style="display: block; margin: auto;" />
 
 **Your scientific notebook should include descriptions that describe:**   
 

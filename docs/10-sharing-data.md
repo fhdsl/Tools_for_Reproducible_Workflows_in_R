@@ -3,7 +3,7 @@
 
 
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_63.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_63.png" alt="Learning objectives are to be able to: Recognize the importance of making data publicly available whenever appropriate. Name the reasons why clear metadata enhances reproducibility. Create a data download script that allows collaborators to re-run your analysis. Store data appropriately in a way that maintains privacy and security when needed" width="100%" style="display: block; margin: auto;" />
 
 
 ## Data sharing is important!
@@ -16,15 +16,15 @@ There are so many excellent reasons to put your data in a repository whether or 
 
 1. Makes your project more transparent and thus more likely to be trusted and cited. In fact one study found that articles with links to the data used (in a repository) were cited more than articles without such information or other forms of data sharing [@colavizza_citation_2020].
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_144.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_144.png" alt="Another researcher is downloading the data from a repository and says ‘These insights are so exciting! I can’t wait to look into this data even more!’" width="100%" style="display: block; margin: auto;" />
 
 2. Helps your relieve your own workload so your email inbox isn't loaded by requests you probably don't have time to respond to.
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_335.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_335.png" alt="Ruby is reading a journal article with data and code she is interested in. The journal article says ‘Code and data are available upon request by email’. Ruby sends an email that says ‘ The email is going to an inbox with 999,999,565473 emails in it and it is labeled ‘the corresponding author’s inbox’." width="100%" style="display: block; margin: auto;" />
 
 3. Allows others to gain even more insights from your data which shows funders that your data will be used to its maximum potential.
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_529.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_529.png" alt="Ruby has uploaded her data to a repository and now its being used by many other researchers. Ruby says to her funders, represented as a bank, ‘The data you funded is getting so much mileage!’" width="100%" style="display: block; margin: auto;" />
 
 4. It also provides more opportunities for others to replicate your results, which could help advance not only your career, but our understanding of science and medicine.
 
@@ -36,7 +36,7 @@ It also helps support researchers at institutes that do not have as many resourc
 
 Ultimately it can therefore help patients benefit from research faster, as faster advances can be made through more efficient research.
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_766.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_766.png" alt="Data Sharing can also help with costs related to collecting data, reduces the time and effort to collect new data, including the burden on patients, it allows research to be more efficient, the same data can be used for multiple studies, which is especially helpful if combining different kinds of data and researchers don't necessarily have to ability to collect each kind of data, it supports researchers at insitutions that have less resources, and it helps patients get the benefits of research faster.’" width="100%" style="display: block; margin: auto;" />
 
 See [this description of additional reasons why sharing data is helpful for scientific advancement](https://hutchdatascience.org/NIH_Data_Sharing/why-this-new-dms-policy.html). 
 ## Data repositories
@@ -110,7 +110,7 @@ Metadata are critically important descriptive information about your data.
 
 Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your dataset.
 
-![](resources/images/10-sharing-data_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_1083.png){width=100%}
+<img src="resources/images/10-sharing-data_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_201_1083.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" />
 
 <div class = "warning">
 At this time it's important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It's critical that you protect this information! For more details on this, we encourage you to see our [course about data management](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html).

@@ -19,7 +19,7 @@ This course is intended for people conducting data analyses at the level of a gr
 
 
 
-![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_14.png){width=100%}
+<img src="resources/images/01-intro_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_14.png" alt="For individuals who: Are new to working in R or RStudio, are familiar with R but want to make their projects more organized, transparent, and reproducible, want to learn about making reproducible reports and want to track changes across projects over time with GitHub" width="100%" style="display: block; margin: auto;" />
 
 ## Topics covered: 
 
@@ -27,7 +27,7 @@ This course will cover organization practices, coding practices, tools, and conc
 
 We will cover important topics such as version control to track changes in documents over time, coding practices to make your code more transparent and to test your code, and methods for sharing your code and data in efficient and clear ways. 
 
-![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_33.png){width=100%}
+<img src="resources/images/01-intro_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_101_33.png" alt="Concepts discussed in the Tools for Reproducible Workflows in R course: Why R is a great tool for reproducibility, major practices involved in reproducibility and methods to organize projects, how to use tools in RStudio to make your work more reproducible, How to make reproducible RMarkdown and Quarto reports, code practices to make your code more transparent, version control with GitHub to track changes over time and collaborate with others on projects, how to be transparent about software versions, how to share data and code publicly" width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -37,7 +37,7 @@ The course will cover the basics for getting started with configuring your proje
 
 We will also point to more advanced topics in other resources.
 
-![](resources/images/01-intro_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_1.png){width=100%}
+<img src="resources/images/01-intro_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33c01fedb5a_0_1.png" alt="Overall Course Learning Objectives. This course will demonstrate how to: 1. Explain best practices for making analyses more reproducible and transparent, 2. Use special features in RStudio for efficiency and reproducibility, 3. Configure and organize projects for data analysis using the here package and the ProjectTemplate package, 4. Create reproducible reports using RMarkdown and Quarto, 5. Write custom functions for reuse of code, 6.Test functions with the testthat package, 7. Setup and use Git and GitHub to track changes over time.,  8. Share data and code publicly " width="100%" style="display: block; margin: auto;" />
   
 References will include @gillespie_efficient_2021, @riederer_column_2020, @timbers_data_nodate.
 

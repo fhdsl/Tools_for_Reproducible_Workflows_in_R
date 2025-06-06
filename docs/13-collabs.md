@@ -3,17 +3,17 @@
 
 
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_68.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g21a84b32106_0_68.png" alt="Learning objectives are to be able to: Use collaborations and code review to boost reproducibility. Polish code with code review through GitHub pull requests. Manage tasks of a project using GitHub Issues. Communicate with collaborators clearly on GitHub" width="100%" style="display: block; margin: auto;" />
 
 ## Components of collaborating on GitHub
 
 As noted previously, GitHub is not only great for sharing and version control but, it is also great for collaborating!
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_6.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_6.png" alt="Github and git allow you to collaborate with others on the same files in a way that has a system for merging all the work together. In this diagram it shows how one set of changes labeled in yellow can be merged in with another set of changes labeled in blue. Reproducible parrot is happy and says ‘GitHub and git make it easy for us to collaborate with each other in a way that we can merge our work together!’ His parrot collaborator is also happy." width="100%" style="display: block; margin: auto;" />
 
 This collaboration can be done through the use of issues and pull requests!
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_0.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g341dc8b716d_0_0.png" alt="The GitHub collaboration workflow starts with the creation of an issue. Someone identified a problem or needed aspect for the project and they can take note of this by creating an issue. This issue will be addressed by changes in a pull request which will reference this issue. " width="100%" style="display: block; margin: auto;" />
 ### Step 1. A problem identified/issue created
 
 [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are where we can note, plan, and discuss work for a project. It might first be filed by one person but then used for further discussion between multiple people to define a problem or new request. Once the issue is scoped and defined enough it can be assigned to someone to work on it.
@@ -66,7 +66,7 @@ In this chapter we will discuss the two sides of code review. Code review ideall
 
 The code review process begins with the creation of a pull request (which we practiced in the [previous chapter](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html#opening-a-pr)). Successful and efficient code review is born out of quality communication, which is a skill set on its own. You can set your reviewers (and yourself) up for success by knowing what basic information can help get the code review conversation going.
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2369.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2369.png" alt="Ruby has filed a very large pull request with a very short PR description:  I updated the project and added new files. She then requested Avi to review this PR. This leaves Avi with very little information to go on and he is very confused. Avi comments: Ummm… I’m a bit confused. Can you explain the context of these changes? This is a lot for me to try to follow.  I’m also unsure what kind of feedback you are looking for. " width="100%" />
 
 Even if you end up reviewing your own code, writing the following information out is still very helpful and highly recommended. It can help you spot problems you might not have otherwise seen and generally help you document your code better for future you!
 
@@ -135,7 +135,7 @@ This being said, the first reviewer of your code should always be yourself! Take
 Additional tip, if you don't want others to look at your pull request yet because you are still working on reviewing it, you can change it to [a draft pull request](https://github.blog/2019-02-14-introducing-draft-pull-requests/) so no one reviews it before you are ready. This can also be a handy tactic to use if you just want to ask for big picture feedback from someone but want to make it clear that the pull request is not anywhere near ready for merging to main.
 
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2555.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2555.png" alt="Ruby has filed a much smaller pull request with a better PR description: Background: In this previous PR we updated the heatmap-script.R file. But now the documentation in the README is out of date. This PR aims to update the README accordingly. Approach: I updated the README with information on the new arguments we added. This also required me to update the Usage section and recommendations there. Feedback needed: Can you look at the Usage section and try running the command and steps described there? I am concerned that this section is not clear enough but I am not sure how to add clarity. Please let me know if you have suggestions on this point.  She has then requested Avi to review this PR.  Avi responds back: Ruby this is great! I was able to dig into this and give you feedback at the places you asked. Let me know what you think of my ideas and comments! This code review situation has been very productive!" width="100%" />
 
 ### Pull Request Templates
 
@@ -143,22 +143,22 @@ Add a [pull request template](https://docs.github.com/en/communities/using-templ
 
 Pull request templates are a way to give yourself and other contributors prompts when starting a new pull request. See below for an example. The comments between `<!--` and `-->` are html comments that will not show up so you don't need to delete them if you don't want to. On the right side, it shows how this template looks when it's rendered. You can see this at any time by clicking `Preview` -- this is true in other places in GitHub.
 
-![](resources/images/13-collabs_files/figure-docx//1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_gfa97af8537_0_0.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1IJ_uFxJud7OdIAr6p8ZOzvYs-SGDqa7g4cUHtUld03I_gfa97af8537_0_0.png" alt="Pull request templates are a way to give yourself and other contributors prompts when starting a new pull request. For example, upon creating a pull request, this text will automatically appear in the text box for your pull request template. Now this helps you and others fill out the pull request more like a form and respond to the prompts. On the right side, it shows how this template looks when it's rendered. You can see this at any time by clicking Preview. " width="100%" />
 
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png" alt="Great pull requests. Provide plenty of context. Have an explicit request for what kind of feedback is needed. Point out questionable areas. Are relatively small and focused. Don't ask a reviewer for help too soon" width="100%" />
 
 ### Preparing for the return of your review
 
 As you wait for your reviewer to get back to you, it can be helpful to remind yourself what the purpose of code review is to get yourself in a positive mindset. You've given your reviewer information to help them help you and now is the time to wait.
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2614.png" alt="Main goals of a pull request author Set up your reviewer for success by erring toward overcommunicating Interpret reviews positively! Determine solutions collaboratively." width="100%" />
 
 First of all, you should pat yourself on the back for engaging in code review. It does require more time and sometimes that can feel scary with looming deadlines, but kudos for being able to prioritize your commitment to creating increasingly more reproducible analyses! Furthermore, it can ultimately save you time over more extensive projects by keeping everyone up-to-date!
 
 Remember that you are not your code and mistakes are all a part of the process! Putting your project out there can feel a tad vulnerable. You may have felt the impulse to keep your code's problems buried under a rug, but you pushed past that and are making your analyses transparent! Remember that hidden problems don't get solved, but known problems are opportunities for reaching an even better end result!
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2625.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2625.png" alt="Remember that you are not your code and mistakes are all a part of the process! The cartoon shows you with exclamation point and equal sign with a fake bit of code to illustrate you are not your code." width="100%" />
 
 When you receive a review back remember that you and the reviewer are on the same team and both want the best end result feasible for this project! They may suggest ideas that you love and can't wait to implement. They also might suggest ideas you don't agree with. Do your best to take all their comments as positive learning opportunities and look for ways to compromise and determine solutions collaboratively.
 
@@ -188,11 +188,11 @@ _Here's some general points:_
 
 The pull request may be the author’s precious bundle. Try to be empathetic to the learning process! You are both working on this project together -- assume you both want the best out of this project. If something seems wrong, work together to find a solution, don't ever waste time on placing blame.
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2647.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2647.png" alt="Remember the author of the pull request has been putting time and effort into this! This cartoon shows a stick person cradling a computer with code on it with lots of hearts and love swirling around. The pull request may be the author’s precious bundle. Try to be empathetic to the learning process!" width="100%" />
 
 Remember that everything sounds harsher when you don't have in-person cues! In this example, Avi may be stating factual things, but without his pleasant and reassuring disposition, it can feel super harsh.
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2653.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2653.png" alt="Ruby requested a code review from Avi who has responded: This code needs work. Don’t use the formattR package it’s inefficient and takes forever to run. You didn’t style the last chunk of code. This feels very harsh to Ruby who has a single tear." width="100%" />
 
 If Avi had reframed his comments, they might be more effective in this collaboration. @Babatunde2018 suggests framing [review comments in three ways to help communication: questions, suggestions, and appreciations](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7).
 
@@ -224,7 +224,7 @@ _For example:_
 
 Let's see how Avi's message could have been reworked to give a more effective review:  
 
-![](resources/images/13-collabs_files/figure-docx//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2679.png){width=100%}
+<img src="resources/images/13-collabs_files/figure-html//1MNHf8JpolaEP_vQ_kB-1xRBF9wo3haCArRu117hBoHA_g33bf0789107_300_2679.png" alt="Ruby has requested a review from Avi but alternatively, Avi has framed his review in a more effective manner, giving context, examples, and creating a much more positive collaboration. Avi’s review says: Ruby, thanks for all this work! This is a great start! I have a few questions so we can further polish this code. Is your usage of the formattR package because of the weird formatting of the data.tsv file? Perhaps we can brainstorm another approach to this that would allow us to get rid of this package requirement. I think that in your last chunk you may have forgotten to style the code according to the conventions for this repository. Perhaps we can discuss how we introduce something to help all authors of this repository adhere to the conventions. This may be an instance we can use automation or a checklist to help. Ruby happily accepts this review and the collaboration will create a better product." width="100%" />
 
 This interaction reminds us that effective code review is steeped in empathy from both sides. Authors need to appreciate the time and effort the reviewer is spending to help them; while reviewers need to be sensitive to the amount of effort put in by the author already.
 
