@@ -1,7 +1,7 @@
 <!--Delete this section below upon using the template-->
 
 ## Tools for Reproducible Workflows
-
+[![Render](https://github.com/fhdsl/Tools_for_Reproducible_Workflows_in_R/actions/workflows/render-all.yml/badge.svg)](https://github.com/fhdsl/Tools_for_Reproducible_Workflows_in_R/actions/workflows/render-all.yml)
 <a href="https://doi.org/10.5281/zenodo.23169176"><img src="https://zenodo.org/badge/568924656.svg" alt="DOI"></a>
 
 This is the GitHub repository for the Tools for Reproducible Workflows course. This course explores a variety of tools that can assist with reproducible data analysis from a broad range of fields. This course was funded as part of a series of courses in the [Training Module for Reproducible Data Science Research project](https://reporter.nih.gov/search/k_pXzn8wfUeEvaWpnzIToA/project-details/10663171).
