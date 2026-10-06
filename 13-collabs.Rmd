@@ -259,7 +259,7 @@ This interaction reminds us that effective code review is steeped in empathy fro
 - [Why code reviews matter (and actually save time!)](https://www.atlassian.com/agile/software-development/code-reviews) by @Radigan2021.
 - [Pull request descriptions](https://www.pullrequest.com/blog/writing-a-great-pull-request-description/) by @Banuelos2020.
 - [A zen manifesto for effective code reviews](https://www.freecodecamp.org/news/a-zen-manifesto-for-effective-code-reviews-e30b5c95204a/) by @Fabre2019.
-- [Best practices for Code Review](https://smartbear.com/en/learn/code-review/best-practices-for-peer-code-review/) by @Smartbear2021.
+- [Best practices for Code Review](https://quokkalabs.com/blog/top-11-best-practices-for-code-review/) by @Joshi_code_review.
 - [Comments during Code Reviews](https://medium.com/@otarutunde/comments-during-code-reviews-2cb7791e1ac7) by @Babatunde2018
 - [On Empathy and Pull Requests](https://slack.engineering/on-empathy-pull-requests/) by @Hirpa2016.
 - [Code Review Guidelines for Humans](https://phauer.com/2018/code-review-guidelines/) by @Hauer2018.

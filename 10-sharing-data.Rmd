@@ -67,7 +67,7 @@ Note that some journals or funding agencies may have specific requirements.
 
 - [CyVerse Data Commons Repository](https://cyverse.org/data-commons)
 - [Data Dryad](https://datadryad.org/stash)
-- [FigShare](https://help.figshare.com/article/how-to-upload-and-publish-your-data)
+- [FigShare](https://info.figshare.com/user-guide/file-upload-options/) 
 - [Zenodo](https://help.zenodo.org/)
 - [GitHub](https://github.com/)
 
